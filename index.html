@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noah's Ark — Naval Architecture Research</title>
+  <link rel="stylesheet" href="ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Research Documentation</div>
+  <h1>Noah's Ark — Naval Architecture Research</h1>
+  <div class="meta">T. Lovett &nbsp;|&nbsp; Cubit: 0.5186m (Nippur) &nbsp;|&nbsp; Last updated: July 2026</div>
+</header>
+
+<p>
+  Working documentation for the Noah's Ark naval architecture feasibility study. 
+  Each page covers one topic area. Pages are updated as the design develops. 
+  All calculations use the Nippur cubit of 0.5186m.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>Topic Pages</h2>
+
+<table>
+  <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
+  <tr>
+    <td><a href="volume-tally/volume-tally.html">Volume Tally</a></td>
+    <td>Primary dimensions, master deduction table, animal zone, animal count, displacement summary</td>
+    <td><span class="status status-provisional">Active</span></td>
+  </tr>
+  <tr>
+    <td><a href="hull-structure/hull-structure.html">Hull Structure</a></td>
+    <td>Skin specification, scantlings, close-chocked framing, bronze spider straps, timber spec, waterproofing</td>
+    <td><span class="status status-provisional">Active</span></td>
+  </tr>
+  <tr>
+    <td><a href="water-systems/water-systems.html">Water Systems</a></td>
+    <td>Ballast zone, header tanks, rainwater harvesting, bamboo distribution, tilt-weir pump, animal consumption</td>
+    <td><span class="status status-provisional">Active</span></td>
+  </tr>
+  <tr>
+    <td><a href="stability/stability.html">Stability</a></td>
+    <td>GM, KG, KB, BM, roll period, GZ curve, draft reconciliation</td>
+    <td><span class="status status-tbd">Pending</span></td>
+  </tr>
+  <tr>
+    <td><a href="animal-zones/animal-zones.html">Animal Zones</a></td>
+    <td>Three waste zones, deck assignment (Lowers/Twos/Threes), bird manifest, clean animal adjustment</td>
+    <td><span class="status status-tbd">Pending</span></td>
+  </tr>
+  <tr>
+    <td><a href="passive-systems/passive-systems.html">Passive Systems</a></td>
+    <td>All self-regulating systems — weathervaning, roll damping, rainwater, tilt-weir pump, cedar aromatics, rooster chronometer</td>
+    <td><span class="status status-tbd">Pending</span></td>
+  </tr>
+  <tr>
+    <td><a href="biblical-analysis/biblical-analysis.html">Biblical Analysis</a></td>
+    <td>Hebrew deck terminology (tachtiyyim/sheniyyim/shelishim), Genesis 7:20 draft, cubit evidence, logbook argument</td>
+    <td><span class="status status-tbd">Pending</span></td>
+  </tr>
+  <tr>
+    <td><a href="biogeography/biogeography.html">Biogeography</a></td>
+    <td>Post-flood timber distribution, animal dispersal, ancestral kind generalisation, dietary specialisation</td>
+    <td><span class="status status-tbd">Pending</span></td>
+  </tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>Key Parameters — Quick Reference</h2>
+
+<table>
+  <tr><th>Parameter</th><th>Value</th><th>Source</th></tr>
+<<<<<<< HEAD
+  <tr><td>Cubit</td>
+  <td>0.5186m</td>
+  <td>Nippur cubit — published research</td></tr>
+=======
+  
+>>>>>>> 2e8023eb5184e8aaa15cc7c570b24153174b62bb
+  <tr><td>Length</td><td>155.4m</td><td>300 cubits × 0.518m</td></tr>
+  <tr><td>Beam</td><td>25.9m</td><td>50 cubits × 0.518m</td></tr>
+  <tr><td>Height</td><td>15.54m</td><td>30 cubits × 0.518m</td></tr>
+  <tr><td>Draft (target)</td><td>7.77m</td><td>15 cubits — Genesis 7:20</td></tr>
+  <tr><td>Hull skin</td><td>1.6m</td><td>3×5" laminate + 2ft frames + 2×6" ceiling</td></tr>
+  <tr><td>Internal beam</td><td>22.7m</td><td>25.9 − 2 × 1.6m</td></tr>
+  <tr><td>Block coefficient</td><td>0.85</td><td>Hull form design</td></tr>
+  <tr><td>Effective animal zone</td><td>~10,013 m³</td><td>After all deductions + promenade bonus</td></tr>
+  <tr><td>Estimated displacement</td><td>~20,825 tonnes</td><td>Volume tally — provisional</td></tr>
+  <tr><td>Kinds range</td><td>~1,700–2,300</td><td>Provisional — pending zone split</td></tr>
+  <tr><td>Header tank volume</td><td>~251 m³</td><td>Roof corners, 1m wide service column</td></tr>
+  <tr><td>Ballast zone capacity</td><td>~4,750 m³</td><td>Below Deck 1, baffled</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>Folder Structure</h2>
+
+<p>Each topic has its own subfolder containing the HTML page plus:</p>
+
+<table>
+  <tr><th>Subfolder</th><th>Contents</th></tr>
+  <tr><td>images/</td><td>Photographs, CAD screenshots, diagrams</td></tr>
+  <tr><td>calcs/</td><td>Excel spreadsheets and calculation workbooks</td></tr>
+  <tr><td>CAD/</td><td>Native CAD files for this topic</td></tr>
+  <tr><td>documents/</td><td>Reference papers, source documents</td></tr>
+</table>
+
+<p>The shared stylesheet <code>ark-style.css</code> sits in the root folder. 
+All topic pages link to it as <code>../ark-style.css</code>.</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp; July 2026
+</footer>
+
+</body>
+</html>
