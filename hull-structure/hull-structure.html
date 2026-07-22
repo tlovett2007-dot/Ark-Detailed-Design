@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hull Structure — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Hull Structure</h1>
+  <div class="meta">
+    Cubit: 0.518m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: July 2026 &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Hull Structure
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. Hull Skin Specification</h2>
+
+<p>
+  The hull skin is a structural sandwich — not conventional frame-and-plank construction. 
+  The skin itself acts as a longitudinal box girder, resisting hogging and sagging over 
+  the 155.4m hull length. This is the only wooden solution viable at this scale, beyond 
+  the practical limit of conventional wooden shipbuilding (~90m, Brunel's threshold).
+</p>
+
+<h3>Layered Cross-Section</h3>
+
+<table>
+  <tr><th>Layer</th><th>Specification</th><th>Metric</th><th>Structural role</th></tr>
+  <tr>
+    <td>Outer planking</td>
+    <td>Triple laminate, 3 × 5"</td>
+    <td>381mm</td>
+    <td>Outer flange of box girder — compression in hogging. Sacrificial outer layer for abrasion/impact.</td>
+  </tr>
+  <tr>
+    <td>Frame / web</td>
+    <td>Close-chocked hardwood frames, ~2ft depth</td>
+    <td>~610mm</td>
+    <td>Shear web between flanges. Transverse bending resistance (hydrostatic pressure over 22.7m span).</td>
+  </tr>
+  <tr>
+    <td>Inner ceiling</td>
+    <td>Double laminate, 2 × 6"</td>
+    <td>305mm</td>
+    <td>Inner flange of box girder — tension in hogging. Cross-laminated for longitudinal continuity.</td>
+  </tr>
+  <tr>
+    <td><strong>Total skin thickness</strong></td>
+    <td></td>
+    <td><strong>~1,296mm → 1.6m nominal</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Why 1.6m:</strong> Raw scantling calculation gives ~1,296mm. Rounded to 1.6m to allow for 
+  frame irregularities, pitch sealing layers, and the outer kopher (pitch) waterproofing coat. 
+  The 1.6m figure is used in all volume calculations.
+</div>
+
+<div class="note note-provisional">
+  <strong>Frame depth under review:</strong> 2ft (610mm) frames selected as structural optimum — 
+  sufficient for transverse hydrostatic bending over 22.7m span, while preserving maximum 
+  longitudinal fibre continuity in the laminate flanges. The conflict: deeper frames resist 
+  transverse loads better but interrupt longitudinal fibres. 
+  Minimum frame depth from bending calc: ~17" (430mm). 2ft provides adequate margin.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Frame System — Close-Chocked Construction</h2>
+
+<p>
+  Conventional wooden ships have widely-spaced frames with open gaps between them. 
+  This Ark design uses close-chocked frames — frames packed so tightly that tapered 
+  hardwood wedges fill all remaining gaps, creating a near-solid transverse wall.
+</p>
+
+<h3>Historical Precedent</h3>
+
+<table>
+  <tr><th>Vessel / Builder</th><th>Method</th><th>Length</th><th>Notes</th></tr>
+  <tr>
+    <td>18th century Royal Navy warships</td>
+    <td>Solid timber above the wales — frames touching</td>
+    <td>~60–80m</td>
+    <td>Confirmed in Ships of Scale literature</td>
+  </tr>
+  <tr>
+    <td>Lake Erie warships (William Bell)</td>
+    <td>Cedar chock fill between frames — solid upper works</td>
+    <td>~50m</td>
+    <td>Specifically chosen for low shrinkage</td>
+  </tr>
+  <tr>
+    <td>Seppings diagonal truss</td>
+    <td>Triangulated frames + iron strapping — resists hogging</td>
+    <td>~80m</td>
+    <td>First systematic solution to longitudinal bending</td>
+  </tr>
+  <tr>
+    <td>Brunel — Great Western (1837)</td>
+    <td>Massive oak + diagonal iron bracing</td>
+    <td>72m</td>
+    <td>Brunel identified 300ft (~91m) as practical limit of wood</td>
+  </tr>
+  <tr>
+    <td><strong>This Ark</strong></td>
+    <td>Close-chocked frames + triple laminate skin + bronze spider straps</td>
+    <td><strong>155.4m</strong></td>
+    <td>Beyond any historical precedent — solid skin as box girder</td>
+  </tr>
+</table>
+
+<h3>Chock Material — High-Density Hardwood Wedges</h3>
+
+<p>
+  Cedar fill (as used by Bell) is superseded here by tapered wedges of ultra-dense hardwood 
+  (lignum vitae type, or pre-flood equivalent with SG &gt;1.0), driven to full compression 
+  between frames from alternating sides.
+</p>
+
+<table>
+  <tr><th>Property</th><th>Cedar fill</th><th>Dense hardwood wedges</th></tr>
+  <tr><td>Installation method</td><td>Cut to fit, placed, pinned</td><td>Tapered, driven to compression — pre-stressed joint</td></tr>
+  <tr><td>Shrinkage behaviour</td><td>Gap may open on drying</td><td>Re-drive wedges as timber seasons — self-tightening</td></tr>
+  <tr><td>Structural contribution</td><td>Compression fill only</td><td>Pre-stressed compression — joint already loaded before wave loads arrive</td></tr>
+  <tr><td>Density</td><td>~380 kg/m³ (floats)</td><td>&gt;1,000 kg/m³ (sinks)</td></tr>
+  <tr><td>Maintenance</td><td>Repack if gaps open</td><td>Re-drive from inside — accessible during voyage</td></tr>
+</table>
+
+<div class="note">
+  <strong>Wood shrinkage:</strong> The primary risk with solid-chocked construction is gap opening 
+  as timber dries and shrinks. Dense hardwood wedges driven from alternating sides address this — 
+  any shrinkage allows re-driving. The Ark interior remains humid from animal respiration throughout 
+  the voyage, reducing drying. Pre-flood timber was likely green (unseasoned) at construction; 
+  100 years of construction time allowed seasoning before launch.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Bronze Spider Straps</h2>
+
+<p>
+  At major timber junctions — particularly where longitudinal skin members meet transverse 
+  frames — conventional timber joinery (mortice, tenon, treenail) is insufficient for 
+  fully reversing wave loads. Bronze spider straps provide ductile moment connections 
+  that can absorb both tension and compression alternately without loosening.
+</p>
+
+<h3>Specification</h3>
+
+<table>
+  <tr><th>Element</th><th>Specification</th></tr>
+  <tr><td>Alloy</td><td>High-tin malleable bronze (~14–18% tin) — maximises cold-working ductility after casting</td></tr>
+  <tr><td>Form</td><td>Cast spider shape — central hub with 4–6 radiating arms</td></tr>
+  <tr><td>Hub diameter</td><td>~150mm</td></tr>
+  <tr><td>Arm dimensions</td><td>~50mm wide × 10mm thick × 300mm long</td></tr>
+  <tr><td>Installation</td><td>Cast to approximate shape, then hammered cold around the timber junction to conform exactly</td></tr>
+  <tr><td>Fixing</td><td>Steel nail through pre-drilled holes in each arm, pinned into timber</td></tr>
+  <tr><td>Sealing</td><td>Pitch-impregnated fabric over strap and junction — waterproofing and corrosion protection</td></tr>
+</table>
+
+<h3>Why High-Tin Bronze</h3>
+
+<p>
+  Tin content controls the ductility/hardness balance in bronze. At 14–18% tin, the alloy 
+  remains castable (good fluidity, sharp detail) but can be cold-worked significantly — 
+  hammered flat against the irregular surface of a round or hewn timber junction without cracking. 
+  The ductility allows micro-yielding under the fully reversing wave loads that would fracture 
+  a harder alloy.
+</p>
+
+<div class="note">
+  <strong>Pre-flood metallurgical precedent:</strong> Genesis 4:22 — Tubal-Cain, "forger of all 
+  instruments of bronze and iron," lived just a few generations before Noah. High-tin bronze 
+  metallurgy was current, available, and sophisticated at the time of construction.
+</div>
+
+<h3>Future Exhibition Proposal</h3>
+
+<p>
+  A full-scale structural demonstration section — genuine hardwood frames, dense hardwood wedge 
+  chocking, real cast and hammer-formed bronze spider straps, pitch-impregnated fabric sealing — 
+  would be the first physical realisation of this hull technology. Not a replica or model — 
+  the actual specified construction method, built to full scale, touchable and smellable. 
+  Proposed for Ark Encounter or similar institution.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Primary Timber Specification</h2>
+
+<table>
+  <tr><th>Element</th><th>Timber</th><th>Density</th><th>Reason</th></tr>
+  <tr>
+    <td>Outer laminate (3 × 5")</td>
+    <td>Old growth pine (pre-flood equivalent)</td>
+    <td>~650 kg/m³</td>
+    <td>Long straight lengths, high resin content, good longitudinal stiffness</td>
+  </tr>
+  <tr>
+    <td>Frames (~2ft depth)</td>
+    <td>Dense hardwood — oak, ironwood or pre-flood equivalent</td>
+    <td>~800–900 kg/m³</td>
+    <td>Transverse bending resistance, compression in chocked wall system</td>
+  </tr>
+  <tr>
+    <td>Chock wedges</td>
+    <td>Ultra-dense hardwood (SG &gt;1.0)</td>
+    <td>&gt;1,000 kg/m³</td>
+    <td>Pre-stressed compression fill, dimensional stability, driven to full compression</td>
+  </tr>
+  <tr>
+    <td>Inner ceiling (2 × 6")</td>
+    <td>Old growth pine (cross-laminated)</td>
+    <td>~650 kg/m³</td>
+    <td>Inner flange of box girder — must be cross-laminated for tensile continuity</td>
+  </tr>
+  <tr>
+    <td>Decks</td>
+    <td>Old growth pine</td>
+    <td>~650 kg/m³</td>
+    <td>Load-bearing, must span between longitudinal beams</td>
+  </tr>
+  <tr>
+    <td>Promenade/internal fitout</td>
+    <td>Cedar of Lebanon (aromatic)</td>
+    <td>~560 kg/m³</td>
+    <td>Passive insect/parasite repellent, rot resistant, aromatic — see note</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Cedar aromatic system:</strong> Cedar of Lebanon used for internal fitout, promenade 
+  lining, cage construction and ceiling panels provides a passive insect/parasite management 
+  system. Cedar oil (thujaplicins, cedrol) is a proven biocide, insect repellent and antifungal 
+  agent. In an enclosed vessel with thousands of animals over 371 days, insect and parasite load 
+  is a genuine animal welfare problem. The cedar interior passively addresses this at no 
+  operational cost — and incidentally counteracts manure odours. Surface area ~8,000–10,000 m² 
+  of aromatic cedar continuously off-gassing throughout the voyage.
+</div>
+
+<h3>Gopher Wood</h3>
+
+<p>
+  Genesis 6:14 specifies <em>gopher wood</em> (Hebrew: <em>עֲצֵי-גֹפֶר</em>). The term is a 
+  hapax legomenon — appearing exactly once in the entire Bible. No subsequent reference allows 
+  identification. Candidates include cypress (<em>gofer → kuparissos</em>), a pre-flood timber 
+  kind now extinct or diversified beyond recognition, or possibly a laminated construction 
+  process rather than a species name.
+</p>
+
+<p>
+  The pre-flood single landmass (Pangaea equivalent) placed all timber kinds in proximity. 
+  Post-flood continental dispersal sent the descendants of pre-flood timber baramins to 
+  geographically separated locations (Douglas fir to Pacific Northwest, teak to Southeast Asia, 
+  cedar to Lebanon and Pacific Northwest, kauri to New Zealand). The ancestral <em>gopher wood</em> 
+  kind may have been the generalised progenitor of several modern timber families — 
+  diversified post-flood beyond recognition, hence the word becoming obsolete.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Waterproofing — Kopher System</h2>
+
+<p>
+  Genesis 6:14 specifies coating the Ark with <em>kopher</em> (כֹּפֶר) — pitch/bitumen — 
+  inside and out. The Hebrew root <em>kaphar</em> means to cover, atone, make reconciliation.
+</p>
+
+<h3>Application Layers</h3>
+
+<table>
+  <tr><th>Location</th><th>Application</th></tr>
+  <tr><td>Hull exterior</td><td>Hot pitch applied to outer laminate — full coverage, primary waterproofing</td></tr>
+  <tr><td>Hull interior skin face</td><td>Pitch to inner ceiling — secondary waterproofing, rot prevention</td></tr>
+  <tr><td>Frame/chock interfaces</td><td>Pitch impregnation between all contact surfaces during assembly</td></tr>
+  <tr><td>Bronze spider straps</td><td>Pitched fabric wrap over each strap and junction</td></tr>
+  <tr><td>Deck surfaces</td><td>Pitch seal on upper face — waterproofs and provides grip</td></tr>
+  <tr><td>Bamboo pipe joints</td><td>Pitched fabric wrap — see Water Systems</td></tr>
+</table>
+
+<h3>Onboard Pitch Cooker</h3>
+
+<p>
+  A small bronze pot over a controlled fire, located in the stern service compartment. 
+  Pre-cut fabric strips stored dry alongside. Pitched fabric functions as the universal 
+  repair material throughout the voyage — superior to any modern equivalent in wet conditions:
+</p>
+
+<table>
+  <tr><th>Property</th><th>Pitched fabric</th><th>Modern duct tape</th></tr>
+  <tr><td>Wet adhesion</td><td>Improves — pitch softens and conforms</td><td>Fails rapidly</td></tr>
+  <tr><td>Underwater application</td><td>Works indefinitely</td><td>Peels off</td></tr>
+  <tr><td>Re-application</td><td>Re-heat and re-apply — repositionable</td><td>New tape required</td></tr>
+  <tr><td>Longevity</td><td>Years to decades</td><td>Hours to days wet</td></tr>
+  <tr><td>Raw materials</td><td>Tree resin + any fabric</td><td>Petrochemical factory</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>6. Longitudinal Structural Challenge — Hogging and Sagging</h2>
+
+<p>
+  At 155.4m, the Ark exceeds Brunel's identified practical limit for wooden construction 
+  (~91m / 300ft), beyond which hogging and sagging loads cause progressive structural 
+  failure in conventional frame-and-plank ships. The solid laminated skin box girder 
+  is the only wooden solution viable at this length.
+</p>
+
+<div class="calc">Transverse hydrostatic pressure at bottom:
+  P = ρgh = 1,025 × 9.81 × 15.54m = ~156 kPa
+
+Frame bending moment (simply supported, 22.7m span):
+  M = wL²/8 = 156 × 22.7² / 8 = ~9,996 kNm per metre of length
+
+Required section modulus at 10 MPa allowable timber stress:
+  Z = M/σ = 9,996,000 / 10,000 = ~1,000,000 cm³/m
+
+Back-calculated frame depth at 300mm frame width:
+  bd²/6 = 1,000,000 → d = ~447mm ≈ 18" minimum
+
+Selected frame depth: 2ft (610mm) — provides adequate margin above 18" minimum
+while limiting interruption of longitudinal skin fibres.</div>
+
+<div class="note note-provisional">
+  <strong>Longitudinal bending moment calculation pending:</strong> The hogging/sagging 
+  bending moment for a 155.4m hull in the design wave condition has not yet been calculated. 
+  This will determine whether the laminate skin thickness (381mm outer + 305mm inner) 
+  provides adequate longitudinal section modulus. CAD geometry required for full calculation.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>7. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Longitudinal bending moment</td><td>Calculate for design wave condition — verify laminate skin adequacy</td></tr>
+  <tr><td>2</td><td>Frame depth optimisation</td><td>Confirm 2ft (610mm) from full transverse bending calc with actual wave pressure</td></tr>
+  <tr><td>3</td><td>Chock wedge geometry</td><td>Specify taper ratio, driving sequence, alternating direction pattern</td></tr>
+  <tr><td>4</td><td>Bronze strap density</td><td>Estimate number of spider straps per unit length — volume/mass contribution</td></tr>
+  <tr><td>5</td><td>Gopher wood identification</td><td>Review literature — any new proposals since last survey?</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.518m (Royal Egyptian) &nbsp;|&nbsp; Last updated: July 2026
+</footer>
+
+</body>
+</html>

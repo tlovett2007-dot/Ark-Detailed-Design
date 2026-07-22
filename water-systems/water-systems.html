@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Systems — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Water Systems</h1>
+  <div class="meta">
+    Cubit: 0.518m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: July 2026 &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Water Systems
+</nav>
+
+<p>
+  The Ark's water system is entirely passive — no pumps, no crew operation under normal 
+  conditions. It operates as a two-tier gravity system: bulk ballast/storage below, 
+  header tanks above, with rainwater harvesting and a novel tilt-weir elevation device 
+  providing replenishment.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. System Overview</h2>
+
+<table>
+  <tr><th>Tier</th><th>Location</th><th>Volume</th><th>Function</th></tr>
+  <tr>
+    <td>Bulk ballast / storage</td>
+    <td>Below Deck 1 floor — full length, baffled</td>
+    <td>~4,750 m³ maximum capacity</td>
+    <td>Stability ballast + strategic fresh water reserve</td>
+  </tr>
+  <tr>
+    <td>Header tanks</td>
+    <td>Roof corners, outboard, both sides</td>
+    <td>~251 m³</td>
+    <td>Gravity-feed distribution — tops up cage reservoirs</td>
+  </tr>
+  <tr>
+    <td>Cage reservoirs</td>
+    <td>Individual animal cages ("nests")</td>
+    <td>Sized for 2–4 week supply per cage</td>
+    <td>Animal drinking water — refilled from header tanks</td>
+  </tr>
+  <tr>
+    <td>Rainwater collection</td>
+    <td>Weatherdeck → parapet gutter → header tanks</td>
+    <td>Up to 20 m³/day in light rain</td>
+    <td>Primary replenishment of header tanks during wet phase</td>
+  </tr>
+  <tr>
+    <td>Tilt-weir pump</td>
+    <td>Outboard service column, both sides</td>
+    <td>Transfer rate TBD</td>
+    <td>Elevation of bulk water to header tanks — passive, no moving parts</td>
+  </tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Bulk Ballast / Fresh Water Zone</h2>
+
+<p>
+  The ballast zone sits below the Deck 1 floor, within the curved bilge section of the hull. 
+  It serves the dual purpose of stability ballast (lowering the centre of gravity) and 
+  strategic fresh water reserve.
+</p>
+
+<h3>Geometry</h3>
+
+<div class="calc">Ballast zone depth:  ~2.0m
+Flat bottom width:   ~20m (inside bilge curves)
+Usable length:       ~125.4m (excluding bow/stern compartments)
+Maximum volume:      2.0 × 20 × 125.4 = ~5,016 m³
+Plus bilge curve contribution: ~15% = ~5,770 m³ total capacity
+
+Working figure: ~4,750 m³ (allowing for baffle structure volume)</div>
+
+<h3>Baffle System</h3>
+
+<p>
+  An undivided tank of 4,750 m³ would have catastrophic free surface effect, 
+  destabilising the vessel in any seaway. The ballast zone is divided by:
+</p>
+
+<table>
+  <tr><th>Baffle type</th><th>Number</th><th>Spacing</th><th>Function</th></tr>
+  <tr>
+    <td>Transverse bulkheads</td>
+    <td>6 (shared with main hull bulkheads)</td>
+    <td>~18m</td>
+    <td>Primary longitudinal subdivision — 7 bays</td>
+  </tr>
+  <tr>
+    <td>Longitudinal baffles</td>
+    <td>2 (centreline + one intermediate each side)</td>
+    <td>~6.7m</td>
+    <td>Transverse subdivision — 3 cells per bay = 21 cells total</td>
+  </tr>
+</table>
+
+<div class="calc">Free surface moment per cell (after full baffling):
+  I_fs = ρ × l × b³/12 = 1,025 × 18 × 6.7³/12 = ~461,000 kg·m²
+  (reduced from ~12,300,000 kg·m² unbaffled — factor of 27 improvement)</div>
+
+<h3>Passive Trim Control</h3>
+
+<p>
+  Inter-cell valves between longitudinal cells allow passive ballast transfer 
+  for trim and list correction. In a pitching vessel, water flows through open 
+  valves by gravity — pitch motion does the pumping. Transfer direction is 
+  controlled by which valve is opened; rate is controlled by valve aperture.
+</p>
+
+<div class="note">
+  <strong>Operational procedure:</strong> Noah opens the appropriate inter-cell valve, 
+  returns to bed. Pitch motion transfers water over hours. Closes valve when 
+  desired trim is achieved. No crew effort required beyond valve operation.
+</div>
+
+<h3>Fresh Water Requirement vs Capacity</h3>
+
+<div class="calc">Voyage duration:          371 days
+Rain ceases (Genesis):    Day ~150
+Dry phase duration:       ~220 days
+
+Animal daily consumption: 6,000 animals × 1.0 L/day (torpor-reduced) = 6,000 L/day = 6 m³/day
+Human daily consumption:  8 people × 3 L/day = ~0.024 m³/day (negligible)
+
+Dry phase requirement:    220 days × 6 m³/day = 1,320 m³
+Safety margin (20%):      +264 m³
+Total bulk water needed:  ~1,584 m³
+
+Ballast zone capacity:    ~4,750 m³
+Surplus available for stability ballast: ~3,166 m³ ✓</div>
+
+<div class="note">
+  <strong>Comparison with Woodmorappe:</strong> Woodmorappe allocated ~10% of hull volume for 
+  water (~4,500 m³ equivalent on this hull), apparently carrying a full year's supply. 
+  This design requires only ~1,584 m³ for the dry phase because: (1) fewer animals 
+  (~6,000 vs 16,000), (2) torpor-reduced consumption (1 L/day vs ~2.5 L/day normal), 
+  (3) rainwater harvesting covers the wet phase (days 1–150), 
+  (4) the ballast zone serves dual function. Woodmorappe did not account for rainwater 
+  harvesting despite the vessel having a 3,875 m² roof catchment area.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Rainwater Harvesting</h2>
+
+<h3>Voyage Phases</h3>
+
+<table>
+  <tr><th>Phase</th><th>Days</th><th>Rainfall</th><th>Water strategy</th></tr>
+  <tr>
+    <td>Flood onset</td>
+    <td>1–40</td>
+    <td>Heavy — but chaotic mix of ocean, groundwater, sediment</td>
+    <td>Bulk ballast tanks primary — roof collection uncertain quality</td>
+  </tr>
+  <tr>
+    <td>Waters prevailing</td>
+    <td>40–150</td>
+    <td>Lighter rain — cleaner, collectible</td>
+    <td>Roof harvesting primary — replenishes header tanks daily</td>
+  </tr>
+  <tr>
+    <td>Waters receding</td>
+    <td>150–371</td>
+    <td>Rain ceases (Genesis 8:2)</td>
+    <td>Bulk ballast tanks only — 220 day dry phase</td>
+  </tr>
+</table>
+
+<h3>Roof Catchment Calculation</h3>
+
+<div class="calc">Roof catchment area: 155.4m × 25.9m = ~4,025 m²
+(Slightly larger due to roof slope — actual catchment ~4,200 m²)
+
+At 5mm/day light rain:   4,200 × 0.005 = 21.0 m³/day
+At 10mm/day:             4,200 × 0.010 = 42.0 m³/day
+At 20mm event:           4,200 × 0.020 = 84.0 m³/day = ~14 days animal supply in one shower
+
+Daily animal requirement: ~6 m³/day
+Even 1.5mm/day rain covers full daily consumption ✓</div>
+
+<h3>Collection System</h3>
+
+<p>
+  Rainwater runs off the roof slope toward the outer edges, where a low timber parapet 
+  runs the full length of the weatherdeck perimeter. The parapet serves dual functions:
+</p>
+
+<table>
+  <tr><th>Function</th><th>Description</th></tr>
+  <tr>
+    <td>Wave deflector</td>
+    <td>Deflects green water (waves washing over deck) away from the ṣohar opening — 
+    first line of defence against interior flooding</td>
+  </tr>
+  <tr>
+    <td>Rainwater gutter</td>
+    <td>Retains rainwater in the gutter between parapet and ṣohar coaming, 
+    channelling it to corner downpipes into header tanks</td>
+  </tr>
+</table>
+
+<h3>Self-Regulating Flap Valves</h3>
+
+<p>
+  Gaps in the parapet fitted with simple flap valves (timber/bronze, hinged at top):
+</p>
+
+<table>
+  <tr><th>Condition</th><th>Valve state</th><th>Result</th></tr>
+  <tr>
+    <td>Calm / light rain</td>
+    <td>Open (gravity)</td>
+    <td>Rainwater drains inboard through gaps → header tanks fill</td>
+  </tr>
+  <tr>
+    <td>Green water on deck</td>
+    <td>Closed (wave pressure)</td>
+    <td>No saltwater contamination of fresh header tanks</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Self-regulating logic:</strong> Green water events (rough weather) close the valves 
+  automatically by wave pressure — exactly when contamination risk is highest. In calm 
+  conditions when collection is safe, valves open by gravity. No crew operation required.
+  The system also self-times — rough weather that prevents collection coincides with 
+  full tanks from prior rain; calm periods allow collection when seas are benign.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Header Tanks</h2>
+
+<h3>Location and Rationale</h3>
+
+<p>
+  Header tanks are positioned in the outboard roof corners — the triangular dead space 
+  where the roof slope meets the hull top. This location optimises five criteria 
+  simultaneously:
+</p>
+
+<table>
+  <tr><th>Criterion</th><th>Corner tanks</th><th>Central roof tanks</th></tr>
+  <tr><td>Mass moment of inertia (roll comfort)</td><td>Maximum r² from centreline ✓</td><td>Reduced r²</td></tr>
+  <tr><td>Usable space consumed</td><td>Zero — dead triangular space ✓</td><td>Competes with atrium</td></tr>
+  <tr><td>ṣohar light/air blocked</td><td>No — tanks are outboard ✓</td><td>Potentially yes</td></tr>
+  <tr><td>Rainwater collection proximity</td><td>At collection point — roof drains to corners ✓</td><td>Requires additional pipes</td></tr>
+  <tr><td>Gravity feed to all decks</td><td>Highest point in vessel ✓</td><td>Same ✓</td></tr>
+  <tr><td>Structural integration</td><td>Into hull/roof junction — shared walls ✓</td><td>Freestanding structure</td></tr>
+</table>
+
+<h3>Volume and Specification</h3>
+
+<div class="calc">Tank geometry (triangular corner cross-section):
+  Base at hull inner face: ~1.0m
+  Height at deepest point: ~1.0m
+  Cross-sectional area: ~0.5 m² (triangular)
+
+Both sides, full usable length 125.4m:
+  Volume = 0.5 × 125.4 × 2 = ~125 m²... 
+
+Revised (from CAD, 1m wide service column):
+  1.0m wide × 1.0m deep × 125.4m × 2 sides = ~251 m³</div>
+
+<h3>Adequacy Check</h3>
+
+<div class="calc">Animal daily consumption:     6,000 × 1.0 L = 6,000 L/day = 6 m³/day
+Header tank volume:          251 m³
+Days supply without refill:  251 ÷ 6 = ~42 days
+
+Cage reservoir additional buffer: sized for 2–4 weeks
+Total buffer before bulk tanks needed: ~6–10 weeks ✓
+
+This comfortably spans the period between rain events during the wet phase,
+and provides time to operate the tilt-weir pump during calm dry-phase periods.</div>
+
+<h3>Stability Contribution</h3>
+
+<div class="calc">Header tank mass (full): 251 m³ × 1,000 kg/m³ = 251 tonnes
+Radius from centreline: ~9.3m (outboard corner position)
+Mass moment of inertia contribution:
+  I = 251,000 kg × (9.3m)² × 2 sides = ~43,400,000 kg·m²
+
+This is a meaningful contribution to roll inertia → longer roll period → 
+more comfortable motion, particularly during the wet phase (days 1–150) 
+when tanks are full and seas are most severe.</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Distribution System — Bamboo Pipework</h2>
+
+<p>
+  Fresh water is distributed from header tanks to cage-level reservoirs via bamboo pipe — 
+  gravity fed throughout, no pumping required below header tank level.
+</p>
+
+<table>
+  <tr><th>Application</th><th>Bamboo solution</th></tr>
+  <tr><td>Header tank outlets</td><td>Bamboo culm pipe, gravity feed vertically down service column</td></tr>
+  <tr><td>Inter-deck distribution mains</td><td>Bamboo runs horizontally along outboard service column at each deck</td></tr>
+  <tr><td>Cage trough supply</td><td>Branch pipes from main — small diameter bamboo to individual troughs</td></tr>
+  <tr><td>Roof gutter / downpipe</td><td>Split bamboo channel along parapet, downpipe to corner tanks</td></tr>
+</table>
+
+<h3>Bamboo Pipe Properties</h3>
+
+<table>
+  <tr><th>Property</th><th>Value</th><th>Relevance</th></tr>
+  <tr><td>Natural form</td><td>Hollow culm, already a tube</td><td>No machining required — split internodes out with rod</td></tr>
+  <tr><td>Diameter</td><td>50–150mm typical</td><td>Adequate for gravity flow distribution</td></tr>
+  <tr><td>Wall material</td><td>Silica-rich outer skin</td><td>Naturally watertight, resists water absorption</td></tr>
+  <tr><td>Pressure rating</td><td>Burst pressure many times gravity head</td><td>13m head (~130 kPa) well within capacity</td></tr>
+  <tr><td>Jointing</td><td>Pitched fabric wrap + bronze ferrule at connections</td><td>Watertight, repairable with onboard pitch cooker</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>6. Tilt-Weir Pump</h2>
+
+<p>
+  A novel passive water elevation device using vessel pitch/roll motion to transfer 
+  water upward through a series of overflow cells — no valves, no moving parts, 
+  no crew operation. Used to replenish header tanks from bulk ballast zone during 
+  the dry phase of the voyage.
+</p>
+
+<div class="note">
+  <strong>Novel device:</strong> Wave-powered pumps using overflow principles exist 
+  (Jobb Wave Pump, 2009 patent) but use fixed coastal installations with oscillating 
+  air column drive. The tilt-weir pump uses vessel motion itself as the drive, 
+  with internal sequential overflow cells. No prior art identified for this specific 
+  application. The device was developed in the context of this Ark research.
+</div>
+
+<h3>Operating Principle</h3>
+
+<p>
+  A series of open troughs arranged in a zigzag, each slightly higher than the previous, 
+  connected by overflow walls of incrementally increasing height. Vessel tilt causes 
+  water to spill over the lower end of each overflow wall into the next trough. 
+  The wall height prevents return flow. Net result: water ratchets upward one step 
+  per tilt cycle.
+</p>
+
+<div class="calc">No valves required — just geometry:
+  Each overflow wall slightly higher than the previous
+  Vessel tilts → water surface tilts → water spills over lower wall edge
+  Vessel returns upright → wall too high for backflow
+  Next tilt → water spills further forward
+  Net: water moves uphill one cell per tilt cycle</div>
+
+<h3>Sizing for Reliable Operation</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Value</th><th>Notes</th></tr>
+  <tr><td>Minimum design roll angle</td><td>~8° (sea state 5)</td><td>Moderate-heavy weather — pump works hardest when most needed</td></tr>
+  <tr><td>Trough width</td><td>~2.0m</td><td>Wider trough = more head available per tilt cycle</td></tr>
+  <tr><td>Head available at 8° tilt</td><td>2.0 × tan(8°) = ~280mm</td><td>Maximum overflow wall height</td></tr>
+  <tr><td>Overflow wall height</td><td>~200mm (conservative)</td><td>Leaves margin for wave irregularity</td></tr>
+  <tr><td>Elevation per step</td><td>~200mm net</td><td>Accounting for ~70% cycle efficiency</td></tr>
+  <tr><td>Total elevation needed</td><td>~13m (ballast zone to roof)</td><td></td></tr>
+  <tr><td>Steps required</td><td>13,000 ÷ 200 = ~65 steps</td><td></td></tr>
+  <tr><td>Total trough length</td><td>65 × 2.0m = ~130m per side</td><td>Zigzag in ~35m horizontal run ✓</td></tr>
+</table>
+
+<h3>Construction</h3>
+
+<table>
+  <tr><th>Element</th><th>Specification</th></tr>
+  <tr><td>Trough</td><td>Timber, 2.0m wide × 0.3m deep, pitched fabric liner — watertight</td></tr>
+  <tr><td>Overflow walls</td><td>Timber partition, height increasing by ~200mm each step — no metal required</td></tr>
+  <tr><td>Location</td><td>Outboard service column, both sides — zigzag from Deck 1 to roof level</td></tr>
+  <tr><td>Moving parts</td><td>None</td></tr>
+  <tr><td>Maintenance</td><td>Pitched fabric repair if trough leaks — onboard pitch cooker</td></tr>
+</table>
+
+<h3>Transfer Rate Estimate</h3>
+
+<div class="calc">Pitch cycle period: ~8 seconds (typical swell)
+Cycles per hour: 450
+Efficient cycles (10% at moderate swell): 45 per hour
+Volume per successful overflow: 2.0m × 0.3m deep × spillage fraction ~0.05m = ~5 litres
+Transfer rate: 45 × 5L = ~225 litres/hour = ~5.4 m³/day
+
+Daily animal consumption: ~6 m³/day
+Tilt-weir pump nearly matches daily consumption in moderate swell ✓
+
+In heavier weather (sea state 6-7): significantly higher transfer rate
+Header tanks (251 m³) can be replenished from empty in ~47 days of moderate pumping</div>
+
+<div class="note note-provisional">
+  <strong>Transfer rate to be confirmed:</strong> The above estimate uses simplified assumptions. 
+  Wave frequency, trough resonance, and actual tilt angles need modelling. The pump is 
+  supplementary to rainwater harvesting — not the primary supply. Even a fraction of the 
+  estimated rate is adequate given the large header tank buffer (42 days) and cage reservoir 
+  buffer (2–4 weeks).
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>7. Animal Water Consumption</h2>
+
+<h3>Torpor Reduction</h3>
+
+<p>
+  Modern live animal transport ships operate with fully conscious, active animals — 
+  and even these show 20–30% reduced feed and water intake compared to animals at pasture 
+  (industry standard observation). The Ark's conditions would drive further reduction:
+</p>
+
+<table>
+  <tr><th>Factor</th><th>Effect on water consumption</th></tr>
+  <tr><td>Darkness / low light</td><td>Reduced activity → reduced metabolic rate</td></tr>
+  <tr><td>Cool temperatures</td><td>Lower metabolic rate → less water needed</td></tr>
+  <tr><td>Torpor / semi-hibernation (small mammals, reptiles)</td><td>70–80% reduction in consumption</td></tr>
+  <tr><td>No growth, no reproduction (maintenance only)</td><td>Minimum metabolic water requirement</td></tr>
+  <tr><td>Stress-induced anorexia (initial period)</td><td>Further short-term reduction</td></tr>
+</table>
+
+<div class="calc">Population breakdown:
+  Small mammals, reptiles, most birds (~70%): 70-80% reduction → ~0.2 L/day avg
+  Medium animals (~25%):                      30% reduction   → ~2.0 L/day avg  
+  Large animals (~5%):                        20% reduction   → ~15 L/day avg
+
+Weighted average: (0.7 × 0.2) + (0.25 × 2.0) + (0.05 × 15)
+               = 0.14 + 0.50 + 0.75
+               = ~1.4 L/day/animal
+
+At 6,000 animals: 6,000 × 1.4 = 8,400 L/day
+Conservative working figure used: 6,000 L/day (1.0 L/day avg — more conservative)</div>
+
+<div class="note">
+  <strong>Comparison with Woodmorappe:</strong> Woodmorappe did not explicitly invoke torpor-reduced 
+  consumption, did not account for rainwater harvesting, and allocated ~10% of hull volume for water. 
+  On an equivalent hull this would be ~6,250 m³. This design requires only ~1,584 m³ for the 
+  critical dry phase — a factor of ~4 reduction — explained by fewer animals, torpor reduction, 
+  and the dual-purpose ballast/storage system.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>8. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Tilt-weir pump transfer rate</td><td>Model wave frequency, trough resonance, actual tilt angles</td></tr>
+  <tr><td>2</td><td>Ballast fill level for draft</td><td>Set to achieve 7.77m draft (Genesis 7:20) — see Stability page</td></tr>
+  <tr><td>3</td><td>Bamboo pipe sizing</td><td>Confirm diameter for required flow rates at gravity head</td></tr>
+  <tr><td>4</td><td>Cage reservoir design</td><td>Size individual trough volumes for 2–4 week supply by animal category</td></tr>
+  <tr><td>5</td><td>Parapet height</td><td>Confirm ~600mm adequate for wave deflection at design sea state</td></tr>
+  <tr><td>6</td><td>Tilt-weir pump patent search</td><td>Confirm no prior art for vessel-tilt-driven internal sequential overflow pump</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.518m (Royal Egyptian) &nbsp;|&nbsp; Last updated: July 2026
+</footer>
+
+</body>
+</html>
