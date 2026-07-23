@@ -164,7 +164,7 @@ tr:last-child td { border-bottom: 2px solid #2c4a2e; }
   border: 1px solid #ccc;
 }
 
-.img-block .caption {
+.caption {
   font-size: 0.82rem;
   color: #555;
   font-family: 'Helvetica Neue', Arial, sans-serif;
