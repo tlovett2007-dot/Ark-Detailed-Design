@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stability — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Stability</h1>
+  <div class="meta">
+    Cubit: 0.518m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: July 2026 &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Stability
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. Design Philosophy — Setting GM from Seakeeping</h2>
+
+<p>
+  Stability design proceeds top-down: set the target roll period first, derive the required GM,
+  then calculate the required KG and arrange masses to achieve it. This avoids the trap of
+  calculating GM from an assumed mass distribution and accepting whatever roll period results.
+</p>
+
+<p>
+  The Ark is a passive vessel with no propulsion, no ability to alter heading under power,
+  and 8 crew managing ~6,000 animals over 371 days. Animal welfare and crew safety both
+  demand comfortable motion. Snappy roll (short period, high GM) causes stress, injury,
+  feed/water spillage and structural fatigue. The design target is a long, gentle roll period.
+</p>
+
+<div class="note">
+  <strong>Non-linear stability objective:</strong> The ideal GZ curve is shallow at small angles
+  (soft, comfortable motion) and steepening at larger angles (strong capsize resistance).
+  This is achieved by the combination of: curved bilge (increasing waterplane with heel),
+  outboard bilge keels (engaging at larger angles), and corner header tanks (outboard high mass).
+  See <a href="../seakeeping/seakeeping.html">Seakeeping</a> for the wave environment context.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Target Roll Period</h2>
+
+<p>
+  The flood wave environment is dominated by confused crossing seas from multiple directions
+  simultaneously — see <a href="../seakeeping/seakeeping.html">Seakeeping</a>. No single
+  dominant wave period exists throughout most of the voyage, reducing resonance risk.
+  The receding phase (days 150–371) introduces a directional wind sea from God's drying wind
+  (Genesis 8:1) with period approximately 14–18 seconds for a sustained global wind.
+</p>
+
+<table>
+  <tr><th>Roll period</th><th>Assessment</th></tr>
+  <tr><td>&lt;10 seconds</td><td>Too stiff — snappy violent roll, animal stress, structural fatigue</td></tr>
+  <tr><td>10–15 seconds</td><td>Marginal — uncomfortable, close to wave period range</td></tr>
+  <tr><td>20–25 seconds</td><td>Target — comfortable, well clear of dominant wave periods</td></tr>
+  <tr><td>&gt;30 seconds</td><td>Very tender — risk of slow progressive heel</td></tr>
+</table>
+
+<p><strong>Selected target: T = 22 seconds</strong> — midpoint of comfort range.</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Required GM</h2>
+
+<h3>Roll Period Formula</h3>
+
+<div class="calc">T = 2π × k / √(g × GM)
+
+Where:
+  T = roll period (seconds)
+  k = radius of gyration (m) — accounts for mass distribution
+  g = 9.81 m/s²
+  GM = metacentric height (m)
+
+Rearranging for GM:
+  GM = (2π × k)² / (g × T²)</div>
+
+<h3>Radius of Gyration (k)</h3>
+
+<p>
+  k = C × B where C is typically 0.39–0.45 for conventional vessels.
+  For the Ark, mass is concentrated outboard (corner tanks, heavy hull skin, outboard keels)
+  giving a higher C than normal. Using C = 0.45:
+</p>
+
+<div class="calc">k = 0.45 × 22.4m (internal beam) = ~10.1m
+
+Note: outboard bilge keels and corner header tanks increase effective k further.
+This figure is conservative — actual k likely higher, meaning actual required GM
+is lower than calculated here, easing the KG requirement.</div>
+
+<h3>GM Calculation</h3>
+
+<div class="calc">At T = 22 seconds, k = 10.1m:
+
+GM = (2π × 10.1)² / (9.81 × 22²)
+   = (63.5)² / (9.81 × 484)
+   = 4,032 / 4,748
+   = ~0.85m
+
+Target GM = 0.85m</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Hull Geometry at Target Draft</h2>
+
+<h3>Draft</h3>
+
+<p>
+  Genesis 7:20 states the waters rose 15 cubits above the mountains. This is interpreted as
+  Noah reporting minimum clearance equal to his known draft of 15 cubits, rather than a
+  measured water depth above mountain peaks (Noah had no means of measuring the latter but
+  knew his draft precisely). See <a href="../biblical-analysis/biblical-analysis.html">Biblical Analysis</a>.
+</p>
+
+<div class="calc">Target draft = 15 cubits × 0.518m = 7.77m</div>
+
+<h3>KB — Centre of Buoyancy Height</h3>
+
+<p>For a wall-sided hull with rounded bilge:</p>
+
+<div class="calc">KB ≈ 0.53 × draft = 0.53 × 7.77m = ~4.12m</div>
+
+<h3>BM — Metacentric Radius</h3>
+
+<div class="calc">BM = I_waterplane / V_displaced
+
+Waterplane second moment of area:
+  I = (1/12) × L × B³ × Cw
+  = (1/12) × 155.4 × 22.4³ × 0.88
+  = ~127,000 m⁴
+
+Displacement volume:
+  V = 20,825t / 1.025 = ~20,317 m³
+
+BM = 127,000 / 20,317 = ~6.25m</div>
+
+<h3>KM — Metacentre Height</h3>
+
+<div class="calc">KM = KB + BM = 4.12 + 6.25 = ~10.37m</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Required KG</h2>
+
+<div class="calc">GM = KM - KG
+KG = KM - GM = 10.37 - 0.85 = ~9.52m</div>
+
+<p>
+  KG = 9.52m on a 15.54m hull — the centre of gravity must sit at
+  <strong>~61% of hull height</strong>, which is above the waterline (7.77m draft).
+  This is unusual but not unprecedented — sailing yachts regularly have KG above waterline
+  due to rig and sails. Here it is achieved by mass distribution, not a rig.
+</p>
+
+<div class="note note-provisional">
+  <strong>KG is very sensitive to k:</strong> If outboard keels and corner tanks push k from
+  10.1m to say 11m, the required GM drops to ~0.71m and required KG drops to ~9.66m.
+  The outboard keel specification (pending) will refine this significantly.
+  A higher k is better — it allows a lower (more achievable) KG for the same roll period.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>6. Achieving the Target KG</h2>
+
+<p>
+  KG ~9.5m requires mass to be concentrated HIGH in the vessel. The natural tendency
+  of a ship is to have KG well below this — heavy structure low, cargo in the hold.
+  The Ark requires deliberate high mass placement.
+</p>
+
+<h3>Mass Inventory — Vertical Distribution</h3>
+
+<table>
+  <tr><th>Item</th><th>Mass (t)</th><th>Centroid height</th><th>Moment (t·m)</th></tr>
+  <tr><td>Hull skin (perimeter — high centroid)</td><td>~11,400</td><td>~7.77m (mid-hull)</td><td>~88,554</td></tr>
+  <tr><td>Deck structures × 3</td><td>~2,370</td><td>~7.77m avg</td><td>~18,416</td></tr>
+  <tr><td>Bulkheads + vertical structure</td><td>~2,070</td><td>~7.77m</td><td>~16,084</td></tr>
+  <tr><td>Ballast water (partial fill ~1,500 m³)</td><td>~1,500</td><td>~1.0m</td><td>~1,500</td></tr>
+  <tr><td>Bulk fodder (bottom deck)</td><td>~620</td><td>~2.5m</td><td>~1,550</td></tr>
+  <tr><td>Animals (distributed)</td><td>~500</td><td>~7.77m</td><td>~3,885</td></tr>
+  <tr><td>Header tanks (roof, full)</td><td>~251</td><td>~14.0m</td><td>~3,514</td></tr>
+  <tr><td>Bow/stern fitout + ramps</td><td>~1,550</td><td>~7.77m</td><td>~12,044</td></tr>
+  <tr><td>Family quarters + equipment</td><td>~50</td><td>~11.0m</td><td>~550</td></tr>
+  <tr><td><strong>Totals</strong></td><td><strong>~20,311</strong></td><td></td><td><strong>~146,097</strong></td></tr>
+</table>
+
+<div class="calc">KG = Total moment / Total mass
+   = 146,097 / 20,311
+   = ~7.19m</div>
+
+<p>
+  Calculated KG of <strong>7.19m</strong> vs required KG of <strong>~9.52m</strong>.
+  Gap = <strong>2.33m</strong> — significant. The Ark as naturally loaded is too stiff.
+</p>
+
+<h3>Options to Raise KG</h3>
+
+<table>
+  <tr><th>Option</th><th>Method</th><th>KG effect</th><th>Practical?</th></tr>
+  <tr>
+    <td>Reduce ballast fill</td>
+    <td>Less water in ballast zone — removes low mass</td>
+    <td>+moderate</td>
+    <td>✓ — simple valve operation</td>
+  </tr>
+  <tr>
+    <td>Move fodder to upper decks</td>
+    <td>Bulk fodder on Deck 3 instead of Deck 1</td>
+    <td>+moderate</td>
+    <td>✓ — design choice</td>
+  </tr>
+  <tr>
+    <td>Stone ballast on weatherdeck</td>
+    <td>Dense mass at maximum height ~15m</td>
+    <td>+significant</td>
+    <td>✓ — unconventional but effective</td>
+  </tr>
+  <tr>
+    <td>Increase outboard keel mass</td>
+    <td>Increases k → longer period for same KG</td>
+    <td>Reduces required KG</td>
+    <td>✓ — preferred solution</td>
+  </tr>
+  <tr>
+    <td>Full header tanks</td>
+    <td>251t at 14m — already included above</td>
+    <td>Already counted</td>
+    <td>✓</td>
+  </tr>
+</table>
+
+<div class="note note-provisional">
+  <strong>Primary solution — outboard keels:</strong> Increasing k by moving mass outboard
+  is more elegant than moving mass upward. Outboard bilge keels add mass at maximum beam radius,
+  dramatically increasing k and therefore allowing a lower (more natural) KG to achieve the
+  target roll period. The keel specification is the critical pending item.
+  Stone on the weatherdeck remains available as a supplementary measure if needed.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>7. Outboard Keel Contribution</h2>
+
+<p>
+  The Ark has triple bilge keels — the specification is pending but their effect on k
+  can be estimated. If the keels add say 500 tonnes at a radius of 11m from centreline:
+</p>
+
+<div class="calc">Additional I from keels:
+  ΔI = 500,000 kg × (11m)² × 2 sides = 121,000,000 kg·m²
+
+Current I (from hull mass distribution):
+  I_current = m × k² = 20,311,000 × 10.1² = ~2,070,000,000 kg·m²
+
+New total I:
+  I_new = 2,070,000,000 + 121,000,000 = ~2,191,000,000 kg·m²
+
+New k:
+  k_new = √(I_new / m_total) = √(2,191,000,000 / 20,811,000) = ~10.26m
+
+New required GM at T=22s:
+  GM = (2π × 10.26)² / (9.81 × 484) = ~0.88m (barely changes)
+
+New required KG:
+  KG = 10.37 - 0.88 = ~9.49m</div>
+
+<p>
+  The keel mass alone doesn't close the gap — the keels contribute to roll DAMPING
+  (resisting roll velocity) more than to the period itself. The period is dominated by GM.
+  The real benefit of outboard keels is damping amplitude, not changing period.
+</p>
+
+<div class="note note-provisional">
+  <strong>Outstanding question:</strong> How to close the 2.33m KG gap.
+  Options being evaluated: reduce ballast fill + move fodder upward + stone on weatherdeck.
+  Full sensitivity analysis pending CAD mass model. Outboard keel specification needed.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>8. Ballast Tuning</h2>
+
+<p>
+  The ballast zone (~4,750 m³ capacity) provides active trim and stability control.
+  Reducing ballast fill raises KG (removes low mass) and reduces draft simultaneously.
+</p>
+
+<div class="calc">Effect of reducing ballast from 1,500t to 500t (removing 1,000t at ~1.0m height):
+
+  Moment removed: 1,000 × 1.0 = 1,000 t·m
+  Mass removed: 1,000t
+  New total mass: 20,311 − 1,000 = 19,311t
+  New total moment: 146,097 − 1,000 = 145,097 t·m
+  New KG: 145,097 / 19,311 = ~7.51m
+
+  KG rises from 7.19m to 7.51m — improvement of 0.32m
+  Still well short of 9.52m target.
+
+  Effect on draft:
+  New displacement: 19,311t
+  New draft ≈ 7.77 × (19,311/20,311) = ~7.39m — slightly less than target</div>
+
+<p>
+  Ballast reduction alone is insufficient to close the KG gap. Multiple measures needed simultaneously.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>9. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Outboard keel specification</td><td>Mass, dimensions, radius — critical for k calculation</td></tr>
+  <tr><td>2</td><td>KG gap closure strategy</td><td>Combination of: reduced ballast + high fodder + weatherdeck stone</td></tr>
+  <tr><td>3</td><td>CAD mass model</td><td>Precise centroids for all major weight groups</td></tr>
+  <tr><td>4</td><td>GZ curve</td><td>Full righting lever curve — confirm non-linear stability behaviour</td></tr>
+  <tr><td>5</td><td>Waterplane coefficient Cw</td><td>Confirm 0.88 from CAD waterplane geometry</td></tr>
+  <tr><td>6</td><td>Roll damping from bilge keels</td><td>Estimate amplitude reduction in design sea state</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.518m (Royal Egyptian) &nbsp;|&nbsp; Last updated: July 2026
+</footer>
+
+</body>
+</html>

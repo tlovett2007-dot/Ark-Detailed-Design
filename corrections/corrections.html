@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Corrections — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Design Corrections</h1>
+  <div class="meta">
+    Last revised: July 2026 &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Design Corrections
+</nav>
+
+<p>
+  The Ark Encounter (AiG, Williamstown KY, opened 2016) was developed partly from 
+  the author's prior CAD work and design concepts. During the artistic and exhibition 
+  development process, a number of engineering decisions were modified — in some cases 
+  replacing passive, self-regulating systems with more complex alternatives that 
+  introduce unnecessary failure modes. This page documents those modifications, 
+  the original engineering rationale, and the correct solution.
+</p>
+
+<div class="note">
+  <strong>Note on tone:</strong> These corrections are made in the spirit of engineering 
+  rigour, not personal criticism. Exhibition design involves legitimate constraints 
+  (visual appeal, visitor understanding, construction practicality) that differ from 
+  genuine naval architecture requirements. The corrections documented here are relevant 
+  to the feasibility argument — what Noah's vessel actually required — not to the 
+  validity of the Ark Encounter as a museum experience.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. Animal Water Delivery — Rotating Vessel vs Valve</h2>
+
+<h3>Original Design (Author)</h3>
+
+<p>
+  A rotating vessel water delivery system — the ancient and proven <strong>chicken 
+  drinker</strong> principle:
+</p>
+
+<table>
+  <tr><th>Element</th><th>Description</th></tr>
+  <tr><td>Vessel</td><td>Inverted container filled with water, open at base</td></tr>
+  <tr><td>Trough</td><td>Shallow trough below the vessel opening</td></tr>
+  <tr><td>Mechanism</td><td>Animal drinks from trough → water level drops → air enters vessel → water flows by gravity to restore level → cycle repeats</td></tr>
+  <tr><td>Moving parts</td><td>None — gravity and atmospheric pressure only</td></tr>
+  <tr><td>Failure modes</td><td>None beyond physical damage to vessel</td></tr>
+  <tr><td>Crew operation</td><td>None — refill vessel periodically from header tank above</td></tr>
+  <tr><td>Historical precedent</td><td>Chicken drinker design used continuously for centuries — proven reliable at scale</td></tr>
+  <tr><td>Vessel motion tolerance</td><td>Excellent — system self-regulates regardless of orientation within normal roll angles</td></tr>
+</table>
+
+<h3>Ark Encounter Modification</h3>
+
+<p>
+  The rotating vessel was replaced with a <strong>stationary drum with a valve</strong> 
+  controlling water flow — apparently for visual clarity in the exhibition context 
+  (attributed to artistic direction, possibly Travis Wilson).
+</p>
+
+<h3>Engineering Problem with the Valve System</h3>
+
+<p>
+  The valve system introduces a critical failure mode absent from the original design:
+</p>
+
+<div class="calc">Failure rate analysis:
+
+Animals on Ark:          ~6,000 kinds × 2 = ~12,000 animals
+Water valves required:   ~12,000 (one per cage/drinker)
+Voyage duration:         371 days
+Valve operations:        12,000 × ~4 operations/day × 371 days = ~17,800,000
+
+At 6-Sigma quality (3.4 defects per million opportunities):
+Expected failures:       17,800,000 × 0.0000034 = ~61 valve failures
+
+At more realistic manufacturing quality (4-Sigma = 6,210 defects/million):
+Expected failures:       17,800,000 × 0.00621 = ~110,538 valve failures 😄
+
+Even at 6-Sigma: 61 failures × potential animal kind loss = feasibility risk
+Pre-industrial bronze/timber valves: far below 6-Sigma</div>
+
+<p>
+  A single leaking valve that allows water to drain from a cage, or a stuck valve 
+  that prevents water reaching an animal, could kill the occupants. With thousands 
+  of valves operating for 371 days in a pre-industrial timber and bronze construction, 
+  the probability of at least one failure approaches certainty.
+</p>
+
+<p>
+  The rotating vessel system has no valves. It cannot fail through valve malfunction. 
+  The only failure mode is physical damage to the vessel itself — visible, 
+  immediately obvious, and trivially repaired with pitched fabric and a replacement vessel.
+</p>
+
+<h3>The Correct System</h3>
+
+<table>
+  <tr><th>Property</th><th>Rotating vessel (original)</th><th>Valve system (AE)</th></tr>
+  <tr><td>Moving parts</td><td>None ✓</td><td>Valve mechanism ✗</td></tr>
+  <tr><td>Failure modes</td><td>Physical damage only ✓</td><td>Valve leak, valve stuck, valve corrosion ✗</td></tr>
+  <tr><td>Crew operation</td><td>Periodic refill only ✓</td><td>Valve inspection/maintenance ✗</td></tr>
+  <tr><td>Vessel motion tolerance</td><td>Excellent ✓</td><td>Dependent on valve orientation ✗</td></tr>
+  <tr><td>Pre-industrial feasibility</td><td>Proven technology ✓</td><td>Requires precision manufacture ✗</td></tr>
+  <tr><td>Self-regulating</td><td>Yes — animal controls its own supply ✓</td><td>No — valve must be correctly set ✗</td></tr>
+</table>
+
+<div class="note">
+  <strong>Engineering principle:</strong> In a system where failure = potential extinction 
+  of an animal kind, passive self-regulating systems with zero moving parts are always 
+  preferred over active systems requiring precision components. The chicken drinker 
+  principle eliminates the failure mode entirely rather than reducing its probability.
+  Noah had 8 people to manage 6,000 animals — passive systems are not a convenience, 
+  they are a necessity.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Hydroponic Plant Stand — Static Test on a Ship</h2>
+
+<h3>The Ark Encounter System</h3>
+
+<p>
+  A hydroponic plant stand with a shallow-angle gravity-fed watering channel — 
+  water flows along channels at a slight gradient, delivering moisture to plant 
+  roots by gravity flow. Tested with a marble on a stationary floor to confirm 
+  the gradient was sufficient for flow. Test result: marble rolled along channel. ✓
+</p>
+
+<h3>The Engineering Problem</h3>
+
+<p>
+  The test was conducted on a stationary floor. The Ark is not stationary.
+</p>
+
+<div class="calc">Effect of vessel roll on shallow-angle watering channel:
+
+Design gradient: say 2° (shallow angle for slow water flow)
+Vessel roll angle: 8° at sea state 5 (moderate conditions)
+
+Roll WITH channel gradient:
+  Effective slope = 2° + 8° = 10° — water rushes rapidly to low end
+  Plants at high end: starved
+  Plants at low end: drowned
+
+Roll AGAINST channel gradient:
+  Effective slope = 2° - 8° = -6° — water flows BACKWARD
+  Plants at high end: drowned (water reverses up channel)
+  Plants at low end: starved
+
+At fully developed sea state (8° roll, period ~22 seconds):
+  Channel alternately floods and drains every 11 seconds
+  No plant survives this treatment for 371 days 😄</div>
+
+<h3>The Marble Test Problem</h3>
+
+<p>
+  Testing a gravity-fed system with a marble on a stationary floor confirms only that 
+  the gradient exists. It says nothing about system behaviour when the floor tilts 
+  ±8° every 22 seconds for 371 days. This is a fundamental test methodology error — 
+  the test environment does not represent the operating environment.
+</p>
+
+<h3>Correct Solutions</h3>
+
+<table>
+  <tr><th>System</th><th>Vessel motion tolerance</th><th>Notes</th></tr>
+  <tr><td>Wicking/capillary system</td><td>Excellent — capillary action independent of orientation</td><td>Proven technology, simple construction, passive</td></tr>
+  <tr><td>Individual pot trays with drainage</td><td>Good — each pot self-contained</td><td>Water retained in pot regardless of vessel angle</td></tr>
+  <tr><td>Deep substrate beds</td><td>Good — soil retains moisture through roll cycles</td><td>The promenade planting strip already specified this way</td></tr>
+  <tr><td>Vertical tower growing</td><td>Moderate — depends on orientation</td><td>Needs motion analysis</td></tr>
+  <tr><td>Shallow gravity channel</td><td>Poor ✗</td><td>AE system — fails in any seaway</td></tr>
+</table>
+
+<div class="note">
+  <strong>The promenade planting strip in this design</strong> uses deep substrate 
+  beds fertilised by bird guano from above — a wicking/soil-retention system with 
+  no gravity channels. Vessel motion irrelevant to plant survival. The sprouting 
+  tray system uses shallow trays that are self-contained — each tray retains its 
+  moisture through roll cycles independently.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Further Corrections — To Be Added</h2>
+
+<table>
+  <tr><th>Topic</th><th>Issue</th><th>Status</th></tr>
+  <tr><td>Hull form</td><td>AE hull is a static building — no weathervaning, no bilge keels, no outboard keels. Fine for a museum, wrong for seakeeping analysis.</td><td><span class="status status-tbd">To develop</span></td></tr>
+  <tr><td>Interior layout</td><td>Three longitudinal public corridors vs single functional promenade — see <a href="../cubit/cubit.html">Cubit Analysis</a> beam argument</td><td><span class="status status-confirmed">Documented ✓</span></td></tr>
+  <tr><td>Ramp system</td><td>AE ramps designed for public visitor flow — angle, width and frequency differ from operational animal loading ramps</td><td><span class="status status-tbd">To develop</span></td></tr>
+  <tr><td>Ventilation</td><td>AE uses modern HVAC — ṣohar passive ventilation system not demonstrated</td><td><span class="status status-tbd">To develop</span></td></tr>
+  <tr><td>Structural system</td><td>AE uses modern engineered timber (glulam, LVL) on concrete foundations — not representative of ancient laminated timber construction</td><td><span class="status status-tbd">To develop</span></td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Last updated: July 2026
+</footer>
+
+</body>
+</html>
