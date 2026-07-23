@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventilation — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Ventilation</h1>
+  <div class="meta">
+    Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: July 2026 &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Ventilation
+</nav>
+
+<p>
+  Ventilation is the primary life support system for 6,000 animals and 8 humans over 
+  371 days in a sealed timber vessel. It must manage oxygen supply, CO₂ removal, 
+  humidity, temperature, and air quality — all passively, without mechanical systems, 
+  using only hull geometry and natural convection.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. The Ventilation Challenge</h2>
+
+<table>
+  <tr><th>Parameter</th><th>Challenge</th><th>Scale</th></tr>
+  <tr><td>CO₂ production</td><td>6,000 animals + 8 humans exhaling continuously</td><td>Potentially lethal accumulation without adequate air exchange</td></tr>
+  <tr><td>Humidity</td><td>Animal respiration + water systems + waste</td><td>High humidity promotes mould, rot, disease</td></tr>
+  <tr><td>Temperature</td><td>Animal body heat in enclosed timber vessel</td><td>Overheating risk — 6,000 metabolising bodies</td></tr>
+  <tr><td>Air quality</td><td>Ammonia from waste, methane from fermentation</td><td>Toxic accumulation in enclosed spaces</td></tr>
+  <tr><td>Oxygen</td><td>Consumption by animals, humans, aerobic decomposition</td><td>Must be continuously replenished</td></tr>
+</table>
+
+<div class="note">
+  <strong>The ventilation system must be entirely passive</strong> — no fans, no ducting, 
+  no mechanical systems. Eight people cannot operate a mechanical ventilation system 
+  for 371 days while also managing 6,000 animals. The vessel geometry must do the work.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. The ṣohar — Primary Ventilation Feature</h2>
+
+<p>
+  Genesis 6:16 specifies the ṣohar (צֹהַר) — a roof opening running the full length 
+  of the vessel, 1 cubit (0.524m) high, positioned at the top of the hull below the 
+  roof peak. The ṣohar is the defining ventilation feature of the entire design.
+</p>
+
+<h3>Geometry</h3>
+
+<table>
+  <tr><th>Dimension</th><th>Value</th><th>Notes</th></tr>
+  <tr><td>Length</td><td>~125.4m usable</td><td>Full vessel length less bow/stern compartments</td></tr>
+  <tr><td>Height (coaming)</td><td>0.524m (1 cubit)</td><td>Genesis 6:16 — explicit dimension</td></tr>
+  <tr><td>Width</td><td>4.0m</td><td>Width of central promenade atrium below</td></tr>
+  <tr><td>Position</td><td>Longitudinal centreline, roof level</td><td>Above the promenade atrium — maximum elevation</td></tr>
+  <tr><td>Orientation</td><td>Longitudinal slot</td><td>Aligned with vessel's long axis</td></tr>
+</table>
+
+<h3>The 1-Cubit Coaming</h3>
+
+<p>
+  The 0.524m coaming height sits ABOVE the Genesis 30-cubit hull height — it is not 
+  included in the main hull dimension. The coaming serves multiple functions:
+</p>
+
+<table>
+  <tr><th>Function</th><th>Mechanism</th></tr>
+  <tr><td>Wave exclusion</td><td>0.524m lip prevents green water entering from weatherdeck</td></tr>
+  <tr><td>Rain dam</td><td>Prevents direct rainfall entry — rain falls on weatherdeck and drains to corner header tanks</td></tr>
+  <tr><td>Venturi effect</td><td>Wind passing over the coaming creates low pressure above the opening — draws air upward from below</td></tr>
+  <tr><td>Light admission</td><td>Diffuse natural light enters through the full length opening — illuminates the promenade atrium</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Passive Ventilation Mechanism</h2>
+
+<h3>Stack Effect (Thermal Convection)</h3>
+
+<p>
+  The primary ventilation driver is the stack effect — warm air rises, creating 
+  continuous natural convection through the vessel:
+</p>
+
+<div class="calc">Convection path:
+
+Animals generate heat → warm air rises
+         ↓
+Warm air rises through promenade atrium (full height, 15.72m)
+         ↓
+Exits through ṣohar at roof level (highest point)
+         ↓
+Fresh cooler air drawn in through outboard vent shafts (lower level)
+         ↓
+Air distributed across animal zones
+         ↓
+Picks up heat and gases → rises again → cycle continues</div>
+
+<h3>Animal Heat as Ventilation Driver</h3>
+
+<p>
+  The problem (animal body heat) becomes the solution (convection driver). 
+  6,000 metabolising animals generate substantial heat — estimated:
+</p>
+
+<div class="calc">Heat generation estimate:
+
+Small animals (~4,200 at torpor): ~2W each = 8,400W
+Medium animals (~1,500 at reduced metabolic rate): ~20W each = 30,000W
+Large animals (~300 at reduced metabolic rate): ~100W each = 30,000W
+8 humans: ~80W each = 640W
+Total: ~69,040W ≈ 69kW continuous heat input
+
+This is equivalent to ~690 light bulbs heating the interior continuously.
+Stack effect convection driven by this heat input is substantial.</div>
+
+<h3>Wind-Driven Ventilation</h3>
+
+<p>
+  When the vessel is weathervaning (bow into wind), wind passes longitudinally 
+  over the ṣohar creating a Venturi low-pressure zone above the opening. This 
+  supplements the stack effect — particularly effective in the windy receding phase 
+  (days 150–371) when God's drying wind provides a reliable air stream.
+</p>
+
+<h3>Cross Ventilation — ṣohar to Outboard Vents</h3>
+
+<p>
+  The outboard service columns (1m wide, both sides, full height) function as 
+  vertical vent shafts — fresh air inlets at lower levels balancing the ṣohar 
+  exhaust at roof level. The pressure differential between the warm ṣohar exhaust 
+  and the cooler outboard inlets drives continuous cross-ventilation.
+</p>
+
+<table>
+  <tr><th>Element</th><th>Function</th><th>Location</th></tr>
+  <tr><td>ṣohar</td><td>Primary exhaust — warm stale air exits</td><td>Roof centreline, full length</td></tr>
+  <tr><td>Outboard vent shafts</td><td>Fresh air inlets — cooler air enters</td><td>Both sides, full height service columns</td></tr>
+  <tr><td>Promenade atrium</td><td>Vertical chimney — connects animal zones to ṣohar</td><td>Central, full height, full length</td></tr>
+  <tr><td>Deck openings</td><td>Air transfer between decks</td><td>Adjacent to promenade at each deck level</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Air Quality Management</h2>
+
+<h3>Ammonia and Methane</h3>
+
+<p>
+  Animal waste produces ammonia (NH₃) from urea decomposition and methane (CH₄) 
+  from anaerobic fermentation. Both are:
+</p>
+
+<table>
+  <tr><th>Gas</th><th>Density vs air</th><th>Behaviour</th><th>Implication</th></tr>
+  <tr><td>Ammonia NH₃</td><td>Lighter than air (MW 17 vs 29)</td><td>Rises naturally</td><td>Drawn up through atrium to ṣohar — self-venting ✓</td></tr>
+  <tr><td>Methane CH₄</td><td>Lighter than air (MW 16)</td><td>Rises naturally</td><td>Same — self-venting through stack effect ✓</td></tr>
+  <tr><td>CO₂</td><td>Heavier than air (MW 44)</td><td>Sinks to floor level</td><td>Risk of accumulation at floor level — mitigated by air movement ✓</td></tr>
+</table>
+
+<p>
+  The fortunate coincidence: the most dangerous gases (ammonia, methane) are lighter 
+  than air and rise naturally toward the ṣohar exhaust. The stack effect specifically 
+  targets these gases for removal. CO₂, which sinks, is managed by the general air 
+  circulation keeping floor-level air moving.
+</p>
+
+<h3>Cedar Aromatic System</h3>
+
+<p>
+  Cedar of Lebanon interior fitout provides passive air quality management through 
+  continuous off-gassing of aromatic compounds:
+</p>
+
+<table>
+  <tr><th>Compound</th><th>Effect</th><th>Benefit</th></tr>
+  <tr><td>Thujaplicins</td><td>Natural biocide — antifungal, antibacterial</td><td>Suppresses mould growth in humid interior</td></tr>
+  <tr><td>Cedrol</td><td>Insect repellent</td><td>Passive fly, mite, flea management</td></tr>
+  <tr><td>Terpenes</td><td>Aromatic, antifungal</td><td>Counteracts ammonia and manure odours</td></tr>
+</table>
+
+<p>
+  Surface area: ~8,000–10,000 m² of cedar continuously off-gassing throughout 
+  the voyage. The ventilation system draws this cedar-scented air through the 
+  animal zones — passive aromatherapy for 6,000 animals. 😄
+</p>
+
+<h3>Header Tank Condensation Effect</h3>
+
+<p>
+  The corner header tanks (251 m³ of water at roof level) are cooler than the 
+  rising warm animal air. Warm humid air rising through the atrium contacts the 
+  cool tank bases — moisture condenses on the tank surfaces, partially 
+  dehumidifying the air before it exits through the ṣohar. Passive dehumidification 
+  at the point of air exhaust. Condensate drains back down the service column to 
+  the ballast zone.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Deck-by-Deck Ventilation</h2>
+
+<table>
+  <tr><th>Deck</th><th>Ventilation quality</th><th>Notes</th></tr>
+  <tr>
+    <td>Deck 3 (Threes — top)</td>
+    <td>Best — directly below ṣohar</td>
+    <td>Large animals and primates assigned here — highest air quality requirements. 
+    Warm stale air exits immediately above. Fresh air from outboard vents at this level.</td>
+  </tr>
+  <tr>
+    <td>Deck 2 (Twos — middle)</td>
+    <td>Good — mid-height in stack</td>
+    <td>Small and medium mammals. Air quality adequate for torpor-reduced metabolism.</td>
+  </tr>
+  <tr>
+    <td>Deck 1 (Lowers — bottom)</td>
+    <td>Least — lowest in stack</td>
+    <td>Reptiles, snakes — lowest metabolic rate, lowest oxygen requirement. 
+    CO₂ accumulation risk mitigated by full-length longitudinal vent shaft at this level.</td>
+  </tr>
+  <tr>
+    <td>Promenade atrium (all decks)</td>
+    <td>Excellent — direct ṣohar connection</td>
+    <td>Bird cages in atrium — birds most sensitive to air quality. 
+    Direct stack effect path to ṣohar exhaust. Best location for sensitive species.</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Deck assignment and ventilation:</strong> The deck assignments (large animals 
+  top, reptiles bottom) are consistent with ventilation requirements as well as waste 
+  drainage requirements — both criteria point to the same solution independently. 
+  See <a href="../animal-zones/animal-zones.html">Animal Zones</a>.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>6. Ventilation During Storm Phases</h2>
+
+<table>
+  <tr><th>Phase</th><th>Days</th><th>Ventilation condition</th><th>Notes</th></tr>
+  <tr>
+    <td>Early flood</td>
+    <td>1–40</td>
+    <td>ṣohar partially restricted — green water risk</td>
+    <td>Weatherdeck parapet and coaming provide protection. 
+    Stack effect still operates. Reduced natural light.</td>
+  </tr>
+  <tr>
+    <td>Mid flood</td>
+    <td>40–150</td>
+    <td>Good — storm reducing, ṣohar fully operational</td>
+    <td>Stack effect + wind-driven Venturi. Best ventilation phase.</td>
+  </tr>
+  <tr>
+    <td>Receding</td>
+    <td>150–371</td>
+    <td>Excellent — God's drying wind provides strong Venturi</td>
+    <td>Sustained directional wind over ṣohar — maximum ventilation performance. 
+    Drying wind also reduces interior humidity.</td>
+  </tr>
+</table>
+
+<div class="note note-provisional">
+  <strong>Storm phase ṣohar protection:</strong> During severe weather (Phase 1), 
+  the combination of weatherdeck parapet (first defence) and 0.524m coaming (second 
+  defence) protects the ṣohar from direct wave ingress. However the ventilation rate 
+  may be reduced during the most severe conditions. The enclosed timber vessel with 
+  6,000 animals in torpor can tolerate reduced ventilation for limited periods — 
+  metabolic oxygen demand is dramatically reduced under torpor conditions.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>7. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Air change rate calculation</td><td>Estimate air changes per hour from stack effect — confirm adequate for animal density</td></tr>
+  <tr><td>2</td><td>CO₂ accumulation model</td><td>Worst case CO₂ at floor level — Deck 1 reptile zone</td></tr>
+  <tr><td>3</td><td>ṣohar green water protection</td><td>Model wave ingress risk during Phase 1 with parapet + coaming protection</td></tr>
+  <tr><td>4</td><td>Outboard vent shaft sizing</td><td>Confirm 1m × full height adequate for required air flow rate</td></tr>
+  <tr><td>5</td><td>Cedar off-gassing rate</td><td>Literature search for cedrol/thujaplicin off-gassing rate per m² — confirm adequate concentration</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp; Last updated: July 2026
+</footer>
+
+</body>
+</html>

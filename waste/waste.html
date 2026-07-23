@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Management — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Waste Management</h1>
+  <div class="meta">
+    Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: July 2026 &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Waste Management
+</nav>
+
+<p>
+  Waste management is the primary driver of crew workload. 8 people managing 6,000 
+  animals over 371 days is only viable if waste collection is matched to animal 
+  metabolism — minimising handling effort while maintaining animal welfare. Three 
+  distinct zones handle different animal categories with different waste characters.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. The Three-Zone System</h2>
+
+<p>
+  The fundamental design principle: match the collection method to the waste character. 
+  Never collect what doesn't need collecting. Never use a complex system where a simple 
+  one suffices.
+</p>
+
+<table>
+  <tr><th>Zone</th><th>Animals</th><th>Waste character</th><th>Method</th><th>Frequency</th></tr>
+  <tr>
+    <td><strong>Zone 1</strong><br>Never collect</td>
+    <td>Reptiles, small dry birds (corvids, doves, small passerines), flightless birds (small)</td>
+    <td>Low moisture, low volume per animal. Desiccates rapidly in warm enclosed environment.</td>
+    <td>Mesh cage floors — droppings fall through, desiccate in subfloor litter layer. Self-managing.</td>
+    <td>Subfloor cleanout every ~60 days</td>
+  </tr>
+  <tr>
+    <td><strong>Zone 2</strong><br>Bi-monthly cleanout</td>
+    <td>Small mammals (rodents, rabbits, small marsupials), medium mammals</td>
+    <td>Accumulated litter — bedding + droppings. Manageable in bulk. Low moisture relative to Zone 3.</td>
+    <td>Sawdust/straw litter. Shovelled to barrows every ~60 days. Wheeled to moon pool zone for disposal.</td>
+    <td>Every 60 days — ~6 cleanouts per voyage</td>
+  </tr>
+  <tr>
+    <td><strong>Zone 3</strong><br>Wash-down</td>
+    <td>Large animals (bovines, equines, large deer), large flightless birds (ostriches, cassowaries)</td>
+    <td>High volume, high moisture. Continuous production. Cannot accumulate for 60 days.</td>
+    <td>Slatted/grated floor over shallow collection channel. Gravity drain to moon pool via short sewer run. Periodic wash-down with water.</td>
+    <td>Daily wash-down — 2 crew, ~2 hours</td>
+  </tr>
+</table>
+
+<div class="note">
+  <strong>Promenade bird zone:</strong> Flying birds in atrium cages above 2m height 
+  deposit droppings by gravity onto the planting strip below — a closed-loop system 
+  that converts waste directly to fertiliser. Not collected, not disposed — immediately 
+  useful. See <a href="../passive-systems/passive-systems.html">Passive Systems</a>.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Zone Locations and Deck Assignment</h2>
+
+<table>
+  <tr><th>Zone</th><th>Deck</th><th>Rationale</th></tr>
+  <tr>
+    <td>Zone 1 — reptiles/dry birds</td>
+    <td>Deck 1 (Lowers) and Deck 2 (Twos)</td>
+    <td>Reptiles prefer dark and cool — Deck 1 natural. Minimal drainage infrastructure needed. Zone 1 subfloor is essentially dead space — minimal depth required.</td>
+  </tr>
+  <tr>
+    <td>Zone 2 — small/medium mammals</td>
+    <td>Deck 2 (Twos) primarily</td>
+    <td>Middle position. Barrow route to moon pool via ramp — manageable gradient. Bi-monthly schedule means crew can plan the cleanout efficiently.</td>
+  </tr>
+  <tr>
+    <td>Zone 3 — large animals</td>
+    <td>Deck 3 (Threes — top deck)</td>
+    <td>Adjacent to moon pools which drain downward through the hull. Short sewer run — only a few metres horizontally to moon pool, then gravity down. Best ventilation for highest-output animals. Wash-down water drains by gravity.</td>
+  </tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Subfloor Design by Zone</h2>
+
+<table>
+  <tr><th>Zone</th><th>Subfloor depth</th><th>Construction</th><th>Volume estimate</th></tr>
+  <tr>
+    <td>Zone 1</td>
+    <td>~200mm</td>
+    <td>Mesh cage floor above shallow litter tray. Desiccated material accumulates — removed bi-monthly by shovel. No drainage required.</td>
+    <td>~200 m³</td>
+  </tr>
+  <tr>
+    <td>Zone 2</td>
+    <td>~300mm</td>
+    <td>Solid floor with bedding depth. Collection tray with slight fall toward central drain channel. Drain channel runs to moon pool zone. Barrow access along floor level.</td>
+    <td>~500 m³</td>
+  </tr>
+  <tr>
+    <td>Zone 3</td>
+    <td>~150mm</td>
+    <td>Slatted or grated floor over shallow collection channel. Channel falls directly to moon pool — sewer run only a few metres. Wash-down water flushes channel clean.</td>
+    <td>~150 m³</td>
+  </tr>
+  <tr>
+    <td><strong>Total</strong></td>
+    <td></td>
+    <td></td>
+    <td><strong>~850 m³</strong></td>
+  </tr>
+</table>
+
+<div class="note note-provisional">
+  <strong>Tally revision:</strong> Current volume tally shows 1,078 m³ for subfloor 
+  waste collection as a single undifferentiated figure. The three-zone breakdown above 
+  gives ~850 m³ — recovering approximately 228 m³ to the animal zone. This revision 
+  is pending confirmation from CAD floor area calculations.
+  See <a href="../volume-tally/volume-tally.html">Volume Tally</a>.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Crew Waste Management Workload</h2>
+
+<table>
+  <tr><th>Task</th><th>Zone</th><th>Frequency</th><th>Crew</th><th>Duration</th></tr>
+  <tr><td>Zone 3 wash-down — large animals</td><td>3</td><td>Daily</td><td>2</td><td>~2 hours</td></tr>
+  <tr><td>Zone 2 litter cleanout — small mammals</td><td>2</td><td>Every 60 days</td><td>3</td><td>~1 full day</td></tr>
+  <tr><td>Zone 1 subfloor cleanout — reptiles/birds</td><td>1</td><td>Every 60 days</td><td>2</td><td>~half day</td></tr>
+  <tr><td>Promenade bird guano — to garden</td><td>Atrium</td><td>Self-managing</td><td>0</td><td>—</td></tr>
+  <tr><td>Moon pool inspection</td><td>All</td><td>Weekly</td><td>1</td><td>~30 min</td></tr>
+  <tr><td><strong>Daily average</strong></td><td></td><td></td><td><strong>~2–3 person-hours/day</strong></td><td></td></tr>
+</table>
+
+<p>
+  The bi-monthly cleanout schedule (6 times per voyage) is the most labour-intensive 
+  event — approximately one full day for 3 crew members. Planned in advance, this 
+  represents a manageable periodic maintenance event rather than a continuous burden.
+  The remaining 59 days between cleanouts require only the Zone 3 daily wash-down 
+  for waste management.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Waste Quantities</h2>
+
+<div class="calc">Waste production estimates (torpor-reduced metabolic rates):
+
+Zone 1 — reptiles/dry birds (~3,000 animals):
+  Typical output: ~5g dry waste/animal/day
+  Total: 3,000 × 0.005kg × 60 days = ~900kg per cleanout cycle
+  Desiccated volume: ~1.5 m³ per cleanout ✓ manageable
+
+Zone 2 — small/medium mammals (~2,500 animals):
+  Typical output: ~20g wet waste/animal/day (torpor reduced)
+  Total: 2,500 × 0.020kg × 60 days = ~3,000kg per cleanout
+  Volume with bedding: ~10 m³ per cleanout
+  Barrow loads at 100L per barrow: ~100 barrow loads per cleanout
+  2 crew × 1 day: ~50 barrow loads each — demanding but achievable ✓
+
+Zone 3 — large animals (~500 animals):
+  Typical output: ~5kg wet waste/animal/day (reduced)
+  Daily total: 500 × 5kg = 2,500kg/day = 2.5 tonnes/day
+  Daily volume: ~2.5 m³/day — flushed directly to moon pool
+  Annual total: ~900 tonnes — all gravity drained ✓</div>
+
+<div class="note">
+  <strong>Zone 3 daily volume is significant</strong> — 2.5 m³/day of large animal 
+  waste must drain reliably to the moon pool every day for 371 days. This confirms 
+  the short sewer run requirement: Zone 3 must be adjacent to the moon pool, not 
+  at the far end of the vessel. See 
+  <a href="../moon-pool/moon-pool.html">Moon Pool</a> for drainage design.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>6. Closed Loop — Bird Guano to Garden</h2>
+
+<p>
+  The promenade bird zone creates the only complete closed waste loop on the vessel:
+</p>
+
+<div class="calc">Bird guano nutrient cycle:
+
+~500 birds in atrium cages above 2m
+Guano falls by gravity to planting strip below
+Planting strip: ~1m wide × 125.4m × 3 decks = ~376 m² (partial occupation)
+
+Bird guano nitrogen content: ~15% (one of richest natural fertilisers)
+Daily guano production: ~500 birds × 5g/day = 2.5kg/day
+Annual: ~926kg of high-nitrogen fertiliser continuously applied
+
+Sprout/vegetable yield from 376m² with continuous guano fertilisation:
+Supports significant fresh food supplement — see Passive Systems page</div>
+
+<p>
+  This is the only waste stream that is not disposed of but directly utilised. 
+  It requires zero crew intervention — gravity does the collection, the plants 
+  do the processing. An elegant closed loop from the first principles of the design.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>7. Waste and Ventilation Interaction</h2>
+
+<p>
+  Waste management and ventilation are closely linked — poor waste management 
+  produces gases that overwhelm the ventilation system; good ventilation 
+  accelerates waste desiccation in Zone 1 reducing management burden:
+</p>
+
+<table>
+  <tr><th>Interaction</th><th>Effect</th></tr>
+  <tr><td>Stack effect draws ammonia upward</td><td>Zone 1 and 2 ammonia naturally vented through atrium to ṣohar — reduces toxic accumulation</td></tr>
+  <tr><td>Warm dry air accelerates Zone 1 desiccation</td><td>Faster desiccation = less odour, less mass to remove at cleanout</td></tr>
+  <tr><td>Cedar aromatics counteract waste odours</td><td>Continuous passive odour management throughout voyage</td></tr>
+  <tr><td>Zone 3 wash-down water adds humidity</td><td>Partially offset by stack effect removing humid air — managed by ventilation design</td></tr>
+  <tr><td>Methane from anaerobic fermentation</td><td>Lighter than air — rises naturally to ṣohar exhaust. Fire risk if concentrated — ventilation prevents accumulation.</td></tr>
+</table>
+
+<div class="note">
+  <strong>Methane fire risk:</strong> Large animal manure produces methane under 
+  anaerobic conditions. The Zone 3 daily wash-down prevents anaerobic accumulation 
+  by keeping the collection channel flushed. The stack effect prevents methane 
+  concentration in any zone. The ṣohar provides continuous exhaust. Fire risk 
+  is managed by design rather than requiring active monitoring.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>8. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Subfloor volume by zone</td><td>Confirm from CAD floor areas — replace 1,078 m³ single figure with 3-zone split</td></tr>
+  <tr><td>2</td><td>Zone 2 barrow route</td><td>Confirm ramp access and barrow path from Zone 2 to moon pool disposal point</td></tr>
+  <tr><td>3</td><td>Zone 3 sewer run length</td><td>Confirm "few metres" — depends on moon pool location relative to Zone 3</td></tr>
+  <tr><td>4</td><td>Methane concentration model</td><td>Worst case methane in Zone 3 — confirm ventilation prevents flammable concentration</td></tr>
+  <tr><td>5</td><td>Bedding material specification</td><td>What bedding for Zone 2? Sawdust vs straw vs sand — availability pre-flood, absorbency, weight</td></tr>
+  <tr><td>6</td><td>Zone 3 wash-down water volume</td><td>Estimate daily water needed for Zone 3 flush — impact on header tank consumption</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp; Last updated: July 2026
+</footer>
+
+</body>
+</html>
