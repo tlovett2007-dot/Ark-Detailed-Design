@@ -11,13 +11,15 @@
 <header class="site-header">
   <div class="project-title">Research Documentation</div>
   <h1>Noah's Ark — Naval Architecture Research</h1>
-  <div class="meta">T. Lovett &nbsp;|&nbsp; Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp; Last updated: 2026-07-23 11:58 AEST</div>
+  <div class="meta">T. Lovett &nbsp;|&nbsp; Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp; Last updated: 2026-07-23 12:22 AEST</div>
 </header>
 
 <p>
   Working documentation for the Noah's Ark naval architecture feasibility study.
   Each page covers one topic area and is updated as the design develops.
   All calculations use the Royal Egyptian Cubit of 0.524m.
+  Biblical text is treated as the primary engineering specification document —
+  textual analysis is embedded within the relevant engineering pages, not siloed separately.
 </p>
 
 <h2>1. Metrology</h2>
@@ -25,7 +27,7 @@
   <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
   <tr>
     <td><a href="cubit/cubit.html">Cubit Analysis</a></td>
-    <td>Cubit selection (REC 524mm), Nippur rod reliability, reconciliation with AiG Ark Encounter, moulded vs outside planking convention, promenade argument</td>
+    <td>Cubit selection (REC 524mm), Nippur rod reliability, AiG Ark Encounter reconciliation, moulded vs outside planking convention, promenade argument</td>
     <td><span class="status status-confirmed">Confirmed — 524mm</span></td>
   </tr>
 </table>
@@ -40,7 +42,7 @@
   </tr>
   <tr>
     <td><a href="stability/stability.html">Stability</a></td>
-    <td>KB, BM, KM, target GM, required KG, roll period, draft reconciliation with Genesis 7:20</td>
+    <td>KB, BM, KM, GM, KG, roll period. Genesis 7:20 as draft specification — independent convergence with displacement calculation.</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
   <tr>
@@ -50,22 +52,42 @@
   </tr>
 </table>
 
-<h2>3. Structure &amp; Materials</h2>
+<h2>3. Structure</h2>
 <table>
   <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
   <tr>
-    <td><a href="hull-structure/hull-structure.html">Hull Structure</a></td>
-    <td>Skin specification, scantlings, close-chocked framing, bronze spider straps, plank bending, wet fitting</td>
+    <td><a href="structure-hull-skin/structure-hull-skin.html">Structure — Hull Skin</a></td>
+    <td>Box girder concept, layered skin cross-section, sacrificial layers, plank bending, cold water soak, close-chocked frames, hogging/sagging, kopher pitch system</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
   <tr>
+    <td><a href="structure-internal/structure-internal.html">Structure — Internal</a></td>
+    <td>Genesis 6:16 deck terminology (tachtiyyim/sheniyyim/shelishim), middle-deck door, three deck system, deck construction, promenade structure, bronze spider straps, outboard service columns</td>
+    <td><span class="status status-provisional">Active</span></td>
+  </tr>
+  <tr>
+    <td><a href="structure-bow-stern/structure-bow-stern.html">Structure — Bow &amp; Stern</a></td>
+    <td>Weathervaning asymmetry, bow form, stem construction, stern compartment, fire management, cubit reconciliation via planking angle</td>
+    <td><span class="status status-provisional">Active</span></td>
+  </tr>
+  <tr>
+    <td><a href="structure-bulkheads-ramps/structure-bulkheads-ramps.html">Structure — Bulkheads &amp; Ramps</a></td>
+    <td>Six transverse bulkheads, longitudinal baffles, internal ramps, ring frames</td>
+    <td><span class="status status-tbd">Pending</span></td>
+  </tr>
+</table>
+
+<h2>4. Materials</h2>
+<table>
+  <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
+  <tr>
     <td><a href="materials/materials.html">Materials</a></td>
-    <td>Timber species, pine pitch (kopher), zopissa caulking, bronze alloy, lignum vitae wedges, cedar aromatics</td>
+    <td>Primary timber, plank bending spec, sacrificial layers, dense hardwood wedges, kopher vs hemar (Genesis 6:14 material specification), zopissa caulking, bronze spider straps, cedar aromatics, bamboo pipework</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
 </table>
 
-<h2>4. Systems</h2>
+<h2>5. Systems</h2>
 <table>
   <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
   <tr>
@@ -75,7 +97,7 @@
   </tr>
   <tr>
     <td><a href="ventilation/ventilation.html">Ventilation</a></td>
-    <td>ṣohar design, stack effect, outboard vent shafts, air quality, cedar aromatics, deck-by-deck ventilation, storm phases</td>
+    <td>ṣohar (Genesis 6:16) design, stack effect, outboard vent shafts, air quality management, cedar aromatics, deck-by-deck ventilation, storm phases</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
   <tr>
@@ -85,17 +107,17 @@
   </tr>
   <tr>
     <td><a href="moon-pool/moon-pool.html">Moon Pool</a></td>
-    <td>Double moon pool complex, structural design, waste disposal functions, bilge access, wave dynamics, location rationale</td>
+    <td>Double moon pool complex, structural design, waste disposal, bilge access, wave dynamics, location rationale</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
   <tr>
     <td><a href="passive-systems/passive-systems.html">Passive Systems</a></td>
-    <td>Complete register of all self-regulating systems with mechanism and benefit</td>
+    <td>Complete register of all self-regulating systems. Rooster chronometer detail. Genesis 7–8 as ship's log. Noah's name (nûaḥ) as design brief.</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
 </table>
 
-<h2>5. Animal Accommodation</h2>
+<h2>6. Animal Accommodation</h2>
 <table>
   <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
   <tr>
@@ -105,32 +127,27 @@
   </tr>
 </table>
 
-<h2>6. Biblical &amp; Historical Analysis</h2>
+<h2>7. Flood Geology &amp; Biogeography</h2>
 <table>
   <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
   <tr>
-    <td><a href="biblical-analysis/biblical-analysis.html">Biblical Analysis</a></td>
-    <td>Hebrew deck terminology, Genesis 7:20 draft, Genesis 8:1 engineering margin, kopher vs hemar, logbook argument, rooster chronometer</td>
-    <td><span class="status status-provisional">Active</span></td>
-  </tr>
-  <tr>
     <td><a href="biogeography/biogeography.html">Biogeography</a></td>
-    <td>Post-flood timber distribution, animal dispersal, ancestral kinds, dietary specialisation, coal/oil formation, flood geology</td>
+    <td>Post-flood timber distribution, animal dispersal, ancestral kinds, dietary specialisation, rapid coal/oil formation, Blue Mountains flood geology</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
 </table>
 
-<h2>7. Publication &amp; Critique</h2>
+<h2>8. Publication &amp; Critique</h2>
 <table>
   <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
   <tr>
     <td><a href="papers/papers.html">Technical Papers</a></td>
-    <td>Candidate papers for publication — argument skeletons for 7 papers plus future candidates list</td>
+    <td>Candidate papers — 7 argument skeletons including "Noah Didn't Build an Ark" (tebah word study), cubit update, tilt-weir pump, kopher/hemar, deck terminology, Genesis 7:20, rooster chronometer</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
   <tr>
     <td><a href="corrections/corrections.html">Design Corrections</a></td>
-    <td>Engineering corrections to AiG Ark Encounter artistic interpretations — rotating vessel vs valve, hydroponic marble test</td>
+    <td>Engineering corrections to AiG Ark Encounter — rotating vessel vs valve (6-Sigma argument), hydroponic marble test on a rocking ship</td>
     <td><span class="status status-provisional">Active</span></td>
   </tr>
 </table>
@@ -143,11 +160,11 @@
   <tr><td>Length</td><td>157.2m</td><td>300 × 0.524m</td></tr>
   <tr><td>Beam</td><td>26.2m</td><td>50 × 0.524m</td></tr>
   <tr><td>Height</td><td>15.72m</td><td>30 × 0.524m</td></tr>
-  <tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20</td></tr>
+  <tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20 engineering interpretation</td></tr>
   <tr><td>Hull skin (bottom)</td><td>~1.8m</td><td>2 sacrificial + 4 structural × 5" + 32" frames + 2 × 4.5" ceiling</td></tr>
   <tr><td>Hull skin (sides)</td><td>~1.7m</td><td>1 sacrificial + 4 structural × 5" + 32" frames + 2 × 4.5" ceiling</td></tr>
   <tr><td>Hull skin (topsides)</td><td>~1.55m</td><td>4 structural × 5" + 32" frames + 2 × 4.5" ceiling</td></tr>
-  <tr><td>Plank thickness</td><td>5" (127mm)</td><td>Max for cold water soak bending at 17.3m bow radius</td></tr>
+  <tr><td>Plank thickness</td><td>5" (127mm)</td><td>Max for cold water soak bending</td></tr>
   <tr><td>Frame depth</td><td>32" (812mm)</td><td></td></tr>
   <tr><td>Deck planking</td><td>6" (152mm)</td><td>vs AiG 4" — absorbs REC vs Nippur height difference</td></tr>
   <tr><td>Block coefficient</td><td>0.85</td><td></td></tr>
@@ -160,20 +177,18 @@
   <tr><td>Ballast zone</td><td>~4,750 m³</td><td>Below Deck 1, 21 baffled cells</td></tr>
   <tr><td>Moon pool</td><td>~728 m³</td><td>Double complex — pending CAD confirmation</td></tr>
   <tr><td>Primary timber</td><td>Old growth pine equivalent</td><td>650 kg/m³</td></tr>
-  <tr><td>Caulking</td><td>Zopissa (pine pitch + beeswax)</td><td>kopher — Genesis 6:14</td></tr>
+  <tr><td>Caulking</td><td>Zopissa — kopher (pine pitch + beeswax)</td><td>Genesis 6:14</td></tr>
   <tr><td>Interior beam (Noah)</td><td>~23.1m</td><td>After full hull skin deduction</td></tr>
   <tr><td>Cage width (Noah)</td><td>~19.1m</td><td>After single 4m promenade — more than AiG's 16.4m</td></tr>
 </table>
 
 <div class="note note-provisional">
-  <strong>Pending:</strong> All volume tally figures and derived calculations require 
-  updating from 0.518m to 0.524m cubit. Volume increases by ~1.7%. 
-  Tally structure and methodology unchanged.
+  <strong>Pending:</strong> All volume tally figures require updating from 0.518m to 0.524m 
+  cubit (~1.7% volume increase). Structure-bulkheads-ramps page pending build.
 </div>
 
 <h2>Folder Structure</h2>
-<p>Each topic has its own subfolder containing the HTML page plus images/, calcs/, CAD/, and documents/ subfolders.</p>
-<p>The shared stylesheet <code>ark-style.css</code> sits in the root folder. All topic pages link to it as <code>../ark-style.css</code>.</p>
+<p>Each topic has its own subfolder. Shared stylesheet <code>ark-style.css</code> in root — all pages link as <code>../ark-style.css</code>.</p>
 
 <footer class="page-footer">
   Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;

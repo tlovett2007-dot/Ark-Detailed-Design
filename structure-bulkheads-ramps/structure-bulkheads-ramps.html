@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structure — Bulkheads &amp; Ramps — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Structure — Bulkheads &amp; Ramps</h1>
+  <div class="meta">
+    Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: 2026-07-23 12:22 AEST &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Structure — Bulkheads &amp; Ramps
+</nav>
+
+<p>
+  Transverse bulkheads divide the hull into longitudinal compartments — providing 
+  structural rigidity, limiting flood damage propagation, separating functional zones, 
+  and carrying transverse loads from deck and hull to the keel. Internal ramps provide 
+  animal and crew access between the three deck levels without compromising 
+  the structural integrity of the bulkhead system.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. Transverse Bulkhead System</h2>
+
+<h3>Number and Spacing</h3>
+
+<p>
+  Six transverse bulkheads are specified in the volume tally, dividing the 
+  main hull into seven longitudinal bays. This is the minimum number consistent 
+  with structural and functional requirements.
+</p>
+
+<table>
+  <tr><th>Bay</th><th>Approx location</th><th>Contents</th></tr>
+  <tr><td>Forward bow compartment</td><td>0 – ~15m</td><td>Structural bow framing only — no animal accommodation</td></tr>
+  <tr><td>Bay 1</td><td>~15 – ~37m</td><td>Animal accommodation — forward zone</td></tr>
+  <tr><td>Bay 2</td><td>~37 – ~59m</td><td>Animal accommodation</td></tr>
+  <tr><td>Bay 3</td><td>~59 – ~81m</td><td>Animal accommodation — amidships</td></tr>
+  <tr><td>Bay 4</td><td>~81 – ~103m</td><td>Animal accommodation</td></tr>
+  <tr><td>Bay 5</td><td>~103 – ~127m</td><td>Animal accommodation — Zone 3 large animals, moon pool zone</td></tr>
+  <tr><td>Stern compartment</td><td>~127 – 157.2m</td><td>Family quarters, service area, pitch cooker</td></tr>
+</table>
+
+<div class="note note-provisional">
+  <strong>Bay boundaries TBD from CAD.</strong> The above is indicative — 
+  six equal spacing of ~22m between bulkheads within the animal accommodation zone. 
+  Final positions driven by structural requirements (bulkheads at stress concentration 
+  points), moon pool location, and ramp positioning.
+</div>
+
+<h3>Structural Functions</h3>
+
+<table>
+  <tr><th>Function</th><th>Mechanism</th></tr>
+  <tr><td>Transverse rigidity</td><td>Bulkheads act as deep transverse frames — resist distortion of the rectangular cross-section under hydrostatic pressure and wave loads</td></tr>
+  <tr><td>Longitudinal load transfer</td><td>Bulkheads collect deck beam loads from both sides and transfer them to the keel via posts — reducing point loads on keel</td></tr>
+  <tr><td>Flood damage limitation</td><td>If the hull skin is breached in one bay, flooding is contained — vessel can survive limited flooding without sinking</td></tr>
+  <tr><td>Racking resistance</td><td>Bulkheads resist transverse racking of the hull under roll loads — prevent the rectangular cross-section from parallelogramming</td></tr>
+  <tr><td>Zone separation</td><td>Separate animal species zones, waste management zones, ballast cells — operational as well as structural function</td></tr>
+</table>
+
+<h3>Bulkhead Construction</h3>
+
+<table>
+  <tr><th>Element</th><th>Specification</th></tr>
+  <tr><td>Material</td><td>Heavy laminated pine — cross-laminated for biaxial strength</td></tr>
+  <tr><td>Thickness</td><td>TBD from structural calculation — likely 300–500mm equivalent</td></tr>
+  <tr><td>Height</td><td>Full hull height — keel to roof structure</td></tr>
+  <tr><td>Width</td><td>Full internal beam — 23.1m clear (excluding service columns)</td></tr>
+  <tr><td>Penetrations</td><td>Door openings at each deck level (Deck 1, 2, 3) — framed with heavy ring timbers</td></tr>
+  <tr><td>Connection to hull</td><td>Bronze spider straps at all perimeter junctions — keel, deck beams, hull frames</td></tr>
+  <tr><td>Waterproofing</td><td>Full pitch treatment — ballast zone bulkheads must be watertight</td></tr>
+</table>
+
+<h3>Volume Deduction</h3>
+
+<div class="calc">Six bulkheads × full internal cross-section:
+
+Internal beam: ~23.1m
+Internal height (animal zone): ~11.76m
+Bulkhead thickness: ~400mm (assumed)
+Volume per bulkhead: 23.1 × 11.76 × 0.4 = ~109 m³
+Six bulkheads: ~654 m³
+
+Plus bulkhead framing timbers: ~886 m³ total — close to tally figure
+(Tally shows ~1,540 m³ for six transverse bulkheads — includes associated structure)
+
+Pending CAD confirmation.</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Ballast Zone Longitudinal Baffles</h2>
+
+<p>
+  The ballast zone below Deck 1 is divided into 21 longitudinal cells by baffles — 
+  not full bulkheads but partial-height dividers allowing controlled water transfer 
+  between cells.
+</p>
+
+<h3>Baffle Function</h3>
+
+<table>
+  <tr><th>Function</th><th>Mechanism</th></tr>
+  <tr><td>Free surface effect reduction</td><td>21 cells vs 1 large tank — dramatically reduces the destabilising effect of free water surface sloshing</td></tr>
+  <tr><td>Trim control</td><td>Opening/closing inter-cell valves transfers water longitudinally — adjusts trim without pumping</td></tr>
+  <tr><td>List correction</td><td>Transferring water port/starboard corrects any list from asymmetric loading</td></tr>
+  <tr><td>Passive trim by pitch</td><td>Opening a valve in a pitching vessel allows net water transfer in the selected direction over hours — see <a href="../passive-systems/passive-systems.html">Passive Systems</a></td></tr>
+</table>
+
+<h3>Free Surface Effect — Why 21 Cells</h3>
+
+<div class="calc">Free surface effect on GM:
+
+Single ballast tank (full beam × full length):
+  I_free_surface = (1/12) × L × B³ = (1/12) × 125.4 × 23.1³ = ~1,625,000 m⁴
+  GG' reduction = I / V = 1,625,000 / 20,317 = ~80m — catastrophic! 😄
+
+21 cells (each ~6m wide × ~6m long):
+  I per cell = (1/12) × 6 × 6³ = 108 m⁴
+  21 cells total: 21 × 108 = ~2,268 m⁴
+  GG' reduction = 2,268 / 20,317 = ~0.11m — manageable ✓
+
+Conclusion: cell subdivision is not optional — a single large ballast tank 
+would destroy all stability. 21 cells reduces free surface effect by ~99%.</div>
+
+<div class="note">
+  <strong>The 21-cell number:</strong> Derived from the requirement to keep free surface 
+  GG' correction below ~0.1m — maintaining adequate GM after ballast free surface 
+  deduction. Fewer larger cells would compromise stability; more smaller cells adds 
+  unnecessary construction complexity.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Internal Ramp System</h2>
+
+<h3>Purpose</h3>
+
+<p>
+  Three deck levels must be accessible to:
+</p>
+
+<table>
+  <tr><th>User</th><th>Requirement</th></tr>
+  <tr><td>Animals (loading/unloading)</td><td>Gentle gradient — large animals cannot navigate steep stairs. Ramp must handle cattle, horses, giraffes, camels.</td></tr>
+  <tr><td>Crew (daily operations)</td><td>Rapid access between decks for welfare rounds, waste management, emergency response</td></tr>
+  <tr><td>Fodder and waste (barrows)</td><td>Loaded barrows must be wheeled between decks — flat gradient essential</td></tr>
+  <tr><td>Water systems</td><td>Tilt-weir pump troughs run between decks — ramp structure integrates with water system</td></tr>
+</table>
+
+<h3>Ramp Specification</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Specification</th><th>Basis</th></tr>
+  <tr><td>Gradient</td><td>~1:6 maximum (9.5°)</td><td>Maximum for loaded barrow — steeper impractical for heavy waste loads</td></tr>
+  <tr><td>Width</td><td>~3m minimum</td><td>Two-way animal traffic + barrow passing width</td></tr>
+  <tr><td>Surface</td><td>Rough-sawn timber with transverse cleats</td><td>Anti-slip for animal hooves, pitched for waterproofing</td></tr>
+  <tr><td>Side barriers</td><td>Solid timber walls to 1.5m</td><td>Animal containment — prevent falls off ramp edge</td></tr>
+  <tr><td>Total height to cover</td><td>~3.92m deck-to-deck</td><td>Clear headroom per deck at REC 524mm cubit</td></tr>
+</table>
+
+<h3>Ramp Geometry</h3>
+
+<div class="calc">Ramp to cover 3.92m height at 1:6 gradient:
+  Horizontal run = 3.92 × 6 = ~23.5m per deck transition
+
+For three decks (Deck 1 → 2 → 3):
+  Total ramp length: 2 × 23.5m = ~47m of ramp run
+
+At 3m width × 47m length:
+  Ramp floor area: ~141 m²
+  Volume deduction (ramp structure): ~2,348 m³ (includes ramp void space, structure, barriers)
+  — consistent with volume tally figure ✓</div>
+
+<h3>Ramp Location</h3>
+
+<p>
+  Ramps positioned to serve both animal loading and operational access simultaneously:
+</p>
+
+<table>
+  <tr><th>Requirement</th><th>Implication for location</th></tr>
+  <tr><td>Animal loading at entry door (Deck 2)</td><td>Ramp from Deck 2 → Deck 1 and Deck 2 → Deck 3 adjacent to entry door zone</td></tr>
+  <tr><td>Waste barrow route to moon pool</td><td>Ramp must provide clear barrow path from Zone 2 (Deck 2) to moon pool zone (Deck 3 area)</td></tr>
+  <tr><td>Structural — avoid bulkhead zones</td><td>Ramps positioned within bays, not cutting through bulkheads</td></tr>
+  <tr><td>Ventilation — not blocking atrium</td><td>Ramps outboard of promenade atrium — do not interrupt stack effect chimney</td></tr>
+</table>
+
+<div class="note note-provisional">
+  <strong>Ramp location TBD from CAD.</strong> The competing requirements suggest 
+  ramps near the entry door zone (midship area) for animal loading convenience, 
+  with a secondary ramp near the moon pool zone for waste management. 
+  Two ramp systems — one forward of centre, one aft — may be required.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Ring Frames at Openings</h2>
+
+<p>
+  Every penetration through a structural member — bulkhead doors, deck hatches, 
+  moon pool trunk, ṣohar opening in roof — creates a stress concentration 
+  requiring ring frame reinforcement.
+</p>
+
+<table>
+  <tr><th>Opening</th><th>Location</th><th>Ring frame requirement</th></tr>
+  <tr><td>Bulkhead doors (3 per bulkhead × 6 bulkheads)</td><td>Each deck level at each bulkhead</td><td>Heavy timber frame around opening — restores bulkhead continuity around door</td></tr>
+  <tr><td>Moon pool trunk (2 pools)</td><td>Each deck level × 2 moon pools × 3 decks = 6 openings</td><td>Heavy ring frame — critical stress concentration in hull skin</td></tr>
+  <tr><td>ṣohar opening</td><td>Roof centreline</td><td>Coaming frame — takes wave load from green water events</td></tr>
+  <tr><td>Entry door (Genesis 6:16)</td><td>Deck 2 level, side of hull</td><td>Massive ring frame — largest single opening in hull skin, highest structural consequence</td></tr>
+  <tr><td>Deck hatches</td><td>Various — ballast zone access, service hatches</td><td>Standard ring frame — smaller openings, lower consequence</td></tr>
+</table>
+
+<h3>Entry Door — Critical Opening</h3>
+
+<p>
+  Genesis 6:16 specifies a door (Hebrew: <em>petach</em> — opening, entrance) in the 
+  side of the Ark. This is the largest single penetration in the hull skin — a 
+  structural discontinuity in the primary box girder at the most critical location 
+  (side of hull, subject to wave pressure and green water).
+</p>
+
+<table>
+  <tr><th>Structural challenge</th><th>Solution</th></tr>
+  <tr><td>Interrupts longitudinal laminate continuity on one side</td><td>Extra laminate layers around door perimeter — restore section modulus locally</td></tr>
+  <tr><td>Wave pressure on door face</td><td>Massive timber door — solid laminated construction, sealed with pitched fabric</td></tr>
+  <tr><td>Door sealing for 371 days</td><td>Genesis 7:16 — "the LORD shut him in." Divine sealing — engineering implication: watertight beyond normal timber door capability. Pitch-impregnated fabric surround + heavy timber batten sealing.</td></tr>
+  <tr><td>Location stress concentration</td><td>Bronze spider straps at all four corners of door opening — ductile moment connections</td></tr>
+</table>
+
+<div class="note">
+  <strong>Genesis 7:16 — "the LORD shut him in":</strong> The divine sealing of the 
+  door is noted as an engineering specification point — the door achieved watertightness 
+  beyond what Noah's construction alone might guarantee. This is consistent with the 
+  design philosophy throughout: passive systems handle the analysable envelope; 
+  divine provision handles the remainder. A pitched and battered timber door 
+  is engineeringly sound; divine sealing provides the margin. 
+  See <a href="../seakeeping/seakeeping.html">Seakeeping — Genesis 8:1</a> 
+  for the same argument applied to seakeeping.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Bulkhead positions</td><td>Finalise from CAD — structural, functional and moon pool location requirements</td></tr>
+  <tr><td>2</td><td>Bulkhead thickness calculation</td><td>Structural calc for transverse load and racking resistance</td></tr>
+  <tr><td>3</td><td>Ramp locations</td><td>CAD — confirm animal loading and waste management routing</td></tr>
+  <tr><td>4</td><td>Entry door dimensions</td><td>CAD — minimum opening for largest animal (giraffe? elephant?)</td></tr>
+  <tr><td>5</td><td>Entry door structural analysis</td><td>Section modulus restoration around door opening — laminate layer additions required</td></tr>
+  <tr><td>6</td><td>Inter-cell valve specification</td><td>Type, location, operating mechanism for 21 ballast cells</td></tr>
+  <tr><td>7</td><td>Free surface calculation update</td><td>Revise with 524mm cubit dimensions — confirm 21 cells still adequate</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp; July 2026
+</footer>
+
+</body>
+</html>

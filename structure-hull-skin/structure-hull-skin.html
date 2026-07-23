@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structure — Hull Skin — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="project-title">Noah's Ark — Naval Architecture Research</div>
+  <h1>Structure — Hull Skin</h1>
+  <div class="meta">
+    Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp;
+    Last revised: 2026-07-23 12:22 AEST &nbsp;|&nbsp;
+    Status: <span class="status status-provisional">Working document</span>
+  </div>
+</header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  Structure — Hull Skin
+</nav>
+
+<p>
+  The hull skin is the primary structural element of the Ark — a solid laminated 
+  sandwich acting as a longitudinal box girder. It is not conventional frame-and-plank 
+  construction. The skin resists hogging and sagging over the 157.2m hull length, 
+  hydrostatic pressure over the 26.2m beam, and fully reversing wave loads throughout 
+  the 371-day voyage. This is the only wooden structural solution viable at this scale.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>1. The Box Girder Concept</h2>
+
+<p>
+  Conventional wooden ships use frames as the primary transverse structure, with planking 
+  as a secondary skin spanning between frames. At 157.2m length this fails — the hull 
+  acts as a beam spanning between wave crests, developing hogging and sagging bending 
+  moments that conventional frame-and-plank construction cannot resist.
+</p>
+
+<p>
+  The solution: treat the hull skin itself as a box girder. The outer and inner laminate 
+  layers become the flanges; the close-chocked frames become the shear web. The entire 
+  skin acts compositely to resist longitudinal bending — the same principle as a modern 
+  steel box girder bridge, but in timber.
+</p>
+
+<table>
+  <tr><th>Element</th><th>Box girder equivalent</th><th>Function</th></tr>
+  <tr><td>Outer laminate (4 × 5" structural)</td><td>Outer flange</td><td>Compression in hogging — takes compressive force from wave-induced bending</td></tr>
+  <tr><td>Close-chocked frames (32")</td><td>Shear web</td><td>Transfers shear between flanges — resists transverse hydrostatic pressure</td></tr>
+  <tr><td>Inner ceiling (2 × 4.5")</td><td>Inner flange</td><td>Tension in hogging — takes tensile force from wave-induced bending</td></tr>
+</table>
+
+<div class="note">
+  <strong>Brunel's threshold:</strong> Brunel identified ~91m (300ft) as the practical 
+  limit of conventional wooden construction, beyond which hogging and sagging loads 
+  cause progressive failure. The Ark at 157.2m exceeds this by 73%. The box girder 
+  skin system is the only viable wooden solution at this scale — conventional framing 
+  is not an option.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>2. Layered Skin Cross-Section</h2>
+
+<h3>Structural Layers</h3>
+
+<table>
+  <tr><th>Layer</th><th>Specification</th><th>Thickness</th><th>Role</th></tr>
+  <tr>
+    <td>Outer structural planking</td>
+    <td>4 layers × 5" cold-water-soak pine, cross-laminated</td>
+    <td>508mm</td>
+    <td>Outer box girder flange. Cross-lamination eliminates continuous seam path — all layers must fail simultaneously for a leak.</td>
+  </tr>
+  <tr>
+    <td>Close-chocked frames</td>
+    <td>Hardwood frames, 32" (812mm) depth, dense hardwood wedge fill</td>
+    <td>812mm</td>
+    <td>Shear web. Transverse bending resistance over 26.2m beam span.</td>
+  </tr>
+  <tr>
+    <td>Inner ceiling</td>
+    <td>2 layers × 4.5" pine, cross-laminated</td>
+    <td>228mm</td>
+    <td>Inner box girder flange. Cross-laminated — two layers required for tensile continuity. Must bend around bow — 4.5" selected for cold-water-soak bending feasibility.</td>
+  </tr>
+  <tr>
+    <td><strong>Total structural skin</strong></td>
+    <td></td>
+    <td><strong>~1,548mm</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+<h3>Sacrificial Layers — Zoned by Position</h3>
+
+<table>
+  <tr><th>Zone</th><th>Sacrificial layers</th><th>Thickness</th><th>Total outer planking</th><th>Rationale</th></tr>
+  <tr><td>Bottom (below waterline)</td><td>2 × 5"</td><td>254mm</td><td>762mm (6 layers)</td><td>Maximum abrasion risk — grounding, marine growth, debris. 2 sacrificial layers.</td></tr>
+  <tr><td>Sides (waterline zone)</td><td>1 × 5"</td><td>127mm</td><td>635mm (5 layers)</td><td>Wave impact, floating debris, abrasion. 1 sacrificial layer.</td></tr>
+  <tr><td>Topsides (above waterline)</td><td>None</td><td>0</td><td>508mm (4 layers)</td><td>Minimal abrasion risk — structural layers only.</td></tr>
+</table>
+
+<h3>Full Skin Cross-Section by Zone</h3>
+
+<table>
+  <tr><th>Zone</th><th>Sacrificial</th><th>Structural outer</th><th>Frames</th><th>Ceiling</th><th>Total</th></tr>
+  <tr><td>Bottom</td><td>254mm</td><td>508mm</td><td>812mm</td><td>228mm</td><td><strong>~1,802mm</strong></td></tr>
+  <tr><td>Sides</td><td>127mm</td><td>508mm</td><td>812mm</td><td>228mm</td><td><strong>~1,675mm</strong></td></tr>
+  <tr><td>Topsides</td><td>0</td><td>508mm</td><td>812mm</td><td>228mm</td><td><strong>~1,548mm</strong></td></tr>
+  <tr><td>Weighted average</td><td></td><td></td><td></td><td></td><td><strong>~1,700mm</strong></td></tr>
+</table>
+
+<div class="note">
+  <strong>Sacrificial layer function:</strong> On departure from Ararat, sacrificial 
+  layers are stripped and replaced — structural skin underneath remains pristine. 
+  371 days submerged produces significant marine growth on bottom and sides; 
+  the sacrificial layers take this damage. Grounding on Ararat produces abrasion 
+  damage on the sacrificial layers only.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>3. Plank Specification — 5" Cold Water Soak</h2>
+
+<h3>Why 5"</h3>
+
+<p>
+  Plank thickness is constrained by the bow bending radius — planks must be bent 
+  to conform to the curved bow without steaming (no industrial steam equipment 
+  available pre-flood). Cold water soaking plasticises wood fibres to approximately 
+  70% of steam bending effectiveness.
+</p>
+
+<div class="calc">Bow radius:
+  Beam = 26.2m
+  Bow radius ≈ 2/3 × beam/2 = 2/3 × 13.1m = ~8.73m
+
+Cold water soak bending limit:
+  Max thickness = Radius / 125 = 8,730mm / 125 = ~70mm... 
+
+Wait — radius in mm:
+  Radius = 8,730mm
+  Max thickness = 8,730 / 125 = ~70mm = ~2.75"
+
+Hmm — this seems tight for 5" planks.
+
+At 17.3m radius (2/3 of full beam):
+  Max thickness = 17,300 / 125 = ~138mm = ~5.4" ✓
+
+5" (127mm) passes cold bending at 17.3m radius — with taper at bow reducing stress further.</div>
+
+<div class="note note-provisional">
+  <strong>Bow radius clarification needed:</strong> The bending radius calculation 
+  depends on whether 2/3 of beam or 2/3 of half-beam is used. At 2/3 of full beam 
+  (17.3m) — 5" planks pass cold bending comfortably. At 2/3 of half-beam (8.7m) — 
+  5" planks are marginal. CAD bow geometry will confirm the correct radius.
+</div>
+
+<h3>Cold Water Soaking Procedure</h3>
+
+<table>
+  <tr><th>Step</th><th>Detail</th></tr>
+  <tr><td>Soak</td><td>Immerse planks in cold water — clay-lined pit or pond — for 1–2 weeks</td></tr>
+  <tr><td>Bend</td><td>Bend wet plank to hull form while fibres are plasticised, clamp in place</td></tr>
+  <tr><td>Partially dry</td><td>Allow plank to approach equilibrium moisture content before fastening — prevents shrinkage-induced joint opening</td></tr>
+  <tr><td>Fit with gap</td><td>Leave 2–3mm caulking gap between adjacent planks — planks swell in service compressing caulking</td></tr>
+  <tr><td>Fasten</td><td>Treenails and/or bronze fastenings through plank and frame</td></tr>
+  <tr><td>Caulk</td><td>Drive zopissa-impregnated fibre into tapered seam gap</td></tr>
+  <tr><td>Pitch</td><td>Hot pine pitch over caulking — seals and waterproofs</td></tr>
+</table>
+
+<div class="note">
+  <strong>Why cold water only — no steaming:</strong> Hot planks are dangerous and 
+  impractical to handle at the scale of Ark construction. Steam boxes require 
+  industrial infrastructure. Cold water soaking in a clay-lined pit is accessible 
+  pre-industrial technology available anywhere. The 5" plank thickness is therefore 
+  determined by the cold-water bending constraint — not arbitrary choice.
+</div>
+
+<h3>Cross-Lamination Advantage</h3>
+
+<p>
+  Each successive plank layer is applied at an alternating grain angle to the previous. 
+  Benefits:
+</p>
+
+<table>
+  <tr><th>Benefit</th><th>Mechanism</th></tr>
+  <tr><td>No continuous seam path</td><td>All layers must fail simultaneously for a leak — redundant waterproofing</td></tr>
+  <tr><td>Improved longitudinal stiffness</td><td>Cross-grain layers resist splitting along grain — better box girder flange performance</td></tr>
+  <tr><td>Reduced anisotropy</td><td>Combined grain directions approach isotropic behaviour — more predictable structural response</td></tr>
+  <tr><td>Self-caulking tendency</td><td>Pine resin bleeds into cross-grain seams — natural minor gap sealing</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>4. Close-Chocked Frame System</h2>
+
+<p>
+  Conventional ships have widely-spaced frames with open gaps — the hull skin spans 
+  between frames as a series of curved panels. Close-chocked construction eliminates 
+  the gaps entirely: frames are packed so tightly that tapered dense hardwood wedges 
+  fill all remaining space, creating a near-solid transverse wall.
+</p>
+
+<h3>Historical Precedent</h3>
+
+<table>
+  <tr><th>Vessel / Builder</th><th>Method</th><th>Length</th><th>Notes</th></tr>
+  <tr><td>18th century Royal Navy warships</td><td>Solid timber above the wales — frames touching</td><td>~60–80m</td><td>Confirmed in Ships of Scale literature</td></tr>
+  <tr><td>Lake Erie warships (William Bell)</td><td>Cedar chock fill — solid upper works</td><td>~50m</td><td>Cedar chosen for low shrinkage coefficient</td></tr>
+  <tr><td>Seppings diagonal truss</td><td>Triangulated frames + iron strapping</td><td>~80m</td><td>First systematic solution to longitudinal bending</td></tr>
+  <tr><td>Brunel — Great Western (1837)</td><td>Massive oak + diagonal iron bracing</td><td>72m</td><td>Identified 91m as practical limit of wood</td></tr>
+  <tr><td><strong>This Ark</strong></td><td>Close-chocked frames + cross-laminated skin + bronze spider straps</td><td><strong>157.2m</strong></td><td>Beyond any historical precedent</td></tr>
+</table>
+
+<h3>Frame Specification</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Value</th><th>Basis</th></tr>
+  <tr><td>Frame depth (moulded)</td><td>32" (812mm)</td><td>Transverse bending calc: minimum 18" (447mm) required; 32" provides margin while preserving longitudinal fibre continuity</td></tr>
+  <tr><td>Frame material</td><td>Dense hardwood — oak, ironwood or pre-flood equivalent</td><td>~800–900 kg/m³ — compression resistance in chocked wall</td></tr>
+  <tr><td>Frame spacing</td><td>Close-chocked — gaps filled with wedges</td><td>No open gaps — solid wall system</td></tr>
+  <tr><td>Chock wedge material</td><td>Ultra-dense hardwood, SG &gt;1.0 (lignum vitae equivalent)</td><td>Sinks when dry — dimensional stability, hardness, self-lubricating</td></tr>
+  <tr><td>Wedge installation</td><td>Tapered, driven from alternating sides to full resistance</td><td>Pre-stressed compression — joint loaded before wave loads arrive</td></tr>
+</table>
+
+<h3>The Structural Conflict</h3>
+
+<p>
+  Frame depth and longitudinal structural performance are in direct conflict:
+</p>
+
+<table>
+  <tr><th>Requirement</th><th>Wants</th><th>Why</th></tr>
+  <tr><td>Transverse hydrostatic resistance</td><td>Deep frames</td><td>Frame spans 26.2m beam resisting water pressure — deeper = stronger in bending</td></tr>
+  <tr><td>Longitudinal hogging/sagging resistance</td><td>Minimum frame interruption</td><td>Every mm of frame depth is timber running across the hull — contributing nothing to longitudinal strength</td></tr>
+</table>
+
+<p>
+  Selected 32" frame depth represents the engineering optimum — adequate transverse 
+  bending resistance with minimum interruption of longitudinal laminate fibres. 
+  The close-chocked system means every frame station interrupts the longitudinal 
+  fibres continuously — deeper frames make this worse.
+</p>
+
+<div class="note note-provisional">
+  <strong>Transverse bending calculation:</strong>
+  P = ρgh = 1,025 × 9.81 × 15.72m = ~158 kPa at bottom<br>
+  M = wL²/8 = 158 × 26.2² / 8 = ~13,497 kNm/m<br>
+  Z required at 10 MPa: ~1,350,000 cm³/m<br>
+  Frame depth at 300mm width: bd²/6 = 1,350,000 → d = ~520mm = ~20.5"<br>
+  Selected 32" (812mm) provides substantial margin above 20.5" minimum. ✓<br>
+  Full calculation pending CAD confirmation of exact hull geometry.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>5. Hogging and Sagging — Longitudinal Bending</h2>
+
+<p>
+  At 157.2m length the Ark acts as a beam spanning between wave crests. When 
+  supported at the ends (sagging) or at midships (hogging) the hull develops 
+  substantial bending moments that must be resisted by the box girder skin.
+</p>
+
+<div class="calc">ABS design wave height for L = 157.2m:
+  H_design = 0.6 × √L × Cw ≈ 0.6 × √157.2 × 1.0 ≈ 7.52m
+
+Note: ABS rules are empirically derived from normal ocean conditions.
+The flood event may produce conditions significantly beyond this envelope.
+See Seakeeping page — vegetation mat damping and Genesis 8:1 argument.
+ABS figure is treated as minimum baseline only.</div>
+
+<div class="note note-provisional">
+  <strong>Longitudinal bending moment calculation pending:</strong> The hogging/sagging 
+  bending moment for the design wave condition has not been calculated. This determines 
+  whether the laminate skin flanges (508mm outer + 228mm inner) provide adequate 
+  longitudinal section modulus. CAD section properties required. This is the critical 
+  outstanding structural calculation.
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>6. Waterproofing — Kopher Pitch System</h2>
+
+<p>
+  Genesis 6:14 specifies <em>kopher</em> (כֹּפֶר) coating inside and out — pine resin 
+  pitch. Applied hot, it penetrates and seals all timber interfaces. 
+  See <a href="../biblical-analysis/biblical-analysis.html">Biblical Analysis</a> 
+  for the kopher vs hemar distinction.
+</p>
+
+<table>
+  <tr><th>Location</th><th>Application</th></tr>
+  <tr><td>Hull exterior</td><td>Full hot pitch coat — primary waterproofing</td></tr>
+  <tr><td>Hull interior skin face</td><td>Pitch to inner ceiling — secondary waterproofing, rot prevention</td></tr>
+  <tr><td>Frame/chock interfaces</td><td>Pitch impregnation between all contact surfaces during assembly</td></tr>
+  <tr><td>Bronze spider straps</td><td>Pitched fabric wrap — see <a href="../structure-internal/structure-internal.html">Structure — Internal</a></td></tr>
+  <tr><td>Plank seams</td><td>Zopissa (pitch + beeswax) driven into tapered seam gap — see <a href="../materials/materials.html">Materials</a></td></tr>
+  <tr><td>Deck surfaces</td><td>Pitch seal on upper face — waterproofs and provides grip</td></tr>
+</table>
+
+<h3>Self-Sealing Properties</h3>
+
+<p>
+  Pine pitch softens slightly in warm conditions, flowing into micro-gaps before 
+  re-hardening on cooling — continuous slow self-healing of minor seam openings 
+  over the life of the vessel. Combined with cross-laminated skin (no continuous 
+  seam path), the hull is a redundant waterproofing system: caulking, pitch, and 
+  geometry all acting independently.
+</p>
+
+<h3>Onboard Pitch Cooker</h3>
+
+<p>
+  Bronze pot over controlled fire in the stern service compartment. Pre-cut fabric 
+  strips stored dry. Pitched fabric = universal repair material — superior to modern 
+  duct tape in wet conditions. Wet adhesion improves as pitch softens; underwater 
+  application works indefinitely; re-heatable and repositionable. 
+  See <a href="../materials/materials.html">Materials</a>.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>7. Cubit Convention and Hull Skin</h2>
+
+<p>
+  The Genesis dimensions (300 × 50 × 30 cubits) are interpreted as outside-of-structural-planking 
+  dimensions at the REC (524mm). The moulded dimension (outside of frames) is approximately 
+  1.436m shorter in length — equivalent to the AiG Ark Encounter's Nippur cubit moulded 
+  dimensions. See <a href="../cubit/cubit.html">Cubit Analysis</a> for full reconciliation.
+</p>
+
+<table>
+  <tr><th>Convention</th><th>Length</th><th>Cubit</th></tr>
+  <tr><td>Moulded (outside frames)</td><td>~155.45m</td><td>Nippur 518.2mm — AiG Ark Encounter</td></tr>
+  <tr><td>Outside structural planking</td><td>157.2m</td><td>REC 524mm — this design</td></tr>
+  <tr><td>Outside sacrificial planking (OAL bottom)</td><td>~157.45m</td><td>OAL including sacrificial</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2>8. Open Items</h2>
+
+<table>
+  <tr><th>#</th><th>Item</th><th>Action needed</th></tr>
+  <tr><td>1</td><td>Longitudinal bending moment</td><td>Calculate for ABS design wave — verify laminate flange adequacy. Critical outstanding item.</td></tr>
+  <tr><td>2</td><td>Bow radius confirmation</td><td>CAD — confirm 17.3m or 8.7m radius — determines if 5" cold bending passes comfortably</td></tr>
+  <tr><td>3</td><td>Frame depth optimisation</td><td>Full transverse bending calc with 524mm cubit geometry — confirm 32" adequate</td></tr>
+  <tr><td>4</td><td>Wedge geometry</td><td>Specify taper ratio, driving sequence, alternating direction pattern</td></tr>
+  <tr><td>5</td><td>Cross-lamination angle specification</td><td>Define alternating grain angles for each plank layer — 90°, 45°, or variable?</td></tr>
+  <tr><td>6</td><td>Sacrificial layer attachment</td><td>How are sacrificial layers fixed to allow removal on arrival at Ararat?</td></tr>
+</table>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  Noah's Ark Naval Architecture Research &nbsp;|&nbsp; T. Lovett &nbsp;|&nbsp;
+  Cubit: 0.524m (Royal Egyptian) &nbsp;|&nbsp; July 2026
+</footer>
+
+</body>
+</html>
