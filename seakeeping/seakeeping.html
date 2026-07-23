@@ -211,33 +211,33 @@ Slope = π × 10/625 = ~0.050 radians = ~2.9°</pre>
 <p><strong>The distinction matters:</strong> An incompetent design relies on providence to survive conditions it should have been designed for. A competent design handles the analysable envelope and honestly acknowledges the unanalysable remainder. Noah's Ark is demonstrably the second. God did not promise the flood would be gentle — He promised Noah would survive it. The design had to be good enough for providence to work with, not good enough to make providence unnecessary.</p>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>9. JONSWAP Fetch-Limited Wave Height</h2>
+<h2>9. Fetch-Limited Wave Height — SPM/SMB Method</h2>
 
-<p>The chart below quantifies the wave environment across all three flood phases. During Phase 1, the vegetation mat effectively reduces fetch to near zero regardless of wind speed. By Phase 3, with mat gone and a global ocean, fetch is effectively unlimited — the curves plateau at their fully developed limits (open circles).</p>
+<p>The chart below quantifies the wave environment across all three flood phases. During Phase 1, the vegetation mat effectively reduces fetch to near zero regardless of wind speed. By Phase 3, with mat gone and a global ocean, fetch is effectively unlimited — the curves approach their fully developed limits asymptotically.</p>
 
-<p class="formula-note"><strong>Formula:</strong> <em>gH<sub>s</sub>/U²</em> = 0.0016 · (<em>gF/U²</em>)<sup>0.5</sup>, capped at fully developed limit <em>gH<sub>s</sub>/U²</em> = 0.243<br>
-Source: Hasselmann et al. (1973) JONSWAP / USACE Coastal Engineering Manual<br>
-U = wind speed at 10m (m/s), F = fetch (m), g = 9.81 m/s²</p>
+<p class="formula-note"><strong>Formula:</strong> <em>gH<sub>s</sub>/U²</em> = 0.283 · tanh( 0.0125 · (<em>gF/U²</em>)<sup>0.42</sup> )<br>
+Source: Shore Protection Manual Eqns 3-39/3-40 (USACE 1984) — SPM/SMB method<br>
+Naturally asymptotic — no artificial cap. U = wind speed at 10m (m/s), F = fetch (m), g = 9.81 m/s²</p>
 
 <div class="chart-legend">
   <span class="legend-item" style="--lc:#2a78d6">20 kn</span>
   <span class="legend-item" style="--lc:#1baf7a">30 kn</span>
   <span class="legend-item" style="--lc:#eda100">40 kn</span>
   <span class="legend-item" style="--lc:#e34948">50 kn</span>
-  <span class="legend-item legend-fd">○ fully developed</span>
+
 </div>
 
 <div class="chart-container">
-  <canvas id="jonswapChart" role="img" aria-label="JONSWAP fetch vs significant wave height for 20 to 50 knot winds to 2000km fetch"></canvas>
+  <canvas id="jonswapChart" role="img" aria-label="SPM/SMB fetch vs significant wave height for 20 to 50 knot winds to 2000km fetch"></canvas>
 </div>
 
 <table>
   <thead><tr><th>Wind speed</th><th>Fully developed Hs</th><th>Fetch to FD</th><th>Flood phase relevance</th></tr></thead>
   <tbody>
-    <tr><td>20 kn</td><td>~3.9m</td><td>~430 km</td><td>Mid flood background wind</td></tr>
-    <tr><td>30 kn</td><td>~8.7m</td><td>~970 km</td><td>Genesis 8:1 drying wind — lower estimate</td></tr>
-    <tr><td>40 kn</td><td>~15.5m</td><td>~1,720 km</td><td>Genesis 8:1 — upper estimate</td></tr>
-    <tr><td>50 kn</td><td>~24.2m</td><td>~2,690 km</td><td>Extreme — beyond 2000km chart range</td></tr>
+    <tr><td>20 kn</td><td>~3.0m</td><td>asymptotic beyond 500km</td><td>Mid flood background wind</td></tr>
+    <tr><td>30 kn</td><td>~6.2m</td><td>asymptotic beyond 1000km</td><td>Genesis 8:1 drying wind — lower estimate</td></tr>
+    <tr><td>40 kn</td><td>~10.0m</td><td>asymptotic beyond 1500km</td><td>Genesis 8:1 — upper estimate</td></tr>
+    <tr><td>50 kn</td><td>~14.0m</td><td>asymptotic beyond 2000km</td><td>Extreme — still developing at 2000km</td></tr>
   </tbody>
 </table>
 
@@ -246,22 +246,17 @@ U = wind speed at 10m (m/s), F = fetch (m), g = 9.81 m/s²</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 (function(){
-  const g = 9.81;
-  function jonswap(F_km, U_kn) {
+  const g = 9.81, a = 0.283, b = 0.0125, n = 0.42;
+  function spm(F_km, U_kn) {
     const U = U_kn * 0.51444;
     const F = F_km * 1000;
     if (F === 0) return 0;
-    const Fstar = g * F / (U * U);
-    const Hsstar = Math.min(0.0016 * Math.pow(Fstar, 0.5), 0.243);
-    return parseFloat((Hsstar * U * U / g).toFixed(3));
-  }
-  function fdFetch(U_kn) {
-    const U = U_kn * 0.51444;
-    return Math.pow(0.243 / 0.0016, 2) * U * U / g / 1000;
+    const Xhat = g * F / (U * U);
+    return parseFloat((a * Math.tanh(b * Math.pow(Xhat, n)) * U * U / g).toFixed(3));
   }
 
   const pts = [];
-  for (let f = 0; f <= 2000; f += 25) pts.push(f);
+  for (let f = 0; f <= 2000; f += 10) pts.push(f);
 
   const series = [
     { kn: 20, color: '#2a78d6' },
@@ -270,33 +265,15 @@ U = wind speed at 10m (m/s), F = fetch (m), g = 9.81 m/s²</p>
     { kn: 50, color: '#e34948' },
   ];
 
-  const datasets = [];
-  const fdScatter = [];
-
-  series.forEach(s => {
-    datasets.push({
-      label: s.kn + ' kn',
-      data: pts.map(f => ({ x: f, y: jonswap(f, s.kn) })),
-      borderColor: s.color,
-      backgroundColor: 'transparent',
-      borderWidth: 2.5,
-      pointRadius: 0,
-      tension: 0.2,
-    });
-    const fdF = Math.min(fdFetch(s.kn), 2000);
-    fdScatter.push({ x: parseFloat(fdF.toFixed(0)), y: jonswap(fdF, s.kn), color: s.color });
-  });
-
-  datasets.push({
-    label: 'Fully developed',
-    data: fdScatter.map(p => ({ x: p.x, y: p.y })),
-    type: 'scatter',
-    pointRadius: 8,
-    pointBackgroundColor: '#fff',
-    pointBorderColor: fdScatter.map(p => p.color),
-    pointBorderWidth: 2.5,
-    showLine: false,
-  });
+  const datasets = series.map(s => ({
+    label: s.kn + ' kn',
+    data: pts.map(f => ({ x: f, y: spm(f, s.kn) })),
+    borderColor: s.color,
+    backgroundColor: 'transparent',
+    borderWidth: 2.5,
+    pointRadius: 0,
+    tension: 0,
+  }));
 
   new Chart(document.getElementById('jonswapChart'), {
     type: 'line',
