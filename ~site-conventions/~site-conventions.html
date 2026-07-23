@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Conventions — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Site Conventions</h1>
+<p class="doc-meta">For AI assistants and collaborators. Not research content. | Last revised: July 2026</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Site Conventions</p>
+
+<p>This page orients an AI assistant (or new collaborator) to the structure, conventions, and assumptions of this research site. Fetch this page at the start of a new chat session before doing any work.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>1. What This Site Is</h2>
+
+<p>Working documentation for a naval architecture feasibility study of Noah's Ark. Author: T. Lovett. The study applies professional naval architecture to the Genesis 6–8 account. It is not devotional literature — it is engineering analysis that takes the biblical text seriously as a primary source.</p>
+
+<p>The site is published via GitHub Pages. Updates are made by editing HTML files locally and uploading via GitHub Desktop. The AI assistant writes complete updated HTML pages which the author uploads directly.</p>
+
+<p><strong>Live URL:</strong> <a href="https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html">https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html</a></p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>2. Folder and File Structure</h2>
+
+<p>Every page lives in its own subfolder named identically to the page. The pattern is invariant:</p>
+
+<pre>root/
+  index.html                          ← home page (root level only)
+  ark-style.css                       ← shared stylesheet (root level only)
+  pagename/
+    pagename.html                     ← the page
+    images/                           ← images for this page
+    calcs/                            ← calculation files
+    CAD/                              ← CAD files
+    documents/                        ← reference documents
+  ~site-conventions/
+    ~site-conventions.html            ← this page</pre>
+
+<p><strong>The tilde prefix on this folder</strong> sorts it to the top of file listings and signals it is meta, not content.</p>
+
+<p><strong>CSS path from every page:</strong> <code>../ark-style.css</code> — always one level up.</p>
+
+<p><strong>Home link from every page:</strong> <code>../index.html</code></p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>3. File Naming</h2>
+
+<table>
+  <thead><tr><th>Rule</th><th>Example</th><th>Reason</th></tr></thead>
+  <tbody>
+    <tr><td>Dashes, not underscores</td><td><code>hull-structure.html</code> not <code>hull_structure.html</code></td><td>Underscores disappear under hyperlink underline</td></tr>
+    <tr><td>Lowercase only</td><td><code>ark-style.css</code></td><td>Case-sensitive on Linux servers</td></tr>
+    <tr><td>No spaces</td><td>—</td><td>URL encoding issues</td></tr>
+    <tr><td>Descriptive, not dated</td><td><code>stability.html</code></td><td>Pages are living documents, not versioned snapshots</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>4. Page Template Structure</h2>
+
+<p>Every page follows this HTML structure exactly:</p>
+
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page Title — Ark Research&lt;/title&gt;
+  &lt;link rel="stylesheet" href="../ark-style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;header&gt;
+  &lt;div class="site-title"&gt;Noah's Ark — Naval Architecture Research&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;p class="doc-meta"&gt;Cubit: 0.524m (Royal Egyptian) | Last revised: Month Year | Status: Active&lt;/p&gt;
+&lt;p class="breadcrumb"&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt; › Page Title&lt;/p&gt;
+
+... content ...
+
+&lt;/main&gt;
+
+&lt;footer&gt;
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | Month Year
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>5. Key Design Parameters — Confirmed Values</h2>
+
+<table>
+  <thead><tr><th>Parameter</th><th>Value</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Cubit</td><td><strong>0.524m (Royal Egyptian)</strong></td><td>Confirmed — supersedes 0.518m Nippur of Lovett (2006)</td></tr>
+    <tr><td>Convention</td><td>Outside structural planking</td><td>AiG Ark Encounter = moulded (Nippur) — same vessel, different convention</td></tr>
+    <tr><td>Length</td><td>157.2m</td><td>300 × 0.524m</td></tr>
+    <tr><td>Beam</td><td>26.2m</td><td>50 × 0.524m</td></tr>
+    <tr><td>Height</td><td>15.72m</td><td>30 × 0.524m</td></tr>
+    <tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20</td></tr>
+    <tr><td>Interior beam</td><td>~23.1m</td><td>After full hull skin deduction</td></tr>
+    <tr><td>Block coefficient</td><td>0.85</td><td></td></tr>
+    <tr><td>Target GM</td><td>~0.85m</td><td>T = 22s roll period</td></tr>
+    <tr><td>Target KG</td><td>~9.52m</td><td>KM − GM — under active review</td></tr>
+    <tr><td>Displacement</td><td>~21,000 tonnes</td><td>Provisional — pending 0.524m update</td></tr>
+    <tr><td>Frame depth</td><td>32" (812mm)</td><td></td></tr>
+    <tr><td>Plank thickness</td><td>5" (127mm)</td><td>Max for cold water soak bending at 17.3m bow radius</td></tr>
+    <tr><td>Primary timber</td><td>Old growth pine equivalent</td><td>650 kg/m³</td></tr>
+    <tr><td>Caulking</td><td>Zopissa (pine pitch + beeswax)</td><td>kopher — Genesis 6:14</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Pending:</strong> All volume tally figures require updating from 0.518m to 0.524m cubit. Volume increases ~1.7%. Tally structure and methodology unchanged.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>6. Page Register</h2>
+
+<table>
+  <thead><tr><th>Page</th><th>Path</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Home / Index</td><td><code>index.html</code></td><td>Active</td></tr>
+    <tr><td>Cubit Analysis</td><td><code>cubit/cubit.html</code></td><td>Confirmed</td></tr>
+    <tr><td>Volume Tally</td><td><code>volume-tally/volume-tally.html</code></td><td>Active — pending 0.524m update</td></tr>
+    <tr><td>Stability</td><td><code>stability/stability.html</code></td><td>Active</td></tr>
+    <tr><td>Seakeeping</td><td><code>seakeeping/seakeeping.html</code></td><td>Active</td></tr>
+    <tr><td>Hull Structure</td><td><code>hull-structure/hull-structure.html</code></td><td>Active</td></tr>
+    <tr><td>Materials</td><td><code>materials/materials.html</code></td><td>Active</td></tr>
+    <tr><td>Water Systems</td><td><code>water-systems/water-systems.html</code></td><td>Active</td></tr>
+    <tr><td>Ventilation</td><td><code>ventilation/ventilation.html</code></td><td>Active</td></tr>
+    <tr><td>Waste Management</td><td><code>waste/waste.html</code></td><td>Active</td></tr>
+    <tr><td>Moon Pool</td><td><code>moon-pool/moon-pool.html</code></td><td>Active</td></tr>
+    <tr><td>Passive Systems</td><td><code>passive-systems/passive-systems.html</code></td><td>Active</td></tr>
+    <tr><td>Animal Zones</td><td><code>animal-zones/animal-zones.html</code></td><td>Active</td></tr>
+    <tr><td>Biblical Analysis</td><td><code>biblical-analysis/biblical-analysis.html</code></td><td>Active</td></tr>
+    <tr><td>Biogeography</td><td><code>biogeography/biogeography.html</code></td><td>Active</td></tr>
+    <tr><td>Technical Papers</td><td><code>papers/papers.html</code></td><td>Active</td></tr>
+    <tr><td>Design Corrections</td><td><code>corrections/corrections.html</code></td><td>Active</td></tr>
+    <tr><td>Site Conventions</td><td><code>~site-conventions/~site-conventions.html</code></td><td>Meta — this page</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>7. AI Assistant Instructions</h2>
+
+<p>When starting a new chat session on this project:</p>
+
+<ol>
+  <li>Fetch this page first: <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/~site-conventions/~site-conventions.html</code></li>
+  <li>Fetch the index for current status of all pages: <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html</code></li>
+  <li>Fetch the specific page being worked on before making any edits</li>
+  <li>Deliver complete updated HTML files — never diffs or snippets</li>
+  <li>Use dashes not underscores in all filenames</li>
+  <li>Always use 0.524m cubit — never 0.518m</li>
+  <li>Keep responses low verbosity — author prefers terse working style</li>
+  <li>The project is in a Claude Project — search past chats for prior decisions before asking questions already answered</li>
+</ol>
+
+<h3>Working Style</h3>
+<ul>
+  <li><strong>Low verbosity.</strong> Author dislikes chatty responses.</li>
+  <li><strong>Challenge formulas.</strong> Always verify sources before implementing equations.</li>
+  <li><strong>No smoothing on charts.</strong> Straight segments between calculated points only — smoothing invents data.</li>
+  <li><strong>XY Scatter for charts with non-uniform data.</strong> Never line charts with category axes.</li>
+  <li><strong>Tone toward AiG:</strong> Respectful and generous. Corrections are engineering observations, not attacks.</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>8. Relationship to AiG Ark Encounter</h2>
+
+<p>The Ark Encounter (Answers in Genesis, Williamstown KY) uses a 0.518m Nippur cubit, moulded dimensions convention. This research uses 0.524m Royal Egyptian cubit, outside planking convention. Both describe the same vessel — the dimensional differences arise from convention, not disagreement about the Ark's size.</p>
+
+<p>The Corrections page documents specific engineering errors in AiG's artistic interpretations. The tone is always respectful — AiG's broader project is valued, and corrections are offered as engineering refinements, not theological critiques.</p>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | July 2026
+</footer>
+
+</body>
+</html>
