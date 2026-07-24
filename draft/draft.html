@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draft & Trim — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Draft &amp; Trim</h1>
+<p class="doc-meta">Cubit: 0.524m (Royal Egyptian) | Last revised: July 2026 | Status: Working document</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Draft &amp; Trim</p>
+
+<p>Draft and trim are determined by mass distribution. They cannot be set independently — draft follows from total displacement, trim follows from the longitudinal position of the centre of gravity relative to the centre of buoyancy. Both are tuned through the ballast distribution, primarily rock ballast placed low and aft.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>1. The Genesis 7:20 Constraint</h2>
+
+<p>"The waters rose and covered the mountains to a depth of fifteen cubits." — Genesis 7:20</p>
+
+<p>This is the primary draft constraint. The interpretation adopted here:</p>
+
+<table>
+  <thead><tr><th>Interpretation</th><th>Assessment</th></tr></thead>
+  <tbody>
+    <tr><td>Water depth above mountain peaks = 15 cubits</td><td>Requires Noah to measure depth above submerged peaks — no mechanism available. Rejected.</td></tr>
+    <tr><td>Noah reporting his known draft = 15 cubits</td><td>The one measurement Noah could make — sounding from the stern. Seamanlike. Adopted.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>15 cubits = 15 × 0.524m = 7.86m</strong> — measured from the bottom of the stern keel to the waterline at the stern.</p>
+
+<p>This gives the stern draft to keel bottom. With 2m keel depth at stern:</p>
+
+<table>
+  <thead><tr><th>Parameter</th><th>Value</th><th>Derivation</th></tr></thead>
+  <tbody>
+    <tr><td>Total stern depth (keel bottom to waterline)</td><td>7.86m</td><td>15 cubits — Genesis 7:20</td></tr>
+    <tr><td>Stern keel depth</td><td>2.00m</td><td>Design specification</td></tr>
+    <tr><td>Hull draft at stern</td><td>5.86m</td><td>7.86 − 2.00m</td></tr>
+    <tr><td>Stern trim</td><td>~2.00m</td><td>Design target — see Section 3</td></tr>
+    <tr><td>Mean hull draft</td><td>~4.86m</td><td>Stern hull draft − trim/2</td></tr>
+    <tr><td>Bow hull draft</td><td>~3.86m</td><td>Mean − trim/2</td></tr>
+    <tr><td>Freeboard at stern</td><td>9.86m</td><td>D − stern hull draft = 15.72 − 5.86m</td></tr>
+    <tr><td>Freeboard at bow</td><td>11.86m</td><td>D − bow hull draft</td></tr>
+  </tbody>
+</table>
+
+<p>Freeboard is very generous at both ends — no swamping risk even in extreme roll combined with 2m trim.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>2. Displacement</h2>
+
+<p>At mean hull draft of 4.86m:</p>
+
+<pre>Displacement = ρ × L × B × T_mean × Cb
+= 1.025 × 157.2 × 26.2 × 4.86 × 0.85
+= <strong>~17,400 tonnes</strong></pre>
+
+<p>This is the total mass of everything on board — hull structure, cargo, animals, provisions, water, and ballast. All mass items must sum to 17,400 tonnes.</p>
+
+<p><strong>Note:</strong> If Genesis 7:20 refers to mean draft rather than stern draft, mean hull draft = 7.86 − 2.00 (keel) = 5.86m and displacement = ~21,000 tonnes. The stern-draft interpretation gives the lighter, more manageable vessel. This remains an open question pending the mass distribution calculation — if the natural mass (structure + cargo) comes in near 17,400 tonnes without forced ballasting, the stern-draft interpretation is confirmed.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>3. Stern Trim — Design Rationale</h2>
+
+<p>A stern-heavy trim of ~2m is a deliberate design feature, not an accident of loading. It serves multiple functions:</p>
+
+<table>
+  <thead><tr><th>Function</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>Weathervaning</td><td>Deeper stern keel immersion → greater lateral resistance aft → stronger passive heading moment</td></tr>
+    <tr><td>Bow lift</td><td>Light bow rises to oncoming seas → reduces slamming loads on bow structure</td></tr>
+    <tr><td>Following sea posture</td><td>Stern digs in, bow lifts and skids — optimal posture for weathervaning in following seas</td></tr>
+    <tr><td>Passive bilge drainage</td><td>All bilge water, wash-down water, and spilled animal water drains aft by gravity to moon pool complex</td></tr>
+    <tr><td>Moon pool efficiency</td><td>Waste flows to moon pool naturally — no pumping required</td></tr>
+    <tr><td>Keel taper confirmation</td><td>Bow keel taper (for weathervaning slip) starts in shallow draft zone — reinforces hydrodynamic asymmetry</td></tr>
+  </tbody>
+</table>
+
+<h3>Trim Calculation</h3>
+
+<pre>Trim formula:  t = M_trim / (Δ × GML / L)
+
+GML = BML + KB − KG
+
+BML = IL / V  where IL = L³·B/12 (rectangular waterplane)
+= 157.2³ × 26.2 / 12
+= 8,440,000 m⁴
+
+V = L × B × T_mean × Cb = 157.2 × 26.2 × 4.86 × 0.85 = 16,975 m³
+
+BML = 8,440,000 / 16,975 = <strong>497m</strong>
+
+GML ≈ BML − (KG − KB) ≈ 497 − (KG − 2.4) ≈ <strong>~495m</strong>  (KG effect negligible on GML)
+
+For 2m trim:
+M_trim = t × Δ × GML / L = 2 × 17,400 × 495 / 157.2 = <strong>~109,500 tonne·m</strong>
+
+Rock ballast at 40m aft of midships:
+Mass required = 109,500 / 40 = <strong>~2,740 tonnes of rock</strong></pre>
+
+<p>2,740 tonnes of rock (granite, density 2,700 kg/m³) = <strong>1,015 m³</strong> — a layer approximately <strong>290mm deep</strong> over the aft quarter of the hull footprint. Trivial to accommodate in the ballast zone.</p>
+
+<h3>Walking Comfort</h3>
+
+<p>2m trim over 157.2m = <strong>1.3° trim angle</strong>. Imperceptible — people work comfortably on ski slopes of 10°+. Not a constraint.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>4. Rock Ballast — The Universal Tuning Tool</h2>
+
+<p>Rock ballast is simultaneously the most effective and most flexible tuning variable in the design. It is dense (granite ~2,700 kg/m³ — nearly twice seawater), sits low, requires no maintenance, and was standard practice in all ancient vessels.</p>
+
+<table>
+  <thead><tr><th>Function</th><th>How rock achieves it</th></tr></thead>
+  <tbody>
+    <tr><td>Close mass budget to target displacement</td><td>Add rock until target draft reached</td></tr>
+    <tr><td>Tune KG downward</td><td>Rock sits at ~0.5m height — pulls KG toward hull bottom</td></tr>
+    <tr><td>Set stern trim</td><td>Concentrate rock aft of midships</td></tr>
+    <tr><td>Tune roll period</td><td>KG adjustment changes GM and hence roll period</td></tr>
+    <tr><td>Increase weathervaning moment</td><td>Aft-heavy trim deepens stern keel</td></tr>
+  </tbody>
+</table>
+
+<h3>Rock Ballast Geometry</h3>
+
+<p>4,000 tonnes of granite (density 2,700 kg/m³):</p>
+
+<pre>Volume = 4,000,000 / 2,700 = 1,480 m³
+
+Over aft half of hull footprint (78.6m × 26.2m × 0.85 = 1,750 m²):
+Layer depth = 1,480 / 1,750 = <strong>0.85m</strong> — less than 1m deep
+
+Or over full hull footprint (3,500 m²):
+Layer depth = 1,480 / 3,500 = <strong>0.42m</strong> — barely half a metre</pre>
+
+<p>Rock ballast is dimensionally trivial — a thin layer across the bilge achieves significant mass effect because of its high density. It sits naturally below the ballast water cells.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>5. Mass Distribution — Provisional</h2>
+
+<p>Provisional mass budget at target displacement ~17,400 tonnes. All figures pending volume tally CAD confirmation.</p>
+
+<table>
+  <thead><tr><th>Item</th><th>Mass (t)</th><th>CG height (m)</th><th>Moment (t·m)</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Hull timber structure</td><td>TBD</td><td>~7.0</td><td>TBD</td><td>Skin + frames + decks — dominant mass item</td></tr>
+    <tr><td>Rock ballast</td><td>TBD</td><td>~0.5</td><td>TBD</td><td>Primary KG and trim tuning tool</td></tr>
+    <tr><td>Water ballast (ballast cells)</td><td>TBD</td><td>~2.0</td><td>TBD</td><td>4,750 m³ zone — partially filled</td></tr>
+    <tr><td>Fresh water (header tanks)</td><td>~260</td><td>~15.5</td><td>~4,030</td><td>251 m³ at roof level</td></tr>
+    <tr><td>Animals — Deck 1</td><td>TBD</td><td>~3.5</td><td>TBD</td><td>Large animals, Zone 3</td></tr>
+    <tr><td>Animals — Deck 2</td><td>TBD</td><td>~8.5</td><td>TBD</td><td>Medium animals</td></tr>
+    <tr><td>Animals — Deck 3</td><td>TBD</td><td>~13.5</td><td>TBD</td><td>Small animals, birds</td></tr>
+    <tr><td>Provisions — all decks</td><td>TBD</td><td>~8.5</td><td>TBD</td><td>Hay, grain, dried food — light</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>~17,400</strong></td><td><strong>KG TBD</strong></td><td><strong>TBD</strong></td><td>Pending volume tally CAD update</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Key observations:</strong></p>
+<ul>
+  <li>Header tanks at roof level (~15.5m) are the highest mass item — they raise KG. Their 260t at 15.5m = 4,030 t·m contribution is significant.</li>
+  <li>Rock ballast at 0.5m is the strongest KG depressant — every tonne of rock at 0.5m offsets many tonnes of cargo at 8–13m.</li>
+  <li>Animal mass is modest — total animal mass even at 50,000 animals averaging 50kg = 2,500 tonnes. Likely less given average kind size.</li>
+  <li>Provisions are light — dried/compressed food for 371 days, 8 people + animals. Probably 2,000–3,000 tonnes.</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>6. KG and GM — Provisional</h2>
+
+<p>KG cannot be calculated precisely until the hull structural mass is confirmed from the volume tally CAD model. The hull timber mass is the dominant item and its vertical CG determines the outcome.</p>
+
+<p>Provisional bounds:</p>
+
+<table>
+  <thead><tr><th>Scenario</th><th>KG (m)</th><th>GM (m)</th><th>Roll period (s)</th><th>Character</th></tr></thead>
+  <tbody>
+    <tr><td>Heavy rock ballast, light upper cargo</td><td>~5.0</td><td>~7.7</td><td>~8s</td><td>Very stiff — rough ride but very safe</td></tr>
+    <tr><td>Moderate rock, typical cargo distribution</td><td>~7.0</td><td>~5.7</td><td>~9s</td><td>Stiff — uncomfortable but safe</td></tr>
+    <tr><td>Light rock, typical cargo</td><td>~9.0</td><td>~3.7</td><td>~12s</td><td>Moderate — acceptable</td></tr>
+    <tr><td>Minimal rock, provisions high</td><td>~11.0</td><td>~1.7</td><td>~17s</td><td>Comfortable but marginal survival margin</td></tr>
+  </tbody>
+</table>
+
+<p>KM at mean hull draft 4.86m:</p>
+<pre>KB = 0.53 × T = 0.53 × 4.86 = 2.58m
+BM = B² / (12 × T × Cb) = 26.2² / (12 × 4.86 × 0.85) = 686 / 49.6 = 13.83m
+KM = KB + BM = 2.58 + 13.83 = <strong>16.41m</strong></pre>
+
+<p>Higher KM than previously calculated — shallower draft gives larger BM. This is favourable — more GM available for a given KG, or equivalently a higher KG can be tolerated for the same GM.</p>
+
+<p><strong>Design philosophy:</strong> A rough ride is preferable to capsizing. The GM target should be set by survival requirements in the worst-case Phase 3 sea state, not by comfort. Rock ballast is available in unlimited quantity and costs nothing — use it to achieve survival GM, accept the roll period consequence. The vegetation mat in Phases 1–2 provides comfort buffering during the period when seas are most confused.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>7. Relationship to Stability Page</h2>
+
+<p>The <a href="../stability/stability.html">Stability</a> page covers GM, GZ curves, and roll period in detail. This page establishes the input conditions — draft, trim, and mass distribution — that feed into the stability calculations. The key link:</p>
+
+<table>
+  <thead><tr><th>This page determines</th><th>Stability page uses</th></tr></thead>
+  <tbody>
+    <tr><td>Mean draft T</td><td>KB, BM, KM</td></tr>
+    <tr><td>Mass distribution → KG</td><td>GM = KM − KG</td></tr>
+    <tr><td>Rock ballast placement</td><td>KG tuning → roll period</td></tr>
+    <tr><td>Stern trim</td><td>Draft at stern — Genesis 7:20 reconciliation</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>8. Open Items</h2>
+
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Action needed</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Hull structural mass</td><td>Calculate from volume tally — skin + frames + decks. Dominant uncertainty.</td></tr>
+    <tr><td>2</td><td>Animal mass total</td><td>Sum from animal zone page — kind count × average mass</td></tr>
+    <tr><td>3</td><td>Provisions mass</td><td>371 days × daily consumption × 8 people + animals</td></tr>
+    <tr><td>4</td><td>Required rock ballast</td><td>= Target displacement − (structure + cargo + water)</td></tr>
+    <tr><td>5</td><td>Rock distribution</td><td>Optimise for target KG and 2m stern trim simultaneously</td></tr>
+    <tr><td>6</td><td>Genesis 7:20 confirmation</td><td>Confirm stern vs mean draft interpretation against mass budget</td></tr>
+    <tr><td>7</td><td>KG calculation</td><td>Full moment table once structural mass confirmed</td></tr>
+    <tr><td>8</td><td>Volume tally update</td><td>All figures pending 0.524m cubit update from 0.518m</td></tr>
+  </tbody>
+</table>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | July 2026
+</footer>
+
+</body>
+</html>
