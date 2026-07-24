@@ -57,16 +57,17 @@
 <p>All pages follow a <code>class-subclass</code> naming convention. Folders sort alphabetically — the tilde prefix on <code>!site</code> keeps it at the top. The full taxonomy:</p>
 
 <pre>aig:        articles, book, contributions, corrections, design, letters, video
-cargo:      animals, biogeography, provisions, zones
+animals:    biogeography, count, kinds, zones
 flood:      geology, mechanism, phases, seastates, vegetation
+food:       fodder, provisions, spoilage, storage, water
 hull:       bow, cubit, dimensions, form, parapet, skin, stern
-internal:   arrangement, decks, holds, moonpool, ramps
+internal:   arrangement, bow, decks, holds, moonpool, ramps, stern
 papers:     future, past
 references: books, rules, ships
 seakeeping: damping, motions, waves, weathervaning
-services:   passive, ventilation, waste, water
+services:   cranes, passive, plumbing, pumps, ventilation, waste
 stability:  draft, gm, gz, roll, volume
-structure:  bulkheads, connections, frames, hogging, scantlings, shear
+structure:  bulkheads, connections, frames, hogging, scantlings
 technology: bronze, construction, joinery, pitch, planking, trunnels
 thirdparty: amc, kriso, magnuson, troyer
 !site:      conventions</pre>
@@ -106,7 +107,7 @@ thirdparty: amc, kriso, magnuson, troyer
 
 &lt;main&gt;
 &lt;h1&gt;Page Title&lt;/h1&gt;
-&lt;p class="doc-meta"&gt;Last revised: Month Year | Status: Active&lt;/p&gt;
+&lt;p class="doc-meta"&gt;Cubit: 0.524m (Royal Egyptian) | Last revised: Month Year | Status: Active&lt;/p&gt;
 &lt;p class="breadcrumb"&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt; › Page Title&lt;/p&gt;
 
 ... content ...
@@ -114,7 +115,7 @@ thirdparty: amc, kriso, magnuson, troyer
 &lt;/main&gt;
 
 &lt;footer&gt;
-  Noah's Ark Naval Architecture Research | T. Lovett | Month Year
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | Month Year
 &lt;/footer&gt;
 
 &lt;/body&gt;
@@ -150,7 +151,23 @@ thirdparty: amc, kriso, magnuson, troyer
 <p><strong>Pending:</strong> All volume tally figures require updating from 0.518m to 0.524m cubit. Volume increases ~1.7%. Tally structure and methodology unchanged.</p>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>6. AI Assistant Instructions</h2>
+<h2>7. Update Workflow</h2>
+
+<p>The standard workflow for publishing changes to the live site:</p>
+
+<ol>
+  <li>Work in chat — pages, calcs, content</li>
+  <li>At end of session, AI produces a ZIP with correct folder structure mirroring the repo</li>
+  <li>Unzip → copy contents into local <code>Ark-Detailed-Design</code> repo folder</li>
+  <li>GitHub Desktop detects changes automatically</li>
+  <li>Commit and push</li>
+</ol>
+
+<p>The ZIP folder structure mirrors the repo exactly — files drop straight into place with no manual renaming. One ZIP per session.</p>
+
+<p><strong>Note:</strong> The repo is stored outside OneDrive to prevent sync conflicts. Local path: <code>C:\Users\tlove\GitHub\Ark-Detailed-Design\</code></p>
+
+
 
 <p>When starting a new chat session on this project:</p>
 
@@ -186,7 +203,7 @@ thirdparty: amc, kriso, magnuson, troyer
 </main>
 
 <footer>
-  Noah's Ark Naval Architecture Research | T. Lovett | July 2026
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | July 2026
 </footer>
 
 </body>
