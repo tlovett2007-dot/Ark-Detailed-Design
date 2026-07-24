@@ -5,160 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noah's Ark — Naval Architecture Research</title>
   <link rel="stylesheet" href="ark-style.css">
+  <style>
+    /* Index-specific overrides */
+    body { max-width: 1400px; }
+    .index-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+    .index-table th { background: #1F4E79; color: #fff; padding: 8px 12px; text-align: left; white-space: nowrap; }
+    .index-table td { padding: 5px 12px; border-bottom: 1px solid #e1e0d9; vertical-align: top; }
+    .index-table td:first-child { white-space: nowrap; font-family: monospace; font-size: 0.95em; }
+    .index-table tr:hover { background: #f5f5f0; }
+    .index-table tr:nth-child(even) { background: #fafaf8; }
+    .index-table tr:nth-child(even):hover { background: #f5f5f0; }
+    .status-active { color: #1a6b1a; }
+    .status-pending { color: #b85c00; }
+    .status-proposal { color: #555; }
+    .status-confirmed { color: #1F4E79; font-weight: bold; }
+    .params-table { font-size: 0.88em; }
+    .home-indicator { font-size: 0.8em; color: #888; float: right; }
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+  <div class="site-title">Noah's Ark — Naval Architecture Research <span class="home-indicator">◀ Home</span></div>
 </header>
 
 <main>
 <h1>Noah's Ark — Naval Architecture Research</h1>
 <p class="doc-meta">T. Lovett | Last updated: July 2026</p>
 
-<p>Working documentation for the Noah's Ark naval architecture feasibility study.
-Each page covers one topic area and is updated as the design develops.</p>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Hull</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
+<table class="index-table">
+  <thead>
+    <tr><th>Page</th><th>Contents</th><th>Status</th></tr>
+  </thead>
   <tbody>
-    <tr><td><a href="hull-cubit/hull-cubit.html">hull-cubit</a></td><td>Cubit selection (REC 524mm), Nippur rod reliability, reconciliation with AiG Ark Encounter, moulded vs outside planking convention, promenade argument</td><td>Confirmed</td></tr>
-    <tr><td><a href="hull-skin/hull-skin.html">hull-skin</a></td><td>Skin specification, scantlings, close-chocked framing, bronze spider straps, plank bending, wet fitting</td><td>Active</td></tr>
-    <tr><td><a href="internal-bow/internal-bow.html">internal-bow</a></td><td>Bow compartment — extent, collision bulkhead, storage</td><td>Active</td></tr>
-    <tr><td><a href="internal-stern/internal-stern.html">internal-stern</a></td><td>Stern compartment — family quarters, moon pool zone, service area</td><td>Active</td></tr>
+    <tr><td><a href="aig-corrections/aig-corrections.html">aig-corrections</a></td><td>Engineering corrections to AiG Ark Encounter — rotating vessel vs valve, hydroponic marble test, reptile jar drainage</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="animals-biogeography/animals-biogeography.html">animals-biogeography</a></td><td>Post-flood timber distribution, animal dispersal, ancestral kinds, dietary specialisation, coal/oil formation, flood geology</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="animals-zones/animals-zones.html">animals-zones</a></td><td>Three waste management zones, deck assignment, bird manifest, clean animal adjustment, diet, torpor</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="hull-cubit/hull-cubit.html">hull-cubit</a></td><td>Cubit selection (REC 524mm), Nippur rod reliability, reconciliation with AiG Ark Encounter, moulded vs outside planking convention, promenade argument</td><td class="status-confirmed">Confirmed</td></tr>
+    <tr><td><a href="hull-skin/hull-skin.html">hull-skin</a></td><td>Skin specification, scantlings, close-chocked framing, bronze spider straps, plank bending, wet fitting</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="internal-arrangement/internal-arrangement.html">internal-arrangement</a></td><td>Bulkheads, ramps, general arrangement</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="internal-bow/internal-bow.html">internal-bow</a></td><td>Bow compartment — extent, collision bulkhead, storage</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="internal-decks/internal-decks.html">internal-decks</a></td><td>Deck structure, deck heights, deck terminology</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="internal-moonpool/internal-moonpool.html">internal-moonpool</a></td><td>Double moon pool complex, five functions, heave damping, waste disposal, weathervaning contribution</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="internal-stern/internal-stern.html">internal-stern</a></td><td>Stern compartment — family quarters, moon pool zone, service area</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="papers-future/papers-future.html">papers-future</a></td><td>Candidate papers for publication — argument skeletons for 7 papers plus future candidates list</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="papers-past/papers-past.html">papers-past</a></td><td>Hong et al. (1994) KRISO study, Lovett (2024) AiG proportions paper — foundation peer-reviewed work</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="seakeeping-waves/seakeeping-waves.html">seakeeping-waves</a></td><td>Wave environment phases, vegetation mat damping, SPM/SMB fetch-limited wave height, wind waves vs current, Genesis 8:1 engineering margin</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="seakeeping-weathervaning/seakeeping-weathervaning.html">seakeeping-weathervaning</a></td><td>Wind vane principle, bow/stern external form asymmetry, keel taper, stern trim contribution, phase relevance</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="services-passive/services-passive.html">services-passive</a></td><td>Complete register of all self-regulating systems with mechanism and benefit</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="services-ventilation/services-ventilation.html">services-ventilation</a></td><td>ṣohar design, stack effect, outboard vent shafts, air quality, cedar aromatics, deck-by-deck ventilation</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="services-waste/services-waste.html">services-waste</a></td><td>Three-zone system, subfloor design, crew workload, waste quantities, closed-loop bird guano garden</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="services-water/services-water.html">services-water</a></td><td>Ballast zone, header tanks, rainwater harvesting, bamboo distribution, tilt-weir pump, animal consumption</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="stability-draft/stability-draft.html">stability-draft</a></td><td>Genesis 7:20 draft constraint, stern trim, displacement, mass distribution, rock ballast, KG provisional</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="stability-gm/stability-gm.html">stability-gm</a></td><td>KB, BM, KM, target GM, required KG, roll period</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="stability-volume/stability-volume.html">stability-volume</a></td><td>Primary dimensions, master deduction table, animal zone, animal count, displacement summary</td><td class="status-pending">Pending 524mm update</td></tr>
+    <tr><td><a href="technology-materials/technology-materials.html">technology-materials</a></td><td>Timber species, pine pitch (kopher), zopissa caulking, bronze alloy, lignum vitae wedges, cedar aromatics</td><td class="status-active">Active</td></tr>
+    <tr><td><a href="thirdparty-amc/thirdparty-amc.html">thirdparty-amc</a></td><td>AMC collaboration proposal, model testing programme, qualification pathway</td><td class="status-proposal">Proposal</td></tr>
+    <tr><td><a href="!site-conventions/!site-conventions.html">!site-conventions</a></td><td>Taxonomy, naming rules, workflow, AI assistant instructions</td><td class="status-proposal">Meta</td></tr>
   </tbody>
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Stability</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="stability-volume/stability-volume.html">stability-volume</a></td><td>Primary dimensions, master deduction table, animal zone, animal count, displacement summary</td><td>Active — pending 524mm update</td></tr>
-    <tr><td><a href="stability-gm/stability-gm.html">stability-gm</a></td><td>KB, BM, KM, target GM, required KG, roll period</td><td>Active</td></tr>
-    <tr><td><a href="stability-draft/stability-draft.html">stability-draft</a></td><td>Genesis 7:20 draft constraint, stern trim, displacement, mass distribution, rock ballast, KG provisional</td><td>Active</td></tr>
-  </tbody>
-</table>
+<h2>Key Parameters</h2>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Seakeeping</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="seakeeping-waves/seakeeping-waves.html">seakeeping-waves</a></td><td>Wave environment phases, vegetation mat damping, SPM/SMB fetch-limited wave height, wind waves vs current, Genesis 8:1 engineering margin</td><td>Active</td></tr>
-    <tr><td><a href="seakeeping-weathervaning/seakeeping-weathervaning.html">seakeeping-weathervaning</a></td><td>Wind vane principle, bow/stern external form asymmetry, keel taper, stern trim contribution, phase relevance</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Internal</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="internal-arrangement/internal-arrangement.html">internal-arrangement</a></td><td>Bulkheads, ramps, general arrangement</td><td>Active</td></tr>
-    <tr><td><a href="internal-decks/internal-decks.html">internal-decks</a></td><td>Deck structure, deck heights, deck terminology</td><td>Active</td></tr>
-    <tr><td><a href="internal-moonpool/internal-moonpool.html">internal-moonpool</a></td><td>Double moon pool complex, five functions, heave damping, waste disposal, weathervaning contribution</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Services</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="services-water/services-water.html">services-water</a></td><td>Ballast zone, header tanks, rainwater harvesting, bamboo distribution, tilt-weir pump, animal consumption</td><td>Active</td></tr>
-    <tr><td><a href="services-ventilation/services-ventilation.html">services-ventilation</a></td><td>ṣohar design, stack effect, outboard vent shafts, air quality, cedar aromatics, deck-by-deck ventilation</td><td>Active</td></tr>
-    <tr><td><a href="services-waste/services-waste.html">services-waste</a></td><td>Three-zone system, subfloor design, crew workload, waste quantities, closed-loop bird guano garden</td><td>Active</td></tr>
-    <tr><td><a href="services-passive/services-passive.html">services-passive</a></td><td>Complete register of all self-regulating systems with mechanism and benefit</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Technology</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="technology-materials/technology-materials.html">technology-materials</a></td><td>Timber species, pine pitch (kopher), zopissa caulking, bronze alloy, lignum vitae wedges, cedar aromatics</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Animals</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="animals-zones/animals-zones.html">animals-zones</a></td><td>Three waste management zones, deck assignment, bird manifest, clean animal adjustment, diet, torpor</td><td>Active</td></tr>
-    <tr><td><a href="animals-biogeography/animals-biogeography.html">animals-biogeography</a></td><td>Post-flood timber distribution, animal dispersal, ancestral kinds, dietary specialisation, coal/oil formation, flood geology</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Papers</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="papers-past/papers-past.html">papers-past</a></td><td>Hong et al. (1994) KRISO study, Lovett (2024) AiG proportions paper — foundation peer-reviewed work</td><td>Active</td></tr>
-    <tr><td><a href="papers-future/papers-future.html">papers-future</a></td><td>Candidate papers for publication — argument skeletons for 7 papers plus future candidates list</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>AiG</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="aig-corrections/aig-corrections.html">aig-corrections</a></td><td>Engineering corrections to AiG Ark Encounter — rotating vessel vs valve, hydroponic marble test, reptile jar drainage</td><td>Active</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Third Party</h2>
-<table>
-  <thead><tr><th>Page</th><th>Contents</th><th>Status</th></tr></thead>
-  <tbody>
-    <tr><td><a href="thirdparty-amc/thirdparty-amc.html">thirdparty-amc</a></td><td>AMC collaboration proposal, model testing programme, qualification pathway</td><td>Proposal</td></tr>
-  </tbody>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>Quick Reference — Key Parameters</h2>
-
-<table>
+<table class="params-table">
   <thead><tr><th>Parameter</th><th>Value</th><th>Notes</th></tr></thead>
   <tbody>
     <tr><td>Cubit</td><td><strong>0.524m (Royal Egyptian)</strong></td><td>Confirmed — supersedes 0.518m Nippur of Lovett (2006)</td></tr>
-    <tr><td>Convention</td><td>Outside structural planking</td><td>AiG Ark Encounter = moulded (Nippur) — same vessel, different convention</td></tr>
+    <tr><td>Convention</td><td>Outside structural planking</td><td>AiG = moulded (Nippur) — same vessel, different convention</td></tr>
     <tr><td>Length</td><td>157.2m</td><td>300 × 0.524m</td></tr>
     <tr><td>Beam</td><td>26.2m</td><td>50 × 0.524m</td></tr>
     <tr><td>Height</td><td>15.72m</td><td>30 × 0.524m</td></tr>
-    <tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20</td></tr>
+    <tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20 — to keel bottom at stern</td></tr>
+    <tr><td>Stern trim</td><td>~2m</td><td>Weathervaning + passive bilge drainage</td></tr>
+    <tr><td>Block coefficient</td><td>0.85</td><td></td></tr>
     <tr><td>Hull skin (bottom)</td><td>~1.8m</td><td>2 sacrificial + 4 structural × 5" + 32" frames + 2 × 4.5" ceiling</td></tr>
     <tr><td>Hull skin (sides)</td><td>~1.7m</td><td>1 sacrificial + 4 structural × 5" + 32" frames + 2 × 4.5" ceiling</td></tr>
-    <tr><td>Hull skin (topsides)</td><td>~1.55m</td><td>4 structural × 5" + 32" frames + 2 × 4.5" ceiling</td></tr>
     <tr><td>Plank thickness</td><td>5" (127mm)</td><td>Max for cold water soak bending at 17.3m bow radius</td></tr>
     <tr><td>Frame depth</td><td>32" (812mm)</td><td></td></tr>
-    <tr><td>Deck planking</td><td>6" (152mm)</td><td>vs AiG 4" — absorbs REC vs Nippur height difference</td></tr>
-    <tr><td>Block coefficient</td><td>0.85</td><td></td></tr>
-    <tr><td>Target GM</td><td>~0.85m</td><td>T = 22s roll period — under review</td></tr>
-    <tr><td>Target KG</td><td>~9.52m</td><td>KM − GM — under active review</td></tr>
-    <tr><td>Effective animal zone</td><td>~10,013 m³</td><td>Pending 524mm update</td></tr>
-    <tr><td>Estimated displacement</td><td>~21,000 tonnes</td><td>Provisional — pending 524mm update</td></tr>
-    <tr><td>Kinds range</td><td>~1,700–2,300</td><td>Provisional</td></tr>
-    <tr><td>Header tanks</td><td>~251 m³</td><td>Roof corners outboard</td></tr>
+    <tr><td>Target GM</td><td>~0.85m</td><td>Under review — survival GM may be higher</td></tr>
     <tr><td>Ballast zone</td><td>~4,750 m³</td><td>Below Deck 1, 21 baffled cells</td></tr>
     <tr><td>Moon pool</td><td>~728 m³</td><td>Double complex — pending CAD confirmation</td></tr>
+    <tr><td>Estimated displacement</td><td>~21,000 tonnes</td><td>Provisional — pending 524mm update</td></tr>
     <tr><td>Primary timber</td><td>Old growth pine equivalent</td><td>650 kg/m³</td></tr>
     <tr><td>Caulking</td><td>Zopissa (pine pitch + beeswax)</td><td>kopher — Genesis 6:14</td></tr>
-    <tr><td>Interior beam (Noah)</td><td>~23.1m</td><td>After full hull skin deduction</td></tr>
-    <tr><td>Cage width (Noah)</td><td>~19.1m</td><td>After single 4m promenade — more than AiG's 16.4m</td></tr>
   </tbody>
 </table>
 
-<p><strong>Pending:</strong> All volume tally figures require updating from 0.518m to 0.524m cubit. Volume increases ~1.7%. Tally structure unchanged.</p>
-
-<p>See <a href="!site-conventions/!site-conventions.html">Site Conventions</a> for taxonomy, naming rules and AI assistant instructions.</p>
+<p><strong>Pending:</strong> All volume tally figures require updating from 0.518m to 0.524m cubit. Volume increases ~1.7%.</p>
 
 </main>
 
