@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seakeeping — Weathervaning — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Seakeeping — Weathervaning</h1>
+<p class="doc-meta">Last revised: July 2026 | Status: Working document</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Seakeeping — Weathervaning</p>
+
+<p>The Ark has no propulsion, no rudder, and no crew capable of sustained manual steering for 371 days. Yet the most dangerous seakeeping condition — the organised wind sea of the receding phase (Genesis 8:1, days 150–371) — requires consistent heading alignment to prevent broaching and boarding seas. The solution is passive weathervaning: external hull form asymmetry that causes the vessel to align automatically under any wind load, without crew intervention.</p>
+
+<p>This page covers the external hull form aspects of weathervaning. For internal bow and stern compartments see <a href="../hull-bow/hull-bow.html">Hull — Bow &amp; Stern</a>. For the wave environment that makes weathervaning necessary see <a href="../seakeeping-waves/seakeeping-waves.html">Seakeeping — Waves</a>.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>1. The Wind Vane Principle</h2>
+
+<p>The Ark functions as a wind vane. On a traditional wind vane, the arrow points into the wind — that arrow is the stern of the Ark: deep keels, low freeboard, anchored upwind. The wind vane tail blows downwind — that is the bow: high freeboard, catches wind, leads downwind. The Ark drifts bow-first downwind, waves approaching from astern. No propeller, no rudder, no crew intervention — pure geometry.</p>
+
+<table>
+  <thead><tr><th>Wind vane element</th><th>Ark equivalent</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>Arrow — points into wind</td><td>Stern — deep keels, low freeboard</td><td>High lateral resistance, low wind resistance — anchored upwind</td></tr>
+    <tr><td>Tail — blows downwind</td><td>Bow — high freeboard</td><td>Low lateral resistance, high wind resistance — pushed downwind freely</td></tr>
+  </tbody>
+</table>
+
+<p>The Ark drifts <strong>bow-first downwind</strong> — waves approach from astern. This is the optimal orientation for a passive vessel in an organised wind sea:</p>
+
+<table>
+  <thead><tr><th>Orientation</th><th>Motion</th><th>Risk</th></tr></thead>
+  <tbody>
+    <tr><td>Beam to waves</td><td>Rolling — transverse</td><td>HIGH — resonance, boarding seas, structural racking</td></tr>
+    <tr><td>Bow leading downwind</td><td>Pitching — longitudinal</td><td>LOW — 157m hull handles hogging/sagging well</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Weathervaning is self-correcting:</strong> If a cross-sea temporarily pushes the vessel off heading, the asymmetry restores bow-downwind automatically. No crew intervention, no mechanism, no failure modes.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>2. The Asymmetry Mechanism</h2>
+
+<table>
+  <thead><tr><th>End</th><th>External form</th><th>Wind resistance</th><th>Lateral resistance</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Bow</strong></td><td>High freeboard, upright profile — catches wind</td><td>High</td><td>Low — keel tapered away</td><td>Pushed downwind freely — leads downwind</td></tr>
+    <tr><td><strong>Stern</strong></td><td>Lower freeboard, deepened by trim — hides from wind</td><td>Low</td><td>High — deep keels, full depth</td><td>Anchored upwind — trails behind bow</td></tr>
+  </tbody>
+</table>
+
+<p>The two mechanisms reinforce each other:</p>
+
+<table>
+  <thead><tr><th>Mechanism</th><th>Bow effect</th><th>Stern effect</th></tr></thead>
+  <tbody>
+    <tr><td>Freeboard asymmetry</td><td>High freeboard catches wind → pushed downwind</td><td>Low freeboard hides from wind → less push</td></tr>
+    <tr><td>Lateral resistance asymmetry</td><td>Keel tapered → low lateral resistance → free to move downwind</td><td>Full keel depth → high lateral resistance → resists downwind drift</td></tr>
+    <tr><td>Stern trim (2m)</td><td>Bow rises → reduces bow draft → less lateral resistance</td><td>Stern deepens → increases keel immersion → more lateral resistance</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>3. Bow Keel Taper</h2>
+
+<p>The bow keel taper is not primarily about reducing slamming loads — it is a deliberate hydrodynamic feature to reduce lateral resistance at the bow, allowing it to slip freely downwind.</p>
+
+<table>
+  <thead><tr><th>Keel zone</th><th>Depth</th><th>Lateral resistance</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td>Bow — tapered</td><td>0 → full depth over ~20m</td><td>Low</td><td>Bow free to be pushed downwind</td></tr>
+    <tr><td>Midship</td><td>Full 2m depth</td><td>Moderate</td><td>Roll damping — bilge keels at ±9.1m</td></tr>
+    <tr><td>Stern — full depth</td><td>2m+ (deepened by trim)</td><td>High</td><td>Stern anchored upwind — wind vane arrow</td></tr>
+  </tbody>
+</table>
+
+<p>The keel taper length (~20m) is a design variable — a longer taper gives more gradual lateral resistance transition, a shorter taper gives a more abrupt transition but stronger weathervaning moment. Pending quantification from CAD.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>4. Stern Trim Contribution</h2>
+
+<p>The 2m stern trim (stern draft deeper than bow) reinforces weathervaning by three mechanisms simultaneously:</p>
+
+<table>
+  <thead><tr><th>Mechanism</th><th>Effect on weathervaning</th></tr></thead>
+  <tbody>
+    <tr><td>Deeper stern keel immersion</td><td>Stern keel bottom at ~7.86m total depth — maximum lateral resistance exactly where needed</td></tr>
+    <tr><td>Bow rises</td><td>Reduced bow draft → reduced bow lateral resistance → bow pushed downwind more freely</td></tr>
+    <tr><td>Lower bow freeboard?</td><td>No — bow freeboard remains high because the hull is deep. Trim affects draft, not freeboard significantly at this scale.</td></tr>
+  </tbody>
+</table>
+
+<p>See <a href="../stability-draft/stability-draft.html">Stability — Draft &amp; Trim</a> for full trim calculations.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>5. Phase Relevance</h2>
+
+<table>
+  <thead><tr><th>Flood phase</th><th>Wave character</th><th>Weathervaning importance</th></tr></thead>
+  <tbody>
+    <tr><td>Phase 1 — Early flood (days 1–40)</td><td>Confused, multi-directional, mat-damped</td><td>Low — no dominant direction to align with</td></tr>
+    <tr><td>Phase 2 — Mid flood (days 40–150)</td><td>Developing, partially organised</td><td>Moderate — some directional preference emerging</td></tr>
+    <tr><td>Phase 3 — Receding (days 150–371)</td><td>Organised wind sea — Genesis 8:1 drying wind</td><td><strong>Critical</strong> — single dominant direction, fully developed seas, no vegetation damping</td></tr>
+  </tbody>
+</table>
+
+<p>The weathervaning design is specifically optimised for Phase 3. During Phase 1 and 2, the confused sea means no single alignment is advantageous — the vessel moves with the chaos. In Phase 3, consistent bow-downwind alignment converts a potentially dangerous beam-sea roll problem into a manageable following-sea pitch problem.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>6. Diagram</h2>
+
+<p><em>Wind vane comparison diagram — to be added.</em></p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>7. Open Items</h2>
+
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Action needed</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Weathervaning moment quantification</td><td>Calculate restoring moment from bow/stern freeboard and lateral resistance asymmetry at design wind speeds</td></tr>
+    <tr><td>2</td><td>Keel taper length</td><td>Confirm from CAD — optimise for weathervaning moment vs slamming loads</td></tr>
+    <tr><td>3</td><td>Wind vane diagram</td><td>Side elevation showing wind direction, Ark orientation, keel profile, freeboard profile</td></tr>
+    <tr><td>4</td><td>Phase 3 sea state</td><td>Cross-reference Genesis 8:1 wind speed with SPM fetch chart — confirm weathervaning adequate for fully developed sea</td></tr>
+    <tr><td>5</td><td>Model test</td><td>Free-drift test on 1:79 model in Botany Bay — confirm passive heading alignment</td></tr>
+  </tbody>
+</table>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | July 2026
+</footer>
+
+</body>
+</html>
