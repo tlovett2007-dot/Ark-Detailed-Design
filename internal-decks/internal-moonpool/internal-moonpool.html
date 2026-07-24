@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Pool — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Moon Pool</h1>
+<p class="doc-meta">Cubit: 0.524m (Royal Egyptian) | Last revised: July 2026 | Status: Working document</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Moon Pool</p>
+
+<p>The moon pool is an opening through the hull bottom, open to the sea, used for waste disposal, bilge access, drainage, ventilation pumping, weathervaning, and heave damping. It is a structural feature requiring careful engineering — a deliberate hole in the hull of a vessel in a global flood demands serious design justification. The volume tally deducts <strong>728 m³</strong> for the "double moon pool complex."</p>
+
+<p>The moon pool exemplifies the passive design philosophy throughout the Ark — one structural feature performing five independent functions with zero moving parts. See <a href="../passive-systems/passive-systems.html">Passive Systems</a>.</p>
+
+<table>
+  <thead><tr><th>#</th><th>Function</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Ventilation pumping</td><td>Stack effect — air drawn through hull, exhausted via moon pool water seal</td></tr>
+    <tr><td>2</td><td>Waste disposal</td><td>Gravity drainage to sea — no valves, no moving parts</td></tr>
+    <tr><td>3</td><td>Water pumping</td><td>Tilt-weir feed, bilge access and inspection</td></tr>
+    <tr><td>4</td><td>Weathervaning</td><td>Lateral resistance contribution at stern — reinforces hydrodynamic heading asymmetry</td></tr>
+    <tr><td>5</td><td>Heave damping</td><td>Passive anti-acceleration in following seas — oscillating water column out of phase with hull motion</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>1. What is a Moon Pool?</h2>
+
+<p>A moon pool (also known as a well or trunk) is a vertical shaft through the hull of a vessel, open at the bottom to the sea and enclosed within the hull structure above the waterline. The water level inside the moon pool equalises with the sea — it does not flood the vessel because the surrounding hull structure and the air pressure above keep water from rising above the waterline level.</p>
+
+<table>
+  <thead><tr><th>Property</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Water level inside</td><td>Equalises with external sea level — rises and falls with waves</td></tr>
+    <tr><td>Flooding risk</td><td>Minimal — air pressure above prevents water rising above sea level. Same principle as an inverted glass in water.</td></tr>
+    <tr><td>Wave action</td><td>Water oscillates in the pool with vessel motion — requires baffling for severe conditions</td></tr>
+    <tr><td>Historical use</td><td>Fishing vessels, offshore platforms, research vessels — well established technology</td></tr>
+    <tr><td>Waste disposal</td><td>Waste dropped into pool drains directly to sea by gravity and wave action</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Why a moon pool and not a drain valve?</strong> A valve is a failure point — a stuck closed valve blocks drainage; a stuck open valve floods the vessel. The moon pool has no moving parts — waste falls through by gravity, sea water self-equalises, no crew operation required under normal conditions. Consistent with the passive systems design philosophy throughout.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>2. The Double Moon Pool Complex</h2>
+
+<p>The volume tally specifies a "double moon pool complex" — two moon pools rather than one. The rationale for doubling:</p>
+
+<table>
+  <thead><tr><th>Reason</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Redundancy</td><td>If one pool becomes blocked (debris, ice, biological growth over 371 days) the other continues functioning</td></tr>
+    <tr><td>Separation of functions</td><td>One pool for waste disposal (Zone 3 large animal drainage + Zone 2 cleanout disposal); one pool for bilge access and general drainage</td></tr>
+    <tr><td>Wave dynamics</td><td>Two pools can be baffled to reduce resonant sloshing — a single large pool in severe conditions could develop dangerous oscillation</td></tr>
+    <tr><td>Location flexibility</td><td>Waste pool positioned adjacent to Zone 3 large animals (short sewer run); bilge pool positioned for structural access</td></tr>
+  </tbody>
+</table>
+
+<h3>Volume Deduction</h3>
+
+<p>Volume tally deduction: 728 m³ for double moon pool complex. Pending CAD confirmation of actual pool dimensions.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>3. Location</h2>
+
+<p>Moon pool location is driven by three competing requirements:</p>
+
+<table>
+  <thead><tr><th>Requirement</th><th>Preferred location</th></tr></thead>
+  <tbody>
+    <tr><td>Zone 3 waste drainage — short sewer run</td><td>Directly below Zone 3 large animal area — top deck, requires vertical shaft through all three decks</td></tr>
+    <tr><td>Structural integrity</td><td>Away from maximum bending moment zone (amidships) — toward bow or stern third</td></tr>
+    <tr><td>Wave dynamics</td><td>Away from extreme ends — slamming and pitching most severe at bow and stern</td></tr>
+    <tr><td>Bilge access</td><td>Near ballast zone — allows inspection of ballast tank condition</td></tr>
+    <tr><td>Heave damping</td><td>After position — wave pressure from following seas acts on stern moon pool for maximum anti-heave effect</td></tr>
+    <tr><td>Stern drainage</td><td>2m stern trim drains bilge water naturally aft — moon pool at stern collects passively</td></tr>
+  </tbody>
+</table>
+
+<p>The competing requirements all converge on the <strong>after third of the vessel</strong> — away from the amidships maximum bending zone, away from bow slamming, close to stern for Zone 3 sewer run, adjacent to the stern service compartment, and optimally placed for following-sea heave damping.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>4. Structural Design</h2>
+
+<h3>The Hull Opening Problem</h3>
+
+<p>A moon pool is a discontinuity in the hull — a stress concentration in the primary structural member (the hull skin box girder). At 157m length with fully reversing wave loads, any discontinuity requires careful reinforcement.</p>
+
+<table>
+  <thead><tr><th>Structural challenge</th><th>Solution</th></tr></thead>
+  <tbody>
+    <tr><td>Longitudinal bending interrupted by pool opening</td><td>Heavy ring frame around pool perimeter — restores continuity of the box girder flanges</td></tr>
+    <tr><td>Stress concentration at corners</td><td>Radiused corners — no sharp re-entrant angles in the pool perimeter</td></tr>
+    <tr><td>Water load on pool walls</td><td>Pool trunk is a tube under external hydrostatic pressure — wall thickness designed accordingly</td></tr>
+    <tr><td>Wave sloshing loads</td><td>Baffles within pool reduce oscillation amplitude — prevents resonant sloshing in heavy weather</td></tr>
+  </tbody>
+</table>
+
+<h3>Pool Trunk Construction</h3>
+
+<table>
+  <thead><tr><th>Element</th><th>Specification</th></tr></thead>
+  <tbody>
+    <tr><td>Trunk walls</td><td>Heavy laminated timber — structural continuity with hull skin</td></tr>
+    <tr><td>Deck penetrations</td><td>Heavy ring frames at each deck level — redistributes loads around opening</td></tr>
+    <tr><td>Pool bottom</td><td>Open to sea — no closing mechanism required</td></tr>
+    <tr><td>Pool top</td><td>Grating at weatherdeck level — prevents accidental entry, allows waste disposal</td></tr>
+    <tr><td>Baffles</td><td>Timber baffle plates reducing pool cross-section by ~50% — damps oscillation</td></tr>
+    <tr><td>Waterproofing</td><td>Full pitch treatment of all surfaces — prevents rot in continuously wet environment</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>5. Waste Disposal Functions</h2>
+
+<h3>Zone 3 Daily Drainage</h3>
+
+<p>The primary waste disposal function. Large animal wash-down water and solid waste flows by gravity from Zone 3 slatted floors through a short sewer run to the moon pool trunk, then falls to sea level and drains through the open bottom.</p>
+
+<table>
+  <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>Daily solid waste</td><td>500 large animals × ~5kg/day = 2,500 kg/day</td></tr>
+    <tr><td>Wash-down water</td><td>~5 m³/day</td></tr>
+    <tr><td>Total flow</td><td>~7.5 m³/day = ~87 mL/s continuous</td></tr>
+    <tr><td>Pipe diameter</td><td>~200mm — adequate for flow rate</td></tr>
+    <tr><td>Gradient</td><td>1% minimum — self-cleaning velocity</td></tr>
+  </tbody>
+</table>
+
+<h3>Zone 2 and Zone 1 Bi-Monthly Disposal</h3>
+
+<p>Every 60 days, Zone 2 litter (~10 m³) and Zone 1 desiccated litter (~1.5 m³) are barrowed to the moon pool and tipped in. Wave action in the pool disperses material to sea over subsequent days.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>6. Bilge and Water Functions</h2>
+
+<p>The second moon pool (bilge pool) provides access to the ballast zone below Deck 1 — allowing inspection of ballast tank water level, hull skin inner face, tilt-weir pump troughs, ballast cell baffles, and bilge water quality. The moon pool also provides controlled sea water access for Zone 3 wash-down supplementation and fire suppression at the pitch cooker.</p>
+
+<p><strong>Stern trim drainage:</strong> The 2m stern trim means all bilge water, spilled animal water, and wash-down water drains naturally aft by gravity toward the moon pool complex — passive bilge collection with no pumping required under normal conditions.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>7. Weathervaning Contribution</h2>
+
+<p>The moon pool trunks add lateral resistance area at the stern — reinforcing the hydrodynamic weathervaning asymmetry between the deep-keeled stern and the tapered bow. The pool trunks act as additional fixed lateral resistance elements, enhancing the passive heading moment that keeps the bow into the weather.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>8. Heave Damping — Passive Anti-Acceleration</h2>
+
+<p>With the Ark weathervaning in following seas, waves approach consistently from astern. The stern moon pool is periodically pressurised from below as wave crests pass beneath. This drives the water column in the pool upward — out of phase with the hull's downward heave motion as the wave crest passes.</p>
+
+<p>This is the operating principle of the <strong>U-tube passive heave compensator</strong> — a device widely used in modern offshore platforms and semi-submersibles to reduce vertical accelerations. The moon pool water column acts as a tuned mass damper in the vertical axis:</p>
+
+<table>
+  <thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Mechanism</td><td>Wave pressure oscillates water column in pool — out of phase with hull heave</td></tr>
+    <tr><td>Effect</td><td>Reduces vertical acceleration at the stern — where animals and crew are located</td></tr>
+    <tr><td>Tuning</td><td>Pool natural period set by pool geometry — baffles adjust effective period</td></tr>
+    <tr><td>Modern analogue</td><td>Semi-submersible platform moon pool heave damping — same principle, pre-industrial implementation</td></tr>
+    <tr><td>Moving parts</td><td>None — water column is the oscillating mass</td></tr>
+    <tr><td>Conditions</td><td>Most effective in organised following seas — exactly the Phase 3 Genesis 8:1 condition</td></tr>
+  </tbody>
+</table>
+
+<p>The heave damping function is most effective precisely when it is most needed — in the organised following sea of Phase 3 (Genesis 8:1 drying wind), when wave period is long and consistent, the Ark is weathervaning steadily, and the stern moon pool receives regular wave pressure pulses at the dominant wave period. Earlier flood phases with confused multi-directional seas provide less organised excitation and correspondingly less heave damping — but also less severe vertical accelerations.</p>
+
+<p><strong>The acceleration reduction matters most for:</strong></p>
+<table>
+  <thead><tr><th>Concern</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr><td>Large animals in Zone 3</td><td>Stern location — maximum heave acceleration without damping; moon pool directly below Zone 3</td></tr>
+    <tr><td>Crew working at stern</td><td>Moon pool management, waste disposal, bilge inspection — reduced acceleration improves safety</td></tr>
+    <tr><td>Tilt-weir pump operation</td><td>Reduced heave noise in the pitch/roll signal improves pump efficiency</td></tr>
+    <tr><td>Structural fatigue</td><td>Lower cyclic acceleration loads reduce cumulative fatigue over 371 days</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>9. Wave Dynamics in the Pool</h2>
+
+<p>Moon pool natural frequency estimate:</p>
+
+<pre>For rectangular pool, width w, depth h:
+f_natural ≈ √(g·π / (2·h)) / (2π)
+
+At draft h = 7.86m (approximate pool depth):
+f_natural ≈ √(9.81·π / (2·7.86)) / (2π) ≈ 0.22 Hz → period ~4.5s
+
+Design wave encounter period: ~14–22s
+Pool natural period: ~4.5s
+Ratio: ~3–5 — well away from resonance ✓
+
+Baffles reduce effective pool area → increase natural frequency further → moves further from wave encounter period ✓</pre>
+
+<p>The moon pool natural period (~4.5s) is well removed from the design wave encounter period (14–22s) — resonance is not a concern at normal sea states. Baffles provide additional margin.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>10. Open Items</h2>
+
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Action needed</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Pool dimensions</td><td>Confirm from CAD — reconcile with 728 m³ tally deduction</td></tr>
+    <tr><td>2</td><td>Pool location</td><td>Confirm after-third position relative to Zone 3 layout</td></tr>
+    <tr><td>3</td><td>Sewer run specification</td><td>Diameter, gradient, material — confirm self-cleaning velocity</td></tr>
+    <tr><td>4</td><td>Ring frame specification</td><td>Size and spacing of reinforcing frames around pool perimeter</td></tr>
+    <tr><td>5</td><td>Baffle design</td><td>Baffle plate sizing for adequate oscillation damping and heave tuning</td></tr>
+    <tr><td>6</td><td>Heave damping quantification</td><td>Model test or CFD — confirm anti-acceleration effectiveness at design wave periods</td></tr>
+    <tr><td>7</td><td>Zone 2 disposal timing</td><td>Confirm pool capacity for bi-monthly litter disposal — wave dispersal rate adequate?</td></tr>
+  </tbody>
+</table>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | July 2026
+</footer>
+
+</body>
+</html>
