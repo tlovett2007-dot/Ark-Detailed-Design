@@ -14,7 +14,7 @@
 
 <main>
 <h1>Seakeeping</h1>
-<p class="doc-meta">Last revised: July 2026 | Status: Working document</p>
+<p class="doc-meta">Cubit: 0.524m (Royal Egyptian) | Last revised: July 2026 | Status: Working document</p>
 <p class="breadcrumb"><a href="../index.html">Home</a> › Seakeeping</p>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
@@ -301,10 +301,27 @@ Naturally asymptotic — no artificial cap. U = wind speed at 10m (m/s), F = fet
 </script>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<h2>10. Calculation Files</h2>
+
+<p>Excel workbooks with live formulas — change wind speeds or constants on the Inputs sheet and all data and charts update automatically.</p>
+
+<table>
+  <thead><tr><th>File</th><th>Contents</th><th>Formula source</th></tr></thead>
+  <tbody>
+    <tr><td><a href="calcs/SPM-Wave-Height.xlsx">SPM-Wave-Height.xlsx</a></td><td>Fetch vs significant wave height Hs — 4 wind speeds, 0–2000km</td><td>SPM/SMB (USACE 1984)</td></tr>
+    <tr><td><a href="calcs/SPM-Wave-Period.xlsx">SPM-Wave-Period.xlsx</a></td><td>Fetch vs peak wave period Tp — 4 wind speeds, 0–2000km</td><td>JONSWAP power law</td></tr>
+    <tr><td><a href="calcs/SPM-Wave-Steepness.xlsx">SPM-Wave-Steepness.xlsx</a></td><td>Fetch vs wave slope (degrees) — 4 wind speeds, 0–200km</td><td>SPM Hs + JONSWAP Tp combined</td></tr>
+    <tr><td><a href="calcs/Roll-Damping-DAF.xlsx">Roll-Damping-DAF.xlsx</a></td><td>Roll damping, DAF vs wave period — keel geometry, amplitude family</td><td>Ikeda linearised damping</td></tr>
+    <tr><td><a href="calcs/JONSWAP-Wave-Height.xlsx">JONSWAP-Wave-Height.xlsx</a></td><td>Earlier JONSWAP fetch vs Hs — retained as reference comparison</td><td>Hasselmann et al. 1973</td></tr>
+  </tbody>
+</table>
+
 </main>
 
 <footer>
-  Noah's Ark Naval Architecture Research | T. Lovett | July 2026
+  Noah's Ark Naval Architecture Research | T. Lovett | Cubit: 0.524m (Royal Egyptian) | July 2026
 </footer>
 
 <style>
