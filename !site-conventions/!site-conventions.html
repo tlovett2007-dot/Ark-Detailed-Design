@@ -56,7 +56,7 @@
 
 <p>All pages follow a <code>class-subclass</code> naming convention. Folders sort alphabetically — the tilde prefix on <code>!site</code> keeps it at the top. The full taxonomy:</p>
 
-<pre>aig:        articles, book, contributions, corrections, design, letters, video
+<pre>aig:        articles, book, contributions, enhance, design, letters, video
 animals:    biogeography, count, kinds, zones
 flood:      geology, mechanism, phases, seastates, vegetation
 food:       fodder, provisions, spoilage, storage, water
@@ -87,7 +87,16 @@ thirdparty: amc, kriso, magnuson, troyer
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<h2>4. Page Template Structure</h2>
+<h3>Preserving Subfolders</h3>
+<p>When updating a page, only replace the <code>.html</code> file. Never touch the subfolders unless explicitly asked:</p>
+<ul>
+  <li><code>images/</code> — page images</li>
+  <li><code>docs/</code> — PDFs and reference documents</li>
+  <li><code>calcs/</code> — calculation files</li>
+  <li><code>CAD/</code> — CAD files</li>
+</ul>
+
+
 
 <p>Every page follows this HTML structure exactly:</p>
 
