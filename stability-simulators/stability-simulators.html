@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stability Simulators — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Stability Simulators</h1>
+<p class="doc-meta">Last revised: July 2026 | Status: In development</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Stability Simulators</p>
+
+<p>Two interactive browser-based simulators are planned for this site, both derived from
+original VB6 programs written by T. Lovett in 2004–2005 for worldwideflood.com. The
+physics and algorithms are proven — the task is reimplementation in HTML5 canvas and
+JavaScript for modern browsers without requiring any download or installation.</p>
+
+<p>Both simulators use the same parameterised hull cross-section: bilge radius, deadrise,
+flare/tumblehome, and beam/depth ratios. Both accept cubit selection as the primary
+dimension input, scaling all geometry accordingly.</p>
+
+<hr>
+
+<h2>Simulator 1 — GZ Curve Plotter</h2>
+<p class="doc-meta">Predecessor: Hydrostatic Calculator Ver 5, T. Lovett, May 2005</p>
+
+<p>The GZ curve plotter calculates static roll stability — the righting arm GZ as a
+function of heel angle for a given hull cross-section and loading condition. This is
+the first check performed on any new hull design. It makes no assumptions about dynamics
+— it answers only: if this vessel is heeled to angle θ and released in calm water, does
+it return upright?</p>
+
+<h3>Physics</h3>
+<p>The calculation follows Archimedes' principle applied to a polygonal hull cross-section:</p>
+
+<ol>
+  <li><strong>Define hull geometry</strong> — polygonal cross-section from input parameters
+  (beam, depth, bilge radius, deadrise, flare/tumblehome, roof camber)</li>
+  <li><strong>Apply heel angle</strong> — rotate hull polygon to current roll angle θ</li>
+  <li><strong>Calculate submerged area</strong> — trapezoidal integration of the
+  waterplane-clipped polygon. For any polygon with vertices in consecutive order:<br>
+  <code>subarea += (Xᵢ − Xᵢ₊₁) × (Yᵢ₊₁ + Yᵢ) / 2</code></li>
+  <li><strong>Vertical force equilibrium</strong> — shift hull vertically until buoyancy
+  force = gravity force. Newton-Raphson iteration converges in 3–4 steps to
+  accuracy &lt; 10⁻⁹</li>
+  <li><strong>Buoyancy centroid B</strong> — centroid of submerged polygon:<br>
+  <code>k = (Xᵢ × Yᵢ₊₁) − (Xᵢ₊₁ × Yᵢ)</code><br>
+  <code>Xb = Σ((Xᵢ + Xᵢ₊₁) × k) / (6 × subarea)</code></li>
+  <li><strong>GZ</strong> — horizontal distance between B and G (gravity centre)</li>
+  <li><strong>Repeat</strong> for θ = 0° to 90° at selected interval</li>
+  <li><strong>Integrate GZ curve</strong> — trapezoidal sum gives area under GZ curve
+  (energy to capsize, m·rad)</li>
+</ol>
+
+<p>This method handles any polygonal cross-section at any heel angle without special
+geometric cases. A bilge radius is approximated by a polygon with sufficient vertices
+to give smooth curves.</p>
+
+<h3>Parameters</h3>
+
+<table>
+  <tr><th>Parameter</th><th>Description</th><th>Typical range</th></tr>
+  <tr><td>Cubit</td><td>Dimension standard — scales all geometry</td><td>REC 524mm (default); historical alternatives selectable</td></tr>
+  <tr><td>Beam B</td><td>Moulded beam in cubits</td><td>50 (biblical)</td></tr>
+  <tr><td>Depth D</td><td>Moulded depth in cubits</td><td>30 (biblical)</td></tr>
+  <tr><td>Bilge radius</td><td>Fraction of B</td><td>0.1–0.3</td></tr>
+  <tr><td>Deadrise</td><td>Bottom V angle (degrees)</td><td>0–5°</td></tr>
+  <tr><td>Flare/tumblehome</td><td>Topsides angle — positive = flare, negative = tumblehome</td><td>-5° to +10°</td></tr>
+  <tr><td>Roof camber</td><td>Camber of upper deck</td><td>0–0.1B</td></tr>
+  <tr><td>KG/D</td><td>Centre of gravity as fraction of depth</td><td>0.3–0.6</td></tr>
+  <tr><td>Density</td><td>Vessel relative density (loaded displacement / volume)</td><td>0.3–0.6</td></tr>
+  <tr><td>Intervals</td><td>Number of angle steps — accuracy vs speed</td><td>100–1000</td></tr>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+  <tr><th>Output</th><th>Description</th></tr>
+  <tr><td>GZ curve</td><td>Righting arm (m) vs heel angle (degrees) — plotted 0° to 90°</td></tr>
+  <tr><td>Integral curve</td><td>Area under GZ curve (m·rad) — energy to capsize</td></tr>
+  <tr><td>Max GZ</td><td>Maximum righting arm and angle at which it occurs</td></tr>
+  <tr><td>GM</td><td>Metacentric height — slope of GZ curve at origin</td></tr>
+  <tr><td>KB, BM, KM</td><td>Key hydrostatic heights</td></tr>
+  <tr><td>Draft</td><td>Calculated from density and geometry</td></tr>
+  <tr><td>Cross-section view</td><td>Live diagram showing hull at current heel angle with M, G, B, K marked</td></tr>
+</table>
+
+<h3>Validation</h3>
+<p>The predecessor VB6 program reproduced Hong et al. (1994) Table 3 stability data
+(column AR) to better than 0.1% at 1000 intervals for all 13 hull forms. The HTML
+reimplementation will use the same algorithm and validate against the same dataset
+before release.</p>
+
+<h3>Preset Hull Forms</h3>
+<p>The following presets will be included for direct comparison and validation:</p>
+
+<table>
+  <tr><th>Preset</th><th>Source</th></tr>
+  <tr><td>Biblical Ark (REC cubit)</td><td>Genesis 6:15, 0.524m cubit</td></tr>
+  <tr><td>Hong Hulls 0–12</td><td>Hong et al. (1994) — all 13 hull forms for validation</td></tr>
+  <tr><td>Gitt hulls</td><td>Werner Gitt (2001) — for cross-validation</td></tr>
+  <tr><td>Default WWF hull</td><td>Lovett (2005) — bilge radius 0.2B, deadrise 2°</td></tr>
+</table>
+
+<hr>
+
+<h2>Simulator 2 — Dynamic Roll Simulator</h2>
+<p class="doc-meta">Predecessor: Noah's Ark Beam Sea Simulator (Pre-release), T. Lovett, Jan 2004</p>
+
+<p>The dynamic roll simulator extends the static GZ calculation into time-domain simulation.
+Given a wave environment and initial conditions, it integrates the equations of motion
+forward in time — computing roll, heave and sway at each timestep and animating the hull
+cross-section in real time. This is the tool for evaluating seakeeping performance,
+resonance risk, and the effectiveness of roll damping systems including the triple keel.</p>
+
+<h3>Physics</h3>
+
+<p>At each timestep the following sequence is executed:</p>
+
+<ol>
+  <li><strong>Wave surface</strong> — compute instantaneous water surface elevation at
+  each point of the hull from the selected wave model (sinusoidal, Stokes, wave group,
+  or opposing waves)</li>
+  <li><strong>Wave particle velocities</strong> — orbital motion of water particles
+  (circular at surface, decaying exponentially with depth). These velocities define the
+  relative velocity of hull surfaces through the water — essential for physically correct
+  damping</li>
+  <li><strong>Submerged geometry</strong> — intersect current hull position (roll + heave
+  + sway) with instantaneous wave surface. Same polygonal algorithm as Simulator 1</li>
+  <li><strong>Buoyancy force and moment</strong> — from submerged area centroid</li>
+  <li><strong>Froude-Krylov force</strong> — pressure field of undisturbed wave acting
+  on hull — primary wave excitation force</li>
+  <li><strong>Damping forces</strong> — quadratic drag on hull surfaces and keels:
+  <code>F_drag = ½ ρ C_d A v²</code> where v is instantaneous surface velocity relative
+  to water particle velocity. Physically derived — not a fudged linear damping coefficient</li>
+  <li><strong>Wind force</strong> — adjustable constant heel moment</li>
+  <li><strong>Equations of motion</strong> — resolve net forces and moments into
+  angular acceleration (roll), vertical acceleration (heave) and lateral acceleration (sway)
+  using hull mass and radii of gyration</li>
+  <li><strong>Numerical integration</strong> — Euler or RK4 timestep. Add accelerations
+  to velocities, velocities to positions</li>
+  <li><strong>Render</strong> — draw hull cross-section at new position, waterline,
+  wave surface, force vectors</li>
+</ol>
+
+<h3>Wave Models</h3>
+
+<table>
+  <tr><th>Model</th><th>Description</th><th>Application</th></tr>
+  <tr><td>Sinusoidal</td><td>Regular linear wave — simple harmonic</td><td>Resonance analysis, period matching</td></tr>
+  <tr><td>Stokes</td><td>Higher-order wave — steeper crests, flatter troughs</td><td>Severe sea conditions</td></tr>
+  <tr><td>Wave group</td><td>Superposition of 8 regular waves — beating pattern</td><td>Successive wave groups — broaching risk</td></tr>
+  <tr><td>Opposing waves</td><td>Two wave trains at 180°</td><td>Confused sea — worst-case stability test</td></tr>
+</table>
+
+<h3>Damping Model</h3>
+<p>The predecessor program used adjustable linear damping coefficients (Roll Damp, Heave
+Damp, Sway Damp) that were acknowledged as uncalibrated. The new simulator replaces
+these with physically derived quadratic damping:</p>
+
+<table>
+  <tr><th>Component</th><th>Mechanism</th><th>Parameters</th></tr>
+  <tr><td>Hull skin friction</td><td>Viscous drag on wetted surface — velocity-dependent</td><td>C_d for smooth timber surface</td></tr>
+  <tr><td>Bilge damping</td><td>Separation drag at bilge — dominant for bare hull</td><td>C_d for rounded bilge</td></tr>
+  <tr><td>Keel damping</td><td>Quadratic drag on keel plan area</td><td>C_d ≈ 1.0–1.5 (flat plate normal to flow); keel area adjustable</td></tr>
+  <tr><td>Triple keel configuration</td><td>Three keels at keel, port bilge, starboard bilge</td><td>Empirical ζ ≈ 0.10–0.18 from literature</td></tr>
+</table>
+
+<p>The damping coefficient ζ emerging from the simulation can be compared against
+empirical values from keel damping literature. This is the calibration check the
+predecessor program lacked.</p>
+
+<h3>Parameters</h3>
+
+<table>
+  <tr><th>Panel</th><th>Parameters</th></tr>
+  <tr><td>Wave</td><td>Wavelength, height, choppiness, wave model selection, period (calculated)</td></tr>
+  <tr><td>Hull geometry</td><td>Same as Simulator 1 — cubit, B/D, bilge radius, deadrise, flare</td></tr>
+  <tr><td>Loading</td><td>Density, KG/D</td></tr>
+  <tr><td>Damping</td><td>Keel depth, keel width, keel C_d — or manual override for comparison with predecessor</td></tr>
+  <tr><td>Excitation</td><td>Wind force, wave model</td></tr>
+</table>
+
+<h3>Outputs</h3>
+
+<table>
+  <tr><th>Output</th><th>Description</th></tr>
+  <tr><td>Animation</td><td>Hull cross-section rolling and heaving in real time against wave surface</td></tr>
+  <tr><td>Roll time history</td><td>θ vs time — scrolling trace</td></tr>
+  <tr><td>Roll period</td><td>Measured from zero crossings — compared against GM-derived natural period</td></tr>
+  <tr><td>Damping ratio ζ</td><td>Extracted from free decay envelope — compared against empirical keel literature</td></tr>
+  <tr><td>Max roll angle</td><td>Running maximum — flags resonance conditions</td></tr>
+  <tr><td>Hydrostatic panel</td><td>Instantaneous GM, GZ, draft, buoyancy centre — same as Simulator 1</td></tr>
+  <tr><td>Force vectors</td><td>Buoyancy, gravity, damping shown on cross-section diagram</td></tr>
+</table>
+
+<h3>Extension to Strip Method</h3>
+<p>The 2D midship strip simulation is the foundation for a 3D strip method analysis.
+Once the single-strip physics is validated, the hull can be divided into N transverse
+strips along its length. Each strip runs the same physics independently, summing
+contributions to total force and moment. This captures:</p>
+
+<ul>
+  <li>Phase differences in wave excitation along the hull length</li>
+  <li>Variation in hull geometry from midship to bow and stern</li>
+  <li>Longitudinal bending moment distribution — feeding directly into the structural analysis</li>
+  <li>Pitch and heave coupling with roll</li>
+</ul>
+
+<p>The strip method is the standard naval architecture tool for seakeeping prediction.
+Implementing it in the browser for a parameterised hull form would be a genuine
+research contribution — no equivalent tool currently exists for public use.</p>
+
+<hr>
+
+<h2>Development Status</h2>
+
+<table>
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>Simulator 1 — GZ plotter algorithm</td><td>Proven in VB6 (2005) — ready to reimplement</td></tr>
+  <tr><td>Simulator 1 — HTML5 canvas implementation</td><td>Planned</td></tr>
+  <tr><td>Simulator 2 — dynamic algorithm</td><td>Proven in VB6 (2004) — damping uncalibrated</td></tr>
+  <tr><td>Simulator 2 — physically derived damping model</td><td>Theory complete — needs implementation</td></tr>
+  <tr><td>Simulator 2 — wave particle motion</td><td>Theory complete — not in predecessor</td></tr>
+  <tr><td>Simulator 2 — HTML5 canvas implementation</td><td>Planned</td></tr>
+  <tr><td>Strip method extension</td><td>Concept only</td></tr>
+</table>
+
+<hr>
+
+<h2>Predecessor Programs</h2>
+
+<table>
+  <tr><th>Program</th><th>Details</th></tr>
+  <tr><td>Hydrostatic Calculator Ver 5</td><td>T. Lovett, May 2005. VB6 executable.
+  Static GZ and integral curve. Polygonal hull, Newton-Raphson equilibrium, Hong and
+  Gitt validation presets. Validated against Hong et al. (1994) to &lt;0.1% at 1000
+  intervals.</td></tr>
+  <tr><td>Noah's Ark Beam Sea Simulator</td><td>T. Lovett, Jan 2004. VB6 executable.
+  Dynamic roll, heave and sway in beam seas. Sinusoidal, Stokes, wave group and opposing
+  wave models. Linear damping (acknowledged uncalibrated). Wind force. Full hydrostatic
+  panel. Source code not recovered.</td></tr>
+</table>
+
+<hr>
+
+<h2>References</h2>
+
+<table>
+  <tr><th>Reference</th><th>Relevance</th></tr>
+  <tr><td>Hong et al. (1994). Safety investigation of Noah's Ark in a seaway.
+  <em>Journal of Creation</em> 8(1):26–36</td><td>Validation dataset for Simulator 1 — 13 hull forms, Table 3</td></tr>
+  <tr><td>Gitt, W. (2001). Das sonderbarste Schiff der Weltgeschichte. CLV</td><td>Additional validation dataset for Simulator 1</td></tr>
+  <tr><td>Scheltema De Heere R.F. &amp; Bakker A.R. (1970). Buoyancy and Stability of
+  Ships Vol 1. Harrap, London</td><td>Hydrostatic theory foundation</td></tr>
+  <tr><td>Keel damping literature — empirical ζ values</td><td>Calibration target for Simulator 2 damping model</td></tr>
+</table>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | July 2026
+</footer>
+
+</body>
+</html>
