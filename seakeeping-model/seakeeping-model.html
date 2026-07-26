@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Testing — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Model Testing</h1>
+<p class="doc-meta">Last revised: July 2026 | Status: Programme planned</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Model Testing</p>
+
+<p>Physical model testing provides empirical validation of the analytical seakeeping work —
+particularly roll damping, weathervaning response, and comparative performance between
+ship-shaped and box hull forms. Two test venues are planned: a local Blue Mountains lake
+for free decay testing, and the AMC Model Test Basin in Launceston for wave and wind testing.</p>
+
+<hr>
+
+<h2>The Model — Construction and Specification</h2>
+<p class="doc-meta">Built: August 2004 | Current location: Attic storage</p>
+
+<p>The test model was constructed in 2004 for worldwideflood.com research. It remains in
+storage and is available for recommissioning with sensor upgrades.</p>
+
+<table>
+  <tr><th>Parameter</th><th>Value</th><th>Notes</th></tr>
+  <tr><td>Length</td><td>1800mm</td><td>~6 feet — close to HO gauge at REC cubit</td></tr>
+  <tr><td>Scale</td><td>~1:79</td><td>Varies slightly with cubit — 1:76 at common cubit, 1:79 at REC 524mm</td></tr>
+  <tr><td>Hull material</td><td>2mm chrome steel</td><td>12% chrome, no nickel — rust resistant, heavy</td></tr>
+  <tr><td>End plates</td><td>15mm PVC</td><td>Replaceable — allows swap between hull form variants</td></tr>
+  <tr><td>Lid</td><td>6mm polycarbonate</td><td>Screwed watertight seal — access holes for sensors</td></tr>
+  <tr><td>Bilge radius</td><td>50mm chamfer</td><td>Designed for replaceable radii</td></tr>
+  <tr><td>Ballasted mass</td><td>~40kg at target draft</td><td>Draft = 0.4 × depth — consistent with volume tally</td></tr>
+  <tr><td>Original sensor</td><td>Gyroscopic mouse</td><td>Angular motion only — to be replaced by Arduino IMU</td></tr>
+</table>
+
+<h3>Modular Design</h3>
+<p>The end sections are interchangeable — different bow and stern forms can be fitted to
+the same parallel midsection. This allows direct comparative testing of hull form variants
+(ship-shaped vs box) under identical conditions with the same instrumented hull. The
+bilge radius is also designed for swap-out — rectangular, chamfered, and fully radiused
+cross-sections can all be tested.</p>
+
+<h3>Original Test Blog — worldwideflood.com (2004)</h3>
+<table>
+  <tr><th>Entry</th><th>Content</th><th>Link</th></tr>
+  <tr><td>Blog 1</td><td>Midsection construction — steel hull, PVC ends, gyro mouse mounting</td>
+  <td><a href="https://tlovett2007-dot.github.io/WWF/ark/model_testing/tmblog/tm01.htm">tm01</a></td></tr>
+  <tr><td>Blog 2</td><td>Bow form construction — ship-shaped end section</td>
+  <td><a href="https://tlovett2007-dot.github.io/WWF/ark/model_testing/tmblog/tm02.htm">tm02</a></td></tr>
+  <tr><td>Blog 3</td><td>Ship vs Box — comparative form testing</td>
+  <td><a href="https://tlovett2007-dot.github.io/WWF/ark/model_testing/tmblog/tm03.htm">tm03</a></td></tr>
+  <tr><td>Blog 4</td><td>Bow fin — active broach prevention device</td>
+  <td><a href="https://tlovett2007-dot.github.io/WWF/ark/model_testing/tmblog/tm04.htm">tm04</a></td></tr>
+</table>
+
+<hr>
+
+<h2>The Bathtub Problem</h2>
+
+<p>The first water test was conducted in a bathtub — the obvious starting point for a
+1800mm model. It failed for a classic reason: the bathtub generated its own resonant
+oscillation (seiche) that swamped the hull roll signal.</p>
+
+<p>A seiche is a standing wave in a confined body of water, oscillating at the natural
+resonant frequency of the container. A standard bathtub (~1.5m long) has a seiche period
+of roughly 0.8 seconds. The model's natural roll period at 1:79 scale is approximately
+22/√79 ≈ 2.5 seconds. The two periods are close enough to interact — the recorded data
+showed two overlapping oscillations, one the hull and one the bathtub. The result was
+uninterpretable.</p>
+
+<table>
+  <tr><th>Body of water</th><th>Approximate seiche period</th><th>Verdict</th></tr>
+  <tr><td>Bathtub (~1.5m)</td><td>~0.8s</td><td>Too close to model roll period — unusable</td></tr>
+  <tr><td>Swimming pool (25m)</td><td>~10s</td><td>Well separated — usable</td></tr>
+  <tr><td>Lake</td><td>Minutes to hours</td><td>Negligible — ideal for free decay</td></tr>
+  <tr><td>AMC basin (35m)</td><td>~14s</td><td>Well separated — usable</td></tr>
+</table>
+
+<p>The lesson is straightforward: free decay tests require a body of water whose seiche
+period is well separated from the model's natural roll period. A lake or large pool
+eliminates the problem entirely.</p>
+
+<hr>
+
+<h2>Sensor Upgrade — Arduino IMU</h2>
+
+<p>The 2004 gyroscopic mouse sensor is replaced by a modern Arduino-based IMU (inertial
+measurement unit). This is a direct sensor swap — the mounting bracket concept is
+unchanged, the capability is substantially improved.</p>
+
+<table>
+  <tr><th>Parameter</th><th>2004 gyroscopic mouse</th><th>Arduino MPU-6050 IMU</th></tr>
+  <tr><td>Angular measurement</td><td>Yes — roll, pitch, yaw</td><td>Yes — 3-axis gyro + 3-axis accelerometer</td></tr>
+  <tr><td>Linear acceleration</td><td>No</td><td>Yes — heave, sway, surge</td></tr>
+  <tr><td>Sample rate</td><td>~30Hz (USB mouse polling)</td><td>Up to 1000Hz</td></tr>
+  <tr><td>Angular resolution</td><td>Limited by mouse encoder</td><td>0.0005°/s</td></tr>
+  <tr><td>Data logging</td><td>PC via USB — tethered</td><td>SD card — untethered</td></tr>
+  <tr><td>Power</td><td>USB from PC</td><td>Small LiPo battery — self-contained</td></tr>
+  <tr><td>Cost</td><td>~$50 (2004)</td><td>~$5</td></tr>
+  <tr><td>Waterproof housing</td><td>Not sealed</td><td>Potted or housed in existing polycarbonate lid</td></tr>
+</table>
+
+<p>Sample rate of 100Hz is more than sufficient — the model roll period of ~2.5 seconds
+gives 250 samples per cycle at 100Hz. The Nyquist limit for roll harmonics up to 10×
+fundamental (25Hz) is met with margin. For paired model testing at AMC, a GPS pulse-per-second
+signal or common trigger wire synchronises the two loggers to a common timebase.</p>
+
+<hr>
+
+<h2>Test Programme — Phase 1: Lake Free Decay</h2>
+
+<p>Free decay tests in a local Blue Mountains lake establish the baseline roll damping
+coefficient ζ for the hull. Flat calm water early morning eliminates wind and wave
+contamination. Each test takes approximately 5 minutes.</p>
+
+<h3>Protocol</h3>
+<ol>
+  <li>Float model at correct draft — verify against calculated waterline</li>
+  <li>Adjust ballast until KG/D matches target (KG/D ≈ 0.6 — soft GM, long roll period)</li>
+  <li>Apply known initial heel angle (~15°) — release cleanly</li>
+  <li>Arduino IMU logs roll angle at 100Hz to SD card</li>
+  <li>Extract roll period from zero crossings</li>
+  <li>Extract damping ratio ζ from logarithmic decrement of amplitude envelope</li>
+  <li>Repeat minimum 3 runs per configuration for repeatability</li>
+</ol>
+
+<h3>Test Matrix</h3>
+<table>
+  <tr><th>Configuration</th><th>Purpose</th></tr>
+  <tr><td>Bare hull — no keels</td><td>Baseline ζ — hull skin friction and bilge damping only</td></tr>
+  <tr><td>Single centreline keel</td><td>Keel contribution — isolated</td></tr>
+  <tr><td>Triple keel — keel + 2 bilge keels</td><td>Full configuration — compare against bare hull</td></tr>
+  <tr><td>Triple keel — varied depth</td><td>Sensitivity of ζ to keel depth</td></tr>
+  <tr><td>Triple keel — varied width</td><td>Sensitivity of ζ to keel plan area</td></tr>
+</table>
+
+<h3>Success Criterion</h3>
+<p>Literature empirical range for keel-fitted vessels: ζ = 0.10–0.18. The triple keel
+configuration should achieve ζ ≥ 0.10. If bare hull gives ζ ≈ 0.05–0.07 (typical for
+smooth hull), the keel contribution should approximately double the damping — consistent
+with empirical data from keel damping literature.</p>
+
+<p>The roll period measured in free decay should match the GM-derived natural period
+Tn = 2π√(I/GΔ) using the calculated target GM of ~0.85m. Agreement within 10% validates
+the KG and GM estimates.</p>
+
+<hr>
+
+<h2>Test Programme — Phase 2: AMC Model Test Basin</h2>
+<p class="doc-meta">Venue: Australian Maritime College, Launceston, Tasmania</p>
+
+<p>The AMC Model Test Basin provides controlled wave and wind environments unavailable
+on open water. Key facility specifications:</p>
+
+<table>
+  <tr><th>Parameter</th><th>Specification</th></tr>
+  <tr><td>Basin dimensions</td><td>35m × 12m</td></tr>
+  <tr><td>Water depth</td><td>0–1.0m adjustable</td></tr>
+  <tr><td>Wave maker</td><td>16 computer-controlled paddles — regular and irregular waves</td></tr>
+  <tr><td>Wind generator</td><td>20 individually controllable fans — adjustable direction and speed</td></tr>
+  <tr><td>Motion capture</td><td>8-camera Qualisys digital system — 6 DOF tracking, multiple models simultaneously</td></tr>
+  <tr><td>Typical model lengths</td><td>2–6m</td></tr>
+  <tr><td>Seiche period</td><td>~14s — well clear of model roll period of ~2.5s</td></tr>
+</table>
+
+<h3>Scale Assessment for AMC</h3>
+
+<p>Design wave condition: Genesis 8:1 drying wind at 40 knots, fully developed Hs = 10m
+(SPM/SMB method).</p>
+
+<table>
+  <tr><th>Scale</th><th>Model length</th><th>Model Hs</th><th>Model wind (40kn full scale)</th><th>Assessment</th></tr>
+  <tr><td>1:79 (existing model)</td><td>2.0m</td><td>127mm</td><td>4.5 knots</td><td>Wind marginal — wave adequate</td></tr>
+  <tr><td>1:40</td><td>3.9m</td><td>250mm</td><td>6.3 knots</td><td>Good compromise</td></tr>
+  <tr><td>1:26</td><td>6.0m</td><td>385mm</td><td>7.8 knots</td><td>Best wind response — large model to build</td></tr>
+</table>
+
+<p>The existing 1:79 model fits the AMC basin and is usable for wave testing. Wind response
+at 4.5 knots model speed is at the lower end of fan controllability — useful but marginal.
+A purpose-built 1:40 model (~4m) would be the optimal AMC test vehicle. The existing model
+serves Phase 1 lake tests and preliminary AMC wave tests while a larger model is considered.</p>
+
+<h3>Proposed AMC Test Programme</h3>
+<table>
+  <tr><th>Test</th><th>Condition</th><th>Measurement</th></tr>
+  <tr><td>Roll in beam seas</td><td>Regular waves at natural roll period — resonance condition</td><td>Roll amplitude vs wave height — RAO</td></tr>
+  <tr><td>Roll damping in waves</td><td>Wave excitation then cut — decay in waves</td><td>ζ in wave environment vs flat water</td></tr>
+  <tr><td>Weathervaning</td><td>Wind + waves — model free to yaw</td><td>Equilibrium heading angle vs wind/wave direction</td></tr>
+  <tr><td>Ship vs box comparative</td><td>Identical conditions — swap end sections</td><td>Roll, heave, pitch — direct comparison</td></tr>
+  <tr><td>Keel effectiveness in waves</td><td>Beam seas — bare hull vs triple keel</td><td>Roll amplitude reduction factor</td></tr>
+  <tr><td>Following sea behaviour</td><td>Waves from astern — weathervaned heading</td><td>Pitch, heave, broaching tendency</td></tr>
+</table>
+
+<h3>Paired Model Concept</h3>
+<p>Running two models simultaneously in the same wave environment eliminates environmental
+variability from comparative tests. Both models experience identical wave conditions —
+any difference in measured response is purely attributable to the design variable under
+test.</p>
+
+<table>
+  <tr><th>Variable</th><th>Model A</th><th>Model B</th></tr>
+  <tr><td>Hull form</td><td>Ship-shaped (Lovett/Magnuson)</td><td>Box barge</td></tr>
+  <tr><td>Damping</td><td>Triple keel</td><td>Bare hull</td></tr>
+  <tr><td>Weathervaning</td><td>Stern skeg fitted</td><td>No skeg</td></tr>
+  <tr><td>KG</td><td>Target KG (~9.5m full scale)</td><td>Low KG (stiff vessel)</td></tr>
+</table>
+
+<p>The AMC Qualisys motion capture system can track both models simultaneously — the
+paired test is directly supported by the facility. Two synchronised Arduino IMU loggers
+(GPS or trigger-pulse synchronised) provide independent verification of the optical
+tracking data.</p>
+
+<hr>
+
+<h2>Scale Modelling Principles</h2>
+
+<p>Froude scaling governs model testing for gravity-dominated phenomena (waves, roll,
+heave). All time-domain quantities scale as √λ where λ is the length scale ratio.</p>
+
+<table>
+  <tr><th>Quantity</th><th>Scale factor</th><th>Example at 1:79</th></tr>
+  <tr><td>Length</td><td>1/λ</td><td>1/79</td></tr>
+  <tr><td>Time / period</td><td>1/√λ</td><td>1/√79 = 1/8.89</td></tr>
+  <tr><td>Velocity (wave, wind)</td><td>1/√λ</td><td>40kn full → 4.5kn model</td></tr>
+  <tr><td>Wave height</td><td>1/λ</td><td>10m full → 127mm model</td></tr>
+  <tr><td>Roll period</td><td>1/√λ</td><td>22s full → 2.5s model</td></tr>
+  <tr><td>Mass</td><td>1/λ³</td><td>21,000t full → 42kg model</td></tr>
+  <tr><td>Force</td><td>1/λ³</td><td>Scales with mass</td></tr>
+</table>
+
+<p>Damping ratio ζ is dimensionless — it does not scale. The ζ measured on the model
+directly equals the full-scale ζ, provided the damping mechanism is correctly reproduced
+(keel geometry scaled geometrically, same C_d in water). This makes free decay testing
+particularly valuable — the damping result transfers directly to the full-scale analysis
+without correction.</p>
+
+<hr>
+
+<h2>Instrumentation Summary</h2>
+
+<table>
+  <tr><th>Instrument</th><th>Measurement</th><th>Specification</th><th>Cost</th></tr>
+  <tr><td>Arduino + MPU-6050 IMU</td><td>Roll, pitch, yaw, heave, sway, surge</td><td>16-bit, 100Hz, SD card logging</td><td>~$15</td></tr>
+  <tr><td>BMP388 pressure sensor</td><td>Wave height at fixed point</td><td>0.085 Pa resolution = ~8.5mm water column</td><td>~$10</td></tr>
+  <tr><td>GPS module (NEO-6M)</td><td>Common timebase for paired models</td><td>1 pulse-per-second synchronisation</td><td>~$10</td></tr>
+  <tr><td>GoPro / smartphone</td><td>Visual record — wave surface, model behaviour</td><td>4K video — photogrammetry capable</td><td>Existing</td></tr>
+  <tr><td>AMC Qualisys system</td><td>6 DOF optical motion capture</td><td>8–16 cameras, multiple models</td><td>AMC facility</td></tr>
+</table>
+
+<p>Total instrumentation cost for lake free decay programme: under $50 excluding existing
+equipment. AMC basin tests use facility instrumentation supplemented by Arduino loggers
+for independent verification.</p>
+
+<hr>
+
+<h2>Connection to AMC Study Proposal</h2>
+
+<p>The model testing programme is directly connected to the proposed enrolment in Naval
+Architecture at AMC — see <a href="../thirdparty-amc/thirdparty-amc.html">AMC Collaboration</a>.
+A formal student research project at AMC provides access to the basin facility, academic
+supervision, and the institutional credibility to publish results. The existing model plus
+the proposed test programme constitutes a ready-made research project requiring only the
+academic framework to execute formally.</p>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | July 2026
+</footer>
+
+</body>
+</html>
