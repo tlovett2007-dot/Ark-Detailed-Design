@@ -19,7 +19,6 @@
 
 <p>This page orients an AI assistant (or new collaborator) to the structure, conventions, and assumptions of this research site. Fetch this page at the start of a new chat session before doing any work.</p>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>1. What This Site Is</h2>
 
 <p>Working documentation for a naval architecture feasibility study of Noah's Ark. Author: T. Lovett. The study applies professional naval architecture to the Genesis 6–8 account. It is not devotional literature — it is engineering analysis that takes the biblical text seriously as a primary source.</p>
@@ -28,12 +27,12 @@
 
 <p><strong>Live URL:</strong> <a href="https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html">https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html</a></p>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>2. Folder and File Structure</h2>
 
 <p>Every page lives in its own subfolder named identically to the page. The pattern is invariant:</p>
 
-<pre>root/
+<pre>
+root/
   index.html                          ← home page (root level only)
   ark-style.css                       ← shared stylesheet (root level only)
   pagename/
@@ -43,64 +42,58 @@
     CAD/                              ← CAD files
     documents/                        ← reference documents
   !site-conventions/
-    !site-conventions.html            ← this page</pre>
+    !site-conventions.html            ← this page
+</pre>
 
-<p><strong>The tilde prefix on this folder</strong> sorts it to the top of file listings and signals it is meta, not content.</p>
+<p><strong>The ! prefix on this folder</strong> sorts it to the top of file listings and signals it is meta, not content.</p>
 
 <p><strong>CSS path from every page:</strong> <code>../ark-style.css</code> — always one level up.</p>
 
 <p><strong>Home link from every page:</strong> <code>../index.html</code></p>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>3. Page Taxonomy</h2>
 
-<p>All pages follow a <code>class-subclass</code> naming convention. Folders sort alphabetically — the tilde prefix on <code>!site</code> keeps it at the top. The full taxonomy:</p>
+<p>All pages follow a <code>class-subclass</code> naming convention. Folders sort alphabetically — the ! prefix on <code>!site</code> keeps it at the top. The full taxonomy:</p>
 
-<pre>aig:        articles, book, contributions, enhance, design, letters, video
+<pre>
+aig:        articles, book, contributions, enhance, design, letters, video
 animals:    biogeography, count, kinds, zones
 flood:      geology, mechanism, phases, seastates, vegetation
 food:       fodder, provisions, spoilage, storage, water
 hull:       bow, cubit, dimensions, form, parapet, skin, stern
 internal:   arrangement, bow, decks, holds, moonpool, ramps, stern
 papers:     future, past
-references: books, rules, ships
+references: aig, biblical, books, rules, ships
 seakeeping: damping, motions, waves, weathervaning
 services:   cranes, passive, plumbing, pumps, ventilation, waste
 stability:  draft, gm, gz, roll, volume
 structure:  bulkheads, connections, frames, hogging, scantlings
 technology: bronze, construction, joinery, pitch, planking, trunnels
 thirdparty: amc, kriso, magnuson, troyer
-!site:      conventions</pre>
+voyage:     drift, launch, phases
+!site:      conventions
+</pre>
 
 <p>New pages must fit this taxonomy. If a topic doesn't fit, discuss adding a new class before creating the page.</p>
 
-
+<p><strong>Note on voyage vs seakeeping vs services:</strong> <code>voyage</code> is the operational/narrative description of what happens during the flood — chronological events, crew actions, phase transitions. <code>seakeeping</code> is technical analysis of wave environment and vessel response. <code>services</code> is engineering specification of each onboard system. They complement without overlapping.</p>
 
 <table>
-  <thead><tr><th>Rule</th><th>Example</th><th>Reason</th></tr></thead>
-  <tbody>
-    <tr><td>Dashes, not underscores</td><td><code>hull-structure.html</code> not <code>hull_structure.html</code></td><td>Underscores disappear under hyperlink underline</td></tr>
-    <tr><td>Lowercase only</td><td><code>ark-style.css</code></td><td>Case-sensitive on Linux servers</td></tr>
-    <tr><td>No spaces</td><td>—</td><td>URL encoding issues</td></tr>
-    <tr><td>Descriptive, not dated</td><td><code>stability.html</code></td><td>Pages are living documents, not versioned snapshots</td></tr>
-  </tbody>
+<tr><th>Rule</th><th>Example</th><th>Reason</th></tr>
+<tr><td>Dashes, not underscores</td><td><code>hull-structure.html</code> not <code>hull_structure.html</code></td><td>Underscores disappear under hyperlink underline</td></tr>
+<tr><td>Lowercase only</td><td><code>ark-style.css</code></td><td>Case-sensitive on Linux servers</td></tr>
+<tr><td>No spaces</td><td>—</td><td>URL encoding issues</td></tr>
+<tr><td>Descriptive, not dated</td><td><code>stability.html</code></td><td>Pages are living documents, not versioned snapshots</td></tr>
 </table>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h3>Preserving Subfolders</h3>
-<p>When updating a page, only replace the <code>.html</code> file. Never touch the subfolders unless explicitly asked:</p>
-<ul>
-  <li><code>images/</code> — page images</li>
-  <li><code>docs/</code> — PDFs and reference documents</li>
-  <li><code>calcs/</code> — calculation files</li>
-  <li><code>CAD/</code> — CAD files</li>
-</ul>
 
-
+<p>When updating a page, only replace the <code>.html</code> file. Never touch the subfolders unless explicitly asked.</p>
 
 <p>Every page follows this HTML structure exactly:</p>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -117,7 +110,7 @@ thirdparty: amc, kriso, magnuson, troyer
 &lt;main&gt;
 &lt;h1&gt;Page Title&lt;/h1&gt;
 &lt;p class="doc-meta"&gt;Last revised: Month Year | Status: Active&lt;/p&gt;
-&lt;p class="breadcrumb"&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt; › Page Title&lt;/p&gt;
+&lt;p class="breadcrumb"&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt; &rsaquo; Page Title&lt;/p&gt;
 
 ... content ...
 
@@ -128,89 +121,78 @@ thirdparty: amc, kriso, magnuson, troyer
 &lt;/footer&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h3>Cubit Reference</h3>
+
 <p>Do NOT include "Cubit: 0.524m (Royal Egyptian)" in page headers, doc-meta, or footers. The cubit is established once on the Cubit page and in this document — repeating it on every page is redundant and a maintenance liability if it ever changes. Remove it whenever editing a page.</p>
 
 <h3>Author Timezone</h3>
-<p>Author is in Sydney, Australia — AEST (UTC+10) / AEDT (UTC+11) in summer. At the start of a session, author will confirm local time if session pacing matters.</p>
 
-
+<p>Author is in Sydney, Australia — AEST (UTC+10) / AEDT (UTC+11) in summer.</p>
 
 <table>
-  <thead><tr><th>Parameter</th><th>Value</th><th>Notes</th></tr></thead>
-  <tbody>
-    <tr><td>Cubit</td><td><strong>0.524m (Royal Egyptian)</strong></td><td>Confirmed — supersedes 0.518m Nippur of Lovett (2006)</td></tr>
-    <tr><td>Convention</td><td>Outside structural planking</td><td>AiG Ark Encounter = moulded (Nippur) — same vessel, different convention</td></tr>
-    <tr><td>Length</td><td>157.2m</td><td>300 × 0.524m</td></tr>
-    <tr><td>Beam</td><td>26.2m</td><td>50 × 0.524m</td></tr>
-    <tr><td>Height</td><td>15.72m</td><td>30 × 0.524m</td></tr>
-    <tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20</td></tr>
-    <tr><td>Interior beam</td><td>~23.1m</td><td>After full hull skin deduction</td></tr>
-    <tr><td>Block coefficient</td><td>0.85</td><td></td></tr>
-    <tr><td>Target GM</td><td>~0.85m</td><td>T = 22s roll period</td></tr>
-    <tr><td>Target KG</td><td>~9.52m</td><td>KM − GM — under active review</td></tr>
-    <tr><td>Displacement</td><td>~21,000 tonnes</td><td>Provisional — pending 0.524m update</td></tr>
-    <tr><td>Frame depth</td><td>32" (812mm)</td><td></td></tr>
-    <tr><td>Plank thickness</td><td>5" (127mm)</td><td>Max for cold water soak bending at 17.3m bow radius</td></tr>
-    <tr><td>Primary timber</td><td>Old growth pine equivalent</td><td>650 kg/m³</td></tr>
-    <tr><td>Caulking</td><td>Zopissa (pine pitch + beeswax)</td><td>kopher — Genesis 6:14</td></tr>
-  </tbody>
+<tr><th>Parameter</th><th>Value</th><th>Notes</th></tr>
+<tr><td>Cubit</td><td><strong>0.524m (Royal Egyptian)</strong></td><td>Confirmed — supersedes 0.518m Nippur of Lovett (2006)</td></tr>
+<tr><td>Convention</td><td>Outside structural planking</td><td>AiG Ark Encounter = moulded (Nippur) — same vessel, different convention</td></tr>
+<tr><td>Length</td><td>157.2m</td><td>300 × 0.524m</td></tr>
+<tr><td>Beam</td><td>26.2m</td><td>50 × 0.524m</td></tr>
+<tr><td>Height</td><td>15.72m</td><td>30 × 0.524m</td></tr>
+<tr><td>Draft (target)</td><td>7.86m</td><td>15 cubits — Genesis 7:20</td></tr>
+<tr><td>Interior beam</td><td>~23.1m</td><td>After full hull skin deduction</td></tr>
+<tr><td>Block coefficient</td><td>0.85</td><td></td></tr>
+<tr><td>Target GM</td><td>~0.85m</td><td>T = 22s roll period</td></tr>
+<tr><td>Target KG</td><td>~9.52m</td><td>KM − GM — under active review</td></tr>
+<tr><td>Displacement</td><td>~21,000 tonnes</td><td>Provisional — pending 0.524m update</td></tr>
+<tr><td>Frame depth</td><td>32" (812mm)</td><td></td></tr>
+<tr><td>Plank thickness</td><td>5" (127mm)</td><td>Max for cold water soak bending at 17.3m bow radius</td></tr>
+<tr><td>Primary timber</td><td>Old growth pine equivalent</td><td>650 kg/m³</td></tr>
+<tr><td>Caulking</td><td>Zopissa (pine pitch + beeswax)</td><td>kopher — Genesis 6:14</td></tr>
 </table>
 
 <p><strong>Pending:</strong> All volume tally figures require updating from 0.518m to 0.524m cubit. Volume increases ~1.7%. Tally structure and methodology unchanged.</p>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>7. Update Workflow</h2>
 
-<p>The standard workflow for publishing changes to the live site:</p>
-
 <ol>
-  <li>Work in chat — pages, calcs, content</li>
-  <li>At end of session, AI produces a ZIP with correct folder structure mirroring the repo</li>
-  <li>Unzip → copy contents into local <code>Ark-Detailed-Design</code> repo folder</li>
-  <li>GitHub Desktop detects changes automatically</li>
-  <li>Commit and push</li>
+<li>Work in chat — pages, calcs, content</li>
+<li>At end of session, AI produces a ZIP with correct folder structure mirroring the repo</li>
+<li>Unzip → copy contents into local <code>Ark-Detailed-Design</code> repo folder</li>
+<li>GitHub Desktop detects changes automatically</li>
+<li>Commit and push</li>
 </ol>
 
-<p>The ZIP folder structure mirrors the repo exactly — files drop straight into place with no manual renaming. One ZIP per session.</p>
-
 <p><strong>Note:</strong> The repo is stored outside OneDrive to prevent sync conflicts. Local path: <code>C:\Users\tlove\GitHub\Ark-Detailed-Design\</code></p>
-
-
-
-<p>When starting a new chat session on this project:</p>
 
 <p><strong>Base URL:</strong> <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/</code> — append <code>pagename/pagename.html</code> for any page.</p>
 
 <ol>
-  <li>Fetch this page first by having the author paste this URL in chat: <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/!site-conventions/!site-conventions.html</code></li>
-  <li>Once any page on the site is fetched, all other pages can be fetched directly by constructing URLs from the base. Paste the index URL to unlock: <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html</code></li>
-  <li>Fetch the specific page being worked on before making any edits</li>
-  <li>Deliver complete updated HTML files — never diffs or snippets</li>
-  <li>Use dashes not underscores in all filenames</li>
-  <li>Always use 0.524m cubit — never 0.518m</li>
-  <li>Keep responses low verbosity — author prefers terse working style</li>
-  <li>The project is in a Claude Project — search past chats for prior decisions before asking questions already answered</li>
+<li>Fetch this page first: <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/!site-conventions/!site-conventions.html</code></li>
+<li>Fetch index to unlock all other pages: <code>https://tlovett2007-dot.github.io/Ark-Detailed-Design/index.html</code></li>
+<li>Fetch the specific page being worked on before making any edits</li>
+<li>Deliver complete updated HTML files — never diffs or snippets</li>
+<li>Use dashes not underscores in all filenames</li>
+<li>Always use 0.524m cubit — never 0.518m</li>
+<li>Keep responses low verbosity — author prefers terse working style</li>
+<li>The project is in a Claude Project — search past chats for prior decisions before asking questions already answered</li>
 </ol>
 
 <h3>Working Style</h3>
+
 <ul>
-  <li><strong>Low verbosity.</strong> Author dislikes chatty responses.</li>
-  <li><strong>Challenge formulas.</strong> Always verify sources before implementing equations.</li>
-  <li><strong>No smoothing on charts.</strong> Straight segments between calculated points only — smoothing invents data.</li>
-  <li><strong>XY Scatter for charts with non-uniform data.</strong> Never line charts with category axes.</li>
-  <li><strong>Tone toward AiG:</strong> Respectful and generous. Corrections are engineering observations, not attacks.</li>
+<li><strong>Low verbosity.</strong> Author dislikes chatty responses.</li>
+<li><strong>Challenge formulas.</strong> Always verify sources before implementing equations.</li>
+<li><strong>No smoothing on charts.</strong> Straight segments between calculated points only — smoothing invents data.</li>
+<li><strong>XY Scatter for charts with non-uniform data.</strong> Never line charts with category axes.</li>
+<li><strong>Tone toward AiG:</strong> Respectful and generous. Corrections are engineering observations, not attacks.</li>
 </ul>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
 <h2>8. Relationship to AiG Ark Encounter</h2>
 
 <p>The Ark Encounter (Answers in Genesis, Williamstown KY) uses a 0.518m Nippur cubit, moulded dimensions convention. This research uses 0.524m Royal Egyptian cubit, outside planking convention. Both describe the same vessel — the dimensional differences arise from convention, not disagreement about the Ark's size.</p>
 
-<p>The Corrections page documents specific engineering errors in AiG's artistic interpretations. The tone is always respectful — AiG's broader project is valued, and corrections are offered as engineering refinements, not theological critiques.</p>
+<p>The aig-enhance page documents engineering enhancements to AiG's artistic interpretations. The tone is always respectful — AiG's broader project is valued, and corrections are offered as engineering refinements, not theological critiques.</p>
 
 </main>
 
