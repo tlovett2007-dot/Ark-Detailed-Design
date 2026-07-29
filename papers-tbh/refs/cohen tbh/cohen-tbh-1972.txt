@@ -1,0 +1,342 @@
+COHEN, Chayim. "Hebrew tbh: Proposed Etymologies."
+Journal of the Ancient Near Eastern Society of Columbia University
+Volume 4, Number 1, January 1972, pp. 37-51.
+
+Chayim Cohen is a graduate student in the Department of Middle East Languages and Cultures [at Columbia University].
+
+The term תבה occurs in the Hebrew bible in but two episodes, the story of the
+flood, and the story of Moses' birth. Its usages in these two cases are radically
+different. In the former, תבה denotes a colossal ark, while in the latter, the
+meaning is a receptacle of infant size. Scholars ancient and modern have attempted
+to solve this difficulty of usage
+
+FOOTNOTES p.37:
+1. Gen. 6:14, 15, 16, 18, 19; 7:1, 7, 9, 13, 15, 17, 18, 23; 8:1, 4, 6, 9, 10,
+   13, 16, 19; 9:10, 18.
+2. Ex. 2:3, 5.
+3. According to A. Heidel, The Gilgamesh Epic and Old Testament Parallels
+   (Chicago, 1963), 236, Noah's ark was 450 feet long, 75 feet wide, and 45 feet
+   high. It had a displacement of about 43,300 tons.
+4. The receptacle was large enough for the infant to be placed in it (Ex. 2:3),
+   but small enough for one of the slave girls of Pharoah's daughter to fetch it
+   (Ex. 2:5).
+5. E.g. Ibn Ezra on Gen. 6:14: "And (its) name is תבה and not 'boat' because it
+   didn't have the shape of a boat, nor did it have oars." Implicit in this
+   statement is the notion that the ark was called תבה rather than אניה "ship"
+   because it was not a ship, but rather a box-like structure. This would solve
+   the problem by resorting to the late Hebrew usage of the word (see below,
+   note 8). Cf. M. D. Cassuto, Commentary on Genesis, II (Jerusalem, 1965), 41
+   [in Hebrew], [hereafter, Cassuto].
+6. E.g. Heidel, 233; Cassuto, 40-42; A. S. Yahuda, The Language of the
+   Pentateuch in its Relation to Egyptian (London, 1933), 205, n. 2, 262-265;
+   N. Sarna, Understanding Genesis (New York, 1966), 49; KB, 1017a; BDB, 1061;
+   E. Ben-Yehuda, A Complete Dictionary of Ancient and Modern Hebrew, VIII
+   (New York, 1960), 7646-7649 [hereafter, Ben-Yehuda].
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.38
+
+by resorting in various ways to the late Hebrew usages or an assumed Egyptian
+etymological origin of תבה. It is our intention here to demonstrate that these
+solutions are untenable, and that the answer must be sought in a completely
+different direction.
+
+M. D. Cassuto, expanding on an idea of Ibn Ezra, proposed to solve this
+difficulty by redefining the term תבה in the Hebrew flood story. In his opinion,
+תבה must have signified "an object made in the shape of a parallelepiped." He
+further states:
+
+    "Undoubtedly the Biblical narrative refers to such a structural shape and
+    not to that of a ship. The sentence, 'and the ark went [הלך] on the face of
+    the waters' (Gen. 7:18) is not suited to a boat, which is navigated by its
+    mariners, but to something that floats on the surface of the waters and moves
+    in accordance with the thrust of the water and wind. Similarly, the subsequent
+    statement (Gen. 8:4): 'the ark came to rest...upon the mountains of Ararat,'
+    implies an object that can rest upon the ground; this is easy for an ark to do
+    since its bottom is straight and horizontal, but not for a ship."
+
+However, neither the biblical text nor comparative Semitic philology bear out
+Cassuto's contentions. As for his first objection (Gen. 7:18), the verb הלך is
+used elsewhere for ships not only in biblical Hebrew, but in Akkadian as well.
+As for the second objection, while there are no other cases of boats landing in
+the Hebrew bible, the verb נוח "to rest" is very similar in its primary meaning
+to the basic meaning of Akkadian emédu - "to lean." Since the latter is the
+regular term for landing in Akkadian, it stands to reason that נוח could be used
+in the bible for "to land."
+
+The Egyptian cognates usually given as evidence for the alleged Egyptian origin
+of תבה are db't and tbt which are translated "Palast o.a; Schrein, Sarg" and
+"Kasten" respectively. However, NEVER ARE EITHER OF THESE WORDS USED IN EGYPTIAN
+TEXTS FOR BOATS. A. S. Yahuda attempted to resolve this obvious difficulty by
+reference to the Egyptian substantive dpt "boat," which he connected with db't
+and tbt. However, Egyptologists are not in agreement with Yahuda, and consider
+dpt to be completely separate in meaning
+
+FOOTNOTES pp.38-39:
+7.  Cassuto, 41. Actually, Cassuto first suggests (ibid., 40) that the term תבה
+    was used in both stories to stress "the similarity of themes." This suggestion,
+    which is not much different from the one presented in this paper, was
+    unfortunately not backed up by any solid textual or philological evidence,
+    but rather by fanciful Midrashic exegesis.
+8.  Ibid., 41. Translation: I. Abrahams, From Noah to Abraham (Jerusalem, 1964),
+    60 [hereafter, Abrahams]. Cassuto also brings in the late Hebrew evidence here.
+    In Mishnaic Hebrew, תבה may usually be translated "box," "chest," and it is
+    also used to represent the holy ark in the synagogue. See G. H. Dalman,
+    Aramaisch-Neuhebraischen Handworterbuch (Gottingen, 1938), 441 and Ben-Yehuda,
+    VIII, 7646-7649.
+9.  Cassuto, 41. Translation: Abrahams, 60.
+10. Is. 33:21; Ps. 104:26; 2 Chron. 9:21; 2 Chron. 20:36, 37.
+11. Two examples will suffice here: (1) Summa istu Kapturi elippasu tallaka "If
+    his ship arrives here from Cyprus" (PRU III, RS 16.238:10-11); (2) ki
+    libbisunu tillakina elippatusunu u telqune bisib tasunu "Their ships come at
+    their pleasure, and take what they desire" (EA 126:11-13).
+12. E.g. ana Nisir itemid elippu "The ship landed at Mount Nisir" (Gilg. XI:140).
+13. H. L. Ginsberg suggests the translation "to run aground" in Gen. 7:18 which
+    certainly fits the context better (oral communication).
+14. תבה was apparently first equated with Egyptian db't by H. Brugsch in his
+    Hieroglyphisch-Demotisches Worterbuch, I-VII (Leipzig, 1867-1882). This
+    equation was accepted by A. Erman in his fundamental study, "Das Verhaltnis
+    des Aegyptischen zu den Semitischen Sprachen," ZDMG 46 (1892), 123. It has
+    been accepted by biblical scholars ever since (see above, note 6). Note,
+    however, that this equation is CONSPICUOUSLY ABSENT from A. Erman and
+    H. Grapow, Worterbuch der Agyptischen Sprache, V (Leipzig, 1926-1931), 261,
+    561; A. Ember, Egypto-Semitic Studies (Leipzig, 1930); and T. O. Lambdin,
+    "Egyptian Loan Words in the Old Testament," JAOS 73 (1953), 145-155, though
+    not specifically denied by these authors. The writer would like to especially
+    thank Professor J. Schmidt for checking all Egyptian matters and permitting
+    me to take up much of his time in consultations.
+15. Wb, V, 561.
+16. Ibid., 261.
+17. Yahuda, 205, n. 3.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.40
+
+from db't and tbt. The latest solution is that put forward by L. Koehler, who
+separates Hebrew תבה into two different words meaning "chest" and "palace, ark."
+For the first, the Egyptian db't in its meaning "coffin, chest" is compared. For
+the second, db't in its meaning "palace" is given. The evidence presented that
+these are homonyms in Egyptian that coalesced into one Hebrew substantive is
+twofold: (1) there are separate hieroglyphs for db't "palace" and db't "coffin,
+chest"; (2) db't "palace" corresponds to תבה in the Hebrew flood story just as
+the boat in the Akkadian flood story is once called ekallu "palace." There are
+three objections to this theory. Firstly, it is likely that the two hieroglyphic
+spellings do not represent homonyms at all, but merely variant spellings of the
+same word. Secondly, the semantic range of words whose primary meaning is "palace"
+or "house" may include "grave, sarcophagus" in Egyptian, Akkadian and biblical
+Hebrew. Thirdly, the reference to the boat as ekallu "palace" in the Akkadian
+flood story is very suspect and has been recently interpreted quite differently.
+
+Thus, we must look elsewhere for an explanation. Now despite some recent
+objections, it has long been accepted in biblical studies that the Akkadian
+
+FOOTNOTES pp.40-41:
+18. Cf. Spiegelberg's reaction to Yahuda's assertion: "...ihm [ist] das Missgeschick
+    zugestossen, dass er ...db't...'Kasten', das bekanntlich im hebr. תבה entlehnt
+    worden ist, und das Wort dp.t 'Schiff', die gar nichts miteinander zu tun
+    haben, zusammen wirft."
+19. KB, 1017a.
+22. Gilg. XI:95.
+23. [Discussion of hieroglyphic spellings as variant rather than homonyms.]
+24. Compare pr "house," "palace" with pr n nhh "tomb" (literally "house of
+    eternity"). Note also that the phrase pr n nbh is exactly equivalent to Hebrew
+    בית עולם.
+27. Nowhere else in any of the Mesopotamian flood stories is the boat of the hero
+    ever called a "palace" or anything similar.
+28. R. Borger, BAL, III, 118, translates lines 94-95 as follows: "To the calker
+    of the ship, to Puzur-Kurgal the sailor, I gave [my] palace [in Surippak]
+    together with its property."
+29. See the excursus at the end of this paper.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.42
+
+composition entitled "The Legend of Sargon" which describes Sargon's birth is
+parallel in content and theme to the story of Moses' birth in Ex. 2:1-10. The
+similarities may be summarized as follows: In both, the mother of the hero is
+forced by circumstances beyond her control to abandon her child. She prepares a
+receptacle for him, makes it water-tight by calking it with bitumen, places her
+child in it and sets the receptacle upon the water. The receptacle is found, the
+infant is raised, has some divine contact and finally becomes a hero of his
+people. A literary connection between the receptacle mentioned in the Legend of
+Sargon and the boat of the Akkadian flood story has never been noted, but should
+such a connection exist, it might help explain why תבה was used in both the
+biblical flood story and the story of Moses' birth. For the boats used in the
+respective flood stories might have been considered to have had some special
+protective quality of divine origin. It would then have been just this divine
+protective quality to which the biblical author was alluding when he called
+Moses' receptacle תבה, and to which the Akkadian author was alluding when he
+conjured up the image of Utnapishtim's ark in his description of Sargon's
+receptacle. Such a connection does perhaps exist not in respect to what the
+receptacle and the boat are called, but in respect to the precautions taken by
+Utnapishtim (=Atrahasis) and the mother of Sargon in making their respective
+vessels water-tight, and the reference to a babu "gate" on both vessels, a term
+which is exceedingly rare in nautical terminology and is of uncertain meaning.
+
+FOOTNOTES pp.42-43:
+34. Since the instructions for building both the biblical ark and its Akkadian
+    counterpart were of divine origin (Gen. 6:14-16; Gilg. XI:28-31, 88), it
+    probably was felt that the finished product in each case was completely
+    infallible. For the authors of both the Sargon Legend and the story of Moses'
+    birth to put this divine stamp of approval on their heroes' receptacle through
+    a literary allusion to the arks in their respective flood stories is quite
+    understandable.
+35. Admittedly, this is a problem. For had the author of the Sargon Legend really
+    wished to allude to the Akkadian ark, he should have called Sargon's receptacle
+    by the name for that ark in the Akkadian flood story, elippu, just as the
+    author of the story of Moses' birth called his hero's receptacle תבה. However,
+    the answer to this problem may well lie in the fact that elippu is also the
+    regular Akkadian generic term for "boat," and had the author of the Sargon
+    Legend used it, no one would have known to which boat he was referring. Thus,
+    as opposed to the biblical author whose use of the term תבה in the story of
+    Moses' birth is a clear allusion to the Hebrew ark (the term תבה is found only
+    in the flood story and Moses' birth story), the Akkadian author of the Sargon
+    Legend could not possibly have used elippu for his hero's receptacle to achieve
+    this same purpose. He had to draw on some unique characteristic of the Akkadian
+    ark so as to make his allusion recognizable.
+36. A. Salonen, Die Wasserfahrzeuge in Babylonien (Helsinki, 1939), 97 lists no
+    other examples besides those in the flood story. CAD, B, 274 lists only one
+    other example of babu as part of a boat.
+37. The translation "hatch" is only provisional and merely a guess from context.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.44
+
+Gilg. XI:88: erub ana libbi elippimma pehi babka "Enter the ship, calk your
+hatch[?]."
+
+Gilg. XI:93: erub ana libbi elippi aptehi babi "I entered the ship, I calked my
+hatch[?]."
+
+Atrahasis III, ii:51-52: [k]upru babil ipehi babsu istuma idilu babu "Pitch was
+brought, he calked its hatch[?]. After he had locked its hatch[?]..."
+
+Atrahasis Fragment W:6: [elippa] erumma bab elippi tirra "Enter the boat, close
+the boat's hatch[?]."
+
+Atrahasis Fragment W:10: [asap]parakkumma inassaru babka "I will send [beasts of
+the field] to you, they will guard your hatch[?]."
+
+Legend of Sargon:5: iskunnanni ina guppi sa suri ina itti babiya iphi "She set
+me in a basket of rushes, she calked my hatch[?] with bitumen."
+
+In summation, we have shown that none of the solutions heretofore presented
+satisfactorily explain why the term תבה was used in both the biblical flood story
+and the story of Moses' birth. Two would-be solutions revolve, in one way or
+another, around the Egyptian db't, which never has anything to do with boats, and
+therefore can not be compared. The third is based on the late Hebrew usages of
+תבה but is philologically unsound. One partial answer to the problem, which is
+not without difficulty, but which may nevertheless be leading in the right
+direction, involves the similarity
+
+[PAGE 45:]
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.45
+
+in description and preparation of the respective vessels in the Akkadian flood
+story and the story of Sargon's birth. The author of the story of Moses' birth
+might likewise have called the receptacle into which Moses was placed by the same
+name that was given to the biblical ark in the Hebrew flood story, because of some
+protective quality of divine origin which the latter possessed and to which the
+author of the story of Moses' birth wished to allude. This literary allusion is
+certainly not the entire answer to the problem (which surely can not be completely
+solved until the meaning of תבה is established on a sound philological basis),
+but it is hopefully a step in the right direction.
+
+================================================================================
+PAGES 46-51: 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.46
+
+EXCURSUS — The Legend of Sargon and the Birth of Moses
+================================================================================
+
+[Pages 46-51 constitute an Excursus defending the parallel between the Legend of
+Sargon and the Birth of Moses against recent critics. Cohen rebuts three
+objections (different maternal motivations; different verbs for placing child in
+water; Egyptian parallel). Conclusion: the Sargon parallel stands. The Exodus 2
+narrative is an exposure legend in the tradition of the Sargon legend. The
+Egyptian parallel proposed by Greenberg is from the Ptolemaic period and cannot
+have inspired the biblical account.]
+
+================================================================================
+KEY QUOTATIONS FOR PAPER 2
+================================================================================
+
+ON CASSUTO'S PARALLELEPIPED CLAIM:
+"M. D. Cassuto...proposed to solve this difficulty by redefining the term תבה in
+the Hebrew flood story. In his opinion, תבה must have signified 'an object made
+in the shape of a parallelepiped.'"
+-- Cohen, p.38 (quoting Cassuto, Commentary on Genesis II, p.41)
+
+Cohen's rebuttal: "However, neither the biblical text nor comparative Semitic
+philology bear out Cassuto's contentions."
+-- Cohen, p.38
+
+ON THE EGYPTIAN LOANWORD CLAIM:
+"never are either of these words [db't and tbt] used in Egyptian texts for boats"
+-- Cohen, p.39 (emphasis in original, underlined in text)
+
+ON LAMBDIN'S SILENCE:
+"this equation is conspicuously absent from...T. O. Lambdin, 'Egyptian Loan Words
+in the Old Testament,' JAOS 73 (1953), 145-155, though not specifically denied
+by these authors."
+-- Cohen, p.39, footnote 14
+
+ON THE UNSOLVED PROBLEM:
+"the meaning of תבה is [not yet] established on a sound philological basis"
+-- Cohen, p.45
+
+COHEN'S CONCLUSION:
+"none of the solutions heretofore presented satisfactorily explain why the term
+תבה was used in both the biblical flood story and the story of Moses' birth."
+-- Cohen, p.44
+
+================================================================================
+BIBLIOGRAPHIC REFERENCES IN COHEN (1972) — selected
+================================================================================
+
+Brugsch, H. Hieroglyphisch-Demotisches Worterbuch, I-VII. Leipzig, 1867-1882.
+  [First to equate תבה with Egyptian db't]
+
+BDB. Brown, Driver, Briggs. Hebrew and English Lexicon of the Old Testament.
+  [Accepts Egyptian equation without question]
+
+Cassuto, M. D. Commentary on Genesis, II. Jerusalem, 1965. [In Hebrew]
+  pp.40-42. [Parallelepiped claim]
+
+Ember, A. Egypto-Semitic Studies. Leipzig, 1930.
+  [Conspicuously absent: no תבה = db't equation]
+
+Erman, A. and Grapow, H. Worterbuch der Agyptischen Sprache, V. Leipzig,
+  1926-1931. pp.261, 561.
+  [Conspicuously absent: no תבה = db't equation]
+
+Erman, A. "Das Verhaltnis des Aegyptischen zu den Semitischen Sprachen."
+  ZDMG 46 (1892), 123. [Accepted Brugsch's equation]
+
+Heidel, A. The Gilgamesh Epic and Old Testament Parallels. Chicago, 1963.
+
+KB. Koehler, L. and Baumgartner, W. Lexicon in Veteris Testamenti Libros.
+  1017a. [Koehler's split-word theory]
+
+Lambdin, T. O. "Egyptian Loan Words in the Old Testament." JAOS 73 (1953),
+  145-155. [Conspicuously ABSENT: does not list תבה as Egyptian loanword]
+
+Lambert, W. G. and Millard, A. R. Atrahasis. London, 1969.
+
+Salonen, A. Die Wasserfahrzeuge in Babylonien. Helsinki, 1939.
+
+Sarna, N. Understanding Genesis. New York, 1966. p.49.
+
+Yahuda, A. S. The Language of the Pentateuch in its Relation to Egyptian.
+  London, 1933. pp.205, 262-265. [Attempted to resolve via dpt "boat" — rejected
+  by Egyptologists]
+
+================================================================================
+END OF DOCUMENT
+================================================================================
+
+Transcribed from photocopy (Fisher Library, University of Sydney, 2005).
+Original: JANES Vol. 4 No. 1, January 1972, pp.37-51.
+Transcription: T. Lovett / AI assisted, July 2026.
