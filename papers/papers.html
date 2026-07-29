@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papers — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Papers</h1>
+<p class="doc-meta">Last revised: July 2026 | Status: Candidates — pre-publication</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Future Papers</p>
+
+<p>Candidate papers for publication prior to the full detailed design release. Each paper is independently defensible and contributes to the published record on a specific topic.</p>
+
+<p><strong>Publication strategy:</strong> Establish a technical publication record across several focused topics before releasing the full detailed naval architecture analysis. Each paper stands alone — the cumulative body of work then provides the credibility foundation for the detailed design reveal.</p>
+
+<h2>Contents</h2>
+
+<table>
+<tr><th>#</th><th>Title</th><th>Topic</th><th>Status</th></tr>
+<tr><td>—</td><td><a href="#hong">Hong et al. (1994)</a></td><td>Foundation seakeeping and stability study — KRISO</td><td>Published</td></tr>
+<tr><td>—</td><td><a href="#lovett2024">Lovett (2024)</a></td><td>Re-analysis of Hong — Hull 9 paradox, weathervaning</td><td>Published</td></tr>
+<tr><td>1</td><td><a href="#paper1">Hong Revisited</a></td><td>Technical audit of Hong et al. (1994) — material model critique, transcription error, confused sea assumption, Cb=1.0 limitation</td><td>Quickest to write</td></tr>
+<tr><td>2</td><td><a href="#paper2">Noah Never Built an Ark: Why <em>Tebah</em> Does Not Mean "Box"</a></td><td>Hebrew word study — <em>tebah</em> carries no geometric information</td><td>In development</td></tr>
+<tr><td>3</td><td><a href="#paper3">How Many Animals Fit? Volume-First Capacity Analysis</a></td><td>Engineering upper bound on kind count — convergence with AiG baraminology ~1,400</td><td>Methodology established</td></tr>
+<tr><td>4</td><td><a href="#paper4">What Was Gopher Wood? The Argument from Silence</a></td><td><em>Gopher</em> — single occurrence, unidentified in 2,500 years of scholarship; extinction hypothesis</td><td>Early development</td></tr>
+<tr><td>5</td><td><a href="#paper5">When Shipwrights Are Shipwrongs</a></td><td>Structural keel counterproductive at Ark scale — stressed-skin is correct</td><td>Developed</td></tr>
+<tr><td>6</td><td><a href="#paper6">Passive Weathervaning — Completing Hong et al.</a></td><td>6:1 proportions optimised for organised following sea without badly jeopardising confused sea performance</td><td>In development</td></tr>
+<tr><td>7</td><td><a href="#paper7"><em>kopher</em> vs <em>hemar</em></a></td><td>Two Hebrew pitch words — pre-flood resin vs post-flood petroleum</td><td>Sketched</td></tr>
+<tr><td>—</td><td><a href="#candidates">Future Candidates</a></td><td>Rooster chronometer, vegetation mat, passive systems, biogeography...</td><td>Noted</td></tr>
+</table>
+
+<h2 id="hong">Foundation Study — Hong et al. (1994)</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Reference</td><td>Hong SW, Na SS, Hyun BS, Hong SY, Gong DS, Kang KJ, Suh SH, Lee KH, Je YG (1994). Safety investigation of Noah's Ark in a seaway. <em>Journal of Creation</em> 8(1):26–36</td></tr>
+<tr><td>Institution</td><td>Korea Research Institute of Ships and Ocean Engineering (KRISO), Daejeon — world-class ship research facility</td></tr>
+<tr><td>Online</td><td><a href="https://creation.com/safety-investigation-of-noahs-ark-in-a-seaway">creation.com — Safety investigation of Noah's Ark in a seaway</a></td></tr>
+<tr><td>Role in this project</td><td>Baseline peer-reviewed study — the essential starting point for all subsequent naval architecture work on the Ark</td></tr>
+</table>
+
+<h3>What Hong et al. Established</h3>
+
+<p>Nine KRISO research scientists applied professional naval architecture methodology to the biblical dimensions. Key findings:</p>
+
+<table>
+<tr><th>Finding</th><th>Detail</th></tr>
+<tr><td>Hull form comparison</td><td>13 hull forms compared at equal displacement — Ark proportions consistently ranked near top across all weighting schemes</td></tr>
+<tr><td>Stability</td><td>Ark is 13× more stable than ABS passenger ship requirements</td></tr>
+<tr><td>Structural safety</td><td>30cm timber hull adequate for 30m waves</td></tr>
+<tr><td>Voyage limit</td><td>Could navigate waves exceeding 30m (structural) and 47.5m (roll limit)</td></tr>
+<tr><td>Model tests</td><td>1:50 scale models at KRISO towing tank validated theoretical analysis for heave, pitch — roll explicitly acknowledged as nonlinear/viscous and not reliably modelled</td></tr>
+<tr><td>Cubit used</td><td>Common cubit 17.5" (444.5mm) → 135m × 22.5m × 13.5m</td></tr>
+<tr><td>Hull form</td><td>Near-box barge (Cb ≈ 1.0) — all 13 comparative hulls rectangular cross-section; ship-shaped hull not tested</td></tr>
+</table>
+
+<h3>Limitations Acknowledged by Hong et al.</h3>
+
+<table>
+<tr><th>Limitation</th><th>Hong's statement</th><th>Implication</th></tr>
+<tr><td>Roll damping</td><td>"Good agreement obtained for all motions except roll motion, which usually showed strong nonlinear behaviour due to viscous damping"</td><td>Roll analysis understated — keel damping not quantified</td></tr>
+<tr><td>Wave direction</td><td>"Waves came from all directions with the same probability"</td><td>Conservative assumption — weathervaning gives significant advantage in organised seas</td></tr>
+<tr><td>Hull form</td><td>Rectangular cross-section assumed throughout</td><td>Bilge radius, deadrise, flare not modelled</td></tr>
+<tr><td>Systems</td><td>Not addressed — purely structural/hydrodynamic study</td><td>Water, ventilation, waste outside scope</td></tr>
+</table>
+
+<h3>Hull 9 Paradox — Noted by Hong, Explained by This Study</h3>
+
+<p>Hull 9 (shorter, wider: L/1.5 × 1.5B × D) consistently outperforms the biblical Ark in stability and structural safety under Hong's confused sea assumption. This appears to undermine the biblical proportions — until weathervaning is considered.</p>
+
+<table>
+<tr><th>Condition</th><th>Hull 9 performance</th><th>Biblical Ark performance</th></tr>
+<tr><td>Confused sea (Hong assumption)</td><td>Superior — better stability and strength</td><td>Good but not optimal</td></tr>
+<tr><td>Organised following sea (weathervaning)</td><td>Poor — short hull broaches more easily, lower pitch damping</td><td>Superior — length provides wave averaging, pitch stability</td></tr>
+<tr><td>Genesis 8:1 drying wind</td><td>Vulnerable beam-on if weathervaning fails</td><td>Designed for this condition</td></tr>
+</table>
+
+<h2 id="lovett2024">Author's Analysis of Hong et al. — Lovett (2024)</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Reference</td><td>Lovett T (2024). Noah's Ark: Proportions of a Real Vessel. <em>Answers in Depth</em> 19. Answers in Genesis.</td></tr>
+<tr><td>Online</td><td><a href="https://answersingenesis.org/noahs-ark/proportions-of-a-real-vessel/">answersingenesis.org — Noah's Ark: Proportions of a Real Vessel</a></td></tr>
+<tr><td>Role</td><td>Re-analysis and extension of Hong et al. — identifies weighting sensitivity, explains Hull 9 paradox, introduces weathervaning argument</td></tr>
+</table>
+
+<h2 id="paper1">Paper 1 — Hong Revisited: A Technical Audit of Hong et al. (1994)</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>Quickest to write — all source material in hand</td></tr>
+<tr><td>Target journal</td><td>Journal of Creation / Answers Research Journal</td></tr>
+<tr><td>Topic</td><td>Technical audit of the foundational KRISO seakeeping study — identifies five limitations, demonstrates each understates Ark performance</td></tr>
+</table>
+
+<p>Hong et al. (1994) is the foundational peer-reviewed study on Noah's Ark seakeeping and structural safety. Nine KRISO naval architects confirmed feasibility using professional methodology. However the study contains five significant limitations, each of which makes the result more conservative than the actual vessel warrants:</p>
+
+<table>
+<tr><th>#</th><th>Limitation</th><th>Effect on result</th></tr>
+<tr><td>1</td><td>Timber modelled as membrane elements (planking) and truss elements (frames) — steel FEA methodology applied without adjustment</td><td>Understates bending stiffness and composite action of stressed-skin timber construction — actual structure stiffer and stronger</td></tr>
+<tr><td>2</td><td>Confused sea assumption — waves from all directions equally probable</td><td>Ignores weathervaning advantage — organised following sea is significantly less severe than confused sea of same Hs</td></tr>
+<tr><td>3</td><td>Box hull (Cb ≈ 1.0) — all 13 comparative hulls rectangular cross-section</td><td>Ship-shaped hull never tested — curved bilge, deadrise, and flare would improve seakeeping and structural performance</td></tr>
+<tr><td>4</td><td>Roll modelling explicitly acknowledged as unreliable — "strong nonlinear behaviour due to viscous damping"</td><td>Roll analysis understated — keel damping not quantified; actual roll behaviour better than modelled</td></tr>
+<tr><td>5</td><td>Transcription error in English translation Table 3 — AR and Safety Index columns</td><td>Corrected values derived from Hong's own data; average absolute error 0.1% — does not affect conclusions but requires correction for the record</td></tr>
+</table>
+
+<p>Conclusion: Hong et al. confirmed Ark feasibility using conservative assumptions and an inadequate material model. The actual vessel — stressed-skin timber construction, weathervaning in organised seas, ship-shaped hull — outperforms Hong's model on every metric. The study understates the case it was making.</p>
+
+<p>This paper requires no new research — all material is in hand. The transcription error is already documented in Lovett (2024). The membrane/truss critique follows directly from standard FEA methodology. Estimated writing time: shortest of all candidate papers.</p>
+
+<h2 id="paper2">Paper 2 — Noah Never Built an Ark: Why <em>Tebah</em> Does Not Mean "Box"</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>In development — see <a href="../papers-tbh/papers-tbh.html">working draft</a></td></tr>
+<tr><td>Target journal</td><td>Journal of Creation / Answers Research Journal</td></tr>
+<tr><td>Topic</td><td>Hebrew word study — <em>tebah</em> carries no geometric information; box-Ark assumption enters through Latin <em>arca</em>, not Hebrew</td></tr>
+</table>
+
+<p>The Hebrew word <em>tebah</em> (תֵּבָה) appears only twice in Scripture — Noah's vessel (Genesis 6–9) and Moses' basket (Exodus 2:3). Cohen (1972) demolished the Egyptian loanword etymology in peer-reviewed philological research; the field has cited his paper for 53 years without engaging his conclusions. Cassuto's "precisely parallelepiped" claim is an unreferenced assertion in a commentary. Lambdin's (1953) specialist Egyptian loanword catalogue omits <em>tebah</em> entirely. Spoelstra (2020), the most recent dedicated treatment, confirms the functional reading but inconsistently accepts the box shape while citing Cohen six times and engaging him zero times. The box-Ark assumption is a transmission error: <em>tebah</em> → <em>kibotos</em> → <em>arca</em> (Jerome) → "Ark" (English). The shape of Noah's vessel comes from naval architecture, not from the word used to describe it.</p>
+
+<h2 id="paper3">Paper 3 — How Many Animals Fit? A Volume-First Engineering Analysis</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>Methodology established — see <a href="../papers-fit/papers-fit.html">working draft</a></td></tr>
+<tr><td>Target journal</td><td>Answers Research Journal (Georgia Purdom contact)</td></tr>
+<tr><td>Topic</td><td>Volume-first methodology — inverts all prior literature; engineering upper bound on kind count; convergence with AiG baraminology</td></tr>
+</table>
+
+<p>All prior feasibility studies go animals→volume: count kinds, show they fit, declare feasibility. This paper inverts the methodology — starting from Genesis dimensions, deducting all non-animal volumes systematically (structure, services, ballast, fodder, family quarters), and deriving animal capacity as the residual. Current best estimate of effective animal zone: ~11,107 m³ (~17.7% of external volume), yielding ~1,300–1,700 kinds at 80% utilisation.</p>
+
+<p>The key finding is convergence: AiG baraminology independently estimates ~1,400 kinds from taxonomic analysis. Two independent methods — engineering and taxonomy — bracket the same number. This is a non-trivial result. The paper's primary contribution is the methodology and the convergence finding.</p>
+
+<h2 id="paper4">Paper 4 — What Was Gopher Wood? The Argument from Silence</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>Early development — see <a href="../papers-gfr/papers-gfr.html">working draft</a></td></tr>
+<tr><td>Target journal</td><td>Journal of Creation / Answers Research Journal</td></tr>
+<tr><td>Topic</td><td><em>Gopher</em> (גֹּפֶר) — single occurrence, Genesis 6:14. No cognates, no identification in 2,500 years of scholarship. The silence is evidence.</td></tr>
+</table>
+
+<p><em>Gopher</em> wood is a hapax legomenon — one occurrence in the entire Hebrew Bible. Unlike every common ANE timber, which has a well-attested Hebrew name, <em>gopher</em> has resisted identification since the LXX translators encountered it in 250 BC. The LXX retreat to "squared timbers" (a processing description, not a species name) suggests the word had already lost its referent within 2,000 years of the flood. The extinction hypothesis — the flood itself eliminated the species — explains the persistent failure of identification. Naval architecture constraints provide a property profile: large-dimension, flexible, rot-resistant, resinous timber. A full transmission table of proposed identifications is in development.</p>
+
+<h2 id="paper5">Paper 5 — When Shipwrights Are Shipwrongs</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>Candidate — argument developed</td></tr>
+<tr><td>Target journal</td><td>Journal of Creation / naval architecture journal</td></tr>
+<tr><td>Topic</td><td>The structural keel is mechanically counterproductive at Ark scale — stressed-skin shell construction is the correct solution; two independent structural arguments against the box Ark</td></tr>
+</table>
+
+<h2 id="paper6">Paper 6 — Passive Weathervaning: Completing the Hong et al. (1994) Seakeeping Analysis</h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>In development — see <a href="../papers-vane/papers-vane.html">working draft</a></td></tr>
+<tr><td>Target journal</td><td>Journal of Creation / Answers Research Journal</td></tr>
+<tr><td>Topic</td><td>Passive weathervaning — hull form asymmetry, 6:1 proportions, organised following sea; completing Hong's confused sea analysis with the organised following sea test</td></tr>
+</table>
+
+<p>Hong et al. (1994) tested 13 hull forms in confused sea and found the biblical proportions second-best. This paper argues that confused sea is the wrong test for Phase 3 — the Genesis 8:1 directional wind produces an organised following sea for which the biblical proportions are specifically optimised. The 6:1 L:B ratio sits between lifeboat (3-4:1) and ship (8-12:1) — too narrow for comfortable beam sea survival, optimal for passive weathervaning in following seas. The proportions are optimised for weathervaning without badly jeopardising confused sea performance. Completing Hong requires running the same hull forms in organised following sea with passive weathervaning — predicted result: biblical proportions first. The paper also resolves the FPSO swell objection: passive weathervaning fails in decoupled swell, which is also the less dangerous wave condition.</p>
+
+<h2 id="paper7">Paper 7 — <em>kopher</em> vs <em>hemar</em></h2>
+
+<table>
+<tr><th>Element</th><th>Detail</th></tr>
+<tr><td>Status</td><td>In development — see <a href="../papers-kpr/papers-kpr.html">working draft</a></td></tr>
+<tr><td>Target journal</td><td>Journal of Creation / biblical studies journal</td></tr>
+<tr><td>Topic</td><td>Two Hebrew words for pitch/bitumen reflecting genuine material and geological distinction — pre-flood pine resin vs post-flood petroleum</td></tr>
+</table>
+
+<h2 id="candidates">Future Candidates — Noted for Development</h2>
+
+<table>
+<tr><th>Topic</th><th>One-line summary</th><th>Note</th></tr>
+<tr><td>Hebrew Deck Terminology</td><td><em>tachtiyyim</em> asymmetry of "Lowers" vs ordinal counting implies middle-deck entry door</td><td></td></tr>
+<tr><td>Genesis 7:20 as Draft Specification</td><td>"15 cubits above the mountains" = Noah's known draft, not water depth above peaks</td><td></td></tr>
+<tr><td>Voyage journal and ship's log</td><td>Genesis 7–8 reads as a ship's log — Noah had time to write, implying manageable crew workload and effective passive systems</td><td>See <a href="../voyage-journal/voyage-journal.html">voyage-journal</a></td></tr>
+<tr><td>Rooster chronometer</td><td>Free-running circadian clock of domestic fowl as passive timekeeping in sealed vessel — explains Genesis calendar precision over 371 days</td><td>See <a href="../voyage-journal/voyage-journal.html">voyage-journal</a> Section 2</td></tr>
+<tr><td>Vegetation mat wave damping</td><td>Pre-flood forest mat passively damped flood waves during Phase 1 — explains apparent structural over-engineering</td><td></td></tr>
+<tr><td>Passive systems register</td><td>Complete analysis of self-regulating systems — the <em>nûaḥ</em> (rest) design philosophy encoded in Noah's name</td><td></td></tr>
+<tr><td>Ancestral kind temperature tolerance</td><td>Modern cold-specialist animals derive from temperate ancestral kinds — eliminates cold zone requirement on Ark</td><td></td></tr>
+<tr><td>Post-flood biogeography</td><td>Timber grows where it was drowned — vegetation distribution follows flood sediment patterns</td><td></td></tr>
+<tr><td>Genesis 8:1 as engineering margin</td><td>"God remembered Noah" positioned at the most dangerous seakeeping phase — honest acknowledgement of the design envelope limit</td><td></td></tr>
+<tr><td>Roll damping model testing</td><td>Free decay tests on 1:79 stainless steel model — empirical ζ vs amplitude for bare hull and triple keel configurations</td><td></td></tr>
+<tr><td>Seakeeping nomogram</td><td>Fetch vs Hs, period, steepness for flood phase analysis — three-phase wave environment quantified</td><td></td></tr>
+</table>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | July 2026
+</footer>
+
+</body>
+</html>
