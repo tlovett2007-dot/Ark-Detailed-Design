@@ -1,0 +1,726 @@
+Cohen, Chayim. "Hebrew tbh: Proposed Etymologies."
+Journal of the Ancient Near Eastern Society of Columbia University
+Volume 4, Number 1, January 1972, pp. 37-51.
+
+Transcribed from photocopy (Fisher Library, University of Sydney, 2005).
+Transcription: T. Lovett / AI assisted, July 2026.
+
+================================================================================
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.37
+
+Chayim Cohen          Hebrew tbh:
+                      Proposed
+                      Etymologies
+
+        The term ??? occurs in the Hebrew bible
+in but two episodes, the story of the flood,1 and the
+story of Moses' birth.2  Its usages in these two cases
+are radically different.  In the former, ??? denotes a
+colossal ark,3 while in the latter, the meaning is a
+receptacle of infant size.4  Scholars ancient5 and mod-
+ern6 have attempted to solve this difficulty of usage
+
+FOOTNOTES p.37:
+1.  Gen. 6:14, 15, 16, 18, 19; 7:1, 7, 9, 13, 15, 17, 18, 23;
+    8:1, 4, 6, 9, 10, 13, 16, 19; 9:10, 18.
+2.  Ex. 2:3, 5.
+3.  According to A. Heidel, The Gilgamesh Epic and Old Testa-
+    ment Parallels (Chicago, 1963), 236 [hereafter, Heidel],
+    Noah's ark was 450 feet long, 75 feet wide, and 45 feet
+    high. It had a displacement of about 43,300 tons.
+4.  The receptacle was large enough for the infant to be placed
+    in it (Ex. 2:3), but small enough for one of the slave girls
+    of Pharoah's daughter to fetch it (Ex. 2:5).
+5.  E.g. Ibn Ezra on Gen. 6:14: ??? ??? ??? ????? ?? ??? ?? ???? ???? ???? ?? ??????
+    ?? ???? ???? ???? ?? ?????? "And (its) name is ??? and not
+    'boat' because it didn't have the shape of a boat, nor did
+    it have oars." Implicit in this statement is the notion
+    that the ark was called ??? rather than ???? "ship" because
+    it was not a ship, but rather a box-like structure. This
+    would solve the problem by resorting to the late Hebrew
+    usage of the word (see below, note 8). Cf. M. D. Cassuto,
+    Commentary on Genesis, II (Jerusalem, 1965), 41 [in Hebrew],
+    [hereafter, Cassuto].
+6.  E.g. Heidel, 233; Cassuto, 40-42; A. S. Yahuda, The
+    Language of the Pentateuch in its Relation to Egyptian
+    (London, 1933), 205, n. 2, 262-265; N. Sarna, Understanding
+    Genesis (New York, 1966), 49; KB, 1017a; BDB, 1061;
+    E. Ben-Yehuda, A Complete Dictionary of Ancient and Modern
+    Hebrew, VIII (New York, 1960), 7646-7649 [hereafter,
+    Ben-Yehuda].
+
+Chayim Cohen is a graduate student in the Department of Middle
+East Languages and Cultures.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.38
+
+by resorting in various ways to the late Hebrew usages
+or an assumed Egyptian etymological origin of ???. It
+is our intention here to demonstrate that these solu-
+tions are untenable, and that the answer must be sought
+in a completely different direction.
+
+        M. D. Cassuto,7 expanding on an idea of
+Ibn Ezra, proposed to solve this difficulty by rede-
+fining the term ??? in the Hebrew flood story. In his
+opinion, ??? must have signified "an object made in the
+shape of a parallelepiped."8 He further states:
+
+        Undoubtedly the Biblical narrative refers to
+such a structural shape and not to that of a ship. The
+sentence, "and the ark went [???] on the face of the
+waters" (Gen. 7:18) is not suited to a boat, which is
+navigated by its mariners, but to something that floats
+on the surface of the waters and moves in accordance
+with the thrust of the water and wind. Similarly, the
+subsequent statement (Gen. 8:4): "the ark came to
+rest...upon the mountains of Ararat," implies an object
+that can rest upon the ground; this is easy for an ark
+to do since its bottom is straight and horizontal, but
+not for a ship.
+
+However, neither the biblical text nor comparative Se-
+mitic philology bear out Cassuto's contentions. As for
+his first objection (Gen. 7:18), the verb ??? is used
+elsewhere for ships not only in biblical Hebrew,10 but
+
+FOOTNOTES p.38:
+7.  Cassuto, 41. Actually, Cassuto first suggests (ibid., 40)
+    that the term ??? was used in both stories to stress "the
+    similarity of themes." This suggestion, which is not much
+    different from the one presented in this paper, was
+    unfortunately not backed up by any solid textual or
+    philological evidence, but rather by fanciful Midrashic
+    exegesis.
+8.  Ibid., 41. Translation: I. Abrahams, From Noah to Abraham
+    (Jerusalem, 1964), 60 [hereafter, Abrahams]. Cassuto also
+    brings in the late Hebrew evidence here. In Mishnaic Hebrew,
+    ??? may usually be translated "box," "chest," and it is also
+    used to represent the holy ark in the synagogue. See G. H.
+    Dalman, Aramaisch-Neuhebraischen Handworterbuch (Gottingen,
+    1938), 441 and Ben-Yehuda, VIII, 7646-7649.
+9.  Cassuto, 41. Translation: Abrahams, 60.
+10. Is. 33:21 (??? ???); Ps. 104:26 (?????) [possibly,
+    however, to be emended]; 2 Chron. 9:21 (????? ????);
+    2 Chron. 20:36, 37 (?????).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.39
+
+in Akkadian as well.11 As for the second objection,
+while there are no other cases of boats landing in the
+Hebrew bible, the verb ??? "to rest" is very similar in
+its primary meaning to the basic meaning of Akkadian
+emédu - "to lean." Since the latter is the regular term
+for landing in Akkadian,12 it stands to reason that ???
+could be used in the bible for "to land."13
+
+        The Egyptian cognates usually given14 as
+evidence for the alleged Egyptian origin of ??? are
+db't and tbt which are translated "Palast o.a; Schrein,
+Sarg"15 and "Kasten"16 respectively. However, NEVER
+ARE EITHER OF THESE WORDS USED IN EGYPTIAN TEXTS FOR
+BOATS. A. S. Yahuda17 attempted to resolve this obvious
+difficulty by reference to the Egyptian substantive
+dpt "boat," which he connected with db't and tbt.
+However, Egyptologists are not in agreement with Yahuda,
+and consider dpt to be completely separate in meaning
+
+FOOTNOTES p.39:
+11. Two examples will suffice here: (1) Summa ištu Kapturi
+    elippašu tallaka "If his ship arrives here from Cyprus"
+    (PRU III, RS 16.238:10-11); (2) kî libbîšunu tillakuna
+    elippatušunu u telqûne bišihtašunu "Their ships come at
+    their pleasure, and take what they desire" (EA 126:11-13).
+12. E.g., ana Nišir Itemid elippu "The ship landed at Mount
+    Nisir" (Gilg. XI:140).
+13. H. L. Ginsberg suggests the translation "to run aground"
+    in Gen. 7:18 which certainly fits the context better (oral
+    communication).
+14. ??? was apparently first equated with Egyptian db't by
+    H. Brugsch in his Hieroglyphisch-Demotisches Worterbuch,
+    I-VII (Leipzig, 1867-1882). This equation was accepted by
+    A. Erman in his fundamental study, "Das Verhaltnis des
+    Aegyptischen zu den Semitischen Sprachen," ZDMG 46 (1892),
+    123. It has been accepted by biblical scholars ever since
+    (see above, note 6). Note, however, that this equation is
+    CONSPICUOUSLY ABSENT from A. Erman and H. Grapow,
+    Worterbuch der Agyptischen Sprache, V (Leipzig, 1926-1931),
+    261, 561; A. Ember, Egypto-Semitic Studies (Leipzig, 1930);
+    and T. O. Lambdin, "Egyptian Loan Words in the Old
+    Testament," JAOS 73 (1953), 145-155, though not specifically
+    denied by these authors. The writer would like to especially
+    thank Professor J. Schmidt for checking all Egyptian matters
+    and permitting me to take up much of his time in
+    consultations.
+15. Wb, V, 561.
+16. Ibid., 261.
+17. Yahuda, 205, n. 3.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.40
+
+from db't and tbt.18  The latest solution is that put
+forward by L. Koehler,19 who separates Hebrew ??? into
+two different words meaning "chest" and "palace, ark."
+For the first,20 the Egyptian db't in its meaning "cof-
+fin, chest" is compared.  For the second,21 db't in its
+meaning "palace" is given.  The evidence presented that
+these are homonyms in Egyptian that coalesced into one
+Hebrew substantive is twofold: (1) there are separate
+hieroglyphs for db't "palace" and db't "coffin, chest";
+(2) db't "palace" corresponds to ??? in the Hebrew flood
+story just as the boat in the Akkadian flood story is
+once called ekallu "palace."22  There are three objec-
+tions to this theory.  Firstly, it is likely that the
+two hieroglyphic spellings do not represent homonyms at
+all, but merely variant spellings of the same word.23
+Secondly, the semantic range of words whose primary
+
+FOOTNOTES p.40:
+18. Cf. Spiegelberg's reaction to Yahuda's assertion in W.
+    Spiegelberg, Zeitschrift fur Semitistik und Verwandte
+    Gebiete 7 (1929), 115: "...ihm [ist] das Missgeschick
+    zugestossen, dass er ...db't...'Kasten', das bekanntlich
+    im hebr. ??? entlehnt worden ist, und das Wort dp.t
+    'Schiff', die gar nichts miteinander zu tun haben,
+    zusammen wirft."
+19. KB, 1017a.
+20. See note 2 for the biblical references.
+21. See note 1 for the biblical references.
+22. Gilg. XI:95.
+23. The difference between the Hieroglyphs of the Egyptian
+    word cognate to Koehler's I ??? (??????) and those of the
+    Egyptian word cognate to his II ??? (??????) is the hiero-
+    glyph ?? = phonetic b which serves in the former word as a
+    phonetic complement to the triliteral sign ?? = db3.
+    According to A. Gardiner, Egyptian Grammar (London, 1969),
+    38[#32], "The complete absence of phonetic complements is
+    uncommon, but is seen in such words as b3 'thousand,' s3
+    'son,' b3k 'servant,' k3t 'work,' 'construction.'" Note,
+    however, that for both h3 and k3t, R. Faulkner, A Concise
+    Dictionary of Middle Egyptian (London, 1962), 183, 283,
+    cites variant spellings which include phonetic complements.
+    Furthermore, the fact that both words contain as their major
+    hieroglyph the triliteral sign ?? = db3 is a clear indication
+    that they both derive from the same root, cf. Gardiner,
+    45[#42], 440. That they differ from each other in spelling
+    only by a phonetic complement indicates that they are simply
+    variant spellings of the same word.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.41
+
+meaning is "palace" or "house" may include "grave, sar-
+cophagus" in Egyptian,24 Akkadian25 and biblical He-
+brew.26  Thirdly, the reference to the boat as ekallu
+"palace" in the Akkadian flood story is very suspect27
+and has been recently interpreted quite differently.28
+        Thus, we must look elsewhere for an ex-
+planation.  Now despite some recent objections,29 it has
+long been accepted in biblical studies that the Akkadian
+
+FOOTNOTES p.41:
+24. Compare pr "house," "palace" with pr n nhh "tomb" (liter-
+    ally "house of eternity"). For references, cf. Faulkner,
+    Dictionary, 89. This Egyptian usage is made even more
+    pertinent to the discussion at hand by the fact that Wb,
+    561 defines db't "als Synonym zu pr-c3." Note also that
+    the phrase pr n nhh is exactly equivalent to Hebrew ??? ????.
+    Cf. H. Tawil, "A Note on the Ahira Inscription," JANES 3,
+    #1 (1970), 36.
+25. In Akkadian, both bitu "house" and ekallu "palace" are
+    also used for "tomb." Note the following examples:
+    (1) bitu ša ina šilli bit Marduk beliya ukinnuma "The tomb
+    which I established in the shade of the temple of Marduk,
+    my lord..." (IAK, 40 #2:5-6);
+    (2) [ša] ina bitišu la qebru "[(Sargon) who] was not buried
+    in his tomb..." (Eretz Israel 5 [1958] 154:9 [cf. 155:20]);
+    (3) ekal šalat kimah tapšuhti šubat darati "A tomb of repose,
+    a dwelling place of eternity" (OIP II, 151 #14:3);
+    (4) ekal tapšuht šubat darat "A tomb of repose, a dwelling
+    place of eternity" (OIP II, 151 #13:2). Note that the last
+    two passages come from inscriptions appearing on bricks from
+    the royal sepulchre at Assur, so that the usage of ekallu
+    for "tomb" is here beyond any shadow of a doubt. For these
+    two passages and a complete discussion of the phrase ?? ???
+    in both Hebrew and Phoenician, cf. Tawil, Abiram, 33-36.
+    For the most recent discussion of this term and the first
+    Nabatean inscription to utilize it, see A. Negev, "A
+    Nabatean Epitaph from Trans-Jordan," IEJ 21, #1 (1971),
+    50-52 and plate 4.
+26. In biblical Hebrew, ??? "house" occurs at least once with
+    the meaning "tomb," for example, in Is. 14:18-19:
+    ?? ???? ????? ??? ????? "Yet they were all laid in honor,
+    each in his tomb." As first noted by H. L. Ginsberg,
+    "Reflexes of Sargon in Isaiah after 715 B. C. E.," JAOS 88
+    (1968), 52, n. 30, this passage is a "reflex" of the second
+    Akkadian passage listed in note 25.
+27. Nowhere else in any of the Mesopotamian flood stories is
+    the boat of the hero ever called a "palace" or anything
+    similar.
+28. R. Borger, BAL, III, 118, translates lines 94-95 as
+    follows: "To the calker of the ship, to Puzur-Kurgal the
+    sailor, I gave [my] palace [in Šurippak] together with its
+    property."
+29. See the excursus at the end of this paper.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.42
+
+composition entitled "The Legend of Sargon"30 which de-
+scribes Sargon's birth is parallel in content and theme
+to the story of Moses' birth in Ex. 2:1-10.  The simi-
+larities may be summarized as follows:  In both, the
+mother of the hero31 is forced by circumstances beyond
+her control to abandon her child.32  She prepares a re-
+ceptacle for him, makes it water-tight by calking it
+with bitumen, places her child in it and sets the re-
+ceptacle upon the water.  The receptacle is found, the
+infant is raised, has some divine contact33 and finally
+becomes a hero of his people.  A literary connection
+between the receptacle mentioned in the Legend of Sargon
+and the boat of the Akkadian flood story has never been
+noted, but should such a connection exist, it might help
+explain why ??? was used in both the biblical flood story
+and the story of Moses' birth.  For the boats used in
+the respective flood stories might have been considered
+to have had some special protective quality of divine
+origin.34  It would then have been just this divine pro-
+tective quality to which the biblical author was allud-
+ing when he called Moses' receptacle ???, and to which
+the Akkadian author was alluding when he conjured up
+the image of Utnapištim's ark in his description of
+
+FOOTNOTES p.42:
+30. The text may be found in CT 13 (1901), plates 42 and 43
+    and now CT 46 (1965), plate 46 #46. For transliteration
+    and translation, cf. L. W. King, Chronicles Concerning
+    Early Babylonian Kings, II (London, 1907), 87-96. For
+    partial translation, cf. H. G. Guterbock, ZA 42 (1934),
+    62-64, and E. A. Speiser, ANET3, 119. Note that A. K.
+    Grayson and W. G. Lambert, "Akkadian Prophecies," JCS 18
+    (1964), 8, have labeled this legend as belonging to a genre
+    of texts which they call "poetic autobiographies."
+31. Both of these legends belong to a literary genre which
+    concerns itself with the birth of the hero. For other
+    texts of the same genre, and a psychological explanation
+    of the existence of such a genre, see O. Rank, The Myth
+    of the Birth of the Hero (New York, 1932) and J. Campbell,
+    Hero with a Thousand Faces (New York and Cleveland, 1956).
+32. See the excursus at the end of this paper.
+33. God communicates with Moses for the first time in Ex.
+    3:4ff., while Ištar loves Sargon in line 11 of the Sargon
+    legend.
+34. Since the instructions for building both the biblical ark
+    and its Akkadian counterpart were of divine origin (Gen.
+    6:14-16; Gilg. XI:28-31, 88), it probably was felt that
+    the finished product in each case was completely infallible.
+    For the authors of both the Sargon Legend and the story of
+    Moses' birth to put this divine stamp of approval on their
+    heroes' receptacle through a literary allusion to the arks
+    in their respective flood stories is quite understandable.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.43
+
+Sargon's receptacle.  Such a connection does perhaps
+exist not in respect to what the receptacle and the boat
+are called,35 but in respect to the precautions taken
+by Utnapištim (=Atrahasis) and the mother of Sargon in
+making their respective vessels water-tight, and the
+reference to a babu "gate" on both vessels, a term which
+is exceedingly rare in nautical terminology36 and is of
+uncertain meaning.37  The relevant texts38 are as follows:
+
+FOOTNOTES p.43:
+35. Admittedly, this is a problem. For had the author of the
+    Sargon Legend really wished to allude to the Akkadian ark,
+    he should have called Sargon's receptacle by the name for
+    that ark in the Akkadian flood story, elippu, just as the
+    author of the story of Moses' birth called his hero's
+    receptacle ???. However, the answer to this problem may
+    well lie in the fact that elippu is also the regular
+    Akkadian generic term for "boat," and had the author of the
+    Sargon Legend used it, no one would have known to which
+    boat he was referring. Thus, as opposed to the biblical
+    author whose use of the term ??? in the story of Moses'
+    birth is a clear allusion to the Hebrew ark (the term ???
+    is found only in the flood story and Moses' birth story),
+    the Akkadian author of the Sargon Legend could not possibly
+    have used elippu for his hero's receptacle to achieve this
+    same purpose. He had to draw on some unique characteristic
+    of the Akkadian ark so as to make his allusion recognizable.
+36. A. Salonen, Die Wasserfahrzeuge in Babylonien (Helsinki,
+    1939), 97 lists no other examples besides those in the
+    flood story. CAD, B, 274 lists only one other example of
+    babu as part of a boat. The text involved (published in
+    transliteration and translation by O. R. Gurney, "A Tablet
+    of Incantations against Slandor," Iraq 22 [1960], 221-227)
+    mentions babu together with makurru "type of boat (perhaps
+    'barge')" several times (lines 18-19, 24 cf. lines 4, 16).
+    The ritual prescribed in this text involved the making of a
+    clay boat into which figurines representing sorcerers and
+    slanderers were placed. The babu of this boat was then
+    sealed and the boat was launched on the water where it would
+    either capsize in a storm or float away downstream.
+37. The translation "hatch" is only provisional and merely a
+    guess from context. Salonen, Wasserfahrzeuge, 96, defines
+    bit elippi as "Aufbau auf dem Deck des Schiffes" and
+    identifies bab elippi as "Tur des bit elippi" which fits
+    very nicely for Utnapištim's ark, but not at all for
+    Sargon's basket. The meaning of bab elippi was already
+    discussed by H. V. Hilprecht, The Earliest Version of the
+    Babylonian Deluge Story and the Temple Library of Nippur
+    (Philadelphia, 1910), 54-55, where an attempt was made to
+    connect Hebrew ??? and Egyptian db't with the phrase bab
+    elippi. This attempt, however, is based on many faulty
+    readings and translations and has, therefore, only
+    historical significance today.
+38. Under babu, CAD, B, 24 also lists Gilg. X:v:33, which,
+    however, is much too broken to be taken into consideration
+    here.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.44
+
+Gilg. XI:88: erub ana libbi elippimma pehi babka "Enter
+the ship, calk your hatch[?]."39
+
+Gilg. XI:93: erub ana libbi elippi aptehi babi "I enter-
+ed the ship, I calked my hatch[?]."40
+
+Atrahasis III, ii:51-52: [k]upru babil ipehi babsu
+istuma idilu babsu "Pitch was brought, he calked its
+hatch[?].  After he had locked its hatch[?]..."41
+
+Atrahasis Fragment W:6: [elippa] erumma bab elippi
+tirra42 "Enter the boat, close the boat's hatch[?]."43
+
+Atrahasis Fragment W:10: [asap]parakkumma inassaru babka
+"I will send [beasts of the field] to you, they will
+guard your hatch[?]."44
+
+Legend of Sargon:5: iskunnanni ina guppi sa suri ina itti
+babiya45 iphi "She set me in a basket of rushes, she calked
+my hatch[?] with bitumen."46
+
+        In summation, we have shown that none of
+the solutions heretofore presented satisfactorily explain
+why the term ??? was used in both the biblical flood
+story and the story of Moses' birth.  Two would-be so-
+lutions revolve, in one way or another, around the Egyp-
+tian db't, which never has anything to do with boats,
+and therefore can not be compared.  The third is based
+on the late Hebrew usages of ??? but is philologically
+unsound.  One partial answer to the problem, which is
+not without difficulty, but which may nevertheless be
+leading in the right direction, involves the similarity
+
+FOOTNOTES p.44:
+39. R. C. Thompson, The Epic of Gilgamesh (Oxford, 1929), 62.
+40. Ibid.
+41. W. G. Lambert and A. R. Millard, Atrahasis (London, 1969),
+    92.
+42. For this meaning of taru in the II/1 as "close, lock,"
+    cf. Salonen, Wasserfahrzeuge, 97, and note the lexical
+    equation cited in CAD, E, 25 (from CT 18, plate 4, reverse
+    ii:6ff.): ...tu-ur-ru... = e-de-lu "to lock."
+43. Lambert, Atrahasis, 129.
+44. Ibid.
+45. That this is grammatically incorrect and should have read
+    babi (singular accusative, cf. Gilg. XI:93) was already
+    pointed out by Guterbock, ZA 42 (1934), 62, n. 5.
+46. King, Chronicles, 89.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.45
+
+in description and preparation of the respective vessels
+in the Akkadian flood story and the story of Sargon's
+birth.  The author of the story of Moses' birth might
+likewise have called the receptacle into which Moses
+was placed by the same name that was given to the bibli-
+cal ark in the Hebrew flood story, because of some pro-
+tective quality of divine origin which the latter pos-
+sessed and to which the author of the story of Moses'
+birth wished to allude.  This literary allusion is cer-
+tainly not the entire answer to the problem (which sure-
+ly can not be completely solved until the meaning of ???
+is established on a sound philological basis), but it
+is hopefully a step in the right direction.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.46
+
+EXCURSUS
+
+The Legend of Sargon and the Birth of Moses
+
+        Despite the fact that the Legend of
+Sargon1 and the Birth of Moses2 have long been accepted
+as parallel in content and theme,3 recently, criticism
+has been leveled against this identification by a few
+biblical scholars.4  Their major arguments may be summed
+up as follows:
+
+I.  The motivations of the heroes' mothers in the re-
+spective stories are quite different: "Whereas in the
+
+FOOTNOTES p.46:
+1.  See note 28 above for bibliography.
+2.  Ex. 2:1-10.
+3.  They are both classical examples of the literary motif of
+    the exposed child. For other examples of this motif, cf.
+    P. Jensen, "Aussetzungsgeschichten," Reallexicon der
+    Assyriologie I (1928), 322-324, and now D. B. Redford,
+    "The Literary Motif of the Exposed Child," Numen 14 (1967),
+    209-228. For the most recent and certainly most exhaustive
+    discussion of this literary motif with complete bibliography
+    of primary sources, cf. T. H. Gaster, Myth, Legend and
+    Custom in the Old Testament (New York, 1969), 224-230. Note
+    also B. S. Childs ("The Birth of Moses," JBL 84 [1965],
+    109-122) who agrees that "the Moses birth story is an
+    exposure saga" (p. 115), but adds that the sequence of
+    events pertaining to the finding, raising and eventual
+    adoption of the exposed foundling, together with the hiring
+    of a wet nurse to wean him, is "traditional and not the
+    creation of the Hebrew author" (p. 111). The ancient Near
+    Eastern parallel presented as evidence of this tradition is
+    the series of bilingual Sumerian-Akkadian legal texts ana
+    ittišu which was edited by B. Landsberger, MSL, I (Rome,
+    1937). The problem in making such a comparison is noted by
+    Childs himself when he states: "The fact that two completely
+    different genres of literature are involved, one narrative
+    and one legal, cannot be lightly dismissed. At most the
+    case can be defended that the sequence of the Moses story
+    reflects a pattern which originally had a legal provenance"
+    (p. 111). The fact that such a sequence is unknown from any
+    ancient Near Eastern source other than the two aforementioned
+    texts, indicates, at least for the time being, that the
+    similarity of sequence in these two compositions is probably
+    due not to established tradition, but rather to mere
+    coincidence.
+4.  M. Cogan, "A Technical Term for Exposure," JNES 27 (1968),
+    133-135; M. Greenberg, Understanding Exodus (New York,
+    1969), 36-44 and especially 198-199; B. Jacob, "The
+    Childhood and Youth of Moses, the Messenger of God," in
+    I. Epstein et. al. eds., Essays in Honour of the Very Rev.
+    Dr. J. H. Hertz (London, 1944), 245-259; A. S. Yahuda,
+    The Language of the Pentateuch in its Relation to Egyptian
+    (London, 1933), 205, n. 2 and 262-265.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.47
+
+legend of Sargon (and similar tales) the child is aban-
+doned to protect others (apparently to hide the shame
+of his mother in Sargon's case), the disposition made
+of Moses was for his own protection."5
+
+II.  In the biblical story of Moses' birth, the hero's
+mother placed (?????) him into the river, while in the
+Akkadian legend of Sargon's birth, the hero's mother
+cast (iddanni) him into the river.  Therefore, whereas
+the Akkadian legend of Sargon is a typical exposure
+narrative, "...the avoidance of the term for 'abandon-
+ment' suggests that...our [biblical] author not merely
+tempered, but virtually eliminated the element of ex-
+posure."6
+
+III.  The closest parallel to the story of the birth of
+Moses "occurs precisely in Egyptian myth, in the allu-
+sions to Isis' concealment of her infant child Horus in
+a Delta papyrus-thicket, to save him from death at the
+hands of Seth."7
+        We will deal with each of these argu-
+ments in turn:
+
+I.  While the motivation of Moses' mother in abandon-
+ing her child has always been quite clear,8 the situa-
+tion with respect to the motivation of Sargon's mother
+has, until quite recently, been somewhat uncertain.  The
+problem lies in the fact that the motivation is not ex-
+plicitly stated in the extant Sargon legend, and can
+not be inferred without some knowledge of the mother's
+role in the story.  She is called e-né-tum which has
+been interpreted in two different ways.  E. A. Speiser,9
+followed by M. Greenberg,10 translated "changeling" on
+the basis of Akkadian enû "to change, alter," while the
+
+FOOTNOTES p.47:
+5.  Greenberg, Exodus, 198; Cf. Jacob, Childhood, 246 and
+    especially 255; Yahuda, Language, 264.
+6.  Cogan, Exposure, 118; Cf. Greenberg, Exodus, 199.
+7.  Greenberg, Exodus, 198-199.
+8.  Cf. Pharoah's edict in Ex. 1:22 and the narrative in Ex.
+    2:2-3. Here we are in agreement with Childs (Birth of
+    Moses, 117-118) who contends "that the motivation for the
+    exposure is a motif created by the Hebrew author in order
+    to make possible his use of the exposure saga in telling
+    the story of the birth of Moses" (p. 117).
+9.  ANET2, 119.
+10. Greenberg, Exodus, 198.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.48
+
+CAD,11 following B. Landsberger,12 connected this sub-
+stantive with Akkadian entum "priestess"13 despite the
+unusual form of the noun.  H. G. Guterbock14 had earli-
+er rejected both possibilities, leaving the question
+more or less open.  If the enetum could be identified
+with the entum priestess, this would solve the problem
+of motivation, for the entum priestess was apparently
+not permitted to bear children.15  The basis of this
+identification by the editors of the CAD was the follow-
+ing lexical equation:16  ba-ar BAR = be-el-tu, en-e-tu
+(A I/6 : 286-287).  This equation showed that entu could
+be written enetu in the singular.  However, W. G. Lam-
+bert has recently published evidence which is even more
+compelling from a contextual point of view, for it de-
+scribes in detail the role of the entu priestess in so-
+ciety:17
+
+appuna šalustum libši ina niši ina niši alittumma la
+alittum....šukni ukbakkati eneti u egisati lu ikkibu
+šinama aladam pur[si]
+
+In addition let there be a third category among the
+people, among the people [let there be] women who bear
+and women who do not bear....Establish Ugbabtu-women,
+Entu-women and Igisitu-women.  Let them be taboo, and
+so stop childbirth (Atrahasis III vii:1-2, 6-9).
+
+As correctly noted by Lambert in his commentary, the mo-
+tivation of Sargon's mother is thus quite clear:18
+
+        His mother was an entu (e-né-tum), who, on his
+birth put him on the river like Moses.  In view of the
+rules of her order, she had to conceal his birth.
+
+FOOTNOTES p.48:
+11. CAD, E, 173.
+12. ZA 30 (1915/16), 71ff.
+13. Cf. now ANET3, 119 where the translation has been changed
+    to "high priestess."
+14. ZA 42 (1934), 62, n. 2.
+15. Cf. M. Astour, JBL 85 (1966), 188ff., and the discussion
+    in CAD, E, 173.
+16. Quoted in CAD, E, 172.
+17. Lambert, Atrahasis, 102. Note that the plural form enetu
+    is used here just as in Maqlu VI:28, 39.
+18. Lambert, Atrahasis, 165.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.49
+
+Our knowledge of the mother's attitude is still fur-
+thered by Guterbock's astute observation that the care-
+ful calking of the receptacle by Sargon's mother (line 5)
+is an obvious indication that her purpose was to give
+her child a chance to live even though she could no long-
+er keep him:19
+
+        Gemeint ist jedenfalls das der Deckel abgedichtet
+wird, damit kein Wasser eindringen kann; den der Sinn der Aus-
+setzung ist das die Mutter ihr Kind nicht toten will, sondern ihm
+die Chance gibt gerettet zu werden.
+
+Thus, the mother of Moses and the mother of Sargon were
+both forced to give up their children.  They both wanted
+their child to live, however, and thus did everything
+they could to make sure that he would not perish.
+
+II.  Cogan's claim that ????? is the Hebrew semantic
+equivalent of Akkadian nadu "to throw, cast" (used in
+line 6 of the Legend of Sargon) and that both these
+verbs must be translated "reject, abandon, expose" in
+contexts of exposure is certainly correct.  However, his
+contention that Hebrew ????? is the only term (or "the
+technical term") which can be used in exposure narra-
+tives with this meaning is untenable.  The regular verb
+in biblical Hebrew for 'abandon, reject, expose' is sim-
+ply ??? (Isa. 18:6; 27:10; 32:14; 62:4; Jer. 12:7;
+Ezek. 23:29; 36:4; Ps. 16:10; 27:10; 37:25; 38:22;
+71:9, 18) and its semantic and etymological equivalent
+in Akkadian is ezebu.  The following example from the
+archives of Mari is to the point:20 šalamtašu [!] ina
+šubatim ugabbiruma ana Hubur izibu "they buried his
+corpse in a garment and exposed it to the river Hubur."
+When a verb expressing exactly how the abandonment took
+place is substituted for ??? or ezebu, the purpose of
+such a substitution is simply to provide a more vivid
+description of the abandonment, e.g. ??? "to place"
+(Gen. 40:15; Ex. 2:3; 2 Chron. 18:26); ????? "to
+throw, cast" (Gen. 21:15; Ex. 1:22; Jer. 38:6,9;
+Ezek. 16:5; Ps. 51:13; 71:9; Eccles. 3:6); ?????
+"to install" (Ezek. 26:20; Ps. 143:3; Lam. 3:6).
+
+FOOTNOTES p.49:
+19. Guterbock, ZA 42 (1934), 63.
+20. ARM VI, #37, rev. 5-6.  For this and many other examples,
+    cf. CAD, E, 416-423.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.50
+
+III.  For all the reasons stated above, it should now be
+clear that the parallelism in content and theme between
+the Birth of Moses and the Legend of Sargon stands.  The
+story of Moses' birth should be looked upon as an ex-
+posure legend whose chief purpose is to explain Moses'
+birth and infancy in terms of the typical exposure motif.
+Whether the biblical author was inspired by the Sargon
+Legend or any other exposure story is something which we
+can never know, but such an inspiration is certainly
+within the realm of possibility.  On the other hand, the
+Egyptian parallel21 adduced by Greenberg could not pos-
+sibly have inspired the biblical author because it dates
+from the Ptolemaic period.22  Furthermore, the purpose
+of this Egyptian text is not to tell about the birth
+and infancy of a hero and how he came to be a leader of
+his people, but rather "to elucidate the origins of the
+name of the Jackal God Anubis (Egyptian Inpw), and to
+explain how it came about that this god was identified
+with Horus."23  Finally, the slight parallelism in de-
+tail between the Birth of Moses and this Egyptian text
+is probably due to the great amount of foreign literary
+influence in Egyptian works of the Ptolemaic period,
+which would make the possibility of the biblical account
+influencing the Egyptian myth much more conceivable than
+the other way around.24  In this connection, we are com-
+pletely in accord with Redford's reasoning:
+
+        The fact is, however, and its importance can not
+be minimized, that the parallels cited come from the Greco-Roman
+
+FOOTNOTES p.50:
+21. The text is from J. Vandier, Le Papyrus Jumilhac (Paris,
+    n.d.). Cf. W. Helck, "Tkw und die Ramses Stadt," VT 15
+    (1965), 48; Redford, Exposed Child, 221-224.
+22. Not only is the extant copy of this text to be dated in
+    the Ptolemaic period, the text itself must also have been
+    written then. The entire work is based on puns, many of
+    which involve words which were not used until the Ptolemaic
+    period. For example, Greenberg, Exodus, 40, makes a point
+    of the fact that the Egyptian text relates that the infant
+    was in a "reed boat." The word for boat here, upon which
+    the pun on the name Anubis is made, is inp. The Egyptian
+    substantive inp "boat" is found only in Ptolemaic texts
+    according to A. Erman and H. Grapow, Worterbuch der
+    Agyptischen Sprache (Leipzig, 1925), I, 96:5-6. For this
+    and other examples, see Redford, Exposed Child, 224, n. 65.
+23. Redford, Exposed Child, 222.
+24. For examples of this foreign influence in late versions
+    of the Osiris and Horus myths, see Redford, Exposed Child,
+    223-224, n. 64.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.51
+
+period when literary cross-fertilization had been going
+on for a long time.  By the time that the Jumilhac
+Papyrus was written, Egypt had been sufficiently exposed
+to both Hebrew and Classical literature for influences
+from those sources to have crept into the age-old myths.
+Nor can one assume that the passage translated, [i.e.
+the relevant passage in the Jumilhac Papyrus], reflects
+independent material of genuine antiquity.  The vocabulary
+used by the writer, even the words on which the puns
+depend, show clearly that the stories in this part of
+the papyrus at least came into existence at a late
+date....The narrative of Exodus 2 still finds its closest
+parallel in the Sargon legend, and parallels almost as
+close in Classical literature.25
+
+FOOTNOTES p.51:
+25. Redford, Exposed Child, 223-224.
+
+================================================================================
+END OF PAPER
+================================================================================
+
+Cohen, Chayim. "Hebrew tbh: Proposed Etymologies."
+Journal of the Ancient Near Eastern Society of Columbia University
+Volume 4, Number 1, January 1972, pp. 37-51.
