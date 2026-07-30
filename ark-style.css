@@ -39,7 +39,7 @@ body {
   font-weight: normal;
   color: #1a1a1a;
   margin-top: 0.2rem;
-  line-height: 1.25;
+  line-height: 0.5;
 }
 
 .site-header .meta {
@@ -64,12 +64,13 @@ body {
 /* ── Section headings ── */
 h2 {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: bold; 
   color: #2c4a2e;
   border-bottom: 1px solid #c8d8c8;
-  padding-bottom: 0.3rem;
+  padding-bottom: 1.3rem;
   margin: 2.5rem 0 1rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+ 
 }
 
 h3 {
