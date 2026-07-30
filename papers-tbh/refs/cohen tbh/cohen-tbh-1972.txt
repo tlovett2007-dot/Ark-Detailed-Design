@@ -20,8 +20,9 @@ FOOTNOTES p.37:
 4. The receptacle was large enough for the infant to be placed in it (Ex. 2:3),
    but small enough for one of the slave girls of Pharoah's daughter to fetch it
    (Ex. 2:5).
-5. E.g. Ibn Ezra on Gen. 6:14: "And (its) name is תבה and not 'boat' because it
-   didn't have the shape of a boat, nor did it have oars." Implicit in this
+5. E.g. Ibn Ezra on Gen. 6:14: ושם תבה ולא ספינה כי אין לה צורת אניה ואין לה משוטים
+   "And (its) name is תבה and not 'boat' because it didn't have the shape of a boat,
+   nor did it have oars." Implicit in this
    statement is the notion that the ark was called תבה rather than אניה "ship"
    because it was not a ship, but rather a box-like structure. This would solve
    the problem by resorting to the late Hebrew usage of the word (see below,
@@ -72,7 +73,7 @@ reference to the Egyptian substantive dpt "boat," which he connected with db't
 and tbt. However, Egyptologists are not in agreement with Yahuda, and consider
 dpt to be completely separate in meaning
 
-FOOTNOTES pp.38-39:
+FOOTNOTES p.38:
 7.  Cassuto, 41. Actually, Cassuto first suggests (ibid., 40) that the term תבה
     was used in both stories to stress "the similarity of themes." This suggestion,
     which is not much different from the one presented in this paper, was
@@ -93,6 +94,10 @@ FOOTNOTES pp.38-39:
 12. E.g. ana Nisir itemid elippu "The ship landed at Mount Nisir" (Gilg. XI:140).
 13. H. L. Ginsberg suggests the translation "to run aground" in Gen. 7:18 which
     certainly fits the context better (oral communication).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.39
+
+FOOTNOTES p.39:
 14. תבה was apparently first equated with Egyptian db't by H. Brugsch in his
     Hieroglyphisch-Demotisches Worterbuch, I-VII (Leipzig, 1867-1882). This
     equation was accepted by A. Erman in his fundamental study, "Das Verhaltnis
@@ -130,7 +135,7 @@ flood story is very suspect and has been recently interpreted quite differently.
 Thus, we must look elsewhere for an explanation. Now despite some recent
 objections, it has long been accepted in biblical studies that the Akkadian
 
-FOOTNOTES pp.40-41:
+FOOTNOTES p.40:
 18. Cf. Spiegelberg's reaction to Yahuda's assertion: "...ihm [ist] das Missgeschick
     zugestossen, dass er ...db't...'Kasten', das bekanntlich im hebr. תבה entlehnt
     worden ist, und das Wort dp.t 'Schiff', die gar nichts miteinander zu tun
@@ -141,6 +146,10 @@ FOOTNOTES pp.40-41:
 24. Compare pr "house," "palace" with pr n nhh "tomb" (literally "house of
     eternity"). Note also that the phrase pr n nbh is exactly equivalent to Hebrew
     בית עולם.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - p.41
+
+FOOTNOTES p.41:
 27. Nowhere else in any of the Mesopotamian flood stories is the boat of the hero
     ever called a "palace" or anything similar.
 28. R. Borger, BAL, III, 118, translates lines 94-95 as follows: "To the calker
@@ -340,3 +349,27 @@ END OF DOCUMENT
 Transcribed from photocopy (Fisher Library, University of Sydney, 2005).
 Original: JANES Vol. 4 No. 1, January 1972, pp.37-51.
 Transcription: T. Lovett / AI assisted, July 2026.
+
+================================================================================
+PAPER NOTES — ACKNOWLEDGEMENTS / EPIGRAPH
+================================================================================
+
+Epigraph candidate:
+"Fifteen pages. Walk away."
+— in the manner of Chayim Cohen (1972)
+
+Acknowledgements draft:
+"The author wishes to acknowledge the work of Chayim Cohen, whose fifteen pages
+in 1972 said everything that needed to be said — and who had the wisdom to walk
+away. This paper attempts the same discipline."
+
+Context: Cohen published 15 pages in JANES Vol. 4 No. 1 (January 1972) and
+walked away. 54 years later it remains the definitive philological treatment of
+tebah. Spoelstra (2020) cites it on p.5 fn.10 and proceeds for 350 more pages
+without returning to it.
+
+The academic incentive structure rewards Spoelstra's exhaustiveness over Cohen's
+restraint. Word count signals effort. Footnote density signals scholarship.
+Cohen answered the question. Spoelstra built a warren in the tailings.
+
+================================================================================
