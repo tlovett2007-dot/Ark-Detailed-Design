@@ -63,19 +63,39 @@ body {
 
 /* ── Page header block ── */
 header {
-  background: #dddddd;
-  padding: 0.8rem 1.5rem;
-  margin: -2rem -1.5rem 1.5rem;
+  margin: -2rem -1.5rem 0;
   border-bottom: 2px solid #2c4a2e;
 }
 
 header .site-title {
+  background: #1a1a1a;
+  color: #ffffff;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #2c4a2e;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  display: block;
+}
+
+header h1 {
+  background: #dddddd;
+  margin: 0;
+  padding: 0.6rem 1.5rem 0.2rem;
+  font-size: 2rem;
+  color: #1a1a1a;
+  border-bottom: none;
+}
+
+header h2 {
+  background: #dddddd;
+  margin: 0;
+  padding: 0 1.5rem 0.8rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #444;
+  border-bottom: none;
 }
 
 /* ── Section headings ── */
