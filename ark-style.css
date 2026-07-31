@@ -49,17 +49,34 @@ body {
   margin-top: 0.4rem;
 }
 
-/* ── Navigation breadcrumb ── */
+/* ── Navigation breadcrumb — sits above site title ── */
 .breadcrumb {
   font-size: 0.82rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #666;
-  margin-bottom: 2rem;
+  margin-bottom: 0.4rem;
 }
 
 .breadcrumb a { color: #2c4a2e; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb span { margin: 0 0.4rem; }
+
+/* ── Page header block ── */
+header {
+  background: #dddddd;
+  padding: 0.8rem 1.5rem;
+  margin: -2rem -1.5rem 1.5rem;
+  border-bottom: 2px solid #2c4a2e;
+}
+
+header .site-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2c4a2e;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+}
 
 /* ── Section headings ── */
 h2 {
