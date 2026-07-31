@@ -1,11 +1,12 @@
 /* Ark Research — Master Stylesheet
-   Simple, linear, print-friendly
-   All pages link to this file one level up: ../ark-style.css
+   Clean rebuild July 2026
+   All pages link: ../ark-style.css
 */
 
-/* ── Reset & Base ── */
+/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Base ── */
 body {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 17px;
@@ -15,59 +16,28 @@ body {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding-bottom: 4rem;
 }
 
-/* ── Site header (top of every page) ── */
-.site-header {
-  border-bottom: 3px solid #2c4a2e;
-  padding-bottom: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-.site-header .project-title {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #2c4a2e;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 600;
-}
-
-.site-header h1 {
-  font-size: 1.9rem;
-  font-weight: normal;
-  color: #1a1a1a;
-  margin-top: 0.2rem;
-  line-height: 0.5;
-}
-
-.site-header .meta {
-  font-size: 0.82rem;
-  color: #666;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin-top: 0.4rem;
-}
-
-/* ── Navigation breadcrumb — sits above site title ── */
+/* ── Breadcrumb — sits above everything, white background ── */
 .breadcrumb {
   font-size: 0.82rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #666;
-  margin-bottom: 0.4rem;
+  padding: 0.5rem 1.5rem;
+  background: #f9f7f4;
 }
-
 .breadcrumb a { color: #2c4a2e; text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
-.breadcrumb span { margin: 0 0.4rem; }
 
-/* ── Page header block ── */
+/* ── Header — black site-title + grey h1/h2 bands ── */
 header {
-  margin: -2rem -1.5rem 0;
+  margin-bottom: 1.5rem;
   border-bottom: 2px solid #2c4a2e;
 }
 
 header .site-title {
+  display: block;
   background: #1a1a1a;
   color: #ffffff;
   font-size: 0.78rem;
@@ -76,190 +46,173 @@ header .site-title {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
-  display: block;
 }
 
 header h1 {
   background: #dddddd;
-  margin: 0;
-  padding: 0.6rem 1.5rem 0.2rem;
-  font-size: 2rem;
   color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem 0.2rem;
+  margin: 0;
   border-bottom: none;
+  line-height: 1.2;
 }
 
 header h2 {
   background: #dddddd;
-  margin: 0;
-  padding: 0 1.5rem 0.8rem;
+  color: #444;
   font-size: 1.1rem;
   font-weight: normal;
-  color: #444;
+  font-style: italic;
+  padding: 0 1.5rem 0.8rem;
+  margin: 0;
   border-bottom: none;
 }
 
-/* ── Section headings ── */
-h2 {
-  font-size: 1.25rem;
-  font-weight: bold; 
-  color: #2c4a2e;
-  border-bottom: 1px solid #c8d8c8;
-  padding-bottom: 1.3rem;
-  margin: 2.5rem 0 1rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
- 
+/* ── Main content area ── */
+main {
+  padding: 0 1.5rem;
 }
 
-/* Subtitle h2 immediately after h1 — reduce gap only */
-h1 + h2 {
-  margin-top: 0.3rem;
+/* ── Doc meta line ── */
+p.doc-meta {
+  font-size: 0.85rem;
+  color: #666;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0.5rem 0 1.5rem;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.8rem;
+}
+
+/* ── Headings in main content ── */
+h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 2rem 0 0.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c4a2e;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.3rem;
+  margin: 2.5rem 0 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 h3 {
   font-size: 1.05rem;
   font-weight: bold;
-  color: #1a1a1a;
-  margin: 1.8rem 0 0.6rem;
+  color: #2c4a2e;
+  margin: 1.5rem 0 0.5rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-h4 {
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: #444;
-  margin: 1.2rem 0 0.4rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+/* h2 immediately after h1 — subtitle, reduce gap */
+h1 + h2 {
+  margin-top: 0.3rem;
 }
 
-/* ── Body text ── */
-p { margin-bottom: 1rem; }
+/* ── Paragraphs ── */
+p { margin: 0 0 1rem; }
+
+/* ── Links ── */
+a { color: #2c4a2e; }
+a:hover { text-decoration: underline; }
 
 /* ── Tables ── */
 table {
-  width: 100%;
   border-collapse: collapse;
-  margin: 1.2rem 0 1.5rem;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
   font-size: 0.92rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-
 th {
   background: #2c4a2e;
   color: #fff;
+  padding: 6px 10px;
   text-align: left;
-  padding: 0.5rem 0.75rem;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-}
-
-td {
-  padding: 0.45rem 0.75rem;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
-}
-
-tr:nth-child(even) td { background: #f0ede8; }
-tr:last-child td { border-bottom: 2px solid #2c4a2e; }
-
-/* ── Status flags ── */
-.status {
-  display: inline-block;
-  font-size: 0.75rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.15rem 0.5rem;
-  border-radius: 3px;
-  vertical-align: middle;
 }
+td {
+  border: 1px solid #c8d8c8;
+  padding: 6px 10px;
+  vertical-align: top;
+}
+tr:nth-child(even) td { background: #f0ede8; }
 
-.status-confirmed  { background: #d4edda; color: #1a5c2a; }
-.status-provisional { background: #fff3cd; color: #7a5c00; }
-.status-tbd        { background: #f8d7da; color: #7a1a1a; }
-.status-revised    { background: #d0e8ff; color: #0a3a6a; }
-
-/* ── Notes / callout boxes ── */
-.note {
+/* ── Blockquotes ── */
+blockquote {
   background: #eef4ee;
   border-left: 4px solid #2c4a2e;
-  padding: 0.75rem 1rem;
-  margin: 1.2rem 0;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0 1.5rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* ── Lists ── */
+ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+li { margin-bottom: 0.3rem; }
+
+/* ── Status badges ── */
+.status-confirmed   { background: #d4edda; color: #1a5c2a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-provisional { background: #fff3cd; color: #7a5c00; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-tbd         { background: #f8d7da; color: #7a1a1a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-revised     { background: #d0e8ff; color: #0a3a6a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+/* ── Note boxes ── */
+.note {
+  background: #fffbea;
+  border-left: 4px solid #c8a000;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
   font-size: 0.92rem;
 }
 
-.note strong { color: #2c4a2e; }
-
-.note-provisional {
-  background: #fffbea;
-  border-left: 4px solid #c8a000;
+/* ── Horizontal rule ── */
+hr {
+  border: none;
+  border-top: 1px solid #c8d8c8;
+  margin: 2rem 0;
 }
-
-/* ── Image blocks ── */
-.img-block {
-  margin: 1.5rem 0;
-}
-
-.img-block img {
-  max-width: 100%;
-  display: block;
-  border: 1px solid #ccc;
-}
-
-.caption {
-  font-size: 0.82rem;
-  color: #555;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin-top: 0.4rem;
-  font-style: italic;
-}
-
-/* ── Calculation blocks ── */
-.calc {
-  background: #f0ede8;
-  border: 1px solid #ccc;
-  padding: 0.75rem 1rem;
-  margin: 1rem 0;
-  font-family: 'Courier New', monospace;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  white-space: pre-wrap;
-}
-
-/* ── Cross-references ── */
-.xref {
-  font-size: 0.82rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #2c4a2e;
-  font-style: italic;
-}
-
-.xref a { color: #2c4a2e; }
 
 /* ── Footer ── */
-.page-footer {
+footer {
   margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ccc;
-  font-size: 0.8rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.82rem;
   color: #888;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  border-top: 1px solid #c8d8c8;
 }
+
+/* ── Index page special ── */
+.site-nav {
+  font-size: 0.82rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: 0.4rem 1.5rem;
+  background: #2c4a2e;
+  color: #fff;
+}
+.site-nav a { color: #aed6ae; }
 
 /* ── Print ── */
 @media print {
-  body { background: white; font-size: 12pt; max-width: none; padding: 0; }
-  .site-header { border-bottom-color: #000; }
-  h2 { border-bottom-color: #999; }
-  .note { border-left-color: #000; }
-  a { color: #000; text-decoration: none; }
+  body { background: white; color: black; width: 100%; max-width: none; }
+  header .site-title { background: black; }
+  header h1, header h2 { background: #ccc; }
+  a { color: black; }
 }
 
 /* ── Mobile ── */
 @media (max-width: 600px) {
-  body { font-size: 15px; padding: 1rem; }
-  .site-header h1 { font-size: 1.5rem; }
+  body { width: 100%; }
+  header h1 { font-size: 1.5rem; }
   table { font-size: 0.82rem; }
-  th, td { padding: 0.35rem 0.5rem; }
 }
