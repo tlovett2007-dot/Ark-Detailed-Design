@@ -24,11 +24,12 @@ body {
   font-size: 0.82rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #666;
-  padding: 0.4rem 1.5rem 0.2rem;
+  padding: 0.4rem 1.5rem 0;
   background: #f9f7f4;
 }
-.breadcrumb a { color: #2c4a2e; text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb a { color: #0000EE; text-decoration: underline; }
+.breadcrumb a:visited { color: #551A8B; }
+.breadcrumb a:hover { color: #0000EE; }
 
 /* ── Header — black site-title + grey h1/h2 bands ── */
 header {
@@ -53,7 +54,7 @@ header h1 {
   color: #1a1a1a;
   font-size: 2rem;
   font-weight: bold;
-  padding: 0.6rem 1.5rem 0.2rem;
+  padding: 0.6rem 1.5rem 0.8rem;
   margin: 0;
   border-bottom: none;
   line-height: 1.2;
@@ -67,12 +68,18 @@ header h2 {
   font-style: italic;
   padding: 0 1.5rem 0.8rem;
   margin: 0;
-  border-bottom: none;
+  border: none;
 }
 
 /* ── Main content area ── */
 main {
   padding: 0 1.5rem;
+}
+
+/* h1 followed by h2 in header — tighten bottom padding */
+header h1 + h2 {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* ── Doc meta line ── */
@@ -120,9 +127,11 @@ h1 + h2 {
 /* ── Paragraphs ── */
 p { margin: 0 0 1rem; }
 
-/* ── Links ── */
-a { color: #2c4a2e; }
-a:hover { text-decoration: underline; }
+/* ── Links — always underlined, standard colours ── */
+a { color: #0000EE; text-decoration: underline; }
+a:visited { color: #551A8B; text-decoration: underline; }
+a:hover { color: #0000EE; }
+a:active { color: #FF0000; }
 
 /* ── Tables ── */
 table {
