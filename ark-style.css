@@ -24,7 +24,7 @@ body {
   font-size: 0.82rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #666;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.5rem 0.2rem;
   background: #f9f7f4;
 }
 .breadcrumb a { color: #2c4a2e; text-decoration: none; }
