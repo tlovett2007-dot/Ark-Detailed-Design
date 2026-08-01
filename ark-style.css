@@ -225,3 +225,93 @@ footer {
   header h1 { font-size: 1.5rem; }
   table { font-size: 0.82rem; }
 }
+
+/* ── Footnote / reference system (cohen-tbh-text.html and future papers) ── */
+
+/* Inline superscript reference links */
+sup.fn-ref {
+  line-height: 0;
+  vertical-align: super;
+  font-size: 0.72em;
+}
+sup.fn-ref a {
+  text-decoration: none;
+  color: #2c4a2e;
+  font-weight: 700;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+sup.fn-ref a:hover { text-decoration: underline; }
+
+/* Footnotes section */
+.footnotes {
+  margin-top: 3em;
+  border-top: 2px solid #c8d8c8;
+  padding-top: 1.5em;
+  font-size: 0.86em;
+  line-height: 1.6;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.footnotes h2 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2c4a2e;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.fn-item {
+  display: flex;
+  gap: 0.6em;
+  margin-bottom: 0.7em;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.fn-item .fn-num {
+  min-width: 2em;
+  font-weight: 700;
+  color: #2c4a2e;
+  flex-shrink: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.fn-item .fn-body { flex: 1; }
+.fn-return {
+  font-size: 0.85em;
+  text-decoration: none;
+  color: #2c4a2e;
+  margin-left: 0.4em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.fn-return:hover { text-decoration: underline; }
+
+/* Page markers (p. 37 etc.) */
+.page-marker {
+  display: block;
+  color: #999;
+  font-size: 0.76em;
+  font-style: italic;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 1.4em 0 0.3em;
+  border-left: 2px solid #c8d8c8;
+  padding-left: 0.5em;
+}
+
+/* Akkadian / Hebrew text blocks */
+.text-block {
+  font-family: Georgia, 'Times New Roman', serif;
+  margin: 0.8em 1.5em;
+  line-height: 1.9;
+}
+.text-block p { margin-bottom: 0.4em; }
+
+/* Excursus section */
+.excursus {
+  margin-top: 2.5em;
+  padding-top: 1em;
+  border-top: 2px solid #2c4a2e;
+}
+.excursus h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+}
