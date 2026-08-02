@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1400 1100"
+  font-family="Georgia, serif" font-size="13" fill="#1a1a1a">
+
+<title>Tebah transmission tree</title>
+<desc>Branching diagram showing how the Hebrew word tebah was transmitted through different traditions.</desc>
+
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arr-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#aaa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect width="1400" height="1100" fill="#f9f7f4"/>
+
+<!-- ══ LEGEND ══ -->
+<text x="40" y="22" font-weight="bold" font-size="12">Legend:</text>
+<line x1="100" y1="18" x2="140" y2="18" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="148" y="22" font-size="12">Direct transmission</text>
+<line x1="310" y1="18" x2="350" y2="18" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+<text x="358" y="22" font-size="12">Indirect / ignored / lost</text>
+<rect x="540" y="10" width="16" height="16" rx="3" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="562" y="22" font-size="12">[BOAT ICON] Ship / functional reading</text>
+<rect x="800" y="10" width="16" height="16" rx="3" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="822" y="22" font-size="12">[BOX ICON] Box / chest reading</text>
+<rect x="1020" y="10" width="16" height="16" rx="3" fill="none" stroke="#aaa" stroke-width="1"/>
+<text x="1042" y="22" font-size="12">Neutral / peripheral</text>
+
+<!-- ══════════════════════════
+     NODE DEFINITIONS
+     All boxes: w=210 h=52 rx=5
+     Connections listed after
+     ══════════════════════════ -->
+
+<!-- N01: ROOT — Hebrew tebah -->
+<rect id="N01" x="595" y="60" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="700" y="81" text-anchor="middle" font-weight="bold">Hebrew תֵּבָה (tebah)</text>
+<text x="700" y="100" text-anchor="middle" font-size="12" fill="#666">functional vessel — etymology unknown</text>
+
+<!-- N02: LXX kibotos — box -->
+<rect id="N02" x="60" y="200" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="165" y="221" text-anchor="middle" font-weight="bold">LXX κιβωτός</text>
+<text x="165" y="240" text-anchor="middle" font-size="12" fill="#666">Alexandria c.250 BC — box imposed</text>
+
+<!-- N03: Berosus ploion — ship -->
+<rect id="N03" x="595" y="200" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="700" y="221" text-anchor="middle" font-weight="bold" fill="#2c4a2e">Berosus πλοῖον</text>
+<text x="700" y="240" text-anchor="middle" font-size="12" fill="#2c4a2e">c.280 BC — ship (Babylonian tradition)</text>
+
+<!-- N04: Aramaic Targum — functional -->
+<rect id="N04" x="1130" y="200" width="210" height="52" rx="5" fill="none" stroke="#aaa" stroke-width="1.5"/>
+<text x="1235" y="221" text-anchor="middle" font-weight="bold">Aramaic תֵּיבוּ</text>
+<text x="1235" y="240" text-anchor="middle" font-size="12" fill="#666">Targum Onkelos — functional</text>
+
+<!-- N05: Vulgate arca — box -->
+<rect id="N05" x="60" y="340" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="165" y="361" text-anchor="middle" font-weight="bold">Vulgate arca</text>
+<text x="165" y="380" text-anchor="middle" font-size="12" fill="#666">Jerome c.400 AD — chest/box</text>
+<text x="165" y="406" text-anchor="middle" font-size="11" fill="#aaa">Moses = fiscella scirpea (rush basket)</text>
+<text x="165" y="420" text-anchor="middle" font-size="11" fill="#aaa">Jerome preserved the distinction</text>
+
+<!-- N06: Berosus fragments — lost -->
+<rect id="N06" x="595" y="340" width="210" height="52" rx="5" fill="none" stroke="#aaa" stroke-width="1"/>
+<text x="700" y="361" text-anchor="middle" font-weight="bold" fill="#aaa">Fragments — lost</text>
+<text x="700" y="380" text-anchor="middle" font-size="12" fill="#aaa">ship reading effectively buried</text>
+
+<!-- N07: Syriac qebuta — functional -->
+<rect id="N07" x="1130" y="340" width="210" height="52" rx="5" fill="none" stroke="#aaa" stroke-width="1.5"/>
+<text x="1235" y="361" text-anchor="middle" font-weight="bold">Syriac qebūtā</text>
+<text x="1235" y="380" text-anchor="middle" font-size="12" fill="#666">Noah + Moses + Covenant</text>
+
+<!-- N08: Wycliffe — box -->
+<rect id="N08" x="60" y="480" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="165" y="501" text-anchor="middle" font-weight="bold">Wycliffe "ark" 1382</text>
+<text x="165" y="520" text-anchor="middle" font-size="12" fill="#666">first English — from Vulgate not Hebrew</text>
+<text x="165" y="546" text-anchor="middle" font-size="11" fill="#aaa">coined the English word that locked in the box</text>
+
+<!-- N09: Arabic tabut — functional -->
+<rect id="N09" x="1130" y="480" width="210" height="52" rx="5" fill="none" stroke="#aaa" stroke-width="1.5"/>
+<text x="1235" y="501" text-anchor="middle" font-weight="bold">Arabic تابوت (tābūt)</text>
+<text x="1235" y="520" text-anchor="middle" font-size="12" fill="#666">functional container — no geometry</text>
+
+<!-- N10: Brugsch 1867 — box source -->
+<rect id="N10" x="280" y="480" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="385" y="501" text-anchor="middle" font-weight="bold">Brugsch 1867–1882</text>
+<text x="385" y="520" text-anchor="middle" font-size="12" fill="#666">first proposed tebah = Egyptian db't</text>
+<text x="385" y="546" text-anchor="middle" font-size="11" fill="#aaa">greatest Egyptologist of his era</text>
+<text x="385" y="560" text-anchor="middle" font-size="11" fill="#aaa">pre-rigorous phonological standards</text>
+
+<!-- N11: English vocabulary node — box -->
+<rect id="N11" x="60" y="620" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="165" y="641" text-anchor="middle" font-weight="bold">English vocabulary</text>
+<text x="165" y="660" text-anchor="middle" font-size="12" fill="#666">"ark" = box before any Hebrew scholar</text>
+<text x="165" y="686" text-anchor="middle" font-size="11" fill="#aaa">Tyndale (1530) back to Hebrew —</text>
+<text x="165" y="700" text-anchor="middle" font-size="11" fill="#aaa">still wrote "ark" — word already fixed</text>
+
+<!-- N12: Erman 1892 — box source -->
+<rect id="N12" x="280" y="620" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="385" y="641" text-anchor="middle" font-weight="bold">Erman 1892</text>
+<text x="385" y="660" text-anchor="middle" font-size="12" fill="#666">accepted Brugsch equation — ZDMG 46</text>
+<text x="385" y="686" text-anchor="middle" font-size="11" fill="#aaa">later omitted it from his own Wörterbuch</text>
+<text x="385" y="700" text-anchor="middle" font-size="11" fill="#aaa">(1926) — quietly withdrew it</text>
+
+<!-- N13: Cohen 1972 — corrected exemplar -->
+<rect id="N13" x="595" y="480" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="700" y="501" text-anchor="middle" font-weight="bold" fill="#2c4a2e">Cohen 1972</text>
+<text x="700" y="520" text-anchor="middle" font-size="12" fill="#2c4a2e">"Etymology undetermined" — unrebutted</text>
+<text x="700" y="546" text-anchor="middle" font-size="11" fill="#aaa">JANES 4:37–51 — cited, never engaged</text>
+<text x="700" y="560" text-anchor="middle" font-size="11" fill="#aaa">graduate student — Columbia University</text>
+
+<!-- N14: Quran — ship -->
+<rect id="N14" x="1130" y="620" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="1235" y="641" text-anchor="middle" font-weight="bold" fill="#2c4a2e">Quran سفينة / فلك</text>
+<text x="1235" y="660" text-anchor="middle" font-size="12" fill="#2c4a2e">safina / fulk — ship c.610 AD</text>
+<text x="1235" y="686" text-anchor="middle" font-size="11" fill="#aaa">does NOT use tābūt for Noah's ark</text>
+<text x="1235" y="700" text-anchor="middle" font-size="11" fill="#aaa">independently preserves ship reading</text>
+
+<!-- N15: BDB 1906 — box -->
+<rect id="N15" x="280" y="760" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="385" y="781" text-anchor="middle" font-weight="bold">BDB 1906</text>
+<text x="385" y="800" text-anchor="middle" font-size="12" fill="#666">"prob. Egyptian loanword" — hub node</text>
+<text x="385" y="826" text-anchor="middle" font-size="11" fill="#aaa">Lambdin (1953) omits tebah — silent witness</text>
+<text x="385" y="840" text-anchor="middle" font-size="11" fill="#aaa">Cohen (1972) demolishes — ignored</text>
+
+<!-- N16: Tyndale/KJV — box -->
+<rect id="N16" x="60" y="760" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="165" y="781" text-anchor="middle" font-weight="bold">Tyndale 1530 → KJV 1611</text>
+<text x="165" y="800" text-anchor="middle" font-size="12" fill="#666">Hebrew scholar — still wrote "ark"</text>
+
+<!-- N17: HALOT 1994 — ship -->
+<rect id="N17" x="595" y="760" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="700" y="781" text-anchor="middle" font-weight="bold" fill="#2c4a2e">HALOT 1994</text>
+<text x="700" y="800" text-anchor="middle" font-size="12" fill="#2c4a2e">"Decision open" — "vessel was a ship"</text>
+<text x="700" y="826" text-anchor="middle" font-size="11" fill="#aaa">Cohen not cited — same conclusion</text>
+
+<!-- N18: Ibn Abbas — ship -->
+<rect id="N18" x="1130" y="760" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="1235" y="781" text-anchor="middle" font-weight="bold" fill="#2c4a2e">Ibn Abbas c.650 AD</text>
+<text x="1235" y="800" text-anchor="middle" font-size="12" fill="#2c4a2e">"Shape like a bird's belly"</text>
+
+<!-- N19: Academic consensus — box -->
+<rect id="N19" x="280" y="900" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="385" y="921" text-anchor="middle" font-weight="bold">Academic consensus</text>
+<text x="385" y="940" text-anchor="middle" font-size="12" fill="#666">Cassuto, Wenham, Spoelstra…</text>
+
+<!-- N20: Every English reader — box -->
+<rect id="N20" x="60" y="900" width="210" height="52" rx="5" fill="none" stroke="#444" stroke-width="1.5"/>
+<text x="165" y="921" text-anchor="middle" font-weight="bold">Every English reader since</text>
+<text x="165" y="940" text-anchor="middle" font-size="12" fill="#666">incl. Hollywood (Noah 2014)</text>
+
+<!-- N21: AiG Ark Encounter — ship -->
+<rect id="N21" x="595" y="900" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="700" y="921" text-anchor="middle" font-weight="bold" fill="#2c4a2e">AiG Ark Encounter</text>
+<text x="700" y="940" text-anchor="middle" font-size="12" fill="#2c4a2e">ship-shaped — Cohen taken seriously</text>
+
+<!-- N22: Ethiopic tabot — ship -->
+<rect id="N22" x="1130" y="900" width="210" height="52" rx="5" fill="none" stroke="#2c4a2e" stroke-width="2"/>
+<text x="1235" y="921" text-anchor="middle" font-weight="bold" fill="#2c4a2e">Ethiopic tābot</text>
+<text x="1235" y="940" text-anchor="middle" font-size="12" fill="#2c4a2e">Noah + Moses + Covenant — ship</text>
+
+<!-- N23: Coptic thebi — neutral -->
+<rect id="N23" x="870" y="760" width="210" height="52" rx="5" fill="none" stroke="#aaa" stroke-width="1"/>
+<text x="975" y="781" text-anchor="middle" font-weight="bold">Coptic thebi</text>
+<text x="975" y="800" text-anchor="middle" font-size="12" fill="#666">Exodus 2 — functional</text>
+
+<!-- ══════════════════════════
+     CONNECTIONS
+     ══════════════════════════ -->
+
+<!-- N01 → N02 LXX -->
+<path d="M650 112 L220 198" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N01 → N03 Berosus -->
+<path d="M700 112 L700 198" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N01 → N04 Aramaic -->
+<path d="M750 112 L1185 198" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+
+<!-- N02 → N05 Vulgate -->
+<path d="M165 252 L165 338" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N03 → N06 Fragments lost -->
+<path d="M700 252 L700 338" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+<!-- N04 → N07 Syriac -->
+<path d="M1235 252 L1235 338" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+
+<!-- N05 → N08 Wycliffe -->
+<path d="M165 392 L165 478" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N04 → N09 Arabic (via Syriac) -->
+<path d="M1235 392 L1235 478" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N02 → N10 Brugsch (LXX feeds Brugsch's intuition) -->
+<path d="M270 226 L385 478" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+
+<!-- N08 → N11 English vocabulary -->
+<path d="M165 532 L165 618" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N10 → N12 Erman -->
+<path d="M385 532 L385 618" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N09 → N14 Quran -->
+<path d="M1235 532 L1235 618" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+
+<!-- N11 → N16 Tyndale/KJV -->
+<path d="M165 672 L165 758" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N12 → N15 BDB -->
+<path d="M385 672 L385 758" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N14 → N18 Ibn Abbas -->
+<path d="M1235 672 L1235 758" fill="none" stroke="#2c4a2e" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N04 → N23 Coptic (dashed) -->
+<path d="M1185 252 L1025 758" fill="none" stroke="#aaa" stroke-width="0.8" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+
+<!-- N13 Cohen ignored by BDB chain -->
+<path d="M668 506 L492 618" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+<text x="548" y="566" text-anchor="middle" font-size="11" fill="#aaa">ignored</text>
+
+<!-- N15 → N17 HALOT (partially corrected) -->
+<path d="M490 786 L593 786" fill="none" stroke="#aaa" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+<text x="542" y="778" text-anchor="middle" font-size="11" fill="#aaa">partially</text>
+<text x="542" y="792" text-anchor="middle" font-size="11" fill="#aaa">corrected</text>
+
+<!-- N15 → N19 Academic consensus -->
+<path d="M385 812 L385 898" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N16 → N20 Every English reader -->
+<path d="M165 812 L165 898" fill="none" stroke="#444" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N17 → N21 AiG -->
+<path d="M700 812 L700 898" fill="none" stroke="#2c4a2e" stroke-width="1" marker-end="url(#arr)"/>
+<!-- N18 → N22 Ethiopic -->
+<path d="M1235 812 L1235 898" fill="none" stroke="#2c4a2e" stroke-width="1" marker-end="url(#arr)"/>
+
+<!-- N13 Cohen → N21 AiG via Lovett (dashed) -->
+<path d="M700 532 L700 758" fill="none" stroke="#2c4a2e" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr-d)"/>
+<text x="716" y="660" font-size="11" fill="#2c4a2e">Lovett 2006</text>
+
+<!-- ══ FOOTER ══ -->
+<text x="700" y="1010" text-anchor="middle" font-size="11" fill="#888">Green outline = ship / functional | Gray outline = box / chest | Light gray = neutral or lost</text>
+<text x="700" y="1026" text-anchor="middle" font-size="11" fill="#888">Solid arrows = direct | Dashed = indirect, ignored, or partial</text>
+<text x="700" y="1042" text-anchor="middle" font-size="11" fill="#888">T. Lovett — Noah's Ark Naval Architecture Research | papers-tbh | July 2026</text>
+
+</svg>
