@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hull Form — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Hull Form</h1>
+<p class="doc-meta">Last revised: August 2026 | Status: Active</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › Hull Form</p>
+
+<p>Authoritative reference page for all confirmed hull geometry and hydrostatic data. All values derive from the definitive CAD geometry file <strong>AR-003-20110418</strong> (Parasolid format), sent to Troyer Architects on 18 April 2011, unless otherwise noted. This page is the single source of truth — other pages reference here rather than repeating values.</p>
+
+<hr>
+
+<h2>Principal Dimensions</h2>
+
+<table>
+<tr><th>Parameter</th><th>Symbol</th><th>Cubits</th><th>Metres</th><th>Notes</th></tr>
+<tr><td>Length</td><td>L</td><td>300</td><td>157.2</td><td>Genesis 6:15</td></tr>
+<tr><td>Beam</td><td>B</td><td>50</td><td>26.2</td><td>Genesis 6:15</td></tr>
+<tr><td>Depth</td><td>D</td><td>30</td><td>15.72</td><td>Genesis 6:15</td></tr>
+<tr><td>Draft (target)</td><td>T</td><td>15</td><td>7.86</td><td>Genesis 7:20 — see note below</td></tr>
+<tr><td>Freeboard</td><td>F</td><td>15</td><td>7.86</td><td>D − T</td></tr>
+</table>
+
+<p class="doc-meta">Cubit: Royal Egyptian Cubit (REC) = 524mm. Supersedes Nippur cubit (518.5mm) of Lovett (2006). AiG Ark Encounter uses 0.518m Nippur cubit, moulded dimensions convention — same vessel, different convention. See <a href="../hull/hull-cubit.html">hull-cubit</a> for full reconciliation.</p>
+
+<p><strong>Note on draft:</strong> Genesis 7:20 states the floodwaters prevailed fifteen cubits upward and the mountains were covered. A coherent interpretation: the fifteen cubits represent the Ark's approximate draft — a vessel 30 cubits high, loaded to approximately half its height, floats at 15 cubits draft. This gives the minimum water depth required for the Ark to pass safely over the highest submerged terrain without grounding. The precision of "fifteen cubits" is explained by the vessel's geometry rather than by an observation Noah could not have made from inside a submerged vessel. See <a href="../papers-tbh/papers-tbh.html">papers-tbh</a> for full discussion.</p>
+
+<hr>
+
+<h2>Hydrostatics — Confirmed from CAD</h2>
+
+<table>
+<tr><th>Parameter</th><th>Symbol</th><th>Value</th><th>Units</th><th>Notes</th></tr>
+<tr><td>Displaced volume</td><td>V</td><td>14,305</td><td>m³</td><td>Below T = 7.86m waterline. CAD confirmed.</td></tr>
+<tr><td>Displacement</td><td>Δ</td><td>~14,700</td><td>tonnes</td><td>V × 1.025 t/m³ seawater. ~15,000t to 2 sig. fig.</td></tr>
+<tr><td>Waterplane area</td><td>Awp</td><td>3,917</td><td>m²</td><td>Full hull (half-model × 2). At T = 7.86m.</td></tr>
+<tr><td>TPC</td><td>—</td><td>40.1</td><td>t/cm</td><td>Awp × 1.025 / 100</td></tr>
+<tr><td>Bounding box volume</td><td>—</td><td>16,410</td><td>m³</td><td>L × B × T = 157.2 × 26.2 × 7.86 (approx — see sectional breakdown)</td></tr>
+</table>
+
+<hr>
+
+<h2>Hull Coefficients — Confirmed from CAD</h2>
+
+<table>
+<tr><th>Coefficient</th><th>Symbol</th><th>Value</th><th>Definition</th><th>Notes</th></tr>
+<tr><td>Block coefficient</td><td>Cb</td><td>0.87</td><td>V / (L × B × T)</td><td>To 2 sig. fig. — model approximations in bow/stern fairing</td></tr>
+<tr><td>Waterplane coefficient</td><td>Cwp</td><td>0.951</td><td>Awp / (L × B)</td><td>Very full — upper end of bulk carrier range</td></tr>
+<tr><td>Midship Cb</td><td>—</td><td>0.981</td><td>Section Cb</td><td>Parallel body — near-rectangular, maximises cargo volume</td></tr>
+<tr><td>Bow Cb</td><td>—</td><td>0.594</td><td>Section Cb</td><td>Significant hull curvature — ship-like entry</td></tr>
+<tr><td>Stern Cb</td><td>—</td><td>0.656</td><td>Section Cb</td><td>Stern keels and taper — directional stability</td></tr>
+</table>
+
+<h3>Sectional Breakdown</h3>
+
+<table>
+<tr><th>Section</th><th>Length (m)</th><th>Displaced volume (m³)</th><th>Box volume (m³)</th><th>Cb</th></tr>
+<tr><td>Mid (parallel body)</td><td>109.7</td><td>11,131</td><td>11,343</td><td>0.981</td></tr>
+<tr><td>Bow</td><td>23.7</td><td>1,455</td><td>2,447</td><td>0.594</td></tr>
+<tr><td>Stern</td><td>25.3</td><td>1,719</td><td>2,620</td><td>0.656</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>158.7</strong></td><td><strong>14,305</strong></td><td><strong>16,410</strong></td><td><strong>0.87</strong></td></tr>
+</table>
+
+<p class="doc-meta">Note: waterline length from CAD = 158.7m vs 157.2m from 300 × 0.524m — small discrepancy from datum setup in model. Reported Cb uses CAD waterline length.</p>
+
+<hr>
+
+<h2>Hull Form Classification</h2>
+
+<table>
+<tr><th>Hull type</th><th>Typical Cb</th><th>Characteristic</th></tr>
+<tr><td>Ocean-going barge</td><td>0.92–0.98</td><td>Near-rectangular, maximum cargo, minimal seakeeping, towed</td></tr>
+<tr><td>Borderline barge/ship</td><td>0.90–0.92</td><td>Transition zone</td></tr>
+<tr><td>Great Lakes bulk carrier ("laker")</td><td>0.87–0.90</td><td>Extremely full-bodied, optimised for cargo, sheltered freshwater seas</td></tr>
+<tr><td><strong>AiG Ark Encounter</strong></td><td><strong>0.87</strong></td><td><strong>Upper end of full-bodied ship forms — Great Lakes bulk carrier territory</strong></td></tr>
+<tr><td>Ocean bulk carrier / tanker</td><td>0.80–0.88</td><td>Full-bodied ship, open ocean, significant wave exposure</td></tr>
+<tr><td>Conventional cargo ship</td><td>0.65–0.80</td><td>Ocean-going, pronounced bow/stern asymmetry</td></tr>
+</table>
+
+<p>With Cb = 0.87, the Ark lies at the upper end of full-bodied ship forms and approaches the lower end of barge-like hull forms. A naval architect seeing only "length ~157m, Cb 0.87" would think "very full ship" before thinking "ocean barge." Ocean-going barges have Cb of 0.92 and above.</p>
+
+<p>Independent corroboration: naval architect Jim King (Creation Museum, 2005) proposed Great Lakes bulk carriers as the nearest modern analogue for Noah's Ark. The CAD calculation independently arrived at Cb = 0.87 — exactly Great Lakes bulk carrier territory.</p>
+
+<pre style="font-family: monospace; background: #f5f5f5; padding: 0.8em; font-size: 0.9em;">
+Cb:   0.75    0.80    0.85    0.87    0.90    0.95
+       Ship   Bulk   Lakers   Ark   Borderline  Barge
+</pre>
+
+<hr>
+
+<h2>Pending Hydrostatics</h2>
+
+<p>The following values require additional CAD measurement or calculation:</p>
+
+<table>
+<tr><th>Parameter</th><th>Symbol</th><th>Status</th><th>Required for</th></tr>
+<tr><td>Second moment of waterplane area</td><td>Ixx</td><td>Pending CAD measurement</td><td>BM calculation → GM → stability</td></tr>
+<tr><td>Metacentric radius</td><td>BM</td><td>Pending (= Ixx / V)</td><td>GM</td></tr>
+<tr><td>Centre of buoyancy height</td><td>KB</td><td>Pending CAD measurement</td><td>GM = KB + BM − KG</td></tr>
+<tr><td>Metacentric height</td><td>GM</td><td>Pending</td><td>Stability — target ~0.85m (T = 22s roll)</td></tr>
+<tr><td>Centre of gravity height</td><td>KG</td><td>~9.52m (provisional)</td><td>GM = KM − KG</td></tr>
+<tr><td>Prismatic coefficient</td><td>Cp</td><td>Pending</td><td>Hull form classification</td></tr>
+<tr><td>Midship coefficient</td><td>Cm</td><td>Pending</td><td>Hull form classification</td></tr>
+</table>
+
+<hr>
+
+<h2>Source File</h2>
+
+<table>
+<tr><th>Parameter</th><th>Value</th></tr>
+<tr><td>Filename</td><td>AR-003-20110418.x_t</td></tr>
+<tr><td>Format</td><td>Parasolid (.x_t)</td></tr>
+<tr><td>Date</td><td>18 April 2011</td></tr>
+<tr><td>Sent to</td><td>Troyer Architects (Leroy Troyer), Shipshewana, Indiana</td></tr>
+<tr><td>Purpose</td><td>Skin template for AiG Ark Encounter construction</td></tr>
+<tr><td>CAD software</td><td>Opens confirmed in Fusion 360</td></tr>
+<tr><td>Convention</td><td>Outside structural planking, REC 524mm cubit</td></tr>
+</table>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | August 2026
+</footer>
+
+</body>
+</html>
