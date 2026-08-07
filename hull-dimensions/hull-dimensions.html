@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hull Dimensions — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body id="top">
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Hull Dimensions</h1>
+<p class="doc-meta">T. Lovett | Draft | 2026 | Status: Active</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; Hull Dimensions</p>
+
+<p>Genesis 6:15 records three numbers: 300 cubits long, 50 wide, 30 high. Genesis 7:20 adds a fourth: 15 cubits — the depth of water above the mountains at the flood peak, which establishes the draft. Four numbers from two verses. This page examines what those numbers produce when evaluated against the professional shipbuilding envelope.</p>
+
+<h2>The Numbers</h2>
+
+<table>
+<tr><th>Parameter</th><th>Cubits</th><th>Metres (0.524m cubit)</th><th>Source</th></tr>
+<tr><td>Length</td><td>300</td><td>157.2m</td><td>Genesis 6:15</td></tr>
+<tr><td>Beam</td><td>50</td><td>26.2m</td><td>Genesis 6:15</td></tr>
+<tr><td>Depth</td><td>30</td><td>15.72m</td><td>Genesis 6:15</td></tr>
+<tr><td>Draft</td><td>15</td><td>7.86m</td><td>Genesis 7:20</td></tr>
+</table>
+
+<h2>The Ratios</h2>
+
+<p>Three numbers produce three ratios. Each ratio is independently evaluable against the historical shipbuilding record:</p>
+
+<table>
+<tr><th>Ratio</th><th>Value</th><th>Historical timber shipbuilding range</th><th>Assessment</th></tr>
+<tr><td>L/B (slenderness)</td><td>6.0</td><td>4–8</td><td>Mid-range ✓</td></tr>
+<tr><td>L/D (longitudinal stiffness)</td><td>10.0</td><td>8–12 for timber</td><td>Mid-range ✓</td></tr>
+<tr><td>B/D (stability)</td><td>1.67</td><td>1.2–2.5</td><td>Conservative ✓</td></tr>
+<tr><td>T/D (load fraction)</td><td>0.50</td><td>0.40–0.65 typical</td><td>Optimal ✓</td></tr>
+</table>
+
+<p>HMS Victory (timber, 69m): L/D ≈ 9. Noah's Ark at L/D = 10 sits at the upper end of what timber construction historically achieved — and at 157m absolute length, the wave bending moment is far larger than any comparable timber vessel. The L/D = 10 specification is not conservative; it is the minimum that fits the cargo.</p>
+
+<p>The draft of 15 cubits — exactly half the depth of 30 — places the loaded waterline at 50% of hull depth. This is the textbook optimum balancing cargo capacity against freeboard. It is independently specified in Genesis 7:20, not derived from the hull dimensions.</p>
+
+<h2>The Probability of Guessing Correctly</h2>
+
+<p>What is the probability of arriving at all four numbers by chance, such that they produce naval-architecture-correct ratios at the right scale?</p>
+
+<p>Assuming a storyteller picks numbers freely within plausible ranges — L: 10–1000 cubits; B: 5–200 cubits; D: 5–100 cubits; T: 1–30 cubits; and overall scale within 50% of the specified length — and treating each number as independent, the combined probability of landing within the naval architecture envelope on all five parameters simultaneously is:</p>
+
+<table>
+<tr><th>Parameter</th><th>Plausible range</th><th>25% window</th><th>P (25%)</th><th>10% window</th><th>P (10%)</th></tr>
+<tr><td>L (300 cubits)</td><td>10–1000</td><td>225–375</td><td>0.152</td><td>270–330</td><td>0.061</td></tr>
+<tr><td>B (50 cubits)</td><td>5–200</td><td>37.5–62.5</td><td>0.128</td><td>45–55</td><td>0.051</td></tr>
+<tr><td>D (30 cubits)</td><td>5–100</td><td>22.5–37.5</td><td>0.158</td><td>27–33</td><td>0.063</td></tr>
+<tr><td>T (15 cubits)</td><td>1–30</td><td>11.25–18.75</td><td>0.259</td><td>13.5–16.5</td><td>0.103</td></tr>
+<tr><td>Scale (within 50% of L)</td><td>10–1000</td><td>150–450</td><td>0.303</td><td>150–450</td><td>0.303</td></tr>
+</table>
+
+<p><strong>Combined probability (25% tolerance):</strong> 0.152 × 0.128 × 0.158 × 0.259 × 0.303 ≈ <strong>1 in 4,100</strong></p>
+<p><strong>Combined probability (10% tolerance):</strong> 0.061 × 0.051 × 0.063 × 0.103 × 0.303 ≈ <strong>1 in 163,000</strong></p>
+
+<p>These tolerances are generous — a professional shipwright working to a survivability specification would target tighter windows than 10%. The 25% figure is presented as a lower bound on the improbability.</p>
+
+<h2>The Babylonian Contrast</h2>
+
+<p>The Babylonian flood vessel (Gilgamesh XI) is described as perfectly cubic — equal length, beam, and depth.<sup><a id="cite1_1" href="#ref1">1</a></sup> This gives L/B = 1, L/D = 1, B/D = 1. Every ratio fails the naval architecture test simultaneously. The cubic dimensions are numerologically motivated — the sacred Babylonian <em>iku</em> unit — not hydrodynamically derived.</p>
+
+<p>One ancient flood specification hits every parameter. Every other ancient flood vessel description fails immediately on L/B alone. A number chosen for literary or religious reasons lands in the right place occasionally. Four numbers from two verses landing correctly on five independent naval architecture parameters simultaneously is a different kind of coincidence.</p>
+
+<h2>Base 60 and the Specification</h2>
+
+<p>300, 50, and 30 are clean multiples in the Babylonian sexagesimal (base 60) system: 5×60, 50, and 30 = 60/2. In cuneiform notation these are simple expressions. The numbers that write most elegantly in base 60 are also the numbers that produce correct naval architecture ratios. Whether this reflects divine economy of specification or something else, the specification is both numerically clean and technically correct — a combination that is not accidental at odds of 1 in 4,100 to 1 in 163,000.</p>
+
+<hr>
+
+<h2>References</h2>
+
+<p id="ref1"><a href="#cite1_1" style="font-size:0.8em; float:right;">↩</a><strong>1. Gilgamesh XI.</strong> In George, A. <em>The Babylonian Gilgamesh Epic.</em> Oxford: Oxford University Press, 2003. Tablet XI, lines 28–31.<br>
+The Babylonian flood vessel is perfectly cubic — numerologically motivated by the sacred <em>iku</em> unit, not by hydrodynamic requirements.</p>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | 2026
+</footer>
+
+</body>
+</html>
