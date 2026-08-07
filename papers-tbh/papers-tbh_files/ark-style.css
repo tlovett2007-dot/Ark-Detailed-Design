@@ -1,0 +1,317 @@
+/* Ark Research — Master Stylesheet
+   Clean rebuild July 2026
+   All pages link: ../ark-style.css
+*/
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Base ── */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #f9f7f4;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* ── Breadcrumb — sits above everything, white background ── */
+.breadcrumb {
+  font-size: 0.82rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #666;
+  padding: 0.4rem 1.5rem 0;
+  background: #f9f7f4;
+}
+.breadcrumb a { color: #0000EE; text-decoration: underline; }
+.breadcrumb a:visited { color: #551A8B; }
+.breadcrumb a:hover { color: #0000EE; }
+
+/* ── Header — black site-title + grey h1/h2 bands ── */
+header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #2c4a2e;
+}
+
+header .site-title {
+  display: block;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+}
+
+header h1 {
+  background: #dddddd;
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem 0.8rem;
+  margin: 0;
+  border-bottom: none;
+  line-height: 1.2;
+}
+
+header h2 {
+  background: #dddddd;
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-style: italic;
+  padding: 0 1.5rem 0.8rem;
+  margin: 0;
+  border: none;
+}
+
+/* ── Main content area ── */
+main {
+  padding: 0 1.5rem;
+}
+
+/* h1 followed by h2 in header — tighten bottom padding */
+header h1 + h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* ── Doc meta line ── */
+p.doc-meta {
+  font-size: 0.85rem;
+  color: #666;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0.5rem 0 1.5rem;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.8rem;
+}
+
+/* ── Headings in main content ── */
+h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 2rem 0 0.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c4a2e;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.3rem;
+  margin: 2.5rem 0 1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #2c4a2e;
+  margin: 1.5rem 0 0.5rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* h2 immediately after h1 — subtitle, reduce gap */
+h1 + h2 {
+  margin-top: 0.3rem;
+}
+
+/* ── Paragraphs ── */
+p { margin: 0 0 1rem; }
+
+/* ── Links — always underlined, standard colours ── */
+a { color: #0000EE; text-decoration: underline; }
+a:visited { color: #551A8B; text-decoration: underline; }
+a:hover { color: #0000EE; }
+a:active { color: #FF0000; }
+
+/* ── Tables ── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+th {
+  background: #2c4a2e;
+  color: #fff;
+  padding: 6px 10px;
+  text-align: left;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+}
+td {
+  border: 1px solid #c8d8c8;
+  padding: 6px 10px;
+  vertical-align: top;
+}
+tr:nth-child(even) td { background: #f0ede8; }
+
+/* ── Blockquotes ── */
+blockquote {
+  background: #eef4ee;
+  border-left: 4px solid #2c4a2e;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0 1.5rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* ── Lists ── */
+ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+li { margin-bottom: 0.3rem; }
+
+/* ── Status badges ── */
+.status-confirmed   { background: #d4edda; color: #1a5c2a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-provisional { background: #fff3cd; color: #7a5c00; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-tbd         { background: #f8d7da; color: #7a1a1a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-revised     { background: #d0e8ff; color: #0a3a6a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+/* ── Note boxes ── */
+.note {
+  background: #fffbea;
+  border-left: 4px solid #c8a000;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+}
+
+/* ── Horizontal rule ── */
+hr {
+  border: none;
+  border-top: 1px solid #c8d8c8;
+  margin: 2rem 0;
+}
+
+/* ── Footer ── */
+footer {
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.82rem;
+  color: #888;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  border-top: 1px solid #c8d8c8;
+}
+
+/* ── Index page special ── */
+.site-nav {
+  font-size: 0.82rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: 0.4rem 1.5rem;
+  background: #2c4a2e;
+  color: #fff;
+}
+.site-nav a { color: #aed6ae; }
+
+/* ── Print ── */
+@media print {
+  body { background: white; color: black; width: 100%; max-width: none; }
+  header .site-title { background: black; }
+  header h1, header h2 { background: #ccc; }
+  a { color: black; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  body { width: 100%; }
+  header h1 { font-size: 1.5rem; }
+  table { font-size: 0.82rem; }
+}
+
+/* ── Footnote / reference system (cohen-tbh-text.html and future papers) ── */
+
+/* Inline superscript reference links */
+sup.fn-ref {
+  line-height: 0;
+  vertical-align: super;
+  font-size: 0.72em;
+}
+sup.fn-ref a {
+  text-decoration: none;
+  color: #2c4a2e;
+  font-weight: 700;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+sup.fn-ref a:hover { text-decoration: underline; }
+
+/* Footnotes section */
+.footnotes {
+  margin-top: 3em;
+  border-top: 2px solid #c8d8c8;
+  padding-top: 1.5em;
+  font-size: 0.86em;
+  line-height: 1.6;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.footnotes h2 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2c4a2e;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.fn-item {
+  display: flex;
+  gap: 0.6em;
+  margin-bottom: 0.7em;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.fn-item .fn-num {
+  min-width: 2em;
+  font-weight: 700;
+  color: #2c4a2e;
+  flex-shrink: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.fn-item .fn-body { flex: 1; }
+.fn-return {
+  font-size: 0.85em;
+  text-decoration: none;
+  color: #2c4a2e;
+  margin-left: 0.4em;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.fn-return:hover { text-decoration: underline; }
+
+/* Page markers (p. 37 etc.) */
+.page-marker {
+  display: block;
+  color: #999;
+  font-size: 0.76em;
+  font-style: italic;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 1.4em 0 0.3em;
+  border-left: 2px solid #c8d8c8;
+  padding-left: 0.5em;
+}
+
+/* Akkadian / Hebrew text blocks */
+.text-block {
+  font-family: Georgia, 'Times New Roman', serif;
+  margin: 0.8em 1.5em;
+  line-height: 1.9;
+}
+.text-block p { margin-bottom: 0.4em; }
+
+/* Excursus section */
+.excursus {
+  margin-top: 2.5em;
+  padding-top: 1em;
+  border-top: 2px solid #2c4a2e;
+}
+.excursus h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+}
