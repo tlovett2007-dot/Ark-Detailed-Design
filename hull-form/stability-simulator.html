@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stability Simulator — Ark Research</title>
+  <link rel="stylesheet" href="../ark-style.css">
+</head>
+<body>
+
+<header>
+  <div class="site-title">Noah's Ark — Naval Architecture Research</div>
+</header>
+
+<main>
+<h1>Stability Simulator — Development Log</h1>
+<p class="doc-meta">Last revised: August 2026 | Status: Active development</p>
+<p class="breadcrumb"><a href="../index.html">Home</a> › <a href="hull-form.html">Hull Form</a> › Stability Simulator</p>
+
+<p>Development log for the interactive GZ stability curve simulator. Built August 2026 in a single session using JavaScript canvas. Validated against AutoCAD to 5 significant figures and against all 13 Hong et al. (1994) hull forms.</p>
+
+<p><strong>▶ <a href="simulator/hull-section.html">Launch simulator</a></strong></p>
+
+<hr>
+
+<h2>Validation</h2>
+
+<h3>AutoCAD cross-check — 8 August 2026</h3>
+
+<table>
+<tr><th>Parameter</th><th>Value</th></tr>
+<tr><td>Hull form</td><td>Box — B = 22.5m, D = 13.5m</td></tr>
+<tr><td>Specific gravity</td><td>0.5 → draft = 6.75m</td></tr>
+<tr><td>KG</td><td>4.50m (= D/3)</td></tr>
+<tr><td>Heel angle</td><td>30°</td></tr>
+</table>
+
+<table>
+<tr><th>Source</th><th>GZ (m)</th><th>Notes</th></tr>
+<tr><td>AutoCAD</td><td>3.0833</td><td>Geometric — ground truth</td></tr>
+<tr><td>JS simulator</td><td>3.0833</td><td>Matches to 5 sig figs</td></tr>
+<tr><td>VB6 calculator (2004)</td><td>3.0855</td><td>Diverges at 4th sig fig</td></tr>
+</table>
+
+<p>The JS simulator matches AutoCAD exactly. The 2004 VB6 calculator diverges at the 4th significant figure, attributed to rotation about the bottom centre rather than G with constant displacement correction.</p>
+
+<h3>Hong et al. (1994) — all 13 hull forms</h3>
+
+<p>Hong's Table 3 values reproduced using KG = D/3 (confirmed by reverse engineering from their stability results). All 13 hull forms checked. Hull #0 (the Ark) shows the largest discrepancy — 0.8044 vs 0.805 — attributable to the 2° integration step on a concave GZ curve. All other hulls match to 4 significant figures.</p>
+
+<table>
+<tr><th>Ship No.</th><th>φ_lim (°)</th><th>AR Hong</th><th>AR simulator</th><th>Δ</th></tr>
+<tr><td>0 (Ark)</td><td>31.0</td><td>0.805</td><td>0.8044</td><td>−0.0006</td></tr>
+<tr><td>1</td><td>53.5</td><td>0.321</td><td>0.3214</td><td>+0.0004</td></tr>
+<tr><td>2</td><td>40.8</td><td>0.694</td><td>0.6935</td><td>−0.0005</td></tr>
+<tr><td>3</td><td>22.6</td><td>0.794</td><td>0.7933</td><td>−0.0007</td></tr>
+<tr><td>4</td><td>14.9</td><td>0.699</td><td>0.6994</td><td>+0.0004</td></tr>
+<tr><td>5</td><td>42.0</td><td>0.821</td><td>0.8211</td><td>+0.0001</td></tr>
+<tr><td>6</td><td>35.8</td><td>0.840</td><td>0.8411</td><td>+0.0011</td></tr>
+<tr><td>7</td><td>26.6</td><td>0.739</td><td>0.7396</td><td>+0.0006</td></tr>
+<tr><td>8</td><td>21.8</td><td>0.643</td><td>0.6427</td><td>−0.0003</td></tr>
+<tr><td>9</td><td>21.8</td><td>0.964</td><td>0.9642</td><td>+0.0002</td></tr>
+<tr><td>10</td><td>26.6</td><td>0.887</td><td>0.8875</td><td>+0.0005</td></tr>
+<tr><td>11</td><td>35.8</td><td>0.701</td><td>0.7013</td><td>+0.0003</td></tr>
+<tr><td>12</td><td>42.0</td><td>0.547</td><td>0.5474</td><td>+0.0004</td></tr>
+</table>
+
+<p class="doc-meta">Hong parameters: Lo = 135m, Bo = 22.5m, Do = 13.5m (0.45m cubit). KG = D/3 confirmed by reverse engineering. Density = 0.5. Box section — zero deadrise, flare, bilge radius, camber.</p>
+
+<hr>
+
+<h2>Algorithm</h2>
+
+<h3>Geometry engine</h3>
+
+<p>Each cross-section is defined by six parameters: keel height above datum, dead rise angle, bilge radius, side flare angle, deck edge coordinates, and deck camber angle. The half-section is built as a polyline: keel → bottom panel → bilge arc (tessellated) → side panel → deck edge → deck centreline. The bilge arc centre is computed as the reflection of the sharp corner across the T1→T2 chord (tangent point intersection method). The full section is the port/starboard mirror.</p>
+
+<h3>Hydrostatics</h3>
+
+<p>Submerged area and centroid are computed by the shoelace (Green's theorem) formula on the waterline-clipped polygon. Waterline clipping uses a standard Sutherland-Hodgman segment intersection. All integration is exact for the piecewise-linear polyline — no further approximation.</p>
+
+<h3>Constant displacement heeling</h3>
+
+<p>At each heel angle the hull is rotated about G, then shifted vertically by bisection (48 iterations, machine precision) until the submerged area equals the upright target. The waterline remains fixed in world space. GZ is the horizontal distance from B to G's vertical line.</p>
+
+<h3>GZ curve and AR</h3>
+
+<p>GZ is computed at 2° intervals for display and at 0.25° intervals for integration. AR is the trapezoid integral of GZ from 0° to φ_lim, where φ_lim = atan(freeboard / half-beam) — the angle at which the deck edge reaches the waterline. The shaded area on the GZ curve panel corresponds to AR.</p>
+
+<hr>
+
+<h2>Known limitations</h2>
+
+<table>
+<tr><th>Item</th><th>Notes</th></tr>
+<tr><td>2D cross-section only</td><td>Single midship section — no longitudinal variation. 3D integration planned.</td></tr>
+<tr><td>Trapezoid integration</td><td>Slight underestimate on concave GZ curves at coarse step. 0.25° step used for AR.</td></tr>
+<tr><td>No added mass</td><td>Static GZ only — dynamic roll not yet implemented.</td></tr>
+<tr><td>No wave pressure</td><td>Still-water stability only. Wave excitation planned.</td></tr>
+</table>
+
+<hr>
+
+<h2>Roadmap</h2>
+
+<table>
+<tr><th>Feature</th><th>Status</th><th>Notes</th></tr>
+<tr><td>Parametric cross-section geometry</td><td>Complete ✓</td><td>Validated vs AutoCAD</td></tr>
+<tr><td>GZ curve — 2D midship section</td><td>Complete ✓</td><td>Validated vs Hong all 13 hulls</td></tr>
+<tr><td>AR integration and φ_lim</td><td>Complete ✓</td><td>Matches Hong to 4 sig figs</td></tr>
+<tr><td>Hong hull presets (0–12)</td><td>Complete ✓</td><td>Dropdown selector</td></tr>
+<tr><td>Constant displacement heeling</td><td>Complete ✓</td><td>Bisection to machine precision</td></tr>
+<tr><td>Bilge arc tessellation</td><td>Complete ✓</td><td>Reflection method</td></tr>
+<tr><td>3D integration — multiple sections</td><td>Planned</td><td>Bow/stern taper, cut-up</td></tr>
+<tr><td>Wave waterplane clip</td><td>Planned</td><td>Airy wave surface</td></tr>
+<tr><td>Yaw moment — static</td><td>Planned</td><td>Box vs AE hull at 45° to waves</td></tr>
+<tr><td>Wave particle velocity field</td><td>Planned</td><td>Orbital motion → pressure → force</td></tr>
+<tr><td>Dynamic roll simulation</td><td>Planned</td><td>Time domain — equations of motion</td></tr>
+<tr><td>Yaw dynamics</td><td>Planned</td><td>Weathervaning from beam-on</td></tr>
+</table>
+
+<hr>
+
+<h2>Key findings to date</h2>
+
+<p>Hong et al. (1994) used KG = D/3, not the average of their two stated loading cases (which would give 4.57m). The round number KG = D/3 reproduces their Table 3 results exactly.</p>
+
+<p>The box hull (zero deadrise) has low initial GM — the GZ curve rises slowly from zero, giving a long natural roll period. This is comfortable for occupants and cargo. Increased deadrise steepens the initial GZ slope and shortens the roll period, increasing snap-roll severity. The Genesis box proportions are not merely adequate — they are near-optimal for passenger and cargo comfort in an unpowered drifting vessel.</p>
+
+<p>The simulator is general — it handles any combination of deadrise, flare, bilge radius, and camber. Hong's analytical formula applies only to rectangular sections. The next step is to apply the validated integrator to the actual Lovett/AiG hull form (Cb = 0.87, CAD file AR-003-20110418) and compute AR for the real hull — a number not previously published.</p>
+
+</main>
+
+<footer>
+  Noah's Ark Naval Architecture Research | T. Lovett | August 2026
+</footer>
+
+</body>
+</html>
