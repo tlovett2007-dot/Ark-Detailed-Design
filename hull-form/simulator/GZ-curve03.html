@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hull Cross-Section — Parametric Definer</title>
+<style>
+  :root {
+    --bg:       #0d1117;
+    --panel:    #161b22;
+    --border:   #30363d;
+    --accent:   #4a9eff;
+    --accent2:  #f0883e;
+    --text:     #e6edf3;
+    --muted:    #8b949e;
+    --grid:     #252d3a;
+    --border:   #30363d;
+    --green:    #3fb950;
+    --red:      #f85149;
+  }
+
+  body.light {
+    --bg:       #ffffff;
+    --panel:    #f5f5f5;
+    --border:   #cccccc;
+    --accent:   #1a6bbf;
+    --accent2:  #c0620a;
+    --text:     #111111;
+    --muted:    #666666;
+    --grid:     #e4e4e4;
+    --border:   #bbbbbb;
+    --green:    #1a7a2a;
+    --red:      #cc2200;
+  }
+
+  #theme-toggle {
+    position: fixed;
+    top: 6px;
+    right: 12px;
+    z-index: 999;
+    background: var(--border);
+    color: var(--text);
+    border: 1px solid var(--muted);
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #main-row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .v-splitter {
+    width: 6px;
+    background: var(--border);
+    cursor: ew-resize;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  .v-splitter:hover, .v-splitter.dragging { background: var(--accent); }
+
+  header {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  header h1 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+
+  header span {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ── LEFT PANEL ── */
+  #controls {
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+  }
+
+  .param-row {
+    display: grid;
+    grid-template-columns: 1fr 64px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .param-row label {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+  .param-row label span {
+    display: block;
+    font-size: 9px;
+    color: #555;
+  }
+
+  .num-input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 4px 6px;
+    width: 100%;
+    text-align: right;
+    border-radius: 3px;
+  }
+
+  .num-input::-webkit-inner-spin-button,
+  .num-input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  .num-input { -moz-appearance: textfield; }
+  .num-input:focus { outline: none; border-color: var(--accent); }
+
+  .slider-row {
+    display: grid;
+    grid-template-columns: 1fr 44px;
+    align-items: center;
+    gap: 8px;
+    margin-top: -2px;
+  }
+
+  input[type=range] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  .slider-val {
+    font-size: 11px;
+    color: var(--accent2);
+    text-align: right;
+  }
+
+  #col-splitter {
+    background: var(--border);
+    cursor: ew-resize;
+    transition: background 0.15s;
+  }
+  #controls {
+    flex: 0 0 320px;
+    min-width: 120px;
+  }
+  #canvas-wrap {
+    flex: 1 1 400px;
+    min-width: 120px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  #gz-panel {
+    flex: 1 1 400px;
+    min-width: 120px;
+    position: relative;
+    overflow: hidden;
+    background: var(--panel);
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  /* ── BOTTOM STATUS BAR ── */
+  #statusbar {
+    flex-shrink: 0;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    padding: 6px 20px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .stat-label {
+    color: var(--muted);
+  }
+
+  .stat-value {
+    color: var(--green);
+    font-weight: 700;
+    min-width: 80px;
+  }
+
+  .stat-value.warn {
+    color: var(--red);
+  }
+
+  #pts-count {
+    color: var(--accent2);
+  }
+
+  /* ── ACCURACY ── */
+  #accuracy-row {
+    margin-top: 4px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 8px 0;
+  }
+
+  .info-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .coord-display {
+    font-size: 10px;
+    color: #444;
+    text-align: center;
+    padding: 4px;
+  }
+</style>
+</head>
+<body>
+
+<button id="theme-toggle" onclick="document.body.classList.toggle('light');this.textContent=document.body.classList.contains('light')?'◑ Dark':'◑ Light';draw();drawGZcurve();">◑ Light</button>
+
+<header>
+  <h1>Hull Section — Parametric Definer</h1>
+  <span>Global datum: amidships centreline bottom &nbsp;|&nbsp; Half-section mirrored &nbsp;|&nbsp; Units: metres</span>
+</header>
+
+<div id="main-row">
+
+<!-- LEFT: CONTROLS -->
+<div id="controls">
+
+  <div class="section-label">Hong (1994) hull presets</div>
+
+  <div class="param-row">
+    <label>Hull No. <span>Lo=135m Bo=22.5m Do=13.5m</span></label>
+    <select id="hongHull" style="background:var(--bg);color:var(--text);border:1px solid var(--border);font-family:'Courier New',monospace;font-size:11px;padding:4px;width:100%;border-radius:3px;">
+      <option value="-1">— select —</option>
+      <option value="0">0 · Ark (Lo, Bo, Do)</option>
+      <option value="1">1 · Lo, Bo/1.5, 1.5Do</option>
+      <option value="2">2 · Lo, Bo/1.2, 1.2Do</option>
+      <option value="3">3 · Lo, 1.2Bo, Do/1.2</option>
+      <option value="4">4 · Lo, 1.5Bo, Do/1.5</option>
+      <option value="5">5 · Lo/1.5, Bo, 1.5Do</option>
+      <option value="6">6 · Lo/1.2, Bo, 1.2Do</option>
+      <option value="7">7 · 1.2Lo, Bo, Do/1.2</option>
+      <option value="8">8 · 1.5Lo, Bo, Do/1.5</option>
+      <option value="9">9 · Lo/1.5, 1.5Bo, Do</option>
+      <option value="10">10 · Lo/1.2, 1.2Bo, Do</option>
+      <option value="11">11 · 1.2Lo, Bo/1.2, Do</option>
+      <option value="12">12 · 1.5Lo, Bo/1.5, Do</option>
+    </select>
+  </div>
+
+  <hr class="divider">
+
+  <div class="param-row">
+    <label>Keel Z above datum <span>cut-up height (m)</span></label>
+    <input class="num-input" id="keelZ" type="number" value="0.00" step="0.05" min="0" max="5">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="keelZ_s" min="0" max="3" step="0.05" value="0">
+    <span class="slider-val" id="keelZ_v">0.00</span>
+  </div>
+
+  <div class="section-label">2 · Bottom</div>
+
+  <div class="param-row">
+    <label>Dead rise angle <span>° from horizontal</span></label>
+    <input class="num-input" id="deadrise" type="number" value="0" step="1" min="0" max="60">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="deadrise_s" min="0" max="60" step="0.5" value="0">
+    <span class="slider-val" id="deadrise_v">0.0°</span>
+  </div>
+
+  <div class="section-label">3 · Bilge</div>
+
+  <div class="param-row">
+    <label>Bilge radius <span>m · fillet between bottom and side</span></label>
+    <input class="num-input" id="bilgeR" type="number" value="0" step="0.1" min="0" max="6">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="bilgeR_s" min="0" max="6" step="0.1" value="0">
+    <span class="slider-val" id="bilgeR_v">0.00</span>
+  </div>
+
+  <div class="section-label">4 · Side</div>
+
+  <div class="param-row">
+    <label>Side angle <span>° from vertical · +flare, −tumblehome</span></label>
+    <input class="num-input" id="sideAngle" type="number" value="0" step="1" min="-30" max="40">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="sideAngle_s" min="-30" max="40" step="0.5" value="0">
+    <span class="slider-val" id="sideAngle_v">0.0°</span>
+  </div>
+
+  <div class="section-label">5 · Deck edge</div>
+
+  <div class="param-row">
+    <label>Deck edge Y <span>half-breadth at sheer (m)</span></label>
+    <input class="num-input" id="deckY" type="number" value="13.1" step="0.1" min="1" max="30">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="deckY_s" min="1" max="30" step="0.1" value="13.1">
+    <span class="slider-val" id="deckY_v">13.10</span>
+  </div>
+
+  <div class="param-row">
+    <label>Deck edge Z <span>height of sheer at side (m)</span></label>
+    <input class="num-input" id="deckEdgeZ" type="number" value="15.72" step="0.1" min="1" max="20">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="deckEdgeZ_s" min="1" max="20" step="0.1" value="15.72">
+    <span class="slider-val" id="deckEdgeZ_v">15.72</span>
+  </div>
+
+  <div class="section-label">6 · Deck camber</div>
+
+  <div class="param-row">
+    <label>Deck camber angle <span>° from horizontal at centreline</span></label>
+    <input class="num-input" id="deckCamber" type="number" value="0" step="0.5" min="0" max="20">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="deckCamber_s" min="0" max="20" step="0.5" value="0">
+    <span class="slider-val" id="deckCamber_v">0.0°</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Tessellation accuracy</div>
+
+  <div class="param-row">
+    <label>Arc segments <span>points on bilge curve</span></label>
+    <input class="num-input" id="arcSegs" type="number" value="24" step="1" min="3" max="200">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="arcSegs_s" min="3" max="120" step="1" value="24">
+    <span class="slider-val" id="arcSegs_v">24</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Loading</div>
+
+  <div class="param-row">
+    <label>Specific density <span>ratio to seawater · 0=empty, 1=sinking</span></label>
+    <input class="num-input" id="density" type="number" value="0.5" step="0.01" min="0" max="1">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="density_s" min="0" max="1" step="0.01" value="0.5">
+    <span class="slider-val" id="density_v">0.50</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Roll angle</div>
+
+  <div class="param-row">
+    <label>Heel angle <span>° from vertical · +starboard down</span></label>
+    <input class="num-input" id="heel" type="number" value="0" step="1" min="0" max="90">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="heel_s" min="0" max="90" step="0.5" value="0">
+    <span class="slider-val" id="heel_v">0.0°</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">Centre of Gravity</div>
+
+  <div class="param-row">
+    <label>KG <span>height of CoG above datum (m)</span></label>
+    <input class="num-input" id="kg" type="number" value="7.86" step="0.1" min="0" max="20">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="kg_s" min="0" max="20" step="0.1" value="7.86">
+    <span class="slider-val" id="kg_v">7.86</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-label">GZ curve scale</div>
+
+  <div class="param-row">
+    <label>GZ max <span>Y axis maximum (m)</span></label>
+    <input class="num-input" id="gzScale" type="number" value="5" step="0.5" min="0.5" max="30">
+  </div>
+  <div class="slider-row">
+    <input type="range" id="gzScale_s" min="0.5" max="30" step="0.5" value="5">
+    <span class="slider-val" id="gzScale_v">5.00</span>
+  </div>
+
+  <hr class="divider">
+
+  <div class="info-box" id="geom-info">
+    Geometry: computing…
+  </div>
+
+  <div class="coord-display" id="mouse-coord"></div>
+
+</div>
+
+<!-- LEFT SPLITTER -->
+<div class="v-splitter" id="spl-left"></div>
+
+<!-- MIDDLE: hull section canvas -->
+<div id="canvas-wrap">
+  <canvas id="c"></canvas>
+</div>
+
+<!-- RIGHT SPLITTER -->
+<div class="v-splitter" id="spl-right"></div>
+
+<!-- RIGHT: GZ curve -->
+<div id="gz-panel">
+  <canvas id="gz-canvas"></canvas>
+</div>
+
+</div><!-- end main-row -->
+
+<!-- BOTTOM STATUS -->
+<div id="statusbar">
+  <div class="stat">
+    <span class="stat-label">Submerged area (full section):</span>
+    <span class="stat-value" id="s-area">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">KB (centroid above datum):</span>
+    <span class="stat-value" id="s-kb">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Draft T:</span>
+    <span class="stat-value" id="s-draft">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Section total area:</span>
+    <span class="stat-value" id="s-fullarea">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">AR (m·rad):</span>
+    <span class="stat-value" id="s-ar">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">GZ (righting lever):</span>
+    <span class="stat-value" id="s-gz">—</span>
+  </div>
+    <span class="slider-val" id="pts-count">—</span>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  GEOMETRY ENGINE
+// ═══════════════════════════════════════════════════════════════
+
+const DEG = Math.PI / 180;
+
+// Read CSS variable at draw time (respects light/dark theme)
+function cssVar(name) {
+  return getComputedStyle(document.body).getPropertyValue(name).trim();
+}
+
+/**
+ * Solve for fillet tangent distances t_bot and t_side given radius R.
+ * Returns {t_bot, t_side} — negative value means R is too large for that panel.
+ *
+ * The fillet centre C is offset inward by R from each panel:
+ *   Bottom inward normal: nb = (-sin dr,  cos dr)   [left-perp of outboard tangent]
+ *   Side   inward normal: ns = ( cos sa, -sin sa)   [right-perp of upward tangent]
+ *
+ * These normals always point INTO the hull corner regardless of angle,
+ * so no sign parameter is needed — it is always a fillet.
+ */
+function buildHalfSection(p) {
+  const {keelZ, deadrise, bilgeR, sideAngle, deckY, deckEdgeZ, deckCentreZ} = p;
+
+  const drRad = deadrise  * DEG;
+  const saRad = sideAngle * DEG;
+
+  const bot_dy =  Math.cos(drRad);
+  const bot_dz =  Math.sin(drRad);
+  const sid_dy =  Math.sin(saRad);
+  const sid_dz =  Math.cos(saRad);
+
+  const ky = 0, kz = keelZ;
+  const dey = deckY, dez = deckEdgeZ;
+
+  // Corner: intersection of bottom ray from keel and side ray from deck edge
+  const det = bot_dy*sid_dz - bot_dz*sid_dy;
+  const RHS_y = dey - ky;
+  const RHS_z = dez - kz;
+  const t_corner = (RHS_y*sid_dz - RHS_z*sid_dy) / det;
+  const corner = { y: ky + t_corner*bot_dy, z: kz + t_corner*bot_dz };
+
+  // T1 and T2: where the bilge circle (centred on corner, radius R) intersects each panel
+  const warnings = [];
+  let T1 = null, T2 = null, R_used = 0;
+
+  const R_req = Math.abs(bilgeR);
+  if (R_req > 0.001) {
+    const bot_len = Math.sqrt((corner.y - ky)**2 + (corner.z - kz)**2);
+    const sid_len = Math.sqrt((corner.y - dey)**2 + (corner.z - dez)**2);
+
+    let R = R_req;
+    if (R > bot_len || R > sid_len) {
+      R = Math.min(bot_len, sid_len);
+      warnings.push(`Radius clamped to ${R.toFixed(3)} m`);
+    }
+    R_used = R;
+
+    const bot_dir = { y: (ky - corner.y) / bot_len, z: (kz - corner.z) / bot_len };
+    T1 = { y: corner.y + R * bot_dir.y, z: corner.z + R * bot_dir.z };
+
+    const sid_dir = { y: (dey - corner.y) / sid_len, z: (dez - corner.z) / sid_len };
+    T2 = { y: corner.y + R * sid_dir.y, z: corner.z + R * sid_dir.z };
+  }
+
+  // Hull polyline: keel → T1 → arc → T2 → deck edge → deck centre
+  const bilgeStart = T1 || corner;
+  const bilgeEnd   = T2 || corner;
+
+  const pts = [ {y: ky, z: kz} ];
+
+  if (T1 && T2 && R_used > 0.001) {
+    pts.push({...T1});
+
+    // Arc centre = reflection of corner across T1→T2 chord
+    const dx = T2.y - T1.y, dz = T2.z - T1.z;
+    const len2 = dx*dx + dz*dz;
+    const t = ((corner.y - T1.y)*dx + (corner.z - T1.z)*dz) / len2;
+    const foot = { y: T1.y + t*dx, z: T1.z + t*dz };
+    const C = { y: 2*foot.y - corner.y, z: 2*foot.z - corner.z };
+
+    // Angles from C to T1 and T2
+    const a1 = Math.atan2(T1.z - C.z, T1.y - C.y);
+    const a2 = Math.atan2(T2.z - C.z, T2.y - C.y);
+
+    // Short arc on the interior side (away from corner)
+    let sweep = ((a2 - a1) + 2*Math.PI) % (2*Math.PI);
+    // Test midpoint of CCW arc vs corner distance
+    const aMidCCW = a1 + sweep*0.5;
+    const midCCW = { y: C.y + R_used*Math.cos(aMidCCW), z: C.z + R_used*Math.sin(aMidCCW) };
+    const dCCW = (midCCW.y-corner.y)**2 + (midCCW.z-corner.z)**2;
+    const aMidCW  = a1 - sweep*0.5;
+    const midCW  = { y: C.y + R_used*Math.cos(aMidCW),  z: C.z + R_used*Math.sin(aMidCW)  };
+    const dCW  = (midCW.y -corner.y)**2 + (midCW.z -corner.z)**2;
+    // Interior arc is CLOSER to corner
+    if (dCCW > dCW) sweep = -(2*Math.PI - sweep); // flip to CW
+
+    const nArc = Math.max(4, Math.round(p.arcSegs || 16));
+    for (let i = 1; i <= nArc; i++) {
+      const a = a1 + (i / nArc) * sweep;
+      pts.push({ y: C.y + R_used*Math.cos(a), z: C.z + R_used*Math.sin(a) });
+    }
+  } else {
+    pts.push({...bilgeStart});
+    pts.push({...bilgeEnd});
+  }
+
+  pts.push({y: dey, z: dez});
+  pts.push({y: 0,   z: deckCentreZ});
+
+  return { pts, warnings, T1, T2, R_used, R_requested: R_req, corner };
+}
+
+/**
+ * Mirror half-section to get full closed section (port + starboard).
+ * Returns full polyline CCW.
+ */
+function fullSection(halfPts) {
+  // Right side: y positive, going from centre keel → starboard → deck centre
+  // Mirror: left side going from deck centre → port → centre keel
+  const right = halfPts;
+  const left  = [...halfPts].reverse().map(p => ({y: -p.y, z: p.z}));
+  // Avoid duplicating the join points
+  return [...right.slice(0, -1), ...left.slice(0, -1)];
+}
+
+/**
+ * Signed area and centroid of a closed polygon (trapezoid/shoelace).
+ * Returns {area, cy, cz} where cy,cz is centroid.
+ */
+function polygonProps(pts) {
+  let A = 0, Cy = 0, Cz = 0;
+  const n = pts.length;
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    const cross = pts[i].y * pts[j].z - pts[j].y * pts[i].z;
+    A  += cross;
+    Cy += (pts[i].y + pts[j].y) * cross;
+    Cz += (pts[i].z + pts[j].z) * cross;
+  }
+  A  /= 2;
+  Cy /= (6 * A);
+  Cz /= (6 * A);
+  return {area: Math.abs(A), cy: Cy, cz: Cz};
+}
+
+/**
+ * Clip a closed polygon to z <= zMax (waterline clip).
+ * Returns clipped polygon.
+ */
+function clipToWaterline(pts, zMax) {
+  if (zMax <= 0) return [];
+  const out = [];
+  const n = pts.length;
+  for (let i = 0; i < n; i++) {
+    const a = pts[i];
+    const b = pts[(i+1) % n];
+    const aIn = a.z <= zMax;
+    const bIn = b.z <= zMax;
+    if (aIn) out.push(a);
+    if (aIn !== bIn) {
+      // Intersection with z = zMax
+      const t = (zMax - a.z) / (b.z - a.z);
+      out.push({ y: a.y + t*(b.y - a.y), z: zMax });
+    }
+  }
+  return out;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  CANVAS RENDERER
+// ═══════════════════════════════════════════════════════════════
+
+const canvas = document.getElementById('c');
+const ctx    = canvas.getContext('2d');
+
+// Viewport transform state
+let viewScale  = 30;   // pixels per metre
+let viewOriginY = 0;   // world Y (metres) at canvas centre-x
+let viewOriginZ = 0;   // world Z (metres) at canvas centre-y
+let isPanning  = false;
+let panStart   = null;
+
+function resize() {
+  const wrap = document.getElementById('canvas-wrap');
+  canvas.width  = wrap.clientWidth  * devicePixelRatio;
+  canvas.height = wrap.clientHeight * devicePixelRatio;
+  canvas.style.width  = wrap.clientWidth  + 'px';
+  canvas.style.height = wrap.clientHeight + 'px';
+  draw();
+}
+
+// World → canvas
+function w2c(y, z) {
+  const cx = canvas.width  / 2;
+  const cy = canvas.height / 2;
+  return {
+    x: cx + (y - viewOriginY) * viewScale,
+    y: cy - (z - viewOriginZ) * viewScale
+  };
+}
+
+// Canvas → world
+function c2w(x, y) {
+  const cx = canvas.width  / 2;
+  const cy = canvas.height / 2;
+  return {
+    y: (x - cx) / viewScale + viewOriginY,
+    z: -(y - cy) / viewScale + viewOriginZ
+  };
+}
+
+function drawGrid() {
+  const W = canvas.width, H = canvas.height;
+  const tl = c2w(0, 0), br = c2w(W, H);
+
+  // Grid spacing: choose round number based on scale
+  let step = 1;
+  if (viewScale < 10)  step = 5;
+  if (viewScale > 80)  step = 0.5;
+  if (viewScale > 200) step = 0.25;
+
+  ctx.strokeStyle = cssVar('--grid');
+  ctx.lineWidth = 1;
+
+  const y0 = Math.floor(tl.y / step) * step;
+  const z0 = Math.floor(br.z / step) * step;
+
+  for (let y = y0; y <= br.y + step; y += step) {
+    const p = w2c(y, 0);
+    ctx.beginPath(); ctx.moveTo(p.x, 0); ctx.lineTo(p.x, H); ctx.stroke();
+  }
+  for (let z = z0; z <= tl.z + step; z += step) {
+    const p = w2c(0, z);
+    ctx.beginPath(); ctx.moveTo(0, p.y); ctx.lineTo(W, p.y); ctx.stroke();
+  }
+
+  // Axis lines
+  const orig = w2c(0, 0);
+  ctx.strokeStyle = cssVar('--border');
+  ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(orig.x, 0); ctx.lineTo(orig.x, H); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0, orig.y); ctx.lineTo(W, orig.y); ctx.stroke();
+
+  // Datum label
+  ctx.fillStyle = cssVar('--muted');
+  ctx.font = `${10 * devicePixelRatio}px Courier New`;
+  ctx.fillText('DATUM', orig.x + 4, orig.y - 4);
+
+  // Scale labels (Z axis)
+  ctx.fillStyle = cssVar('--muted');
+  ctx.font = `${9 * devicePixelRatio}px Courier New`;
+  for (let z = z0; z <= tl.z + step; z += step) {
+    if (Math.abs(z) < 0.001) continue;
+    const p = w2c(0, z);
+    ctx.fillText(z.toFixed(z < 1 ? 2 : 1) + 'm', orig.x + 3, p.y - 2);
+  }
+}
+
+function drawPolyline(pts, style) {
+  if (!pts || pts.length < 2) return;
+  ctx.beginPath();
+  const p0 = w2c(pts[0].y, pts[0].z);
+  ctx.moveTo(p0.x, p0.y);
+  for (let i = 1; i < pts.length; i++) {
+    const p = w2c(pts[i].y, pts[i].z);
+    ctx.lineTo(p.x, p.y);
+  }
+  if (style.close) ctx.closePath();
+  if (style.fill)   { ctx.fillStyle   = style.fill;   ctx.fill();   }
+  if (style.stroke) { ctx.strokeStyle = style.stroke; ctx.lineWidth = style.lw || 1; ctx.stroke(); }
+}
+
+function drawPoint(y, z, label, color) {
+  const p = w2c(y, z);
+  ctx.fillStyle = color || '#fff';
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, 4, 0, 2*Math.PI);
+  ctx.fill();
+  if (label) {
+    ctx.fillStyle = color || '#fff';
+    ctx.font = `${9 * devicePixelRatio}px Courier New`;
+    ctx.fillText(label, p.x + 6, p.y - 4);
+  }
+}
+
+function drawDimensionLine(y1, z1, y2, z2, label, color) {
+  const p1 = w2c(y1, z1), p2 = w2c(y2, z2);
+  ctx.strokeStyle = color || '#556';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([3, 3]);
+  ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+  ctx.setLineDash([]);
+  if (label) {
+    ctx.fillStyle = color || '#778';
+    ctx.font = `${9 * devicePixelRatio}px Courier New`;
+    ctx.fillText(label, (p1.x+p2.x)/2 + 4, (p1.y+p2.y)/2);
+  }
+}
+
+// ─── Main draw ──────────────────────────────────────────────
+let lastGeom = null;
+
+function draw() {
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+
+  // Background
+  ctx.fillStyle = cssVar('--bg');
+  ctx.fillRect(0, 0, W, H);
+
+  drawGrid();
+
+  // Get params
+  const p = getParams();
+  const geom = buildHalfSection(p);
+  lastGeom = geom;
+
+  // Full section
+  const fullRaw = fullSection(geom.pts);
+
+  // Rotate about G, then shift vertically to restore displacement
+  const heelRad = p.heel * DEG;
+  const cosH = Math.cos(heelRad), sinH = Math.sin(heelRad);
+  function rotPt(pt) {
+    const dy = pt.y, dz = pt.z - p.kg;
+    return { y: dy*cosH + dz*sinH, z: -dy*sinH + dz*cosH + p.kg };
+  }
+  const fullRot = fullRaw.map(rotPt);
+
+  // Find vertical shift to restore displacement
+  const full0r  = fullSection(buildHalfSection(p).pts);
+  const sub0r   = clipToWaterline(full0r, p.draft);
+  const targetA = sub0r.length > 2 ? polygonProps(sub0r).area : 0;
+
+  let dz = 0;
+  if (p.heel > 0.001) {
+    let dzLo = -p.deckEdgeZ, dzHi = p.deckEdgeZ;
+    for (let iter = 0; iter < 48; iter++) {
+      const dzMid = (dzLo + dzHi) / 2;
+      const shifted = fullRot.map(pt => ({y: pt.y, z: pt.z + dzMid}));
+      const sub  = clipToWaterline(shifted, p.draft);
+      const area = sub.length > 2 ? polygonProps(sub).area : 0;
+      if (area < targetA) dzHi = dzMid; else dzLo = dzMid;
+    }
+    dz = (dzLo + dzHi) / 2;
+  }
+  const full = fullRot.map(pt => ({y: pt.y, z: pt.z + dz}));
+
+  // Submerged section at fixed waterline
+  const submerged = clipToWaterline(full, p.draft);
+
+  // Draw submerged fill
+  if (submerged.length > 2) {
+    drawPolyline(submerged, {
+      fill: 'rgba(74, 158, 255, 0.12)',
+      stroke: null,
+      close: true
+    });
+  }
+
+  const wlLeft  = w2c(-50, p.draft);
+  const wlRight = w2c( 50, p.draft);
+  ctx.strokeStyle = 'rgba(74,158,255,0.5)';
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([8, 4]);
+  ctx.beginPath(); ctx.moveTo(wlLeft.x, wlLeft.y); ctx.lineTo(wlRight.x, wlRight.y); ctx.stroke();
+  ctx.setLineDash([]);
+  const wlP = w2c(0, p.draft);
+  ctx.fillStyle = 'rgba(74,158,255,0.7)';
+  ctx.font = `${9 * devicePixelRatio}px Courier New`;
+  ctx.fillText(`WL  T=${p.draft.toFixed(2)}m`, wlP.x + 6, wlP.y - 4);
+
+  // Draw full section outline
+  drawPolyline(full, {
+    stroke: '#4a9eff',
+    lw: 2,
+    close: true
+  });
+
+  // G rotates about itself so stays at (0, kg), then shifts by dz
+  const Gworld = {y: 0, z: p.kg + dz};
+  const Gpx = w2c(Gworld.y, Gworld.z);
+  ctx.strokeStyle = 'rgba(248,81,73,0.5)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 3]);
+  ctx.beginPath(); ctx.moveTo(Gpx.x, 0); ctx.lineTo(Gpx.x, canvas.height); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#f85149';
+  ctx.beginPath(); ctx.arc(Gpx.x, Gpx.y, 5, 0, 2*Math.PI); ctx.fill();
+  ctx.font = `${9 * devicePixelRatio}px Courier New`;
+  ctx.fillStyle = '#f85149';
+  ctx.fillText('G', Gpx.x + 7, Gpx.y - 4);
+  const datumP = w2c(0, 0);
+  ctx.strokeStyle = '#3fb950';
+  ctx.lineWidth = 2;
+  const cs = 8;
+  ctx.beginPath();
+  ctx.moveTo(datumP.x - cs, datumP.y); ctx.lineTo(datumP.x + cs, datumP.y);
+  ctx.moveTo(datumP.x, datumP.y - cs); ctx.lineTo(datumP.x, datumP.y + cs);
+  ctx.stroke();
+
+  // Centroid of submerged section
+  let subProps = null;
+  if (submerged.length > 2) {
+    subProps = polygonProps(submerged);
+    const bp = w2c(subProps.cy, subProps.cz);
+    ctx.fillStyle = '#3fb950';
+    ctx.beginPath();
+    ctx.arc(bp.x, bp.y, 5, 0, 2*Math.PI);
+    ctx.fill();
+    // KB line
+    drawDimensionLine(0, 0, 0, subProps.cz, `KB=${subProps.cz.toFixed(3)}m`, '#3fb950');
+    ctx.fillStyle = '#3fb950';
+    ctx.font = `${9 * devicePixelRatio}px Courier New`;
+    const kbp = w2c(2, subProps.cz);
+    ctx.fillText(`B (${subProps.cy.toFixed(2)}, ${subProps.cz.toFixed(2)})`, kbp.x, kbp.y);
+  }
+
+  // Full section props
+  const fullProps = polygonProps(full);
+
+  // Update status bar
+  const bwl = computeHalfBreadthAtZ(geom.pts, p.draft);
+  const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+
+  setEl('s-draft',    p.draft.toFixed(3) + ' m');
+  setEl('s-area',     subProps ? subProps.area.toFixed(3) + ' m²' : '—');
+  setEl('s-kb',       subProps ? subProps.cz.toFixed(4) + ' m' : '—');
+  setEl('s-fullarea', fullProps.area.toFixed(3) + ' m²');
+  setEl('pts-count',  geom.pts.length + ' pts → ' + full.length + ' full');
+
+  if (subProps) {
+    const GZ = subProps.cy - Gworld.y;
+    const gzEl = document.getElementById('s-gz');
+    if (gzEl) { gzEl.textContent = GZ.toFixed(4) + ' m'; gzEl.className = 'stat-value' + (GZ < 0 ? ' warn' : ''); }
+  } else {
+    setEl('s-gz', '—');
+  }
+
+  // Geometry info box
+  let infoHTML = '';
+  if (geom.warnings && geom.warnings.length > 0) {
+    infoHTML += `<span style="color:var(--red)">⚠ ${geom.warnings.join('<br>⚠ ')}</span><br>`;
+  }
+  if (geom.T1) {
+    if (geom.R_used < geom.R_requested - 0.001) {
+      infoHTML += `<span style="color:var(--accent2)">R clamped: ${geom.R_requested.toFixed(3)} → ${geom.R_used.toFixed(3)} m</span><br>`;
+    }
+    infoHTML += `T1: Y=${geom.T1.y.toFixed(3)}, Z=${geom.T1.z.toFixed(3)}<br>`;
+    infoHTML += `T2: Y=${geom.T2.y.toFixed(3)}, Z=${geom.T2.z.toFixed(3)}`;
+  }
+  document.getElementById('geom-info').innerHTML = infoHTML || 'Geometry OK';
+
+  // Redraw GZ curve
+  drawGZcurve();
+}
+
+function computeHalfBreadthAtZ(pts, z) {
+  // Find intersection of section with horizontal z=const
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i+1];
+    if ((a.z <= z && b.z >= z) || (a.z >= z && b.z <= z)) {
+      const t = (z - a.z) / (b.z - a.z);
+      return a.y + t*(b.y - a.y);
+    }
+  }
+  return 0;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  PARAMETER BINDING
+// ═══════════════════════════════════════════════════════════════
+
+function getParams() {
+  const deckY      = +document.getElementById('deckY').value;
+  const deckEdgeZ  = +document.getElementById('deckEdgeZ').value;
+  const deckCamber = +document.getElementById('deckCamber').value;
+  const deckCentreZ = deckEdgeZ + deckY * Math.tan(deckCamber * DEG);
+  return {
+    keelZ:       +document.getElementById('keelZ').value,
+    deadrise:    +document.getElementById('deadrise').value,
+    bilgeR:      +document.getElementById('bilgeR').value,
+    sideAngle:   +document.getElementById('sideAngle').value,
+    deckY,
+    deckEdgeZ,
+    deckCamber,
+    deckCentreZ,
+    arcSegs:     +document.getElementById('arcSegs').value,
+    kg:          +document.getElementById('kg').value,
+    gzScale:     +document.getElementById('gzScale').value,
+    heel:        +document.getElementById('heel').value,
+    density:     +document.getElementById('density').value,
+    draft:       deckEdgeZ * (+document.getElementById('density').value),
+  };
+}
+
+// Wire up each number input ↔ slider pair
+const pairs = [
+  ['keelZ',       (v)=>`${v.toFixed(2)}`],
+  ['deadrise',    (v)=>`${v.toFixed(1)}°`],
+  ['bilgeR',      (v)=>`${v.toFixed(2)}`],
+  ['sideAngle',   (v)=>`${v.toFixed(1)}°`],
+  ['deckY',       (v)=>`${v.toFixed(2)}`],
+  ['deckEdgeZ',   (v)=>`${v.toFixed(2)}`],
+  ['deckCamber',  (v)=>`${(+v).toFixed(1)}°`],
+  ['kg',          (v)=>`${(+v).toFixed(2)}`],
+  ['gzScale',     (v)=>`${(+v).toFixed(2)}`],
+  ['heel',        (v)=>`${(+v).toFixed(1)}°`],
+  ['arcSegs',     (v)=>`${Math.round(v)}`],
+  ['density',     (v)=>`${(+v).toFixed(2)}`],
+];
+
+for (const [id, fmt] of pairs) {
+  const numEl  = document.getElementById(id);
+  const sldEl  = document.getElementById(id + '_s');
+  const valEl  = document.getElementById(id + '_v');
+
+  if (!numEl || !sldEl) continue;
+
+  numEl.addEventListener('input', () => {
+    sldEl.value = numEl.value;
+    if (valEl) valEl.textContent = fmt(+numEl.value);
+    draw();
+  });
+
+  sldEl.addEventListener('input', () => {
+    numEl.value = sldEl.value;
+    if (valEl) valEl.textContent = fmt(+sldEl.value);
+    draw();
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  VIEWPORT INTERACTION
+// ═══════════════════════════════════════════════════════════════
+
+const wrap = document.getElementById('canvas-wrap');
+
+wrap.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.1 : 0.9;
+  viewScale *= factor;
+  viewScale = Math.max(5, Math.min(500, viewScale));
+  draw();
+}, {passive: false});
+
+wrap.addEventListener('mousedown', (e) => {
+  isPanning = true;
+  panStart  = {x: e.clientX, y: e.clientY, oy: viewOriginY, oz: viewOriginZ};
+});
+
+wrap.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const cx   = (e.clientX - rect.left) * devicePixelRatio;
+  const cy   = (e.clientY - rect.top)  * devicePixelRatio;
+  const w    = c2w(cx, cy);
+  document.getElementById('mouse-coord').textContent = `Y=${w.y.toFixed(3)}  Z=${w.z.toFixed(3)}`;
+
+  if (isPanning && panStart) {
+    const dx = e.clientX - panStart.x;
+    const dy = e.clientY - panStart.y;
+    viewOriginY = panStart.oy - dx / viewScale;
+    viewOriginZ = panStart.oz + dy / viewScale;
+    draw();
+  }
+});
+
+wrap.addEventListener('mouseup',    () => { isPanning = false; });
+wrap.addEventListener('mouseleave', () => { isPanning = false; document.getElementById('mouse-coord').textContent = ''; });
+
+// ── Initial fit-to-section ────────────────────────────────────
+function autoFit() {
+  const p = getParams();
+  const wrap = document.getElementById('canvas-wrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  const margin = 0.25;  // larger margin = smaller hull on screen
+  const scaleY = W * (1 - margin*2) / (p.deckY * 2);
+  const scaleZ = H * (1 - margin*2) / p.deckCentreZ;
+  viewScale   = Math.min(scaleY, scaleZ);
+  viewOriginY = 0;
+  viewOriginZ = p.deckCentreZ / 2;
+  draw();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  GZ CURVE
+// ═══════════════════════════════════════════════════════════════
+
+const gzCanvas = document.getElementById('gz-canvas');
+const gzCtx    = gzCanvas.getContext('2d');
+
+function resizeGZ() {
+  const panel = document.getElementById('gz-panel');
+  gzCanvas.width  = panel.clientWidth  * devicePixelRatio;
+  gzCanvas.height = panel.clientHeight * devicePixelRatio;
+  gzCanvas.style.width  = panel.clientWidth  + 'px';
+  gzCanvas.style.height = panel.clientHeight + 'px';
+}
+
+function computeGZcurve(p, step = 2) {
+  const pts = [];
+
+  // Target: upright submerged area (constant displacement)
+  const geom0   = buildHalfSection(p);
+  const full0   = fullSection(geom0.pts);
+  const sub0    = clipToWaterline(full0, p.draft);
+  const targetA = sub0.length > 2 ? polygonProps(sub0).area : 0;
+
+  for (let heel = 0; heel <= 90; heel += step) {
+    const heelRad = heel * DEG;
+    const cosH = Math.cos(heelRad), sinH = Math.sin(heelRad);
+
+    // Rotate about G (0, kg)
+    function rotPtH(pt) {
+      const dy = pt.y, dz = pt.z - p.kg;
+      return { y: dy*cosH + dz*sinH, z: -dy*sinH + dz*cosH + p.kg };
+    }
+
+    const geom    = buildHalfSection({...p, heel});
+    const fullRaw = fullSection(geom.pts);
+    const fullRot = fullRaw.map(rotPtH);
+
+    // Bisect vertical shift dz to restore displacement
+    // Waterline is fixed at p.draft — shift hull up/down by dz
+    let dzLo = -p.deckEdgeZ, dzHi = p.deckEdgeZ;
+    for (let iter = 0; iter < 48; iter++) {
+      const dzMid = (dzLo + dzHi) / 2;
+      const shifted = fullRot.map(pt => ({y: pt.y, z: pt.z + dzMid}));
+      const sub  = clipToWaterline(shifted, p.draft);
+      const area = sub.length > 2 ? polygonProps(sub).area : 0;
+      if (area < targetA) dzHi = dzMid; else dzLo = dzMid;
+    }
+    const dz = (dzLo + dzHi) / 2;
+    const full = fullRot.map(pt => ({y: pt.y, z: pt.z + dz}));
+
+    const sub = clipToWaterline(full, p.draft);
+    if (sub.length > 2) {
+      const sp = polygonProps(sub);
+      // G stays at world position (0, kg) — waterline is fixed
+      // GZ = horizontal distance from B to G's vertical
+      pts.push({ heel, GZ: sp.cy, dz });
+    } else {
+      pts.push({ heel, GZ: 0, dz: 0 });
+    }
+  }
+  return pts;
+}
+
+function drawGZcurve() {
+  const W = gzCanvas.width, H = gzCanvas.height;
+  gzCtx.clearRect(0, 0, W, H);
+  gzCtx.fillStyle = cssVar('--panel');
+  gzCtx.fillRect(0, 0, W, H);
+
+  const p = getParams();
+  const curve     = computeGZcurve(p, 2);      // coarse for drawing
+  const curveHigh = computeGZcurve(p, 0.25);   // fine for AR integration
+
+  const maxGZ = p.gzScale;
+  const pad = { l: 44*devicePixelRatio, r: 12*devicePixelRatio, t: 22*devicePixelRatio, b: 28*devicePixelRatio };
+  const cW = W - pad.l - pad.r;
+  const cH = H - pad.t - pad.b;
+
+  const tx = heel => pad.l + heel / 90 * cW;
+  const posH = cH * 0.75;
+  const negH = cH * 0.25;
+  const ty = gz => gz >= 0
+    ? pad.t + posH - (gz / maxGZ) * posH * 0.97
+    : pad.t + posH + (-gz / maxGZ) * negH * 0.97;
+
+  // Vertical grid lines
+  gzCtx.strokeStyle = cssVar('--grid');
+  gzCtx.lineWidth = 1;
+  [0,15,30,45,60,75,90].forEach(h => {
+    gzCtx.beginPath(); gzCtx.moveTo(tx(h), pad.t); gzCtx.lineTo(tx(h), pad.t+cH); gzCtx.stroke();
+    gzCtx.fillStyle = cssVar('--muted'); gzCtx.font = `${9*devicePixelRatio}px Courier New`;
+    gzCtx.textAlign = 'center';
+    gzCtx.fillText(h+'°', tx(h), pad.t+cH+14*devicePixelRatio);
+  });
+  gzCtx.textAlign = 'left';
+
+  // Y axis ticks and horizontal grid
+  const yStep = maxGZ <= 2 ? 0.5 : maxGZ <= 5 ? 1 : maxGZ <= 10 ? 2 : 5;
+  gzCtx.font = `${9*devicePixelRatio}px Courier New`;
+  for (let gz = -maxGZ*0.25; gz <= maxGZ; gz += yStep) {
+    const y = ty(gz);
+    gzCtx.strokeStyle = gz === 0 ? cssVar('--border') : cssVar('--grid');
+    gzCtx.lineWidth   = 1;
+    gzCtx.beginPath(); gzCtx.moveTo(pad.l, y); gzCtx.lineTo(pad.l+cW, y); gzCtx.stroke();
+    gzCtx.fillStyle = cssVar('--muted');
+    gzCtx.textAlign = 'right';
+    gzCtx.fillText(gz.toFixed(gz < 1 && gz > -1 ? 1 : 0), pad.l - 4, y + 3);
+  }
+  gzCtx.textAlign = 'left';
+
+  // Title
+  gzCtx.fillStyle = cssVar('--muted');
+  gzCtx.font = `${9*devicePixelRatio}px Courier New`;
+  gzCtx.fillText('GZ CURVE  (m)', pad.l + 4, pad.t - 6*devicePixelRatio);
+
+  // Positive area fill
+  gzCtx.fillStyle = 'rgba(63,185,80,0.15)';
+  gzCtx.beginPath();
+  gzCtx.moveTo(tx(0), ty(0));
+  curve.forEach(d => gzCtx.lineTo(tx(d.heel), ty(Math.max(0, d.GZ))));
+  gzCtx.lineTo(tx(90), ty(0));
+  gzCtx.closePath(); gzCtx.fill();
+
+  // Negative fill
+  gzCtx.fillStyle = 'rgba(248,81,73,0.15)';
+  gzCtx.beginPath();
+  gzCtx.moveTo(tx(0), ty(0));
+  curve.forEach(d => gzCtx.lineTo(tx(d.heel), ty(Math.min(0, d.GZ))));
+  gzCtx.lineTo(tx(90), ty(0));
+  gzCtx.closePath(); gzCtx.fill();
+
+  // GZ curve
+  gzCtx.strokeStyle = '#3fb950';
+  gzCtx.lineWidth = 2;
+  gzCtx.beginPath();
+  curve.forEach((d, i) => i === 0 ? gzCtx.moveTo(tx(d.heel), ty(d.GZ)) : gzCtx.lineTo(tx(d.heel), ty(d.GZ)));
+  gzCtx.stroke();
+
+  // Current heel marker
+  gzCtx.strokeStyle = '#f0883e';
+  gzCtx.lineWidth = 1;
+  gzCtx.setLineDash([3,3]);
+  gzCtx.beginPath(); gzCtx.moveTo(tx(p.heel), pad.t); gzCtx.lineTo(tx(p.heel), pad.t+cH); gzCtx.stroke();
+  gzCtx.setLineDash([]);
+
+  // ── φ_lim and A_R ─────────────────────────────────────────
+  const freeboard = p.deckEdgeZ - p.draft;
+  const phiLim_rad = Math.atan2(freeboard, p.deckY);
+  const phiLim_deg = phiLim_rad / DEG;
+
+  // A_R: Simpson's rule integration of GZ from 0 to φ_lim (m·rad)
+  // Collect points up to and including interpolated φ_lim
+  const integPts = [];
+  for (let i = 0; i < curveHigh.length; i++) {
+    const d = curveHigh[i];
+    if (d.heel >= phiLim_deg) {
+      const prev = curveHigh[i-1] || d;
+      const t = (phiLim_deg - prev.heel) / (d.heel - prev.heel || 1);
+      const gzAtLim = prev.GZ + t * (d.GZ - prev.GZ);
+      integPts.push({ heel: phiLim_deg, GZ: gzAtLim });
+      break;
+    }
+    integPts.push(d);
+  }
+
+  // Simpson's rule (composite)
+  let AR = 0;
+  const n = integPts.length - 1;
+  for (let i = 0; i < n; i++) {
+    const a = integPts[i], b = integPts[i+1];
+    const h = (b.heel - a.heel) * DEG;
+    const mid_heel = (a.heel + b.heel) / 2;
+    // Find or interpolate GZ at midpoint
+    const gz_mid = a.GZ + 0.5 * (b.GZ - a.GZ);
+    AR += (h / 6) * (a.GZ + 4 * gz_mid + b.GZ);
+  }
+
+  // φ_lim vertical line
+  gzCtx.strokeStyle = 'rgba(240,136,62,0.8)';
+  gzCtx.lineWidth = 1.5;
+  gzCtx.setLineDash([5, 3]);
+  gzCtx.beginPath(); gzCtx.moveTo(tx(phiLim_deg), pad.t); gzCtx.lineTo(tx(phiLim_deg), pad.t+cH); gzCtx.stroke();
+  gzCtx.setLineDash([]);
+
+  // φ_lim label
+  gzCtx.fillStyle = '#f0883e';
+  gzCtx.font = `${9*devicePixelRatio}px Courier New`;
+  gzCtx.textAlign = 'center';
+  gzCtx.fillText(`φ_lim=${phiLim_deg.toFixed(1)}°`, tx(phiLim_deg), pad.t + cH + 25*devicePixelRatio);
+  gzCtx.textAlign = 'left';
+
+  // A_R shaded area
+  gzCtx.fillStyle = 'rgba(180,220,80,0.20)';
+  gzCtx.beginPath();
+  gzCtx.moveTo(tx(0), ty(0));
+  for (let i = 0; i < curve.length; i++) {
+    const d = curve[i];
+    if (d.heel >= phiLim_deg) {
+      // Interpolate GZ at exactly phi_lim
+      const prev = curve[i-1] || d;
+      const t = (phiLim_deg - prev.heel) / (d.heel - prev.heel || 1);
+      const gzAtLim = prev.GZ + t * (d.GZ - prev.GZ);
+      gzCtx.lineTo(tx(phiLim_deg), ty(Math.max(0, gzAtLim)));
+      break;
+    }
+    gzCtx.lineTo(tx(d.heel), ty(Math.max(0, d.GZ)));
+  }
+  gzCtx.lineTo(tx(phiLim_deg), ty(0));
+  gzCtx.closePath(); gzCtx.fill();
+
+  // Max GZ and A_R annotations
+  const maxPt = curve.reduce((a,b) => b.GZ > a.GZ ? b : a);
+  gzCtx.fillStyle = '#3fb950';
+  gzCtx.font = `${9*devicePixelRatio}px Courier New`;
+  gzCtx.fillText(`Max GZ=${maxPt.GZ.toFixed(3)}m @ ${maxPt.heel}°`, pad.l+4, pad.t+14*devicePixelRatio);
+  gzCtx.fillStyle = '#b4dc50';
+  gzCtx.fillText(`AR=${AR.toFixed(4)} m·rad`, pad.l+4, pad.t+26*devicePixelRatio);
+
+  // Also update status bar
+  document.getElementById('s-ar').textContent = AR.toFixed(4) + ' m·rad';
+}
+
+// ── Generic column splitter drag ──────────────────────────────
+function makeSplitter(splitterEl, leftEl, rightEl) {
+  let dragging = false, startX = 0, startLeft = 0, startRight = 0;
+
+  splitterEl.addEventListener('mousedown', e => {
+    dragging = true;
+    startX     = e.clientX;
+    startLeft  = leftEl.getBoundingClientRect().width;
+    startRight = rightEl.getBoundingClientRect().width;
+    splitterEl.classList.add('dragging');
+    document.body.style.cursor = 'ew-resize';
+    document.body.style.userSelect = 'none';
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    const delta = e.clientX - startX;
+    const newLeft  = Math.max(120, startLeft  + delta);
+    const newRight = Math.max(120, startRight - delta);
+    leftEl.style.flex  = `0 0 ${newLeft}px`;
+    rightEl.style.flex = `0 0 ${newRight}px`;
+    resize(); resizeGZ(); drawGZcurve();
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    splitterEl.classList.remove('dragging');
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+  });
+}
+
+makeSplitter(
+  document.getElementById('spl-left'),
+  document.getElementById('controls'),
+  document.getElementById('canvas-wrap')
+);
+makeSplitter(
+  document.getElementById('spl-right'),
+  document.getElementById('canvas-wrap'),
+  document.getElementById('gz-panel')
+);
+
+// ── Hong (1994) hull presets ───────────────────────────────────
+const Lo = 135, Bo = 22.5, Do = 13.5;
+const hongHulls = [
+  [Lo,      Bo,      Do     ],  // 0 Ark
+  [Lo,      Bo/1.5,  1.5*Do ],  // 1
+  [Lo,      Bo/1.2,  1.2*Do ],  // 2
+  [Lo,      1.2*Bo,  Do/1.2 ],  // 3
+  [Lo,      1.5*Bo,  Do/1.5 ],  // 4
+  [Lo/1.5,  Bo,      1.5*Do ],  // 5
+  [Lo/1.2,  Bo,      1.2*Do ],  // 6
+  [1.2*Lo,  Bo,      Do/1.2 ],  // 7
+  [1.5*Lo,  Bo,      Do/1.5 ],  // 8
+  [Lo/1.5,  1.5*Bo,  Do     ],  // 9
+  [Lo/1.2,  1.2*Bo,  Do     ],  // 10
+  [1.2*Lo,  Bo/1.2,  Do     ],  // 11
+  [1.5*Lo,  Bo/1.5,  Do     ],  // 12
+];
+
+function setVal(id, val) {
+  const el = document.getElementById(id);
+  const sl = document.getElementById(id + '_s');
+  if (el) el.value = typeof val === 'number' ? val.toFixed(id.includes('Angle') || id.includes('Camber') || id.includes('heel') ? 1 : 2) : val;
+  if (sl) sl.value = val;
+}
+
+document.getElementById('hongHull').addEventListener('change', function() {
+  const n = +this.value;
+  if (n < 0) return;
+  const [L, B, D] = hongHulls[n];
+  const halfB = B / 2;
+  const draft = D / 2;
+  const kg    = D / 3;
+
+  // All Hong hulls: box section, no deadrise, no flare, no bilge, no camber
+  setVal('keelZ',      0);
+  setVal('deadrise',   0);
+  setVal('bilgeR',     0);
+  setVal('sideAngle',  0);
+  setVal('deckY',      halfB);
+  setVal('deckEdgeZ',  D);
+  setVal('deckCamber', 0);
+  setVal('density',    0.5);
+  setVal('kg',         kg);
+  setVal('heel',       0);
+
+  // Update slider display values
+  document.getElementById('deckY_v').textContent     = halfB.toFixed(2);
+  document.getElementById('deckEdgeZ_v').textContent = D.toFixed(2);
+  document.getElementById('density_v').textContent   = '0.50';
+  document.getElementById('kg_v').textContent        = kg.toFixed(2);
+
+  draw();
+  autoFit();
+});
+
+// Sync all sliders to their number input values on load
+for (const [id] of pairs) {
+  const numEl = document.getElementById(id);
+  const sldEl = document.getElementById(id + '_s');
+  if (numEl && sldEl) sldEl.value = numEl.value;
+}
+
+resize();
+resizeGZ();
+setTimeout(() => { autoFit(); drawGZcurve(); }, 50);
+</script>
+</body>
+</html>
