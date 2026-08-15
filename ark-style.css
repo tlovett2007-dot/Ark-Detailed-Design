@@ -170,12 +170,12 @@ ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
 li { margin-bottom: 0.3rem; }
 
 /* ── Status badges ── */
-.status-confirmed   { background: #d4edda; color: #1a5c2a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
-.status-provisional { background: #fff3cd; color: #7a5c00; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
-.status-tbd         { background: #f8d7da; color: #7a1a1a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
-.status-unsure      { background: #e8e8e8; color: #555555; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
-.status-refer       { color: #cc0000; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; } /* placeholder ref — needs linking */
-.status-revised     { background: #d0e8ff; color: #0a3a6a; padding: 2px 6px; border-radius: 3px; font-size: 0.8rem; font-family: 'Helvetica Neue', Arial, sans-serif; }
+.status-confirmed   { background: #d4edda; color: #1a5c2a; padding: 2px 6px; border-radius: 3px; }
+.status-provisional { background: #fff3cd; color: #7a5c00; padding: 2px 6px; border-radius: 3px; }
+.status-tbd         { background: #f8d7da; color: #7a1a1a; padding: 2px 6px; border-radius: 3px; }
+.status-unsure      { background: #e8e8e8; color: #555555; padding: 2px 6px; border-radius: 3px; }
+.status-refer       { color: #cc0000; } /* placeholder ref — needs linking */
+.status-revised     { background: #d0e8ff; color: #0a3a6a; padding: 2px 6px; border-radius: 3px; }
 
 /* ── Note boxes ── */
 .note {
