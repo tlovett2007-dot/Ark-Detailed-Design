@@ -220,13 +220,6 @@ footer {
   table { font-size: 0.82rem; }
 }
 
-/* ── Criteria comparison table ── */
-.criteria-table th:nth-child(1) { width: 21%; }
-.criteria-table th:nth-child(2) { width: 20%; }
-.criteria-table th:nth-child(3) { width: 20%; }
-.criteria-table th:nth-child(4) { width: 19%; }
-.criteria-table th:nth-child(5) { width: 20%; }
-
 /* ── Footnote / reference system (cohen-tbh-text.html and future papers) ── */
 
 /* Inline superscript reference links */
