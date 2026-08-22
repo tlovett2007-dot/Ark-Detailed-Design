@@ -51,8 +51,13 @@ body {
 .breadcrumb a:visited { color: #551A8B; }
 .breadcrumb a:hover { color: #0000EE; }
 
-/* ── Site title bar ── */
-.site-title {
+/* ── Header — black site-title + grey h1/h2 bands ── */
+header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #2c4a2e;
+}
+
+header .site-title {
   display: block;
   background: #1a1a1a;
   color: #ffffff;
@@ -62,12 +67,39 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
-  margin-bottom: 0;
+}
+
+header h1 {
+  background: #dddddd;
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem 0.8rem;
+  margin: 0;
+  border-bottom: none;
+  line-height: 1.2;
+}
+
+header h2 {
+  background: #dddddd;
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-style: italic;
+  padding: 0 1.5rem 0.8rem;
+  margin: 0;
+  border: none;
 }
 
 /* ── Main content area ── */
 main {
   padding: 0 1.5rem;
+}
+
+/* h1 followed by h2 in header — tighten bottom padding */
+header h1 + h2 {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* ── Doc meta line ── */
@@ -81,23 +113,20 @@ p.doc-meta {
 }
 
 /* ── Headings in main content ── */
-
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   font-weight: bold;
   color: #1a1a1a;
-  padding-bottom: 0.3rem;
-  margin: 2.5rem 0 1rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 2rem 0 0.5rem;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  font-style:italic;
-  color: #1a1a1a;
-  border-bottom: 2px solid #1a1a1a;
-  padding-bottom: 1rem;
+  color: #2c4a2e;
+  border-bottom: 1px solid #c8d8c8;
+  padding-bottom: 0.3rem;
   margin: 2.5rem 0 1rem;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
@@ -127,25 +156,24 @@ a:active { color: #FF0000; }
 /* ── Tables ── */
 table {
   border-collapse: collapse;
-  width:auto;
+  width: 100%;
   margin: 1rem 0 1.5rem;
   font-size: 0.92rem;
-  background:#FFF;
 }
 th {
-  background: #e0e0e0;
-  color: #000;
+  background: #2c4a2e;
+  color: #fff;
   padding: 6px 10px;
   text-align: left;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
-  border: 1px solid #999999;
 }
 td {
-  border: 1px solid #999999;
+  border: 1px solid #c8d8c8;
   padding: 6px 10px;
   vertical-align: top;
 }
+tr:nth-child(even) td { background: #f0ede8; }
 
 /* ── Blockquotes ── */
 blockquote {
